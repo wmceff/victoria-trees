@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
+  <script>
+    var trees = [];
+    var offset = 1000;
+
+    var fetchTrees = function(pageNum) {
+      var geometry = {
+        xmin: map.getBounds().getNorthEast().lng(),
+        xmax: map.getBounds().getSouthWest().lng(),
+        ymin: map.getBounds().getSouthWest().lat(),
+        ymax: map.getBounds().getNorthEast().lat(),
+        spatialReference: {"wkid" : 4326}
+      };
+      console.log(geometry);
+      var params = {
+        where: '1=1',
+        outFields: 'Species,PlantingDateEst,YearPlanted,BotanicalName,CommonName',
+        inSR: '4326',
+        outSR: '4326',
+        spatialRel: 'esriSpatialRelIntersects',
+        geometryType: 'esriGeometryEnvelope',
+        geometry: JSON.stringify(geometry),
+        returnGeometry: true,
+        f: 'json'
+      };
+      var encodedParams = Object.keys(params).map(function(k) {
+        return encodeURIComponent(k) + "=" + encodeURIComponent(params[k]);
+      }).join('&')
+
+      var treesEndpoint = "http://vicmap.victoria.ca/arcgis/rest/services/OpenData/OpenData_Parks/MapServer/15/query?" + encodedParams;
+      var req = treesEndpoint;
+      if (pageNum >= 1) {
+        req = treesEndpoint + '&resultOffset=' + pageNum * offset;
+      }
+      fetch(req).then(function(response) {
+        return response.json();
+      }).then(function(response) {
+        trees = trees.concat(response.features);
+
+        if (response.exceededTransferLimit) {
+          fetchTrees(pageNum + 1);
+        } else {
+          trees.forEach(function(feature) {
+            var lat = feature.geometry.y;
+            var lng = feature.geometry.x;
+            var commonName = feature.attributes.CommonName;
+
+            // info window is 250px  on an iphone6 - 12px margin
+            // could probably do soemthing better with window size
+            //content: '<div style="height:500px;width:238px;margin:0;padding:0"><a href="https://en.m.wikipedia.org/?title='+feature.attributes.Species+'" target="_blank">'+feature.attributes.CommonName+'</a></div>'
+            console.log(feature);
+            var infowindow = new google.maps.InfoWindow({
+              content: `<div style='margin:10px;padding:10px'>
+                <h1>${feature.attributes.CommonName}</h1>
+                <a href='https://en.m.wikipedia.org/?title=${feature.attributes.Species}' target'_blank'>${feature.attributes.Species}</a>
+              </div>`
+            });
+
+            var marker = new google.maps.Marker({
+              position: { lat, lng },
+              map: map,
+              title: commonName,
+              //icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
+              icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
+            });
+
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+          });
+        }
+      });;
+    };
+
+    var map, infoWindow;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 48.413489, lng: -123.363524},
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        tilt: 0
+      });
+
+      infoWindow = new google.maps.InfoWindow;
+
+      function CenterControl(controlDiv, map) {
+        // Set CSS for the control border.
+        var controlUI = document.createElement('div');
+        controlUI.style.backgroundColor = '#fff';
+        controlUI.style.border = '2px solid #fff';
+        controlUI.style.borderRadius = '3px';
+        controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+        controlUI.style.cursor = 'pointer';
+        controlUI.style.marginBottom = '10px';
+        controlUI.style.textAlign = 'center';
+        controlUI.title = 'Populate trees';
+        controlDiv.appendChild(controlUI);
+
+        // Set CSS for the control interior.
+        var controlText = document.createElement('div');
+        controlText.style.color = 'rgb(25,25,25)';
+        controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+        controlText.style.fontSize = '16px';
+        controlText.style.lineHeight = '38px';
+        controlText.style.paddingLeft = '5px';
+        controlText.style.paddingRight = '5px';
+        controlText.innerHTML = 'Populate trees';
+        controlUI.appendChild(controlText);
+
+        // Setup the click event listeners: simply set the map to Chicago.
+        controlUI.addEventListener('click', function() {
+          fetchTrees(0);
+        });
+      }
+
+      // Create the DIV to hold the control and call the CenterControl()
+      // constructor passing in this DIV.
+      var centerControlDiv = document.createElement('div');
+      var centerControl = new CenterControl(centerControlDiv, map);
+
+      centerControlDiv.index = 1;
+      map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
+
+      // Try HTML5 geolocation.
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+
+          map.setCenter(pos);
+          map.setZoom(20);
+          var marker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            title: 'You are here'
+          });
+
+          // for some reason this is necessary to get map bounds
+          // setTimeout(function() { fetchTrees(0) }, 1);
+        }, function() {
+          //location error
+        });
+      } else {
+        // Browser doesn't support Geolocation or didn't confirm
+      }
+    }
+  </script>
+</body>
+</html>
