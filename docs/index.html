@@ -49,16 +49,21 @@
             icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
           });
 
+          let infoWindowTemplate = `
+            <div style='margin:10px;padding:10px'>
+              <h1>${feature.common_name}</h1>
+              <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a>
+          `;
+          const genus = feature.botanical_name.split(" ")[0];
+          if (genus) {
+            infoWindowTemplate += `<br><a href='https://en.m.wikipedia.org/?title=${genus}' target='_blank'>${genus}</a>`;
+          }
+          infoWindowTemplate += '</div>';
+
           // info window is 250px  on an iphone6 - 12px margin
           // could probably do soemthing better with window size
-          // content: '<div style="height:500px;width:238px;margin:0;padding:0"><a href="https://en.m.wikipedia.org/?title='+feature.attributes.Species+'" target="_blank">'+feature.attributes.CommonName+'</a></div>'
           let infoWindow = new google.maps.InfoWindow({
-            content: `
-              <div style='margin:10px;padding:10px'>
-                <h1>${feature.common_name}</h1>
-                <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a>
-              </div>
-            `
+            content: infoWindowTemplate
           });
 
           marker.addListener('click', function() {
@@ -89,7 +94,6 @@
       function RefreshButton(controlDiv, map) {
         const buttonText = 'Relocate';
 
-        // Set CSS for the control border.
         const controlUI = document.createElement('div');
         controlUI.style.backgroundColor = '#fff';
         controlUI.style.border = '2px solid #fff';
@@ -101,7 +105,6 @@
         controlUI.title = buttonText;
         controlDiv.appendChild(controlUI);
 
-        // Set CSS for the control interior.
         const controlText = document.createElement('div');
         controlText.style.color = 'rgb(25,25,25)';
         controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
