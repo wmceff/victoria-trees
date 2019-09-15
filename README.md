@@ -1,5 +1,24 @@
-# trees
+# Victoria Trees
 
-http://victoria-trees.s3-website-us-west-1.amazonaws.com/
+Identify the near you in Victoria. Inspired by
+[James Clowater](http://naturevictoria.com/)'s
+[Trees of Victoria](http://treesofvictoria.com/).
 
-uses the [victoria trees dataset](http://opendata.victoria.ca/datasets/tree-species) provided by the city of victoria to populate a map with the identified trees in your vicinity. click the tree marker to get the wikipedia page in the info window.
+Uses the
+[victoria trees dataset](http://opendata.victoria.ca/datasets/tree-species)
+provided by the City of Victoria.
+
+## Structure
+
+- [`/api`] - basic serverless api functions (Lambda)
+- [`/docs`] - the website
+- [`/export`] - a script to export the Victoria Trees dataset to CSV with lat &
+  long
+
+to test the page, visit the docs directory and run
+`python -m SimpleHTTPServer 8081`
+
+## Export
+
+To get the CSV data into a database, in `psql` do something like
+`\COPY trees(object_id,common_name,botanical_name,latitude,longitude,data,source) FROM 'trees.csv' DELIMITER ',' CSV;`

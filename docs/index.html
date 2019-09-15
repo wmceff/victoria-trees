@@ -20,79 +20,58 @@
   <div id="map"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
   <script>
     var trees = [];
     var offset = 1000;
 
-    var fetchTrees = function(pageNum) {
-      var geometry = {
-        xmin: map.getBounds().getNorthEast().lng(),
-        xmax: map.getBounds().getSouthWest().lng(),
-        ymin: map.getBounds().getSouthWest().lat(),
-        ymax: map.getBounds().getNorthEast().lat(),
-        spatialReference: {"wkid" : 4326}
-      };
-      console.log(geometry);
-      var params = {
-        where: '1=1',
-        outFields: 'Species,PlantingDateEst,YearPlanted,BotanicalName,CommonName',
-        inSR: '4326',
-        outSR: '4326',
-        spatialRel: 'esriSpatialRelIntersects',
-        geometryType: 'esriGeometryEnvelope',
-        geometry: JSON.stringify(geometry),
-        returnGeometry: true,
-        f: 'json'
-      };
-      var encodedParams = Object.keys(params).map(function(k) {
-        return encodeURIComponent(k) + "=" + encodeURIComponent(params[k]);
-      }).join('&')
+    // TODO - get bounding box of map
+    var treesEndpoint = 'https://5s7vu0rlq6.execute-api.ca-central-1.amazonaws.com/production/trees';
 
-      var treesEndpoint = "http://vicmap.victoria.ca/arcgis/rest/services/OpenData/OpenData_Parks/MapServer/15/query?" + encodedParams;
-      var req = treesEndpoint;
-      if (pageNum >= 1) {
-        req = treesEndpoint + '&resultOffset=' + pageNum * offset;
-      }
-      fetch(req).then(function(response) {
-        return response.json();
-      }).then(function(response) {
-        trees = trees.concat(response.features);
+    fetch(treesEndpoint).then(function(response) {
+      return response.json();
+    }).then(function(response) {
+      trees = JSON.parse(response.body); // .slice(0, 10);
 
-        if (response.exceededTransferLimit) {
-          fetchTrees(pageNum + 1);
-        } else {
-          trees.forEach(function(feature) {
-            var lat = feature.geometry.y;
-            var lng = feature.geometry.x;
-            var commonName = feature.attributes.CommonName;
+      var markers = [];
 
-            // info window is 250px  on an iphone6 - 12px margin
-            // could probably do soemthing better with window size
-            //content: '<div style="height:500px;width:238px;margin:0;padding:0"><a href="https://en.m.wikipedia.org/?title='+feature.attributes.Species+'" target="_blank">'+feature.attributes.CommonName+'</a></div>'
-            console.log(feature);
-            var infowindow = new google.maps.InfoWindow({
-              content: `<div style='margin:10px;padding:10px'>
-                <h1>${feature.attributes.CommonName}</h1>
-                <a href='https://en.m.wikipedia.org/?title=${feature.attributes.Species}' target'_blank'>${feature.attributes.Species}</a>
-              </div>`
-            });
+      trees.forEach(function(feature) {
+        // TODO: fix this crap
+        var lng = feature.latitude;
+        var lat = feature.longitude;
+        var commonName = feature.common_name;
 
-            var marker = new google.maps.Marker({
-              position: { lat, lng },
-              map: map,
-              title: commonName,
-              //icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
-              icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
-            });
+        // info window is 250px  on an iphone6 - 12px margin
+        // could probably do soemthing better with window size
+        //content: '<div style="height:500px;width:238px;margin:0;padding:0"><a href="https://en.m.wikipedia.org/?title='+feature.attributes.Species+'" target="_blank">'+feature.attributes.CommonName+'</a></div>'
+        var infowindow = new google.maps.InfoWindow({
+          content: `<div style='margin:10px;padding:10px'>
+            <h1>${feature.common_name}</h1>
+            <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target'_blank'>${feature.botanical_name}</a>
+          </div>`
+        });
 
-            marker.addListener('click', function() {
-              infowindow.open(map, marker);
-            });
-          });
-        }
-      });;
-    };
+
+        var marker = new google.maps.Marker({
+          position: { lat, lng },
+          map: map,
+          title: commonName,
+          icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
+          // icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+        markers.push(marker);
+      });
+
+      var markerCluster = new MarkerClusterer(map, markers, {
+        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+      });
+    });
 
     var map, infoWindow;
     function initMap() {
@@ -105,6 +84,7 @@
 
       infoWindow = new google.maps.InfoWindow;
 
+      /* BUTTON TO LOAD TREES ( NOT USED ) 
       function CenterControl(controlDiv, map) {
         // Set CSS for the control border.
         var controlUI = document.createElement('div');
@@ -131,7 +111,7 @@
 
         // Setup the click event listeners: simply set the map to Chicago.
         controlUI.addEventListener('click', function() {
-          fetchTrees(0);
+          // fetchTrees(0);
         });
       }
 
@@ -142,6 +122,7 @@
 
       centerControlDiv.index = 1;
       map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
+      */
 
       // Try HTML5 geolocation.
       if (navigator.geolocation) {
