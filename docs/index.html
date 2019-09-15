@@ -23,57 +23,66 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
   <script>
-    var trees = [];
-    var offset = 1000;
+    let openInfoWindow;
 
-    // TODO - get bounding box of map
-    var treesEndpoint = 'https://5s7vu0rlq6.execute-api.ca-central-1.amazonaws.com/production/trees';
+    const fetchTrees = function(pos) {
+      let params = '';
+      if (pos) {
+        const radius = .001 // very roughly 1km around current position
+        params = `?xmin=${pos.lng + radius}&xmax=${pos.lng - radius}&ymin=${pos.lat-radius}&ymax=${pos.lat+radius}`
+      }
 
-    fetch(treesEndpoint).then(function(response) {
-      return response.json();
-    }).then(function(response) {
-      trees = JSON.parse(response.body); // .slice(0, 10);
+      const treesEndpoint = 'https://5s7vu0rlq6.execute-api.ca-central-1.amazonaws.com/production/trees'+params;
 
-      var markers = [];
+      fetch(treesEndpoint).then(function(response) {
+        return response.json();
+      }).then(function(response) {
+        const trees = response; // .slice(0, 10);
 
-      trees.forEach(function(feature) {
-        // TODO: fix this crap
-        var lng = feature.latitude;
-        var lat = feature.longitude;
-        var commonName = feature.common_name;
+        const markers = [];
 
-        // info window is 250px  on an iphone6 - 12px margin
-        // could probably do soemthing better with window size
-        //content: '<div style="height:500px;width:238px;margin:0;padding:0"><a href="https://en.m.wikipedia.org/?title='+feature.attributes.Species+'" target="_blank">'+feature.attributes.CommonName+'</a></div>'
-        var infowindow = new google.maps.InfoWindow({
-          content: `<div style='margin:10px;padding:10px'>
-            <h1>${feature.common_name}</h1>
-            <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target'_blank'>${feature.botanical_name}</a>
-          </div>`
+        trees.forEach(function(feature) {
+          const lat = feature.latitude;
+          const lng = feature.longitude;
+          const commonName = feature.common_name;
+
+          const marker = new google.maps.Marker({
+            position: { lat, lng },
+            map: map,
+            title: commonName,
+            icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
+            // icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
+          });
+
+          // info window is 250px  on an iphone6 - 12px margin
+          // could probably do soemthing better with window size
+          // content: '<div style="height:500px;width:238px;margin:0;padding:0"><a href="https://en.m.wikipedia.org/?title='+feature.attributes.Species+'" target="_blank">'+feature.attributes.CommonName+'</a></div>'
+          let infoWindow = new google.maps.InfoWindow({
+            content: `
+              <div style='margin:10px;padding:10px'>
+                <h1>${feature.common_name}</h1>
+                <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a>
+              </div>
+            `
+          });
+
+          marker.addListener('click', function() {
+            if (openInfoWindow) {
+              openInfoWindow.close();
+            };
+            infoWindow.open(map, marker);
+            openInfoWindow = infoWindow;
+          });
+
+          markers.push(marker);
+
         });
 
-
-        var marker = new google.maps.Marker({
-          position: { lat, lng },
-          map: map,
-          title: commonName,
-          icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
-          // icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
-        });
-
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-
-        markers.push(marker);
+        const markerCluster = new MarkerClusterer(map, markers, { imagePath: 'images/m', gridSize: 80 });
       });
+    };
 
-      var markerCluster = new MarkerClusterer(map, markers, {
-        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-      });
-    });
-
-    var map, infoWindow;
+    var map;
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 48.413489, lng: -123.363524},
@@ -82,12 +91,9 @@
         tilt: 0
       });
 
-      infoWindow = new google.maps.InfoWindow;
-
-      /* BUTTON TO LOAD TREES ( NOT USED ) 
-      function CenterControl(controlDiv, map) {
+      function RefreshButton(controlDiv, map) {
         // Set CSS for the control border.
-        var controlUI = document.createElement('div');
+        const controlUI = document.createElement('div');
         controlUI.style.backgroundColor = '#fff';
         controlUI.style.border = '2px solid #fff';
         controlUI.style.borderRadius = '3px';
@@ -99,7 +105,7 @@
         controlDiv.appendChild(controlUI);
 
         // Set CSS for the control interior.
-        var controlText = document.createElement('div');
+        const controlText = document.createElement('div');
         controlText.style.color = 'rgb(25,25,25)';
         controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
         controlText.style.fontSize = '16px';
@@ -109,47 +115,46 @@
         controlText.innerHTML = 'Populate trees';
         controlUI.appendChild(controlText);
 
-        // Setup the click event listeners: simply set the map to Chicago.
         controlUI.addEventListener('click', function() {
-          // fetchTrees(0);
+          centerOnCurrentLocationAndFetch();
         });
-      }
+      } // centerControl
 
       // Create the DIV to hold the control and call the CenterControl()
       // constructor passing in this DIV.
-      var centerControlDiv = document.createElement('div');
-      var centerControl = new CenterControl(centerControlDiv, map);
+      const centerControlDiv = document.createElement('div');
+      const refreshButton = new RefreshButton(centerControlDiv, map);
 
       centerControlDiv.index = 1;
       map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
-      */
 
-      // Try HTML5 geolocation.
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+      function centerOnCurrentLocationAndFetch() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            const pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
+            map.setCenter(pos);
+            map.setZoom(20);
+            const marker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: 'You are here'
+            });
 
-          map.setCenter(pos);
-          map.setZoom(20);
-          var marker = new google.maps.Marker({
-            position: pos,
-            map: map,
-            title: 'You are here'
+            fetchTrees(pos);
+          }, function() {
+            alert('Had a problem finding your location - refresh and try again');
           });
-
-          // for some reason this is necessary to get map bounds
-          // setTimeout(function() { fetchTrees(0) }, 1);
-        }, function() {
-          //location error
-        });
-      } else {
-        // Browser doesn't support Geolocation or didn't confirm
+        } else {
+          fetchTrees();
+        }
       }
-    }
+
+      centerOnCurrentLocationAndFetch();
+    } // initMap
   </script>
 </body>
 </html>
