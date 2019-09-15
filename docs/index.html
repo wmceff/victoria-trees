@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 100%;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 <body>
   <div id="map"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
   <script>
     let openInfoWindow;
+    let markers = [];
 
     const fetchTrees = function(pos) {
       let params = '';
@@ -39,8 +37,6 @@
       }).then(function(response) {
         const trees = response; // .slice(0, 10);
 
-        const markers = [];
-
         trees.forEach(function(feature) {
           const lat = feature.latitude;
           const lng = feature.longitude;
@@ -51,7 +47,6 @@
             map: map,
             title: commonName,
             icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
-            // icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
           });
 
           // info window is 250px  on an iphone6 - 12px margin
@@ -92,6 +87,8 @@
       });
 
       function RefreshButton(controlDiv, map) {
+        const buttonText = 'Relocate';
+
         // Set CSS for the control border.
         const controlUI = document.createElement('div');
         controlUI.style.backgroundColor = '#fff';
@@ -101,7 +98,7 @@
         controlUI.style.cursor = 'pointer';
         controlUI.style.marginBottom = '10px';
         controlUI.style.textAlign = 'center';
-        controlUI.title = 'Populate trees';
+        controlUI.title = buttonText;
         controlDiv.appendChild(controlUI);
 
         // Set CSS for the control interior.
@@ -112,7 +109,7 @@
         controlText.style.lineHeight = '38px';
         controlText.style.paddingLeft = '5px';
         controlText.style.paddingRight = '5px';
-        controlText.innerHTML = 'Populate trees';
+        controlText.innerHTML = buttonText;
         controlUI.appendChild(controlText);
 
         controlUI.addEventListener('click', function() {
@@ -129,6 +126,12 @@
       map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
 
       function centerOnCurrentLocationAndFetch() {
+        // remove all markers
+        markers.forEach((marker, index) => {
+          marker.setMap(null);
+        });
+        markers = [];
+
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             const pos = {
@@ -137,7 +140,7 @@
             };
 
             map.setCenter(pos);
-            map.setZoom(20);
+            map.setZoom(21);
             const marker = new google.maps.Marker({
               position: pos,
               map: map,
