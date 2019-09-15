@@ -37,8 +37,8 @@ var fetchTrees = function(pageNum) {
       trees = trees.concat(
         response_trees.map(response_tree => {
           tree = response_tree.attributes;
-          tree.lat = response_tree.geometry.x;
-          tree.lng = response_tree.geometry.y;
+          tree.lng = response_tree.geometry.x;
+          tree.lat = response_tree.geometry.y;
           return tree;
         })
       );
