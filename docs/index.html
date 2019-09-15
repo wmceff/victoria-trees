@@ -3,31 +3,60 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
-      #map {
-        height: 100%;
-      }
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
+      #map {
+        height: 100%;
+      }
+      #bottom-bar {
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+      }
+      .bottom-btn {
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        box-shadow: 0 2px 6px rgba(0,0,0,.3);
+        cursor: pointer;
+        margin-bottom: 10px;
+        text-align: center;
+        color: rgb(25,25,25);
+        font-family: Roboto,Arial,sans-serif;
+        color: rgb(25,25,25);
+        font-size: 16px;
+        line-height: 38px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
 <body>
   <div id="map"></div>
+  <div id="bottom-bar">
+    <span class="bottom-btn" id="relocate">Relocate</span>
+    <span class="bottom-btn" id="search">Find trees in this area</span>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
   <script>
     let openInfoWindow;
     let markers = [];
+    let currentPositionMarker;
 
-    const fetchTrees = function(pos) {
+    const fetchTrees = function({ xmin, xmax, ymin, ymax }) {
       let params = '';
-      if (pos) {
+      if (xmin) {
         const radius = .001 // very roughly 1km around current position
-        params = `?xmin=${pos.lng + radius}&xmax=${pos.lng - radius}&ymin=${pos.lat-radius}&ymax=${pos.lat+radius}`
+        params = `?xmin=${xmin}&xmax=${xmax}&ymin=${ymin}&ymax=${ymax}`
       }
 
       const treesEndpoint = 'https://5s7vu0rlq6.execute-api.ca-central-1.amazonaws.com/production/trees'+params;
@@ -46,7 +75,7 @@
             position: { lat, lng },
             map: map,
             title: commonName,
-            icon: 'https://maps.google.com/mapfiles/kml/shapes/parks.png'
+            icon: 'https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
           });
 
           let infoWindowTemplate = `
@@ -78,7 +107,10 @@
 
         });
 
-        const markerCluster = new MarkerClusterer(map, markers, { imagePath: 'images/m', gridSize: 80 });
+        const markerCluster = new MarkerClusterer(map, markers, {
+          imagePath: 'images/m',
+          gridSize: 10
+        });
       });
     };
 
@@ -91,42 +123,21 @@
         tilt: 0
       });
 
-      function RefreshButton(controlDiv, map) {
-        const buttonText = 'Relocate';
+      document.getElementById('relocate').addEventListener('click', function() {
+        centerOnCurrentLocationAndFetch();
+      });
 
-        const controlUI = document.createElement('div');
-        controlUI.style.backgroundColor = '#fff';
-        controlUI.style.border = '2px solid #fff';
-        controlUI.style.borderRadius = '3px';
-        controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
-        controlUI.style.cursor = 'pointer';
-        controlUI.style.marginBottom = '10px';
-        controlUI.style.textAlign = 'center';
-        controlUI.title = buttonText;
-        controlDiv.appendChild(controlUI);
-
-        const controlText = document.createElement('div');
-        controlText.style.color = 'rgb(25,25,25)';
-        controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-        controlText.style.fontSize = '16px';
-        controlText.style.lineHeight = '38px';
-        controlText.style.paddingLeft = '5px';
-        controlText.style.paddingRight = '5px';
-        controlText.innerHTML = buttonText;
-        controlUI.appendChild(controlText);
-
-        controlUI.addEventListener('click', function() {
-          centerOnCurrentLocationAndFetch();
-        });
-      } // centerControl
-
-      // Create the DIV to hold the control and call the CenterControl()
-      // constructor passing in this DIV.
-      const centerControlDiv = document.createElement('div');
-      const refreshButton = new RefreshButton(centerControlDiv, map);
-
-      centerControlDiv.index = 1;
-      map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
+      document.getElementById('search').addEventListener('click', function() {
+        // get bounding box
+        // use those co-ords
+        const box = {
+          xmin: map.getBounds().getNorthEast().lng(),
+          xmax: map.getBounds().getSouthWest().lng(),
+          ymin: map.getBounds().getSouthWest().lat(),
+          ymax: map.getBounds().getNorthEast().lat()
+        }
+        fetchTrees(box);
+      });
 
       function centerOnCurrentLocationAndFetch() {
         // remove all markers
@@ -143,16 +154,30 @@
             };
 
             map.setCenter(pos);
-            map.setZoom(21);
-            const marker = new google.maps.Marker({
+            map.setZoom(20);
+
+            if (currentPositionMarker) {
+              currentPositionMarker.setMap(null);
+            }
+            currentPositionMarker = new google.maps.Marker({
               position: pos,
               map: map,
               title: 'You are here'
             });
 
-            fetchTrees(pos);
+            const radius = .001 // very roughly 1km around current position
+            const boundingBox = {
+              xmin: pos.lng + radius,
+              xmax: pos.lng - radius,
+              ymin: pos.lat - radius,
+              ymax: pos.lat + radius
+            }
+
+            fetchTrees(boundingBox);
           }, function() {
             alert('Had a problem finding your location - refresh and try again');
+          }, {
+            enableHighAccuracy: true
           });
         } else {
           fetchTrees();
