@@ -59,7 +59,8 @@
         params = `?xmin=${xmin}&xmax=${xmax}&ymin=${ymin}&ymax=${ymax}`
       }
 
-      const treesEndpoint = 'https://5s7vu0rlq6.execute-api.ca-central-1.amazonaws.com/production/trees'+params;
+      const deployment = "https://sb2tcoq1of.execute-api.us-west-2.amazonaws.com/production";
+      const treesEndpoint = deployment + '/trees' + params;
 
       fetch(treesEndpoint).then(function(response) {
         return response.json();
@@ -104,12 +105,12 @@
           });
 
           markers.push(marker);
-
         });
 
         const markerCluster = new MarkerClusterer(map, markers, {
           imagePath: 'images/m',
-          gridSize: 10
+          gridSize: 40,
+          maxZoom: 18
         });
       });
     };
