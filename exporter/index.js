@@ -3,7 +3,7 @@ const os = require("os");
 const fetch = require("node-fetch");
 const CSV = require("csv-string");
 
-const trees = [];
+let trees = [];
 const offset = 1000;
 
 var fetchTrees = function(pageNum) {
@@ -80,7 +80,7 @@ var fetchTrees = function(pageNum) {
         csv_rows = [];
 
         trees_csv = trees.map(tree => {
-          const tree_row = {
+          let tree_row = {
             object_id: tree.OBJECTID,
             // botanical_name: tree.BotanicalName, this is bunk dat\COPY trees(object_id,common_name,botanical_name,latitude,longitude,data,source)  FROM 'trees2.csv' DELIMITER ',' CSV;a
             common_name: tree.CommonName,
@@ -105,4 +105,4 @@ var fetchTrees = function(pageNum) {
     });
 };
 
-fetchTrees(1);
+fetchTrees(0);
