@@ -336,7 +336,7 @@
       const treeList = document.querySelector('#tree-list')
       treeList.innerHtml = '';
 
-      response.forEach((item) => {
+      response.species_counts.forEach((item) => {
         const textNode = document.createTextNode(item.common_name + ' ' + item.total);
         const listNode = document.createElement("li");
 
