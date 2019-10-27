@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.7.5)
+    faraday (0.17.0)
+      multipart-post (>= 1.2, < 3)
+    json (2.2.0)
+    multipart-post (2.1.1)
+    pg (1.1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv (~> 2.7)
+  faraday (~> 0.17.0)
+  json (~> 2.2)
+  pg (~> 1.1)
+
+BUNDLED WITH
+   2.0.2
