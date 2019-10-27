@@ -26,7 +26,9 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://wmceff.github.io/victoria-trees">
-        <b>Victoria Trees</b>
+        <span class="icon is-large">
+          <i class="fas fa-tree"></i>
+        </span>
       </a>
 
       <div class="navbar-item">
@@ -35,8 +37,8 @@
             <span class="icon is-large">
               <i class="fas fa-2x fa-search-location"></i>
             </span>
-            <span>Geolocate</span>
-          <a class="button" id="search-button" disabled>Find trees in this area</a>
+            <span class="is-hidden-mobile">Geolocate</span>
+            <a class="button" id="search-button" disabled>Populate <span class="is-hidden-mobile">&nbsp;this area</span></a>
           <a class="button" id="details-button">Details</a>
         </div>
       </div>
