@@ -1,3 +1,3 @@
-trees.csv
+*.csv
 node_modules
 .env

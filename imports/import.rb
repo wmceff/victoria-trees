@@ -10,7 +10,7 @@ begin
   # conn.exec('SELECT * FROM species WHERE properties = \'{}\'') do |results|
   conn.exec('SELECT id, name FROM species') do |results|
     results.each do |row|
-      # query the species API 
+      # query the species API
       puts "SEARCHING #{row['name']}"
       gbif_endpoint = "http://api.gbif.org/v1/species?name="
       response = JSON.parse(Faraday.get("#{gbif_endpoint}#{row['name']}").body)
