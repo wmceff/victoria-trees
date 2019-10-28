@@ -196,14 +196,16 @@
       });
       */
 
+      const zoomLimit = 15;
+
       map.addListener('bounds_changed', () => {
-        if (map.getZoom() > 16) {
+        if (map.getZoom() > zoomLimit) {
           enableSearchButton()
         }
       });
 
       map.addListener('zoom_changed', () => {
-        if (map.getZoom() <= 16) {
+        if (map.getZoom() <= zoomLimit) {
           beaconHillParkPoly.setVisible(true);
           markers.forEach((marker) => {
             marker.setVisible(false);
@@ -244,6 +246,11 @@
       }).then(function(response) {
         const trees = response; // .slice(0, 10);
 
+        const mapIcon = {
+          url: 'https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png',
+          scaledSize: new google.maps.Size(20, 20)
+        };
+
         trees.forEach(function(feature) {
           const lat = feature.latitude;
           const lng = feature.longitude;
@@ -253,8 +260,8 @@
             position: { lat, lng },
             map: map,
             title: commonName,
-            objectId: feature.object_id, // TODO: clean
-            icon: 'https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
+            // objectId: feature.object_id, // for finding trees in regions
+            icon: mapIcon
           });
 
           let infoWindowTemplate = `
@@ -295,6 +302,7 @@
 
         disableSearchButton();
       }).catch((error) => {
+        console.log(error);
         displayError();
       });
     } // fetchTrees
