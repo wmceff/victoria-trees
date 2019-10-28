@@ -24,7 +24,7 @@ begin
     puts "#{i} of #{trees.count}"
 
     # check if its in the database
-    r = conn.exec("INSERT INTO trees(object_id, botanical_name, common_name, latitude, longitude, data, source)
+    r = conn.exec("INSERT INTO trees(object_id, common_name, botanical_name, latitude, longitude, data, source)
       VALUES ($1, $2, $3, $4, $5, $6, $7)
       ON CONFLICT (object_id) DO NOTHING",
       [row[0], row[1], row[2], row[3], row[4], row[5], row[6]]

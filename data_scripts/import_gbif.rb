@@ -8,7 +8,7 @@ begin
   puts ENV['PGHOST']
 
   # conn.exec('SELECT * FROM species WHERE properties = \'{}\'') do |results|
-  conn.exec('SELECT id, name FROM species') do |results|
+  conn.exec('SELECT id, name FROM species ORDER BY properties DESC') do |results|
     results.each do |row|
       # query the species API
       puts "SEARCHING #{row['name']}"
