@@ -197,6 +197,16 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       scaledSize: new google.maps.Size(20, 20)
     };
 
+    const svgIcon = {
+      path: "M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z",
+      fillColor: '#000000',
+      fillOpacity: .9,
+      anchor: new google.maps.Point(0,0),
+      strokeWeight: 2,
+      strokeColor: '#FFFFFF',
+      scale: 0.03
+    };
+
     trees.forEach(function(feature) {
       const lat = feature.latitude;
       const lng = feature.longitude;
@@ -207,7 +217,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         map: map,
         title: commonName,
         // objectId: feature.object_id, // for finding trees in regions
-        icon: mapIcon
+        icon: svgIcon
       });
 
       let infoWindowTemplate = `
