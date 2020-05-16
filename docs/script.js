@@ -55,6 +55,8 @@ function initMap() {
         fetchTrees(boundingBox);
       }
 
+      let current_retries = 0;
+      const retries = 5;
       // try five times to improve location accuracy
       const getPositionAndTrees = function(callback) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -75,8 +77,14 @@ function initMap() {
             title: 'You are here',
           });
 
-          if(callback) {
-            callback(pos);
+          // populate trees on the first req
+          if (current_retries == 0) {
+            populateTreesForPosition(pos);
+          }
+
+          current_retries++;
+          if (current_retries < retries) {
+            setTimeout(getPositionAndTrees, 1000);
           }
         }, function() {
           alert('Had a problem finding your location - refresh and try again');
@@ -85,12 +93,7 @@ function initMap() {
           maximumAge: 500 // force device to re-fetch
         });
       }
-      for (let k=0; k<5; k++) {
-        // TODO: potentially do this at the end
-        getPositionAndTrees(populateTreesForPosition);
-        // update position without populating trees
-        setTimeout(getPositionAndTrees, k*1100);
-      }
+      getPositionAndTrees();
     } else {
       fetchTrees();
     }
