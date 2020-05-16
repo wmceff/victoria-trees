@@ -1,6 +1,7 @@
 let openInfoWindow;
 let markers = [];
 let currentPositionMarker;
+let lastPos = { lat: 0, lng: 0 };
 const apiDeployment = "https://sb2tcoq1of.execute-api.us-west-2.amazonaws.com/production";
 
 // set map height
@@ -44,7 +45,7 @@ function initMap() {
         });
         markers = [];
 
-        const radius = 0.001 // roughly 2km around current position
+        const radius = 0.0008 // roughly 2km around current position
         const boundingBox = {
           xmin: pos.lng + radius,
           xmax: pos.lng - radius,
@@ -56,7 +57,7 @@ function initMap() {
       }
 
       let current_retries = 0;
-      const retries = 5;
+      const retries = 8;
       // try five times to improve location accuracy
       const getPositionAndTrees = function(callback) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -65,24 +66,47 @@ function initMap() {
             lng: position.coords.longitude
           };
 
+          // set zoom according to diff in last position (less diff = closer zoom)
+          error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng)
+
+          if (error < 0.0002) {
+            map.setZoom(20);
+          } else if(error < 0.0008) {
+            map.setZoom(19);
+          } else {
+            map.setZoom(18);
+          }
           map.setCenter(pos);
-          map.setZoom(20);
+
+          lastPos.lat = pos.lat;
+          lastPos.lng = pos.lng;
+
 
           if (currentPositionMarker) {
-            currentPositionMarker.setMap(null);
-          }
-          currentPositionMarker = new google.maps.Marker({
-            position: pos,
-            map: map,
-            title: 'You are here',
-          });
-
-          // populate trees on the first req
-          if (current_retries == 0) {
-            populateTreesForPosition(pos);
+            currentPositionMarker.setPosition(pos);
+          } else {
+            currentPositionMarker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: 'You are here',
+              icon: {
+                path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
+                fillColor: '#4285F4',
+                fillOpacity: .7,
+                strokeWeight: 5,
+                strokeColor: '#FFFFFF',
+                strokeOpacity: 0.9,
+                scale: 0.1,
+                anchor: new google.maps.Point(250, 250),
+              }
+            });
           }
 
           current_retries++;
+          // populate trees on the first req
+          if (current_retries == retries) {
+            populateTreesForPosition(pos);
+          }
           if (current_retries < retries) {
             setTimeout(getPositionAndTrees, 1000);
           }
@@ -340,3 +364,53 @@ function filterMarkers(common_name) {
   });
 }
 */
+
+// override geolocation to simuluate being outside
+let testMode = false;
+if (testMode) {
+  let i = 0;
+  navigator.geolocation.getCurrentPosition = function(callback) {
+    coords = [
+      {
+        latitude: 48.414222,
+        longitude: -123.360474
+      },
+      {
+        latitude: 48.414136,
+        longitude: -123.362073
+      },
+      {
+        latitude: 48.414378,
+        longitude: -123.361644
+      },
+      {
+        latitude: 48.414434,
+        longitude: -123.361819
+      },
+      {
+        latitude: 48.414324,
+        longitude: -123.361846
+      },
+      {
+        latitude: 48.414334,
+        longitude: -123.361846
+      },
+      {
+        latitude: 48.414324,
+        longitude: -123.361746
+      },
+      {
+        latitude: 48.414334,
+        longitude: -123.361746
+      },
+    ];
+
+    const return_value = {
+      coords: coords[i]
+    }
+
+    i += 1;
+
+    setTimeout(callback(return_value), 200);
+  }
+}
