@@ -165,6 +165,10 @@ function initMap() {
       });
     }
   });
+
+  // hide the nav bar
+  window.scrollTo(0, 1);
+
 } // initMap
 
 function fetchTrees({ xmin, xmax, ymin, ymax }) {
