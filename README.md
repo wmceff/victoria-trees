@@ -8,17 +8,20 @@ Uses the
 [victoria trees dataset](http://opendata.victoria.ca/datasets/tree-species)
 provided by the City of Victoria.
 
-## Structure
+## Development
 
-- [`/api`] - basic serverless api functions (Lambda)
-- [`/docs`] - the website
-- [`/export`] - a script to export the Victoria Trees dataset to CSV with lat &
-  long
-
-to test the page, visit the docs directory and run
+To test the page, visit the docs directory and run
 `python -m SimpleHTTPServer 8081`
 
 ## Export
 
 To get the CSV data into a database, in `psql` do something like
 `\COPY trees(object_id,common_name,botanical_name,latitude,longitude,data,source) FROM 'trees.csv' DELIMITER ',' CSV;`
+
+## Structure
+
+- [`/api`] - basic serverless api functions (Lambda)
+- [`/docs`] - the website
+- [`/data_scripts`] - some scripts to import data from various sources(City of Victoria, GBIF species)
+- [`/export`] - a script to export the Victoria Trees dataset to CSV with lat &
+  long
