@@ -104,7 +104,7 @@ function initMap() {
 
           current_retries++;
           // populate trees on the first req
-          if (current_retries == retries) {
+          if (current_retries == 3) {
             populateTreesForPosition(pos);
           }
           if (current_retries < retries) {
@@ -226,9 +226,10 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
     };
 
     const svgIcon = {
-      path: "M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm80 248c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80z",
-      fillColor: '#000000',
-      fillOpacity: .9,
+      path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
+      fillColor: '#1dd70d',
+      // darker - #0a6402
+      fillOpacity: 1,
       anchor: new google.maps.Point(0,0),
       strokeWeight: 2,
       strokeColor: '#FFFFFF',
@@ -251,11 +252,11 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
           <h1>${feature.common_name}</h1>
-          <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a>
+          <p><b>Wikipedia</b>: <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a></p>
       `;
       const genus = feature.botanical_name.split(" ")[0];
       if (genus) {
-        infoWindowTemplate += `<br><a href='https://en.m.wikipedia.org/?title=${genus}' target='_blank'>${genus}</a>`;
+        infoWindowTemplate += `<p><b>Genus</b>: <a href='https://en.m.wikipedia.org/?title=${genus}' target='_blank'>${genus}</a></p>`;
       }
       infoWindowTemplate += '</div>';
 
@@ -266,11 +267,15 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       });
 
       marker.addListener('click', function() {
+        document.getElementById('tree-modal').classList.add('is-active');
+        document.getElementById('tree-modal-content').innerHTML = infoWindowTemplate;
+        /*
         if (openInfoWindow) {
           openInfoWindow.close();
         };
         infoWindow.open(map, marker);
         openInfoWindow = infoWindow;
+        */
       });
 
       markers.push(marker);
@@ -298,72 +303,6 @@ function enableSearchButton() {
 function disableSearchButton() {
   document.getElementById('search-button').setAttribute('disabled', 'disabled');
 }
-
-/*
-// fetch region details
-fetch(apiDeployment + '/regions/1').then((response) => {
-  if (response.status > 300) {
-    displayError();
-  }
-  return response.json();
-}).then(function(response) {
-  // tree list
-  const infoSection = document.querySelector('.info-section');
-  
-  const treeList = document.querySelector('#tree-list')
-  treeList.innerHtml = '';
-
-  response.species_counts.forEach((item) => {
-    const textNode = document.createTextNode(item.common_name + ' ' + item.total);
-    const listNode = document.createElement("li");
-
-    listNode.appendChild(textNode);
-
-    const filterNode = document.createElement("a");
-    // filterNode.setAttribute('data-derpy', item.common_name);
-    filterNode.classList.add('button');
-    filterNode.classList.add('filter-button');
-    filterNode.addEventListener('click', () => {
-      filterMarkers(item.common_name);
-      document.querySelector('.info-section').classList.toggle('is-hidden');
-    });
-    const filterTextNode = document.createTextNode("FILTER");
-
-    filterNode.append(filterTextNode);
-
-    listNode.appendChild(filterNode);
-
-    treeList.appendChild(listNode);
-  });
-});
-// Display list of trees on screen
-/*
-document.getElementById('details-button').addEventListener('click', function() {
-  const infoSection = document.querySelector('.info-section');
-  
-  infoSection.classList.toggle('is-hidden');
-
-  const treeList = document.querySelector('#tree-list')
-  treeList.innerHtml = '';
-
-  markers.forEach((item) => {
-    const textNode = document.createTextNode(item.title);
-    const listNode = document.createElement("li");
-    listNode.appendChild(textNode);
-    treeList.appendChild(listNode);
-  });
-});
-
-function filterMarkers(common_name) {
-  markers.forEach((marker) => {
-    if (marker.title !== common_name) {
-      marker.setVisible(false);
-    } else {
-      marker.setVisible(true);
-    }
-  });
-}
-*/
 
 // override geolocation to simuluate being outside
 let testMode = false;
@@ -414,3 +353,8 @@ if (testMode) {
     setTimeout(callback(return_value), 200);
   }
 }
+
+
+document.getElementById('tree-modal-background').addEventListener('click', function() {
+  document.getElementById('tree-modal').classList.remove('is-active');
+});
