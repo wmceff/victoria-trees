@@ -10,3 +10,10 @@
   border-radius: 100px;
   padding: 1rem;
 }
+
+/* taking a gamle there won't be any other text nested this far down */
+.gm-style div div div div div div div {
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}

@@ -221,22 +221,6 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
   }).then(function(response) {
     const trees = response; // .slice(0, 10);
 
-    const mapIcon = {
-      url: 'https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png',
-      scaledSize: new google.maps.Size(20, 20)
-    };
-
-    const svgIcon = {
-      path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
-      fillColor: '#1dd70d',
-      // darker - #0a6402
-      fillOpacity: 1,
-      anchor: new google.maps.Point(0,0),
-      strokeWeight: 2,
-      strokeColor: '#FFFFFF',
-      scale: 0.03
-    };
-
     trees.forEach(function(feature) {
       const lat = feature.latitude;
       const lng = feature.longitude;
@@ -245,9 +229,24 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       const marker = new google.maps.Marker({
         position: { lat, lng },
         map: map,
-        title: commonName,
+        // title: commonName,
         // objectId: feature.object_id, // for finding trees in regions
-        icon: svgIcon
+        label: {
+          color: 'white',
+          fontWeight: 'bold',
+          text: commonName,
+        },
+        icon: {
+          path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
+          fillColor: '#1dd70d',
+          // darker - #0a6402
+          fillOpacity: 1,
+          anchor: new google.maps.Point(600,600),
+          labelOrigin: new google.maps.Point(300,900),
+          strokeWeight: 2,
+          strokeColor: '#FFFFFF',
+          scale: 0.02
+        }
       });
 
       let infoWindowTemplate = `
