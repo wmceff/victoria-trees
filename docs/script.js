@@ -195,15 +195,16 @@ function initMap() {
 
 } // initMap
 
+function displayError() {
+  alert('Whoops, something went wrong on our end. The database might be waking up - try refreshing in a minute.');
+};
+
+// fetch trees from API within box
 function fetchTrees({ xmin, xmax, ymin, ymax }) {
   let params = '';
   if (xmin) {
     params = `?xmin=${xmin}&xmax=${xmax}&ymin=${ymin}&ymax=${ymax}`
   }
-
-  const displayError = () => {
-    alert('Whoops, something went wrong on our end. The database might be waking up - try refreshing in a minute.');
-  };
 
   // mark button
   const geolocateButton = document.getElementById('geolocate');
@@ -258,24 +259,25 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       if (genus) {
         infoWindowTemplate += `<p><b>Genus</b>: <a href='https://en.m.wikipedia.org/?title=${genus}' target='_blank'>${genus}</a></p>`;
       }
+      infoWindowTemplate += '<p id="tree-content-custom"></p>';
       infoWindowTemplate += '</div>';
-
-      // info window is 250px  on an iphone6 - 12px margin
-      // could probably do soemthing better with window size
-      let infoWindow = new google.maps.InfoWindow({
-        content: infoWindowTemplate
-      });
 
       marker.addListener('click', function() {
         document.getElementById('tree-modal').classList.add('is-active');
         document.getElementById('tree-modal-content').innerHTML = infoWindowTemplate;
-        /*
-        if (openInfoWindow) {
-          openInfoWindow.close();
-        };
-        infoWindow.open(map, marker);
-        openInfoWindow = infoWindow;
-        */
+        console.log(feature.id);
+        fetchTree(feature.id).then(function(tree) {
+          const species = tree.species;
+          document.getElementById('tree-content-custom').innerHTML = `
+            <ul>
+              <li>Species name: ${species.name}</li>
+              <li>Native: ${species.native}</li>
+              <li>Native to: ${species.native_region}</li>
+              <li>There are <b>${species.tree_count}</b> of these trees in the City of Victoria.</li>
+              <li>Notes: ${species.description}</li>
+            </ul>
+          `
+        });
       });
 
       markers.push(marker);
@@ -354,7 +356,22 @@ if (testMode) {
   }
 }
 
-
 document.getElementById('tree-modal-background').addEventListener('click', function() {
   document.getElementById('tree-modal').classList.remove('is-active');
 });
+
+// fetch detailed tree information
+function fetchTree(id) {
+  const treesEndpoint = 'https://victoria-trees-admin.herokuapp.com/trees/' + id;
+
+  return fetch(treesEndpoint).then(function(response) {
+    if (response.status > 300) {
+      displayError();
+    }
+    return response.json();
+  }).catch((error) => {
+    console.log(error);
+    displayError();
+  });
+}
+
