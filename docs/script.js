@@ -175,6 +175,20 @@ function initMap() {
   });
 
   map.addListener('zoom_changed', () => {
+    if (map.getZoom() < 20) {
+      markers.forEach((marker) => {
+        marker.setLabel('');
+      });
+    } else {
+      markers.forEach((marker) => {
+        marker.setLabel({
+          color: 'white',
+          fontWeight: 'bold',
+          text: marker.name,
+        })
+      });
+    };
+
     if (map.getZoom() <= zoomLimit) {
       beaconHillParkPoly.setVisible(true);
       markers.forEach((marker) => {
@@ -190,8 +204,15 @@ function initMap() {
     }
   });
 
-  // hide the nav bar
-  window.scrollTo(0, 1);
+  map.addListener('dragend', () => {
+    const box = {
+      xmin: map.getBounds().getNorthEast().lng(),
+      xmax: map.getBounds().getSouthWest().lng(),
+      ymin: map.getBounds().getSouthWest().lat(),
+      ymax: map.getBounds().getNorthEast().lat()
+    }
+    fetchTrees(box);
+  })
 
 } // initMap
 
@@ -246,7 +267,8 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
           strokeWeight: 2,
           strokeColor: '#FFFFFF',
           scale: 0.02
-        }
+        },
+        name: commonName
       });
 
       let infoWindowTemplate = `
