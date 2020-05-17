@@ -224,7 +224,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
     trees.forEach(function(feature) {
       const lat = feature.latitude;
       const lng = feature.longitude;
-      const commonName = feature.common_name;
+      const commonName = feature.species_common_name;
 
       const marker = new google.maps.Marker({
         position: { lat, lng },
@@ -251,32 +251,47 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
 
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
-          <h1>${feature.common_name}</h1>
+          <h1>${feature.species_common_name}</h1>
+          <p id="tree-content-custom"></p>
           <p><b>Wikipedia</b>: <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a></p>
       `;
       const genus = feature.botanical_name.split(" ")[0];
       if (genus) {
         infoWindowTemplate += `<p><b>Genus</b>: <a href='https://en.m.wikipedia.org/?title=${genus}' target='_blank'>${genus}</a></p>`;
       }
-      infoWindowTemplate += '<p id="tree-content-custom"></p>';
       infoWindowTemplate += '</div>';
 
       marker.addListener('click', function() {
         document.getElementById('tree-modal').classList.add('is-active');
         document.getElementById('tree-modal-content').innerHTML = infoWindowTemplate;
         console.log(feature.id);
-        fetchTree(feature.id).then(function(tree) {
-          const species = tree.species;
-          document.getElementById('tree-content-custom').innerHTML = `
-            <ul>
-              <li>Species name: ${species.name}</li>
-              <li>Native: ${species.native}</li>
-              <li>Native to: ${species.native_region}</li>
-              <li>There are <b>${species.tree_count}</b> of these trees in the City of Victoria.</li>
-              <li>Notes: ${species.description}</li>
-            </ul>
-          `
-        });
+        if (feature.id) {
+          fetchTree(feature.id).then(function(tree) {
+            const species = tree.species;
+            let treeDetailsHTML = '';
+
+            if (species.native) {
+              treeDetailsHTML += '<p>This species is native to Victoria.</p>';
+            } else {
+              treeDetailsHTML += `<p>This species is native to ${species.native_region}.</p>`;
+            }
+            
+            // This is jank, could do a DB query for this if we REALY want to is 32284
+            const totalVicTrees = 32284;
+            const treePercentage = Math.round(((species.tree_count / totalVicTrees) * 100 * 100) + Number.EPSILON) / 100;
+            treeDetailsHTML += `
+              <p>
+                There are <b>${species.tree_count}</b> of these trees in the City of Victoria.
+                (<b>${treePercentage}%</b>)
+              </p>`;
+
+            if (species.description) {
+              treeDetailsHTML += `<p>${species.description}</p>`;
+            }
+
+            document.getElementById('tree-content-custom').innerHTML = treeDetailsHTML;
+          });
+        }
       });
 
       markers.push(marker);
@@ -355,9 +370,13 @@ if (testMode) {
   }
 }
 
-document.getElementById('tree-modal-background').addEventListener('click', function() {
+const closeModal = () => {
   document.getElementById('tree-modal').classList.remove('is-active');
-});
+}
+document.getElementById('tree-modal-background')
+  .addEventListener('click', closeModal);
+document.querySelector('.modal-close')
+  .addEventListener('click', closeModal);
 
 // fetch detailed tree information
 function fetchTree(id) {
