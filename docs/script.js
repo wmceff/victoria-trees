@@ -34,7 +34,7 @@ function initMap() {
     fetchTrees(box);
   };
 
-  document.getElementById('search-button').addEventListener('click', findTreesForCurrentPosition);
+  // document.getElementById('search-button').addEventListener('click', findTreesForCurrentPosition);
 
   function centerOnCurrentLocationAndFetch() {
     if (navigator.geolocation) {
@@ -262,8 +262,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         },
         icon: {
           path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
-          fillColor: '#1dd70d',
-          // darker - #0a6402
+          fillColor: (feature.species_order == 'Pinales') ? '#0a6402' : '#1dd70d',
           fillOpacity: 1,
           anchor: new google.maps.Point(600,600),
           labelOrigin: new google.maps.Point(300,900),
@@ -277,13 +276,10 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
           <h1>${feature.species_common_name}</h1>
+          <p><b>${feature.botanical_name}</b></p>
           <p id="tree-content-custom"></p>
-          <p><b>Wikipedia</b>: <a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>${feature.botanical_name}</a></p>
+          <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
       `;
-      const genus = feature.botanical_name.split(" ")[0];
-      if (genus) {
-        infoWindowTemplate += `<p><b>Genus</b>: <a href='https://en.m.wikipedia.org/?title=${genus}' target='_blank'>${genus}</a></p>`;
-      }
       infoWindowTemplate += '</div>';
 
       marker.addListener('click', function() {
@@ -295,10 +291,15 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
             const species = tree.species;
             let treeDetailsHTML = '';
 
-            if (species.native) {
-              treeDetailsHTML += '<p>This species is native to Victoria.</p>';
-            } else {
-              treeDetailsHTML += `<p>This species is native to ${species.native_region}.</p>`;
+            if (species.native_region) {
+              treeDetailsHTML += `<p>This tree is native to `;
+              treeDetailsHTML += species.native_region;
+              if (species.native) {
+                treeDetailsHTML += ', including Victoria'
+              }
+              treeDetailsHTML += '.</p>';
+            } else if (species.native) {
+              treeDetailsHTML += '<p>This tree is native to Victoria.</p>';
             }
             
             // This is jank, could do a DB query for this if we REALY want to is 32284
@@ -306,7 +307,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
             const treePercentage = Math.round(((species.tree_count / totalVicTrees) * 100 * 100) + Number.EPSILON) / 100;
             treeDetailsHTML += `
               <p>
-                There are <b>${species.tree_count}</b> of these trees in the City of Victoria.
+                The City of Victoria has <b>${species.tree_count}</b> of these trees on record.
                 (<b>${treePercentage}%</b>)
               </p>`;
 
@@ -338,11 +339,11 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
 } // fetchTrees
 
 function enableSearchButton() {
-  document.getElementById('search-button').removeAttribute('disabled');
+  // document.getElementById('search-button').removeAttribute('disabled');
 }
 
 function disableSearchButton() {
-  document.getElementById('search-button').setAttribute('disabled', 'disabled');
+  // document.getElementById('search-button').setAttribute('disabled', 'disabled');
 }
 
 // override geolocation to simuluate being outside
@@ -395,13 +396,22 @@ if (testMode) {
   }
 }
 
+const aboutModal = document.getElementById('about-modal');
+document.getElementById('about').addEventListener('click', function() {
+  aboutModal.classList.add('is-active');
+});
+
 const closeModal = () => {
-  document.getElementById('tree-modal').classList.remove('is-active');
+  document.querySelectorAll('.modal').forEach((el) => {
+    el.classList.remove('is-active');
+  });
 }
-document.getElementById('tree-modal-background')
-  .addEventListener('click', closeModal);
-document.querySelector('.modal-close')
-  .addEventListener('click', closeModal);
+document.querySelectorAll('.modal-background').forEach((el) => {
+  el.addEventListener('click', closeModal);
+});
+document.querySelectorAll('.modal-close').forEach((el) => {
+  el.addEventListener('click', closeModal);
+});
 
 // fetch detailed tree information
 function fetchTree(id) {

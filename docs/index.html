@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+    <title>Victoria Trees</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
@@ -26,45 +27,6 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
 <body>
-  <!--
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://wmceff.github.io/victoria-trees">
-        <span class="icon is-large">
-          <i class="fas fa-tree"></i>
-        </span>
-      </a>
-
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" id="relocate-button">
-            <span class="icon is-large">
-              <i class="fas fa-2x fa-search-location"></i>
-            </span>
-            <span class="is-hidden-mobile">Geolocate</span>
-            <a class="button" id="search-button" disabled>Populate <span class="is-hidden-mobile">&nbsp;this area</span></a>
-          <a class="button" id="details-button">Details</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="navbar" class="navbar-menu is-active">
-      <div class="navbar-start"></div>
-      <div class="navbar-end"></div>
-      </div>
-    </div>
-    
-    <section class="section info-section is-hidden">
-      <div class="container">
-        <h1 class="title">Trees on-screen</h1>
-        <ul id="tree-list">
-        </ul>
-      </div>
-    </section>
-  </nav>
-  -->
-
   <div id="map-container">
     <div id="map"></div>
   </div>
@@ -75,11 +37,26 @@
         <i class="fas fa-location-arrow"></i>
       </span>
     </div>
-    <div id="search-button" class="box">
+    <div id="about" class="box">
       <span class="icon">
-        <i class="fas fa-redo"></i>
+        <i class="fas fa-question"></i>
       </span>
     </div>
+  </div>
+
+  <div class="modal" id="about-modal">
+    <div class="modal-background" id="tree-modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div class="content">
+          <h1>About this map</h1>
+          <p>This map displays all of the trees the City of Victoria keeps track of <a href="http://opendata.victoria.ca/datasets/tree-species">here</a>. Inspired by <a href="http://naturevictoria.com">James Clowater</a>'s website <a href="http://treesofvictoria.com/">Trees of Victoria</a>.</p>
+          <p>We've cleaned up their data and provided some additional points of interest about the trees.</p>
+          <p><a href="https://github.com/wmceff/victoria-trees">Source on Github</a></p>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
   <div class="modal" id="tree-modal">

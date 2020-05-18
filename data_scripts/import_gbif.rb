@@ -13,7 +13,10 @@ begin
       # query the species API
       puts "SEARCHING #{row['name']}"
       gbif_endpoint = "http://api.gbif.org/v1/species?name="
-      response = JSON.parse(Faraday.get("#{gbif_endpoint}#{row['name']}").body)
+      # deal with hybrids
+      species_name = row['name'].gsub('× ', '×')
+      url = URI.encode("#{gbif_endpoint}#{species_name}")
+      response = JSON.parse(Faraday.get(url).body)
       properties = response['results'][0]
 
       puts "Nothing found for #{row['name']} - skipping" unless properties
