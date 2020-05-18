@@ -216,6 +216,12 @@ function initMap() {
 
   map.addListener('dragend', () => {
     dragging = false;
+
+    // remove old markers
+    markers.forEach((marker, index) => {
+      marker.setMap(null);
+    });
+
     const box = {
       xmin: map.getBounds().getNorthEast().lng(),
       xmax: map.getBounds().getSouthWest().lng(),
@@ -281,10 +287,11 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         name: commonName
       });
 
+      // TODO: handle botanical name when contains cultivar
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
           <h1>${feature.species_common_name}</h1>
-          <p><b>${feature.botanical_name}</b></p>
+          <p><b>${feature.species_name}</b></p>
           <p id="tree-content-custom"></p>
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
       `;
