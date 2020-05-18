@@ -104,7 +104,7 @@ function initMap() {
 
           current_retries++;
           // populate trees on the first req
-          if (current_retries == 3) {
+          if (current_retries == 3 || current_retries == retries) {
             populateTreesForPosition(pos);
           }
           if (current_retries < retries) {
@@ -166,7 +166,7 @@ function initMap() {
   });
   */
 
-  const zoomLimit = 15;
+  const zoomLimit = 16;
 
   map.addListener('bounds_changed', () => {
     if (map.getZoom() > zoomLimit) {
@@ -175,6 +175,7 @@ function initMap() {
   });
 
   map.addListener('zoom_changed', () => {
+    // only display text if in a closer zoom
     if (map.getZoom() < 20) {
       markers.forEach((marker) => {
         marker.setLabel('');
@@ -211,7 +212,9 @@ function initMap() {
       ymin: map.getBounds().getSouthWest().lat(),
       ymax: map.getBounds().getNorthEast().lat()
     }
-    fetchTrees(box);
+    if (map.getZoom() > 18) {
+      fetchTrees(box);
+    }
   })
 
 } // initMap
