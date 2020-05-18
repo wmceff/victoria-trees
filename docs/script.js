@@ -2,6 +2,7 @@ let openInfoWindow;
 let markers = [];
 let currentPositionMarker;
 let lastPos = { lat: 0, lng: 0 };
+let dragging = false;
 const apiDeployment = "https://sb2tcoq1of.execute-api.us-west-2.amazonaws.com/production";
 
 // set map height
@@ -100,6 +101,10 @@ function initMap() {
                 anchor: new google.maps.Point(250, 250),
               }
             });
+          }
+
+          if(dragging) {
+            return;
           }
 
           current_retries++;
@@ -205,7 +210,12 @@ function initMap() {
     }
   });
 
+  map.addListener('dragstart', () => {
+    dragging =true;
+  });
+
   map.addListener('dragend', () => {
+    dragging = false;
     const box = {
       xmin: map.getBounds().getNorthEast().lng(),
       xmax: map.getBounds().getSouthWest().lng(),
@@ -253,12 +263,10 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       const marker = new google.maps.Marker({
         position: { lat, lng },
         map: map,
-        // title: commonName,
-        // objectId: feature.object_id, // for finding trees in regions
         label: {
           color: 'white',
           fontWeight: 'bold',
-          text: commonName,
+          text: (commonName) ? commonName : feature.common_name,
         },
         icon: {
           path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
@@ -289,6 +297,9 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         if (feature.id) {
           fetchTree(feature.id).then(function(tree) {
             const species = tree.species;
+            if (!species){
+              return;
+            }
             let treeDetailsHTML = '';
 
             if (species.native_region) {
