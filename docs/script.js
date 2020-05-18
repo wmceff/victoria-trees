@@ -291,7 +291,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
           <h1>${feature.species_common_name}</h1>
-          <p><b>${feature.species_name}</b></p>
+          <p><b>${(feature.botanical_name.includes("'")) ? feature.botanical_name : feature.species_name}</b></p>
           <p id="tree-content-custom"></p>
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
       `;
@@ -321,7 +321,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
             }
             
             // This is jank, could do a DB query for this if we REALY want to is 32284
-            const totalVicTrees = 32284;
+            const totalVicTrees = 33081;
             const treePercentage = Math.round(((species.tree_count / totalVicTrees) * 100 * 100) + Number.EPSILON) / 100;
             treeDetailsHTML += `
               <p>

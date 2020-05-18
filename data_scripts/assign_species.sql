@@ -1,16 +1,17 @@
 -- remove " spp" or " species" from botanical_names
 UPDATE trees
 SET botanical_name = regexp_replace(botanical_name, ' spp\.', '')
-WHERE botanical_name LIKE '% spp%'
+WHERE botanical_name LIKE '% spp%';
 
 UPDATE trees
 SET botanical_name = regexp_replace(botanical_name, ' species', '')
-WHERE botanical_name LIKE '% species%'
+WHERE botanical_name LIKE '% species%';
 
 -- clean up cultivar names
 UPDATE trees
 SET botanical_name = REGEXP_REPLACE(botanical_name, '\"', '''', 'g');
 
+/* these live in the rails app now
 -- set the first two names as the "species name" in trees table
 UPDATE trees SET species_name = regexp_replace(botanical_name, '(\w+ \w+)(.*)', '\1');
 
@@ -43,3 +44,4 @@ from (
 	SELECT id, (regexp_matches(botanical_name, '\A(\w+ \w+)'))[1] as botanical_name FROM trees
 )two_word_trees
 GROUP BY botanical_name
+*/
