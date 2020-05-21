@@ -177,10 +177,13 @@ function initMap() {
     const footerText = document.getElementById('footer-text');
     const zoom = map.getZoom();
     if (zoom < 18) {
-      footerText.innerHTML = 'zoom in to see some trees on the map';
+      footerText.style.display = 'block';
+      footerText.innerHTML = 'zoom in to see the trees';
     } else {
-      footerText.innerHTML = 'tap trees to see info about them';
+      // make some real estate for the trees
+      footerText.style.display = 'none';
     }
+    // TODO: show a tooltip if no trees in this area
 
     // only display city of vic less than 14 zoom
     cityOfVictoriaPoly.setVisible(map.getZoom() <= 14);  
