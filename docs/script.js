@@ -3,17 +3,20 @@ let markers = [];
 let currentPositionMarker;
 let lastPos = { lat: 0, lng: 0 };
 let dragging = false;
+let map;
+let victoriaShape, beaconHillParkShape;
+let locating = false;
+
 const apiDeployment = "https://sb2tcoq1of.execute-api.us-west-2.amazonaws.com/production";
 
 // set map height
 const navbarHeight = 0; // 56;
 document.getElementById('map-container').setAttribute('style', 'height:'+(window.innerHeight - navbarHeight)+'px');
 
-var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 48.413489, lng: -123.363524},
-    zoom: 18,
+    center: {lat: 48.426867, lng: -123.36059},
+    zoom: 13,
     mapTypeId: google.maps.MapTypeId.HYBRID,
     tilt: 0,
     disableDefaultUI: true
@@ -57,6 +60,7 @@ function initMap() {
         fetchTrees(boundingBox);
       }
 
+      locating = true;
       let current_retries = 0;
       const retries = 8;
       // try five times to improve location accuracy
@@ -77,11 +81,16 @@ function initMap() {
           } else {
             map.setZoom(18);
           }
+
+          if (dragging) {
+            locating = false;
+            return;
+          }
+
           map.setCenter(pos);
 
           lastPos.lat = pos.lat;
           lastPos.lng = pos.lng;
-
 
           if (currentPositionMarker) {
             currentPositionMarker.setPosition(pos);
@@ -103,11 +112,11 @@ function initMap() {
             });
           }
 
-          if(dragging) {
-            return;
-          }
-
           current_retries++;
+          // signify that were done so it stops refetching
+          if (current_retries == retries) {
+            locating = false;
+          }
           // populate trees on the first req
           if (current_retries == 3 || current_retries == retries) {
             populateTreesForPosition(pos);
@@ -123,100 +132,17 @@ function initMap() {
         });
       }
       getPositionAndTrees();
-    } else {
-      fetchTrees();
-    }
-  }
+    } // if navigator.geolocate
+  } // function centerOnCurrentLocationAndFetch
 
-  centerOnCurrentLocationAndFetch();
+  // add the map & park sections
+  addShapes();
 
-  /* example drawing polygon to find trees within it
-     you need to customize the labmda to send object_id */
+  // TODO - WAIT ON UI FOR THIS? INITIAL LOAD?!
+  // centerOnCurrentLocationAndFetch();
 
-  var beaconHillParkPoints = [
-    [48.409197, -123.367862], // mile 0
-    [48.410091, -123.368837],
-    [48.410726, -123.368720], 
-    [48.415891, -123.365847], //toronto st
-    [48.418512, -123.365675], //southgate st
-    [48.418362, -123.364718],
-    [48.417881, -123.364015],
-    [48.417774, -123.363780],
-    [48.417543, -123.362423],
-    [48.417529, -123.362271],
-    [48.416735, -123.360421], // southgate heywood
-    [48.416539, -123.360533],
-    [48.412843, -123.360614],
-    [48.412786, -123.357268],
-    [48.407915, -123.357888],
-    [48.407730, -123.358831],
-    [48.408528, -123.362026],
-  ];
-  window.beaconHillParkPoly = new google.maps.Polygon({
-    strokeColor: "#1E41AA",
-    strokeOpacity: 1.0,
-    strokeWeight: 3,
-    map: map,
-    fillColor: "#2652F2",
-    fillOpacity: 0.6,
-    paths: beaconHillParkPoints.map((p) => ({ lat: p[0], lng: p[1] }))
-  });
-
-  /* example calculating markers within bounds
-  const objectIds = [];
-  markers.forEach((marker, i) => {
-    if (google.maps.geometry.poly.containsLocation(markers[i].getPosition(), beaconHillParkPoly)) {
-      objectIds.push(marker.objectId)
-    }
-  });
-  */
-
-  const zoomLimit = 16;
-
-  map.addListener('bounds_changed', () => {
-    if (map.getZoom() > zoomLimit) {
-      enableSearchButton()
-    }
-  });
-
-  map.addListener('zoom_changed', () => {
-    // only display text if in a closer zoom
-    if (map.getZoom() < 20) {
-      markers.forEach((marker) => {
-        marker.setLabel('');
-      });
-    } else {
-      markers.forEach((marker) => {
-        marker.setLabel({
-          color: 'white',
-          fontWeight: 'bold',
-          text: marker.name,
-        })
-      });
-    };
-
-    if (map.getZoom() <= zoomLimit) {
-      beaconHillParkPoly.setVisible(true);
-      markers.forEach((marker) => {
-        marker.setVisible(false);
-      });
-      disableSearchButton();
-    } else {
-      beaconHillParkPoly.setVisible(false);
-      enableSearchButton();
-      markers.forEach((marker) => {
-        marker.setVisible(true);
-      });
-    }
-  });
-
-  map.addListener('dragstart', () => {
-    dragging =true;
-  });
-
-  map.addListener('dragend', () => {
-    dragging = false;
-
+  // event listening
+  const fetchTreesForCurrentBox = () => {
     // remove old markers
     markers.forEach((marker, index) => {
       marker.setMap(null);
@@ -228,11 +154,63 @@ function initMap() {
       ymin: map.getBounds().getSouthWest().lat(),
       ymax: map.getBounds().getNorthEast().lat()
     }
-    if (map.getZoom() > 18) {
+
+    // fetch trees depending on zoom level
+    // TODO: get more intelligent about this
+    if (map.getZoom() > 17) {
       fetchTrees(box);
     }
-  })
+  }
 
+  const zoomLimit = 16;
+
+  map.addListener('zoom_changed', () => {
+    // only show header when zoomed out
+    const header = document.getElementById('header');
+    if (map.getZoom() > 14) {
+      header.style.display = 'none';
+    } else {
+      header.style.display = 'block';
+    }
+
+    // show different text at diff zoom levels
+    const footerText = document.getElementById('footer-text');
+    const zoom = map.getZoom();
+    if (zoom < 18) {
+      footerText.innerHTML = 'zoom in to see some trees on the map';
+    } else {
+      footerText.innerHTML = 'tap trees to see info about them';
+    }
+
+    // only display city of vic less than 14 zoom
+    cityOfVictoriaPoly.setVisible(map.getZoom() <= 14);  
+
+    // highlight the shapes when at different zoom levels
+    if (map.getZoom() <= zoomLimit) {
+      beaconHillParkPoly.setVisible(true);
+      markers.forEach((marker) => {
+        marker.setVisible(false);
+      });
+    } else {
+      beaconHillParkPoly.setVisible(false);
+      markers.forEach((marker) => {
+        marker.setVisible(true);
+      });
+    }
+
+    if (!locating) {
+      fetchTreesForCurrentBox();
+    }
+  });
+
+  map.addListener('dragstart', () => {
+    dragging = true;
+  });
+
+  map.addListener('idle', () => {
+    dragging = false;
+    fetchTreesForCurrentBox();
+  })
 } // initMap
 
 function displayError() {
@@ -266,14 +244,19 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       const lng = feature.longitude;
       const commonName = feature.species_common_name;
 
-      const marker = new google.maps.Marker({
-        position: { lat, lng },
-        map: map,
-        label: {
+      let label = '';
+      if (map.getZoom() >= 19){ 
+        label = {
           color: 'white',
           fontWeight: 'bold',
           text: (commonName) ? commonName : feature.common_name,
-        },
+        }
+      }
+
+      const marker = new google.maps.Marker({
+        position: { lat, lng },
+        map: map,
+        label: label,
         icon: {
           path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
           fillColor: (feature.species_order == 'Pinales') ? '#0a6402' : '#1dd70d',
@@ -330,7 +313,9 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
               </p>`;
 
             if (species.description) {
-              treeDetailsHTML += `<p>${species.description}</p>`;
+              // thanks stack overflow
+              const description = species.description.replace(/(?:\r\n|\r|\n)/g, '<br>');
+              treeDetailsHTML += `<p>${description}</p>`;
             }
 
             document.getElementById('tree-content-custom').innerHTML = treeDetailsHTML;
@@ -348,21 +333,11 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       maxZoom: 18
     });
     */
-
-    disableSearchButton();
   }).catch((error) => {
     console.log(error);
     displayError();
   });
 } // fetchTrees
-
-function enableSearchButton() {
-  // document.getElementById('search-button').removeAttribute('disabled');
-}
-
-function disableSearchButton() {
-  // document.getElementById('search-button').setAttribute('disabled', 'disabled');
-}
 
 // override geolocation to simuluate being outside
 let testMode = false;
@@ -446,3 +421,63 @@ function fetchTree(id) {
   });
 }
 
+function addShapes() {
+  const cityOfVictoriaPoints = [
+    [48.428566, -123.394325],
+    [48.441922, -123.392759],
+    [48.44942, -123.384637],
+    [48.447012, -123.379627],
+    [48.450026,  -123.35258],
+    [48.44813, -123.332635],
+    [48.43896, -123.332517],
+    [48.438752, -123.328112],
+    [48.433631, -123.329164],
+    [48.433466, -123.322335],
+    [48.405497, -123.326932],
+    [48.402186, -123.350042],
+    [48.412265, -123.396069]
+  ];
+
+  const beaconHillParkPoints = [
+    [48.409197, -123.367862], // mile 0
+    [48.410091, -123.368837],
+    [48.410726, -123.368720], 
+    [48.415891, -123.365847], //toronto st
+    [48.418512, -123.365675], //southgate st
+    [48.418362, -123.364718],
+    [48.417881, -123.364015],
+    [48.417774, -123.363780],
+    [48.417543, -123.362423],
+    [48.417529, -123.362271],
+    [48.416735, -123.360421], // southgate heywood
+    [48.416539, -123.360533],
+    [48.412843, -123.360614],
+    [48.412786, -123.357268],
+    [48.407915, -123.357888],
+    [48.407730, -123.358831],
+    [48.408528, -123.362026],
+  ];
+
+  cityOfVictoriaPoly = new google.maps.Polygon({
+    strokeColor: "#1E41AA",
+    strokeOpacity: 0.5,
+    strokeWeight: 2,
+    map: map,
+    fillColor: "#2652F2",
+    fillOpacity: 0.3,
+    paths: cityOfVictoriaPoints.map((p) => ({ lat: p[0], lng: p[1] }))
+  });
+
+  beaconHillParkPoly = new google.maps.Polygon({
+    strokeColor: "#1E41AA",
+    strokeOpacity: 1.0,
+    strokeWeight: 3,
+    map: map,
+    fillColor: "#2652F2",
+    fillOpacity: 0.6,
+    paths: beaconHillParkPoints.map((p) => ({ lat: p[0], lng: p[1] }))
+  });
+}
+
+// wake up the free heroku dyno (takes about 10sec)
+fetch('https://victoria-trees-admin.herokuapp.com/').catch(() => {});
