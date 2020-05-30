@@ -178,7 +178,7 @@ function initMap() {
     const zoom = map.getZoom();
     if (zoom < 18) {
       footerText.style.display = 'block';
-      footerText.innerHTML = 'zoom in to see the trees';
+      footerText.innerHTML = 'zoom in to see the trees, or press the button on the right to zoom to your position';
     } else {
       // make some real estate for the trees
       footerText.style.display = 'none';
@@ -280,7 +280,12 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
           <p><b>${(feature.botanical_name.includes("'")) ? feature.botanical_name : feature.species_name}</b></p>
           <p id="tree-content-custom"></p>
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
+
       `;
+
+      if (window.location.href.indexOf("admin") > -1) {
+        infoWindowTemplate += '<p><a href="https://victoria-trees-admin.herokuapp.com/admin/trees/'+feature.id+'" target="_blank">Edit Tree</a></p>';
+      }
       infoWindowTemplate += '</div>';
 
       marker.addListener('click', function() {
@@ -320,7 +325,6 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
               const description = species.description.replace(/(?:\r\n|\r|\n)/g, '<br>');
               treeDetailsHTML += `<p>${description}</p>`;
             }
-
             document.getElementById('tree-content-custom').innerHTML = treeDetailsHTML;
           });
         }
