@@ -2,10 +2,12 @@ let openInfoWindow;
 let markers = [];
 let currentPositionMarker;
 let lastPos = { lat: 0, lng: 0 };
+let lastFetchPos;
 let dragging = false;
 let map;
 let victoriaShape, beaconHillParkShape;
-let locating = false;
+let locating = false; // used to allow drag without moving center when relocating
+let watchingPosition = false;
 
 const apiDeployment = "https://sb2tcoq1of.execute-api.us-west-2.amazonaws.com/production";
 
@@ -40,114 +42,10 @@ function initMap() {
 
   // document.getElementById('search-button').addEventListener('click', findTreesForCurrentPosition);
 
-  function centerOnCurrentLocationAndFetch() {
-    if (navigator.geolocation) {
-      const populateTreesForPosition = function(pos) {
-        // remove all markers
-        markers.forEach((marker, index) => {
-          marker.setMap(null);
-        });
-        markers = [];
-
-        const radius = 0.0008 // roughly 2km around current position
-        const boundingBox = {
-          xmin: pos.lng + radius,
-          xmax: pos.lng - radius,
-          ymin: pos.lat - radius,
-          ymax: pos.lat + radius
-        }
-
-        fetchTrees(boundingBox);
-      }
-
-      locating = true;
-      let current_retries = 0;
-      const retries = 8;
-      // try five times to improve location accuracy
-      const getPositionAndTrees = function(callback) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
-
-          // set zoom according to diff in last position (less diff = closer zoom)
-          error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng)
-
-          if (error < 0.0002) {
-            map.setZoom(20);
-          } else if(error < 0.0008) {
-            map.setZoom(19);
-          } else {
-            map.setZoom(18);
-          }
-
-          if (dragging) {
-            locating = false;
-            return;
-          }
-
-          map.setCenter(pos);
-
-          lastPos.lat = pos.lat;
-          lastPos.lng = pos.lng;
-
-          if (currentPositionMarker) {
-            currentPositionMarker.setPosition(pos);
-          } else {
-            currentPositionMarker = new google.maps.Marker({
-              position: pos,
-              map: map,
-              title: 'You are here',
-              icon: {
-                path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
-                fillColor: '#4285F4',
-                fillOpacity: .7,
-                strokeWeight: 5,
-                strokeColor: '#FFFFFF',
-                strokeOpacity: 0.9,
-                scale: 0.1,
-                anchor: new google.maps.Point(250, 250),
-              }
-            });
-          }
-
-          current_retries++;
-          // signify that were done so it stops refetching
-          if (current_retries == retries) {
-            locating = false;
-          }
-          // populate trees on the first req
-          if (current_retries == 3 || current_retries == retries) {
-            populateTreesForPosition(pos);
-          }
-          if (current_retries < retries) {
-            setTimeout(getPositionAndTrees, 1000);
-          }
-        }, function() {
-          alert('Had a problem finding your location - refresh and try again');
-        }, {
-          enableHighAccuracy: true,
-          maximumAge: 500 // force device to re-fetch
-        });
-      }
-      getPositionAndTrees();
-    } // if navigator.geolocate
-  } // function centerOnCurrentLocationAndFetch
-
   // add the map & park sections
   addShapes();
 
-  // TODO - WAIT ON UI FOR THIS? INITIAL LOAD?!
-  // centerOnCurrentLocationAndFetch();
-
-  // event listening
   const fetchTreesForCurrentBox = () => {
-    // remove old markers
-    markers.forEach((marker, index) => {
-      marker.setMap(null);
-    });
-
     const box = {
       xmin: map.getBounds().getNorthEast().lng(),
       xmax: map.getBounds().getSouthWest().lng(),
@@ -156,7 +54,6 @@ function initMap() {
     }
 
     // fetch trees depending on zoom level
-    // TODO: get more intelligent about this
     if (map.getZoom() > 17) {
       fetchTrees(box);
     }
@@ -202,6 +99,7 @@ function initMap() {
     }
 
     if (!locating) {
+      console.log('zoomchangefetch');
       fetchTreesForCurrentBox();
     }
   });
@@ -210,11 +108,121 @@ function initMap() {
     dragging = true;
   });
 
+  // fetch when drag end (factoring in inertia)
   map.addListener('idle', () => {
-    dragging = false;
-    fetchTreesForCurrentBox();
+    if (dragging) { // prevent this firing every position update
+      dragging = false;
+      console.log('idle fetch');
+      fetchTreesForCurrentBox();
+    }
   })
 } // initMap
+
+function centerOnCurrentLocationAndFetch() {
+  if (navigator.geolocation) {
+    locating = false;
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      map.setCenter(pos);
+
+      updateCurrentPositionMarker(pos);
+
+      console.log('fetching from here');
+      fetchTreesForPosition(pos);
+      
+      watchAndUpdatePosition();
+    });
+
+  } // if navigator.geolocation
+}
+
+// watch for position updates, update and fetch, but dont re-center
+function watchAndUpdatePosition() {
+  if (!watchingPosition) {
+    watchingPosition = true;
+    navigator.geolocation.watchPosition(function(position) {
+      console.log('position updated');
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      updateCurrentPositionMarker(pos);
+
+      // fetch if the last fetch was far away
+      const lastFetchDiff = Math.abs(pos.lat - lastFetchPos.lat) + Math.abs(pos.lng - lastFetchPos.lng)
+      console.log(lastFetchDiff);
+      if (lastFetchDiff > 0.0005) {
+        console.log('last fetch diff is big, fetching');
+        fetchTreesForPosition(pos);
+      };
+    }, function() {
+      console.log("Error watching geolocation position");
+    }, {
+      enableHighAccuracy: true,
+      // maximumAge: 0 // no location caching
+    })
+  }
+};
+
+
+function updateCurrentPositionMarker(pos) {
+  if (currentPositionMarker) {
+    currentPositionMarker.setPosition(pos);
+  } else {
+    currentPositionMarker = new google.maps.Marker({
+      position: pos,
+      map: map,
+      title: 'You are here',
+      icon: {
+        path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
+        fillColor: '#4285F4',
+        fillOpacity: .7,
+        strokeWeight: 5,
+        strokeColor: '#FFFFFF',
+        strokeOpacity: 0.9,
+        scale: 0.1,
+        anchor: new google.maps.Point(250, 250),
+      }
+    });
+  }
+
+  // set zoom according to diff in last position (less diff = closer zoom)
+  error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng);
+  let zoom;
+  if (error < 0.0002) {
+    zoom = 20;
+  } else if(error < 0.0008) {
+    zoom = 19;
+  } else {
+    zoom = 18;
+  }
+  if (map.getZoom() != zoom) { // prevent zoom_changed from firing unnecessarily
+    map.setZoom(zoom);
+  }
+
+  lastPos.lat = pos.lat;
+  lastPos.lng = pos.lng;
+}
+
+function fetchTreesForPosition(pos) {
+  const radius = 0.0008 // roughly 2km around current position
+  const boundingBox = {
+    xmin: pos.lng + radius,
+    xmax: pos.lng - radius,
+    ymin: pos.lat - radius,
+    ymax: pos.lat + radius
+  }
+
+  lastFetchPos = pos;
+
+  fetchTrees(boundingBox);
+}
+
 
 function displayError() {
   alert('Whoops, something went wrong on our end. The database might be waking up - try refreshing in a minute.');
@@ -256,11 +264,21 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         }
       }
 
+      if (markers.find(function(marker) { return (marker.id === feature.id) })) {
+        return //continue 
+      }
+
       const marker = new google.maps.Marker({
         position: { lat, lng },
         map: map,
         label: label,
-        icon: {
+        icon: { 
+          url: (feature.species_order == 'Pinales') ? 'img/conifer.png' : 'img/hardwood.png',
+          labelOrigin: new google.maps.Point(10, 20),
+          scaledSize: new google.maps.Size(10, 10),
+        },
+        /*, SVG
+        icon: ({
           path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
           fillColor: (feature.species_order == 'Pinales') ? '#0a6402' : '#1dd70d',
           fillOpacity: 1,
@@ -270,7 +288,9 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
           strokeColor: '#FFFFFF',
           scale: 0.02
         },
-        name: commonName
+        */
+        name: commonName,
+        id: feature.id
       });
 
       // TODO: handle botanical name when contains cultivar
