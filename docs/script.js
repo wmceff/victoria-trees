@@ -107,6 +107,19 @@ function initMap() {
     if (!locating) {
       fetchTreesForCurrentBox();
     }
+
+    // set label for all markers
+    markers.forEach(function(m) {
+      if(map.getZoom() >= 19) {
+        if (m.getLabel() == '') { 
+          m.setLabel(labelForTree({}, m.name));
+        }
+      } else {
+        if (m.getLabel != '') {
+          m.setLabel('');
+        }
+      }
+    });
   });
 
   map.addListener('dragstart', () => {
@@ -290,11 +303,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
 
       let label = '';
       if (map.getZoom() >= 19){ 
-        label = {
-          color: 'white',
-          fontWeight: 'bold',
-          text: (commonName) ? commonName : feature.common_name,
-        }
+        label = labelForTree(feature, commonName);
       }
 
       // dont add trees we already have
@@ -549,4 +558,12 @@ function isMobile() {
 
 function l(m) {
   DEBUG && console.log(m);
+}
+
+function labelForTree(tree, commonName = null) {
+  return {
+    color: 'white',
+    fontWeight: 'bold',
+    text: (commonName) ? commonName : tree.common_name,
+  }
 }
