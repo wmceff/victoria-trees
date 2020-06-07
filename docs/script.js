@@ -27,12 +27,6 @@ function initMap() {
     disableDefaultUI: true
   });
 
-  document.getElementById('geolocate').addEventListener('click', centerOnCurrentLocationAndFetch);
-  
-  window.addEventListener('pageshow', function() {
-    l('pageshow');
-  });
-
   const findTreesForCurrentPosition = function() {
     // get bounding box
     // use those co-ords
@@ -63,6 +57,11 @@ function initMap() {
       fetchTrees(box);
     }
   }
+
+  document.getElementById('geolocate').addEventListener('click', centerOnCurrentLocationAndFetch);
+  
+  // resume from homescreen
+  window.addEventListener('focus', centerOnCurrentLocationAndFetch);
 
   const zoomLimit = 16;
 
@@ -321,14 +320,12 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         id: feature.id
       });
 
-      // TODO: handle botanical name when contains cultivar
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
-          <h1>${feature.species_common_name}</h1>
+          <h3>${feature.species_common_name}</h3>
           <p><b>${(feature.botanical_name.includes("'")) ? feature.botanical_name : feature.species_name}</b></p>
           <p id="tree-content-custom"></p>
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
-
       `;
 
       if (window.location.href.indexOf("admin") > -1) {
