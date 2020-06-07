@@ -99,7 +99,6 @@ function initMap() {
     }
 
     if (!locating) {
-      console.log('zoomchangefetch');
       fetchTreesForCurrentBox();
     }
   });
@@ -112,16 +111,22 @@ function initMap() {
   map.addListener('idle', () => {
     if (dragging) { // prevent this firing every position update
       dragging = false;
-      console.log('idle fetch');
       fetchTreesForCurrentBox();
     }
   })
+
+  // if on mobile, attempt geolocation right away
+  if (isMobile()) {
+    centerOnCurrentLocationAndFetch();
+  }
 } // initMap
 
 function centerOnCurrentLocationAndFetch() {
   if (navigator.geolocation) {
     locating = false;
     navigator.geolocation.getCurrentPosition(function(position) {
+      locating = true;
+
       const pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -131,7 +136,6 @@ function centerOnCurrentLocationAndFetch() {
 
       updateCurrentPositionMarker(pos);
 
-      console.log('fetching from here');
       fetchTreesForPosition(pos);
       
       watchAndUpdatePosition();
@@ -145,7 +149,6 @@ function watchAndUpdatePosition() {
   if (!watchingPosition) {
     watchingPosition = true;
     navigator.geolocation.watchPosition(function(position) {
-      console.log('position updated');
       const pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -155,7 +158,6 @@ function watchAndUpdatePosition() {
 
       // fetch if the last fetch was far away
       const lastFetchDiff = Math.abs(pos.lat - lastFetchPos.lat) + Math.abs(pos.lng - lastFetchPos.lng)
-      console.log(lastFetchDiff);
       if (lastFetchDiff > 0.0005) {
         console.log('last fetch diff is big, fetching');
         fetchTreesForPosition(pos);
@@ -167,6 +169,7 @@ function watchAndUpdatePosition() {
       // maximumAge: 0 // no location caching
     })
   }
+  locating = false;
 };
 
 
@@ -191,18 +194,25 @@ function updateCurrentPositionMarker(pos) {
     });
   }
 
-  // set zoom according to diff in last position (less diff = closer zoom)
-  error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng);
-  let zoom;
-  if (error < 0.0002) {
-    zoom = 20;
-  } else if(error < 0.0008) {
-    zoom = 19;
-  } else {
-    zoom = 18;
-  }
-  if (map.getZoom() != zoom) { // prevent zoom_changed from firing unnecessarily
-    map.setZoom(zoom);
+  // set zoom according to potential location accuracy, based on last known position
+  // (if there's big difference between last position, zoom out) 
+  if (map.getBounds().contains(currentPositionMarker.getPosition())) { // only if we're looking at the marker
+    locating = true; //dont trigger zoom fetch
+
+    error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng);
+    let zoom;
+    if (error < 0.0002) {
+      zoom = 20;
+    } else if(error < 0.0008) {
+      zoom = 19;
+    } else {
+      zoom = 18;
+    }
+    if (map.getZoom() != zoom) { // prevent zoom_changed from firing unnecessarily
+      map.setZoom(zoom);
+    }
+
+    locating = false;
   }
 
   lastPos.lat = pos.lat;
@@ -250,6 +260,15 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
   }).then(function(response) {
     const trees = response; // .slice(0, 10);
 
+    //clear out old trees if there's too many in mem
+    if (markers.length > 1000) {
+      markers.forEach(function(marker, index) {
+        marker.setMap(null);
+        markers = markers.splice(index, 1);
+      });
+    }
+
+
     trees.forEach(function(feature) {
       const lat = feature.latitude;
       const lng = feature.longitude;
@@ -264,6 +283,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         }
       }
 
+      // dont add trees we already have
       if (markers.find(function(marker) { return (marker.id === feature.id) })) {
         return //continue 
       }
@@ -508,3 +528,9 @@ function addShapes() {
 
 // wake up the free heroku dyno (takes about 10sec)
 fetch('https://victoria-trees-admin.herokuapp.com/').catch(() => {});
+
+function isMobile() {
+  let check = false;
+  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+  return check;
+};
