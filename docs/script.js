@@ -61,7 +61,9 @@ function initMap() {
   document.getElementById('geolocate').addEventListener('click', centerOnCurrentLocationAndFetch);
   
   // resume from homescreen
-  window.addEventListener('focus', centerOnCurrentLocationAndFetch);
+  if (isMobile()) {
+    window.addEventListener('focus', centerOnCurrentLocationAndFetch);
+  }
 
   const zoomLimit = 16;
 
@@ -269,12 +271,17 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
 
     //remove any offscreen markers for performance
     l('marker length: ' + markers.length);
-    markers.forEach(function(marker, index) {
-      if (!map.getBounds().contains(marker.getPosition())) { // only if we're looking at the marker
-        marker.setMap(null);
-        markers = markers.splice(index, 1);
+    const mapBounds = map.getBounds();
+    const newMarkers = [];
+    for (let x=0;x<markers.length;x+=1) {
+      const m = markers[x];
+      if (!mapBounds.contains(m.getPosition())) { // only if we're looking at the marker
+        m.setMap(null);
+      } else {
+        newMarkers.push(m);
       }
-    });
+    }
+    markers = newMarkers;
 
     trees.forEach(function(feature) {
       const lat = feature.latitude;
