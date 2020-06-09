@@ -141,10 +141,29 @@ function initMap() {
 } // initMap
 
 function centerOnCurrentLocationAndFetch() {
+  let fetches = 0;
   if (navigator.geolocation) {
-    locating = false;
-    navigator.geolocation.getCurrentPosition(function(position) {
-      locating = true;
+    locating = true;
+    navigator.geolocation.getAccurateCurrentPosition(function(position) {
+      l('final position');
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      map.setCenter(pos);
+      updateCurrentPositionMarker(pos);
+      fetchTreesForPosition(pos);
+
+      locating = false;
+    }, function(error) {
+      alert('Sorry, we had a problem fetching your location. Refresh and try again!');
+      locating = false;
+    }, function(position) { // progress updates
+      fetches += 1;
+
+      l('PROGRESS');
+      l(position.coords.accuracy);
 
       const pos = {
         lat: position.coords.latitude,
@@ -152,15 +171,14 @@ function centerOnCurrentLocationAndFetch() {
       };
 
       map.setCenter(pos);
-
       updateCurrentPositionMarker(pos);
-
-      fetchTreesForPosition(pos);
-      
-      watchAndUpdatePosition();
+      if (fetches % 3 == 0) {
+        fetchTreesForPosition(pos);
+      }
+    }, {
+      desiredAccuracy: 10 // meters 
     });
-
-  } // if navigator.geolocation
+  }
 }
 
 // watch for position updates, update and fetch, but dont re-center
@@ -191,7 +209,6 @@ function watchAndUpdatePosition() {
   }
   locating = false;
 };
-
 
 function updateCurrentPositionMarker(pos) {
   if (currentPositionMarker) {
