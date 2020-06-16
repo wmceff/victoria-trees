@@ -6,9 +6,10 @@ let markers = [];
 let currentPositionMarker;
 let lastPos = { lat: 0, lng: 0 };
 let lastFetchPos;
-let dragging = false;
 let map;
 let victoriaShape, beaconHillParkShape;
+let centerOnLocationUpdate = true;
+let dragging = false;
 let locating = false; // used to allow drag without moving center when relocating
 let watchingPosition = false;
 
@@ -58,7 +59,9 @@ function initMap() {
     }
   }
 
-  document.getElementById('geolocate').addEventListener('click', centerOnCurrentLocationAndFetch);
+  document.getElementById('geolocate').addEventListener('click', function() {
+    centerOnCurrentLocationAndFetch();
+  });
   
   // resume from homescreen
   if (isMobile()) {
@@ -124,6 +127,8 @@ function initMap() {
 
   map.addListener('dragstart', () => {
     dragging = true;
+    centerOnLocationUpdate = false;
+    document.querySelector('#geolocate .icon').classList.remove('has-text-info');
   });
 
   // fetch when drag end (factoring in inertia)
@@ -143,26 +148,12 @@ function initMap() {
 function centerOnCurrentLocationAndFetch() {
   let fetches = 0;
   if (navigator.geolocation) {
+    centerOnLocationUpdate = true;
+    document.querySelector('#geolocate .icon').classList.add('has-text-info');
+
     locating = true;
     navigator.geolocation.getAccurateCurrentPosition(function(position) {
-      l('final position');
-      const pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      map.setCenter(pos);
-      updateCurrentPositionMarker(pos);
-      fetchTreesForPosition(pos);
-
-      locating = false;
-    }, function(error) {
-      alert('Sorry, we had a problem fetching your location. Refresh and try again!');
-      locating = false;
-    }, function(position) { // progress updates
-      fetches += 1;
-
-      l('PROGRESS');
+      l('final position accuracy:');
       l(position.coords.accuracy);
 
       const pos = {
@@ -170,13 +161,39 @@ function centerOnCurrentLocationAndFetch() {
         lng: position.coords.longitude
       };
 
-      map.setCenter(pos);
+      if(centerOnLocationUpdate) {
+        map.panTo(pos);
+      }
+
+      updateCurrentPositionMarker(pos);
+      fetchTreesForPosition(pos);
+
+      locating = false;
+    }, function(error) {
+      alert('Sorry, we had a problem fetching your location. Check that you have location permissions enabled, refresh and try again!');
+      console.log(error);
+      locating = false;
+    }, function(position) { // progress updates
+      fetches += 1;
+
+      l('location updated. accuracy:');
+      l(position.coords.accuracy);
+
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      if (centerOnLocationUpdate) {
+        map.panTo(pos);
+      }
+
       updateCurrentPositionMarker(pos);
       if (fetches % 3 == 0) {
         fetchTreesForPosition(pos);
       }
     }, {
-      desiredAccuracy: 10 // meters 
+      desiredAccuracy: 5 // meters 
     });
   }
 }
@@ -225,7 +242,7 @@ function updateCurrentPositionMarker(pos) {
         strokeWeight: 5,
         strokeColor: '#FFFFFF',
         strokeOpacity: 0.9,
-        scale: 0.1,
+        scale: 0.1, // TODO: adjust scale based on pos accuracy
         anchor: new google.maps.Point(250, 250),
       }
     });
@@ -234,24 +251,25 @@ function updateCurrentPositionMarker(pos) {
   // set zoom and center according to potential location accuracy, based on last known position
   // (if there's big difference between last position, zoom out) 
   if (map.getBounds().contains(currentPositionMarker.getPosition())) { // only if we're looking at the marker
-    locating = true; //dont trigger zoom fetch
+    if (centerOnLocationUpdate) {
+      // TODO: just use accuracy
+      locating = true; //dont trigger zoom fetch while zooming
+      error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng);
+      let zoom;
+      if (error < 0.0002) {
+        zoom = 20;
+      } else if(error < 0.0008) {
+        zoom = 19;
+      } else {
+        zoom = 18;
+      }
+      if (map.getZoom() != zoom) { // prevent zoom_changed from firing unnecessarily
+        map.setZoom(zoom);
+      }
+      locating = false;
 
-    error = Math.abs(pos.lat - lastPos.lat) + Math.abs(pos.lng - lastPos.lng);
-    let zoom;
-    if (error < 0.0002) {
-      zoom = 20;
-    } else if(error < 0.0008) {
-      zoom = 19;
-    } else {
-      zoom = 18;
+      map.panTo(pos);
     }
-    if (map.getZoom() != zoom) { // prevent zoom_changed from firing unnecessarily
-      map.setZoom(zoom);
-    }
-
-    map.setCenter(pos);
-
-    locating = false;
   }
 
   lastPos.lat = pos.lat;
