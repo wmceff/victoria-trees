@@ -373,7 +373,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
 
       let infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
-          <h3>${feature.species_common_name}</h3>
+          <h3>${feature.species_common_name}${(feature.sencoten_name) ? " <a href='http://saanich.montler.net/WordList/plants.html'>"+feature.sencoten_name+"</a>" : ''}</h3>
           <p><b>${(feature.botanical_name.includes("'")) ? feature.botanical_name : feature.species_name}</b></p>
           <p id="tree-content-custom"></p>
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
