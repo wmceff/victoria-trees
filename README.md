@@ -15,7 +15,6 @@ To test the page, visit the docs directory and run
 
 ## Structure
 
-- [`/api`] - basic serverless api functions (Lambda)
 - [`/docs`] - the website
 - [`/data_scripts`] - some scripts to import data from various sources(City of Victoria, GBIF species)
 - [`/export`] - a script to export the Victoria Trees dataset to CSV with lat &

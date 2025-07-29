@@ -13,7 +13,7 @@ let dragging = false;
 let locating = false; // used to allow drag without moving center when relocating
 let watchingPosition = false;
 
-const apiDeployment = "https://sb2tcoq1of.execute-api.us-west-2.amazonaws.com/production";
+const apiDeployment = "https://victoria-trees-admin.vercel.app/";
 
 // set map height
 const navbarHeight = 0; // 56;
@@ -520,7 +520,7 @@ document.querySelectorAll('.modal-close').forEach((el) => {
 
 // fetch detailed tree information
 function fetchTree(id) {
-  const treesEndpoint = 'https://victoria-trees-admin.herokuapp.com/trees/' + id;
+  const treesEndpoint = 'https://victoria-trees-admin.vercel.app/trees/' + id;
 
   return fetch(treesEndpoint).then(function(response) {
     if (response.status > 300) {
