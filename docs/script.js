@@ -13,7 +13,7 @@ let dragging = false;
 let locating = false; // used to allow drag without moving center when relocating
 let watchingPosition = false;
 
-const apiDeployment = "https://victoria-trees-admin.vercel.app/";
+const apiDeployment = "https://victoria-trees-admin.vercel.app";
 
 // set map height
 const navbarHeight = 0; // 56;
@@ -389,7 +389,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
       `;
 
       if (window.location.href.indexOf("admin") > -1) {
-        infoWindowTemplate += '<p><a href="https://victoria-trees-admin.herokuapp.com/admin/trees/'+feature.id+'" target="_blank">Edit Tree</a></p>';
+        infoWindowTemplate += '<p><a href="https://victoria-trees-admin.vercel.app/admin/trees/'+feature.id+'" target="_blank">Edit Tree</a></p>';
       }
       infoWindowTemplate += '</div>';
 
