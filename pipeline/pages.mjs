@@ -2,7 +2,7 @@
 // index pages, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
 import fs from "node:fs";
 
-export const siteUrl = "https://wmceff.github.io/victoria-trees/";
+export const siteUrl = "https://victoriatrees.ca/";
 
 // URL slug for a species or neighbourhood name, eg. "Prunus × yedoensis" -> "prunus-x-yedoensis"
 export function slugFor(name) {

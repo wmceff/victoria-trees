@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wmceff.github.io/victoria-trees/sitemap.xml
+Sitemap: https://victoriatrees.ca/sitemap.xml

@@ -1,6 +1,6 @@
 # Victoria Trees
 
-Identify the trees near you in Victoria: https://wmceff.github.io/victoria-trees/
+Identify the trees near you in Victoria: https://victoriatrees.ca/
 
 Inspired by [James Clowater](http://naturevictoria.com/)'s
 [Trees of Victoria](http://treesofvictoria.com/). Uses the
