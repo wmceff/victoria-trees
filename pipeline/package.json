@@ -1,0 +1,13 @@
+{
+  "name": "victoria-trees-pipeline",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Builds docs/data/trees.json from City of Victoria open data and curated species data",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

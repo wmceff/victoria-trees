@@ -13,7 +13,16 @@ let dragging = false;
 let locating = false; // used to allow drag without moving center when relocating
 let watchingPosition = false;
 
-const apiDeployment = "https://victoria-trees-admin.vercel.app";
+// every tree in the city, built by pipeline/build.mjs
+let treeData;
+const treeDataLoaded = fetch('data/trees.json').then(function(response) {
+  if (!response.ok) {
+    throw new Error('trees.json returned ' + response.status);
+  }
+  return response.json();
+}).then(function(data) {
+  treeData = data;
+});
 
 // set map height
 const navbarHeight = 0; // 56;
@@ -292,28 +301,42 @@ function fetchTreesForPosition(pos) {
 
 
 function displayError() {
-  alert('Whoops, something went wrong on our end. The database might be waking up - try refreshing in a minute.');
+  alert('Whoops, something went wrong loading the trees. Try refreshing the page.');
 };
 
-// fetch trees from API within box
-function fetchTrees({ xmin, xmax, ymin, ymax }) {
-  let params = '';
-  if (xmin) {
-    params = `?xmin=${xmin}&xmax=${xmax}&ymin=${ymin}&ymax=${ymax}`
-  }
+// trees within box, shaped like the old API's /trees response
+// (xmin is the east edge and xmax the west edge)
+function treesInBox({ xmin, xmax, ymin, ymax }) {
+  const trees = [];
+  treeData.trees.forEach(function([latitude, longitude, speciesIndex, botanicalIndex], id) {
+    if (latitude < ymin || latitude > ymax || longitude > xmin || longitude < xmax) {
+      return;
+    }
+    const species = treeData.species[speciesIndex];
+    trees.push({
+      id,
+      latitude,
+      longitude,
+      species_common_name: species.common_name,
+      species_name: species.name,
+      botanical_name: treeData.botanical[botanicalIndex],
+      species_order: species.order,
+      sencoten_name: species.sencoten_name,
+      sencoten_url: species.sencoten_url
+    });
+  });
+  return trees;
+}
 
+// show trees within box
+function fetchTrees({ xmin, xmax, ymin, ymax }) {
   // mark button
   const geolocateButton = document.getElementById('geolocate');
   geolocateButton.classList.add('is-loading');
 
-  const treesEndpoint = apiDeployment + '/trees' + params;
-
-  fetch(treesEndpoint).then(function(response) {
-    if (response.status > 300) {
-      displayError();
-    }
+  treeDataLoaded.then(function() {
     geolocateButton.classList.remove('is-loading');
-    return response.json();
+    return treesInBox({ xmin, xmax, ymin, ymax });
   }).then(function(response) {
     const trees = response; // .slice(0, 10);
 
@@ -388,9 +411,6 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
       `;
 
-      if (window.location.href.indexOf("admin") > -1) {
-        infoWindowTemplate += '<p><a href="https://victoria-trees-admin.vercel.app/admin/trees/'+feature.id+'" target="_blank">Edit Tree</a></p>';
-      }
       infoWindowTemplate += '</div>';
 
       marker.addListener('click', function() {
@@ -416,8 +436,7 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
               treeDetailsHTML += '<p>This tree is native to Victoria.</p>';
             }
             
-            // This is jank, could do a DB query for this if we REALY want to is 32284
-            const totalVicTrees = 33081;
+            const totalVicTrees = treeData.total;
             const treePercentage = Math.round(((species.tree_count / totalVicTrees) * 100 * 100) + Number.EPSILON) / 100;
             treeDetailsHTML += `
               <p>
@@ -518,15 +537,11 @@ document.querySelectorAll('.modal-close').forEach((el) => {
   el.addEventListener('click', closeModal);
 });
 
-// fetch detailed tree information
+// fetch detailed tree information, shaped like the old API's /trees/:id response
 function fetchTree(id) {
-  const treesEndpoint = 'https://victoria-trees-admin.vercel.app/trees/' + id;
-
-  return fetch(treesEndpoint).then(function(response) {
-    if (response.status > 300) {
-      displayError();
-    }
-    return response.json();
+  return treeDataLoaded.then(function() {
+    const speciesIndex = treeData.trees[id][2];
+    return { species: treeData.species[speciesIndex] };
   }).catch((error) => {
     l(error);
     displayError();

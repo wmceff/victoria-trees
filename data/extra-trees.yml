@@ -1,0 +1,491 @@
+# Trees that aren't in the City's open data layer (other surveys, hand-added).
+# The pipeline adds them to the City trees.
+
+- latitude: 48.4220904157628
+  longitude: -123.408850116568
+  botanical_name: Pinus ponderosa
+  common_name: Ponderosa Pine
+  source: Chaster & Ross 1988
+  address: 357 Lampson Street
+  notable: true
+  confirmed: true
+  data:
+    cbh: '3.35'
+    tree_code: A117
+    site_number: null
+    date_measured: 07-Aug-15
+- latitude: 48.42295
+  longitude: -123.41453
+  botanical_name: Pinus ponderosa
+  common_name: Ponderosa Pine
+  source: Chaster & Ross 1988
+  address: 1183 Munro Street
+  notable: true
+  confirmed: true
+  data:
+    cbh: '2.7'
+    tree_code: A118
+    site_number: null
+    date_measured: 07-Aug-15
+- latitude: 48.412425534073
+  longitude: -123.364294635582
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  source: Chaster & Ross 1988
+  address: Beacon Hill Park
+  notable: true
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A123
+    site_number: null
+    date_measured: null
+- latitude: 48.4145809910499
+  longitude: -123.320341078539
+  botanical_name: Quercus garriana
+  common_name: Garry Oak
+  source: Chaster & Ross 1988
+  address: 570 Falkland Rd.
+  notable: true
+  confirmed: true
+  notes: Largest Garry Oak in Victoria
+  data:
+    cbh: '5.67'
+    tree_code: A136
+    site_number: null
+    date_measured: 08-Feb-16
+- latitude: 48.41052
+  longitude: -123.33785569
+  botanical_name: Pinus thunbergii
+  common_name: Aleppo pine
+  source: Chaster & Ross 1988
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '1241'
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.97'
+    tree_code: A240
+    site_number: '1241'
+    date_measured: 18-Jul-17
+- latitude: 48.4095341172307
+  longitude: -123.343772907742
+  botanical_name: Pinus nigra
+  common_name: Austrian Pine
+  source: clowater
+  tag: '738'
+  confirmed: true
+  data:
+    lat: -123.34374608565187
+    lng: 48.40951271470453
+    Area: Fairfield
+    Width: 12
+    Height: 14
+    SiteID: '8034'
+    Street: FAIRFIELD RD
+    Address: '1495'
+    Species: Pinus nigra
+    OBJECTID: 11588
+    OnStreet: FAIRFIELD RD
+    ToStreet: Lane 282-1
+    GrowSpace: Turf
+    CommonName: 'Austrian pine '
+    FromStreet: MEMORIAL CRES
+    ChangedDate: '20130611'
+    FullAddress: 1495 FAIRFIELD RD
+    YearPlanted: Unassigned
+    SideOfParcel: N/A
+    BotanicalName: Pinus nigra
+    InventoryDate: '20130611'
+    BlossomDateEnd: null
+    PlantingDateEst: 40+
+    BlossomDateStart: null
+    DiameterAtBreastHeight: 62
+- latitude: 48.409563806611
+  longitude: -123.343793897494
+  botanical_name: Pinus thunbergii
+  common_name: Pine
+  source: clowater
+  tag: '737'
+  confirmed: true
+  data:
+    lat: -123.34374328401638
+    lng: 48.40955596325327
+    Area: Fairfield
+    Width: 3
+    Height: 5
+    SiteID: '8035'
+    Street: FAIRFIELD RD
+    Address: '1495'
+    Species: Pinus thunbergiana
+    OBJECTID: 24667
+    OnStreet: FAIRFIELD RD
+    ToStreet: Lane 282-1
+    GrowSpace: Turf
+    CommonName: Pine
+    FromStreet: MEMORIAL CRES
+    ChangedDate: '20130611'
+    FullAddress: 1495 FAIRFIELD RD
+    YearPlanted: Unassigned
+    SideOfParcel: N/A
+    BotanicalName: Pinus
+    InventoryDate: '20130611'
+    BlossomDateEnd: null
+    PlantingDateEst: 21-40
+    BlossomDateStart: null
+    DiameterAtBreastHeight: 23
+- latitude: 48.41833
+  longitude: -123.37152
+  botanical_name: Ulmus americana
+  common_name: American Elm
+  source: clowater
+  address: Parliment Buildings, Superior Street
+  notable: true
+  confirmed: true
+  notes: "The most characteristic vase-shaped American elm is behind the Parliament Buildings\r\nbeside the hedge on Superior Street, 85 feet high (25.9 m), 75 feet (22.8 m) wide with a\r\n50 inch (127 em) girth. (Chaster and Ross, 1988) (DBH 1.43, 2015)"
+  data:
+    cbh: '4.35'
+    tree_code: A102
+    site_number: null
+    date_measured: 20-Jul-15
+- latitude: 48.4109530325689
+  longitude: -123.338181632523
+  botanical_name: Pinus nigra
+  common_name: Austrian Pine ?
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '1238'
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A104
+    site_number: null
+    date_measured: 21-Jul-15
+- latitude: 48.41154
+  longitude: -123.34129
+  botanical_name: Pinus thunbergii
+  common_name: Japanese Black Pine
+  source: clowater
+  data:
+    cbh: '2.2'
+    tree_code: A105
+    site_number: null
+    date_measured: 21-Jul-15
+- latitude: 48.4318602238086
+  longitude: -123.307097667494
+  botanical_name: Cedrus atlantica glauca
+  common_name: Blue Atlas Cedar
+  source: clowater
+  address: Beach Drive at Bowker Ave.
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A11
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.4155781882283
+  longitude: -123.365647842922
+  botanical_name: Pinus jeffreyi
+  common_name: Jeffrey Pine
+  source: clowater
+  address: Beacon Hill Park
+  notable: true
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A119
+    site_number: null
+    date_measured: 07-Aug-15
+- latitude: 48.43183
+  longitude: -123.30677
+  botanical_name: Pinus thunbergii
+  common_name: Japanese Black Pine
+  source: clowater
+  address: Beach Drive and Bowker Ave.
+  notable: true
+  notes: "The First of a historical planting of 14 Japanese black pines in a row from 1881 to\r\n1959 Beach Drive. (Chaster And Ross, 1988)"
+  data:
+    cbh: null
+    tree_code: A12
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.4111
+  longitude: -123.3477
+  botanical_name: Prunus X blireiana
+  common_name: Blireana Plum
+  source: clowater
+  data:
+    cbh: null
+    tree_code: A143
+    site_number: null
+    date_measured: 27-Feb-16
+- latitude: 48.4314
+  longitude: -123.3431
+  botanical_name: Prunus X yedoensis
+  common_name: Yoshino Cherry
+  source: clowater
+  data:
+    cbh: '1.55'
+    tree_code: A149
+    site_number: null
+    date_measured: null
+- latitude: 48.4111
+  longitude: -123.3375
+  botanical_name: Abies homolepis
+  common_name: Nikko fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '665'
+  confirmed: true
+  data:
+    cbh: '1.32'
+    tree_code: A153
+    site_number: '665'
+    date_measured: 07-Apr-16
+- latitude: 48.4134
+  longitude: -123.3645
+  botanical_name: Styrax japonicus
+  common_name: Japanese Snowbell
+  source: clowater
+  address: Beacon Hill Park
+  tag: '1582'
+  data:
+    cbh: null
+    tree_code: A159
+    site_number: '1582'
+    date_measured: 13-Dec-16
+- latitude: 48.4132
+  longitude: -123.3646
+  botanical_name: Sorbus X thuriniaca
+  common_name: Oakleaf Mountain Ash
+  source: clowater
+  data:
+    cbh: null
+    tree_code: A160
+    site_number: null
+    date_measured: 13-Dec-16
+- latitude: 48.41051
+  longitude: -123.33727
+  botanical_name: Abies cephalonica
+  common_name: Amabilis fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '1286'
+  confirmed: true
+  data:
+    cbh: '2.68'
+    tree_code: A241
+    site_number: '1286'
+    date_measured: 18-Jul-17
+- latitude: 48.4126134431117
+  longitude: -123.366757813492
+  botanical_name: Abies homolepis
+  common_name: Nikko fir
+  source: clowater
+  address: Beacon Hill Park
+  tag: '580'
+  confirmed: true
+  data:
+    cbh: '2.15'
+    tree_code: A242
+    site_number: '580'
+    date_measured: 19-Oct-17
+- latitude: 48.4117409275605
+  longitude: -123.338501457672
+  botanical_name: Abies nordmanniana
+  common_name: Caucasian fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '499'
+  data:
+    cbh: '1.62'
+    tree_code: A249
+    site_number: '499'
+    date_measured: 04-Jul-18
+- latitude: 48.41243
+  longitude: -123.36568
+  botanical_name: Abies nordmanniana
+  common_name: Caucasian fir
+  source: clowater
+  data:
+    cbh: '2.33'
+    tree_code: A252
+    site_number: '589'
+    date_measured: 04-Jul-18
+- latitude: 48.4117539907678
+  longitude: -123.340280961971
+  botanical_name: Abies homolepis
+  common_name: Nikko fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '384'
+  confirmed: true
+  data:
+    cbh: '1.50'
+    tree_code: A259
+    site_number: '384'
+    date_measured: 28-Feb-19
+- latitude: 48.41191830314
+  longitude: -123.340124635582
+  botanical_name: Abies amabilis
+  common_name: Amabilis fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '401'
+  confirmed: true
+  data:
+    cbh: '1.98'
+    tree_code: A260
+    site_number: '401'
+    date_measured: 28-Feb-19
+- latitude: 48.4399207892057
+  longitude: -123.339814576721
+  botanical_name: Abies balsamea
+  common_name: Balsam fir
+  source: clowater
+  address: Belmont Ave. and Ryan Street
+  data:
+    cbh: '0.68'
+    tree_code: A262
+    site_number: null
+    date_measured: 12-Mar-19
+- latitude: 48.4115849643159
+  longitude: -123.339130262566
+  botanical_name: Abies firma
+  common_name: Momi fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '458'
+  data:
+    cbh: '3.02'
+    tree_code: A264
+    site_number: '458'
+    date_measured: 29-Mar-19
+- latitude: 48.4111379143703
+  longitude: -123.342712389772
+  botanical_name: Abies homolepis
+  common_name: Caucasian fir
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '252'
+  confirmed: true
+  data:
+    cbh: '2.24'
+    tree_code: A266
+    site_number: '252'
+    date_measured: 29-Mar-19
+- latitude: 48.4130338477393
+  longitude: -123.366141049109
+  botanical_name: Juniperus
+  common_name: Juniper
+  source: clowater
+  address: Beacon Hill Park
+  data:
+    cbh: '0.91'
+    tree_code: A267
+    site_number: null
+    date_measured: 30-Jun-19
+- latitude: 48.4148
+  longitude: -123.36419
+  botanical_name: Juniperus
+  common_name: Juniper
+  source: clowater
+  address: Beacon Hill Park
+  data:
+    cbh: '0.71'
+    tree_code: A268
+    site_number: null
+    date_measured: 30-Jun-19
+- latitude: 48.4115273393997
+  longitude: -123.343367580357
+  botanical_name: Pinus sylvestris
+  common_name: Scotts Pine
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '219'
+  confirmed: true
+  data:
+    cbh: '2.35'
+    tree_code: A272
+    site_number: '219'
+    date_measured: 30-Jun-19
+- latitude: 48.44041
+  longitude: -123.30768
+  botanical_name: Quercus robur
+  common_name: English Oak
+  source: clowater
+  address: 2632 Burdick Ave.
+  notable: true
+  confirmed: true
+  notes: Beautiful large specimen. (Chaster and Ross,1988)
+  data:
+    cbh: null
+    tree_code: A09
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.43138
+  longitude: -123.30508
+  botanical_name: Acer saccharinium
+  common_name: Silver Maple
+  source: clowater
+  address: Bowker Avenue and Bowker Place
+  notable: true
+  confirmed: true
+  notes: "\"Bowker Place was once part of \"the James Bowker Homestead, where many interesting trees remain\r\nfrom the original plantings. These include a huge silver maple. (Chaster and Ross, 1988)"
+  data:
+    cbh: '4'
+    tree_code: A10
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.41833
+  longitude: -123.37152
+  botanical_name: Ulmus americana
+  common_name: American Elm
+  source: clowater
+  data:
+    cbh: '4.35'
+    tree_code: A102
+    site_number: null
+    date_measured: 20-Jul-15
+- latitude: 48.41079
+  longitude: -123.33813
+  botanical_name: Pinus nigra
+  common_name: Austrian Pine ?
+  source: clowater
+  data:
+    cbh: null
+    tree_code: A104
+    site_number: null
+    date_measured: 21-Jul-15
+- latitude: 48.41154
+  longitude: -123.34129
+  botanical_name: Pinus thunbergii
+  common_name: Japanese Black Pine
+  source: clowater
+  address: Ross Bay Cemetery, Fairfield Road
+  data:
+    cbh: '2.2'
+    tree_code: A105
+    site_number: null
+    date_measured: 21-Jul-15
+- latitude: 48.4140419332957
+  longitude: -123.364798335147
+  botanical_name: Black locust
+  source: mcfarland
+- latitude: 48.4111071962987
+  longitude: -123.357675830688
+  botanical_name: Populus balsamifera
+  common_name: Black Cottonwood
+  source: Victoria Horticultural Society Heritage Tree Group
+  address: Cook St.,
+  notable: true
+  confirmed: true
+  data:
+    cbh: '4.65'
+    tree_code: A86
+    site_number: null
+    date_measured: 16-Apr-15
+- latitude: 48.4168523269298
+  longitude: -123.360982637575
+  botanical_name: Tilia cordata
+  source: wmceff@gmail.com

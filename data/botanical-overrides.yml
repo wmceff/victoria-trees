@@ -1,0 +1,49 @@
+# Corrections for names pipeline/species-name.mjs can't map to a species in species.yml.
+# Keys are either a full cleaned botanical name or a derived species name; the full
+# botanical name is checked first.
+
+Aesculus carnea: Aesculus × carnea
+Aesculus carnea 'Fort McNair': Aesculus × carnea
+Amelanchier grandiflora: Amelanchier × grandiflora
+Amelanchier grandiflora 'Autumn: Amelanchier × grandiflora
+Black locust: Robinia pseudoacacia
+Chamaecyparis nootkatensis: Cupressus nootkatensis
+Chameacyparis: Chamaecyparis
+Cornus x Eddies White Wonder: Cornus x
+Cotoneaster x watereri: Cotoneaster x
+Crataegus grignonensis: Crataegus × grignonensis
+Crataegus x lavallei: Crataegus × lavalleei
+Cryptomeria: Cryptomeria japonica
+Cupressus macrocarpa: Hesperocyparis macrocarpa
+Eucryphia x intermedia: Eucryphia x
+Gleditsia inermis: Gleditsia triacanthos var. inermis
+Ilex: Ilex spp.
+Magnolia x Galaxy: Magnolia × 'Galaxy'
+Magnolia x soulangiana: Magnolia × soulangeana
+Metasequoia glyptostroboid: Metasequoia glyptostroboides
+Pinus parvifolia: Pinus parviflora
+Platanus acerifolia: Platanus × acerifolia
+Platanus hybrida: Platanus × acerifolia
+Prunus accolade: Prunus serrulata
+Prunus blieriana: Prunus × blireiana
+Prunus ceresifera Linsayiae: Prunus cerasifera
+Prunus yedoensis: Prunus × yedoensis
+Robinia x idahoensis: Robinia x
+Salix x sepulcralis Simonkai: Salix × sepulcralis 'Chrysocoma'
+Sorbus X thuriniaca: Sorbus x
+Stewartia pseudo-camellia: Stewartia pseudocamellia
+Thuja: Thuja occidentalis
+Thuja orientalis: Platycladus orientalis
+Trachycarpus fortuneii: Trachycarpus fortunei
+Yoshino Cherry: Prunus × yedoensis
+
+# Derived species names that are misspellings or synonyms of a curated species.
+Acer saccharam: Acer saccharum
+Cladastris kentukea: Cladrastis kentukea
+Corylus avellena: Corylus avellana
+Crataegus mordenensis: Crataegus × mordenensis
+Frangula purshiana: Rhamnus purshiana
+Morus Alba X Rubra: Morus
+Prunus Domestica: Prunus domestica
+Quercus Frainetto: Quercus frainetto
+Ulmus american: Ulmus americana
