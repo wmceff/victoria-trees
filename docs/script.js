@@ -91,9 +91,9 @@ function addTrees(treeData) {
     type: 'circle',
     source: 'trees',
     paint: {
-      'circle-color': ['case', ['get', 'conifer'], '#1b5e20', '#43a047'],
+      'circle-color': ['case', ['get', 'conifer'], '#35553a', '#8aa65f'],
       'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 1, 14, 2, 17, 4, 19, 7, 21, 12],
-      'circle-stroke-color': '#ffffff',
+      'circle-stroke-color': '#f7f2e3',
       'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1],
       'circle-opacity': 0.9
     }
@@ -112,8 +112,8 @@ function addTrees(treeData) {
       'text-offset': [0, 0.8]
     },
     paint: {
-      'text-color': '#1b3d1b',
-      'text-halo-color': '#ffffff',
+      'text-color': '#2f3b2c',
+      'text-halo-color': '#f7f2e3',
       'text-halo-width': 1.5
     }
   });
@@ -132,7 +132,7 @@ function addTrees(treeData) {
 // colours the species' trees and greys out the rest, then frames them unless ?bounds= is set
 function highlightSpecies(treeData, speciesIndex) {
   const isSpecies = ['==', ['get', 'species'], speciesIndex];
-  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, '#e65100', '#9e9e9e']);
+  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, '#b5652b', '#b9b4a0']);
   map.setPaintProperty('trees', 'circle-opacity', ['case', isSpecies, 1, 0.35]);
   map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);
 
@@ -145,7 +145,7 @@ function highlightSpecies(treeData, speciesIndex) {
 
   const species = treeData.species[speciesIndex];
   const name = species.common_name || species.name;
-  showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in orange. `);
+  showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in rust. `);
   const showAll = document.createElement('a');
   showAll.href = window.location.pathname;
   showAll.textContent = 'Show all trees';
@@ -281,14 +281,14 @@ function addCityOutline() {
     type: 'fill',
     source: 'city',
     maxzoom: 14.5,
-    paint: { 'fill-color': '#2652F2', 'fill-opacity': 0.12 }
+    paint: { 'fill-color': '#7a5636', 'fill-opacity': 0.06 }
   });
   map.addLayer({
     id: 'city-outline',
     type: 'line',
     source: 'city',
     maxzoom: 14.5,
-    paint: { 'line-color': '#1E41AA', 'line-opacity': 0.5, 'line-width': 2 }
+    paint: { 'line-color': '#7a5636', 'line-opacity': 0.45, 'line-width': 2 }
   });
 }
 

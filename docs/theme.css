@@ -1,0 +1,103 @@
+/* Shared look for the map and the species and neighbourhood pages: warm paper, muted greens and browns */
+:root {
+  --paper: #f7f2e3;
+  --paper-glass: rgba(247, 242, 227, 0.93);
+  --paper-edge: #e3d9bd;
+  --ink: #2f3b2c;
+  --ink-soft: #5e604c;
+  --moss: #4f6b3a;
+  --moss-dark: #3c5330;
+  --moss-pale: #dfe7cc;
+  --bark: #7a5636;
+  --bark-pale: #efe2cc;
+  --heading-font: "Lora", Georgia, "Times New Roman", serif;
+}
+
+html,
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+.content h1, .content h2, .content h3, .content h4,
+.title, .subtitle {
+  font-family: var(--heading-font);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+a {
+  color: var(--bark);
+}
+a:hover {
+  color: var(--moss-dark);
+}
+
+.box {
+  background-color: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--paper-edge);
+  box-shadow: 0 2px 10px rgba(47, 59, 44, 0.12);
+}
+
+.button.is-success {
+  background-color: var(--moss);
+  color: #fffdf6;
+}
+.button.is-success:hover,
+.button.is-success:focus {
+  background-color: var(--moss-dark);
+  color: #fffdf6;
+}
+.button {
+  border-color: var(--paper-edge);
+  color: var(--ink);
+  background-color: #fffdf6;
+}
+
+.modal-background {
+  background-color: rgba(47, 59, 44, 0.55);
+}
+
+.navbar.is-success {
+  background-color: var(--moss);
+}
+.navbar.is-success .navbar-item {
+  color: #fffdf6;
+}
+.navbar.is-success a.navbar-item:hover {
+  background-color: var(--moss-dark);
+  color: #fffdf6;
+}
+.navbar.is-success .navbar-brand > .navbar-item:first-child {
+  font-family: var(--heading-font);
+}
+
+.footer {
+  background-color: var(--bark-pale);
+  color: var(--ink-soft);
+}
+
+.content table th {
+  color: var(--ink);
+}
+.content table td, .content table th {
+  border-color: var(--paper-edge);
+}
+
+hr {
+  background-color: var(--paper-edge);
+}
+
+.has-text-grey {
+  color: var(--ink-soft) !important;
+}
+
+.tag.is-native {
+  background-color: var(--moss-pale);
+  color: var(--moss-dark);
+}
+.tag.is-planted {
+  background-color: var(--bark-pale);
+  color: var(--bark);
+}

@@ -6,9 +6,13 @@
 
 #map-controls .box {
   cursor: pointer;
-  background-color: rgba(255,255,255,0.85);
+  background-color: var(--paper-glass);
+  color: var(--ink);
   border-radius: 100px;
   padding: 1rem;
+}
+#geolocate .icon.has-text-info {
+  color: var(--moss) !important;
 }
 
 /* the #geolocate button drives the map's geolocate control */
@@ -31,7 +35,7 @@
   }
 }
 .bottom-box .box {
-  background-color: rgba(255,255,255,0.85);
+  background-color: var(--paper-glass);
 }
 #footer {
   display: none;
@@ -45,4 +49,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.welcome-steps .icon {
+  color: var(--moss);
+}
+.welcome-steps .step-tree {
+  color: #8aa65f;
+}
+
+.tree-place {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
 }

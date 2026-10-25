@@ -61,6 +61,8 @@ function layout({ path, title, description, body }) {
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:url" content="${canonical}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap">
+    <link rel="stylesheet" href="${home}theme.css">
   </head>
 <body>
   <nav class="navbar is-success" aria-label="main navigation">
