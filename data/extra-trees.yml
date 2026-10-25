@@ -1,11 +1,638 @@
-# Trees that aren't in the City's open data layer (other surveys, hand-added).
-# The pipeline adds them to the City trees.
+# Trees that aren't in the City's open data layer (other surveys, other municipalities, hand-added).
+# The pipeline adds them to the City trees. `species` is the curated species they were assigned to.
 
+- latitude: 48.62259
+  longitude: -123.41704
+  botanical_name: Picea abies
+  common_name: Norway Spruce
+  species: Picea abies
+  source: Agriculture Canada
+  object_id: A114
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: '2.23'
+    tree_code: A114
+    site_number: '8417'
+    date_measured: 28-Jul-15
+- latitude: 48.62224
+  longitude: -123.41779
+  botanical_name: Chamaecyparis lawsoniana 'Gracilis Pendula'
+  common_name: Lawson Cypress
+  species: Chamaecyparis lawsoniana
+  source: Agriculture Canada
+  object_id: A183
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A183
+    site_number: '7358'
+    date_measured: 27-Dec-16
+- latitude: 48.62218
+  longitude: -123.41776
+  botanical_name: Cedrus deodara
+  common_name: Deodara Cedar
+  species: Cedrus deodara
+  source: Agriculture Canada
+  object_id: A184
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A184
+    site_number: '7858'
+    date_measured: 27-Dec-16
+- latitude: 48.62219
+  longitude: -123.41768
+  botanical_name: Cedrus libani
+  common_name: Lebanon Cedar
+  species: Cedrus libani
+  source: Agriculture Canada
+  object_id: A186
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A186
+    site_number: '7857'
+    date_measured: 27-Dec-16
+- latitude: 48.62209
+  longitude: -123.41757
+  botanical_name: Abies cephalonica
+  common_name: Greek Fir
+  species: Abies cephalonica
+  source: Agriculture Canada
+  object_id: A187
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A187
+    site_number: '7849'
+    date_measured: 27-Dec-16
+- latitude: 48.62202
+  longitude: -123.41746
+  botanical_name: Chamaecyparis lawsoniana 'Gracilis Pendula'
+  common_name: Lawson Cypress
+  species: Chamaecyparis lawsoniana
+  source: Agriculture Canada
+  object_id: A188
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A188
+    site_number: '7860'
+    date_measured: 27-Dec-16
+- latitude: 48.62194
+  longitude: -123.41756
+  botanical_name: Pinus contorta
+  common_name: Lodgepole Pine
+  species: Pinus contorta
+  source: Agriculture Canada
+  object_id: A189
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A189
+    site_number: '7853'
+    date_measured: 27-Dec-16
+- latitude: 48.62178
+  longitude: -123.41773
+  botanical_name: Picea sitchensis
+  common_name: Sitka Spruce
+  species: Picea sitchensis
+  source: Agriculture Canada
+  object_id: A190
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8585'
+  data:
+    cbh: null
+    tree_code: A190
+    site_number: '8585'
+    date_measured: 27-Dec-16
+- latitude: 48.62171
+  longitude: -123.41755
+  botanical_name: Pinus
+  common_name: pine
+  species: Pinus
+  source: Agriculture Canada
+  object_id: A191
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8596'
+  data:
+    cbh: null
+    tree_code: A191
+    site_number: '8596'
+    date_measured: 27-Dec-16
+- latitude: 48.62162
+  longitude: -123.41754
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: Agriculture Canada
+  object_id: A192
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '1176'
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A192
+    site_number: '1176'
+    date_measured: 27-Dec-16
+- latitude: 48.6226
+  longitude: -123.41751
+  botanical_name: Pinus sylvestris 'Fastigiata'
+  common_name: Scotch Pine
+  species: Pinus sylvestris
+  source: Agriculture Canada
+  object_id: A195
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '9150'
+  data:
+    cbh: null
+    tree_code: A195
+    site_number: '9150'
+    date_measured: 23-Jan-17
+- latitude: 48.62259
+  longitude: -123.41751
+  botanical_name: Chamaecyparis lawsoniana 'Lane'
+  common_name: Lawson Cypress
+  species: Chamaecyparis lawsoniana
+  source: Agriculture Canada
+  object_id: A196
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '11900'
+  data:
+    cbh: null
+    tree_code: A196
+    site_number: '11900'
+    date_measured: 23-Jan-17
+- latitude: 48.62259
+  longitude: -123.41751
+  botanical_name: Ilex aquifolium silver variegated 'Red Stem'
+  common_name: Silver Variegated Holly
+  species: Ilex aquifolium
+  source: Agriculture Canada
+  object_id: A197
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7330'
+  data:
+    cbh: null
+    tree_code: A197
+    site_number: '7330'
+    date_measured: 23-Jan-17
+- latitude: 48.6226095028121
+  longitude: -123.41749682209
+  botanical_name: Picea pungens 'Globosa'
+  common_name: Dwarf Globe Blue Spruce
+  species: Picea pungens
+  source: Agriculture Canada
+  object_id: A198
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8406'
+  data:
+    cbh: '0.75'
+    tree_code: A198
+    site_number: '8406'
+    date_measured: 23-Jan-17
+- latitude: 48.6226046810521
+  longitude: -123.417212332506
+  botanical_name: Picea abies 'Gregoryana Veitchii'
+  common_name: Norway Spruce
+  species: Picea abies
+  source: Agriculture Canada
+  object_id: A199
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '6447'
+  data:
+    cbh: '1.55'
+    tree_code: A199
+    site_number: '6447'
+    date_measured: 23-Jan-17
+- latitude: 48.62261
+  longitude: -123.41727
+  botanical_name: Picea abies 'Remontii'
+  common_name: Remont Norway Spruce
+  species: Picea abies
+  source: Agriculture Canada
+  object_id: A201
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '14751'
+  confirmed: true
+  data:
+    cbh: '0.43'
+    tree_code: A201
+    site_number: '14751'
+    date_measured: 23-Jan-17
+- latitude: 48.62255
+  longitude: -123.41701
+  botanical_name: Picea abies 'Pumila'
+  common_name: Pumila Norway Spruce
+  species: Picea abies
+  source: Agriculture Canada
+  object_id: A203
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '14811'
+  confirmed: true
+  data:
+    cbh: '0.80'
+    tree_code: A203
+    site_number: '14811'
+    date_measured: 23-Jan-17
+- latitude: 48.6226503892872
+  longitude: -123.41702
+  botanical_name: Ligustrum sinense Stauntoni
+  common_name: Chinese privet
+  species: Ligustrum sinense
+  source: Agriculture Canada
+  object_id: A204
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '12351'
+  data:
+    cbh: null
+    tree_code: A204
+    site_number: '12351'
+    date_measured: 23-Jan-17
+- latitude: 48.6227
+  longitude: -123.4168
+  botanical_name: Cotinus coggygria 'purpureus'
+  common_name: Purple Leaved Smoke Tree
+  species: Cotinus coggygria
+  source: Agriculture Canada
+  object_id: A205
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '6123'
+  data:
+    cbh: '0.37'
+    tree_code: A205
+    site_number: '6123'
+    date_measured: 23-Jan-17
+- latitude: 48.62271
+  longitude: -123.41681
+  botanical_name: Cotinus coggygria 'purpureus'
+  common_name: Purple Leaved Smoke Tree
+  species: Cotinus coggygria
+  source: Agriculture Canada
+  object_id: A206
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '11661'
+  data:
+    cbh: '0.33'
+    tree_code: A206
+    site_number: '11661'
+    date_measured: 23-Jan-17
+- latitude: 48.6227
+  longitude: -123.4168
+  botanical_name: Cotinus coggygria 'purpureus'
+  common_name: Purple Leaved Smoke Tree
+  species: Cotinus coggygria
+  source: Agriculture Canada
+  object_id: A207
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '6191'
+  data:
+    cbh: '0.27'
+    tree_code: A207
+    site_number: '6191'
+    date_measured: 23-Jan-17
+- latitude: 48.62268620543
+  longitude: -123.416615364418
+  botanical_name: Buxus
+  common_name: Boxwood
+  species: Buxus
+  source: Agriculture Canada
+  object_id: A208
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '17031'
+  data:
+    cbh: null
+    tree_code: A208
+    site_number: '17031'
+    date_measured: 23-Jan-17
+- latitude: 48.622672
+  longitude: -123.41664
+  botanical_name: Cedrus atlantica Glauca
+  common_name: Blue Atlas Cedar
+  species: Cedrus atlantica
+  source: Agriculture Canada
+  object_id: A209
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '917'
+  data:
+    cbh: '0.37'
+    tree_code: A209
+    site_number: '917'
+    date_measured: 23-Jan-17
+- latitude: 48.62272
+  longitude: -123.41653
+  botanical_name: Magnolia stellata
+  common_name: Star Magnolia
+  species: Magnolia stellata
+  source: Agriculture Canada
+  object_id: A211
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7930'
+  data:
+    cbh: null
+    tree_code: A211
+    site_number: '7930'
+    date_measured: 23-Jan-17
+- latitude: 48.62201
+  longitude: -123.41573
+  botanical_name: Quercus gambelii
+  common_name: Gambel oak
+  species: Quercus gambelii
+  source: Agriculture Canada
+  object_id: A212
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7875'
+  data:
+    cbh: '2.25'
+    tree_code: A212
+    site_number: '7875'
+    date_measured: 10-Feb-17
+- latitude: 48.62188
+  longitude: -123.41536
+  botanical_name: Betula populifolia
+  common_name: Gray Birch
+  species: Betula populifolia
+  source: Agriculture Canada
+  object_id: A216
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7869'
+  data:
+    cbh: '1.42'
+    tree_code: A216
+    site_number: '7869'
+    date_measured: 10-Feb-17
+- latitude: 48.6221
+  longitude: -123.41524
+  botanical_name: Chamaecyparis lawsoniana
+  common_name: Lawson Cypress
+  species: Chamaecyparis lawsoniana
+  source: Agriculture Canada
+  object_id: A217
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '11891'
+  data:
+    cbh: null
+    tree_code: A217
+    site_number: '11891'
+    date_measured: 10-Feb-17
+- latitude: 48.6217
+  longitude: -123.41515
+  botanical_name: Betula alba
+  common_name: Silver Birch
+  species: Betula alba
+  source: Agriculture Canada
+  object_id: A218
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7870'
+  data:
+    cbh: '1.48'
+    tree_code: A218
+    site_number: '7870'
+    date_measured: 11-Feb-17
+- latitude: 48.6215559350991
+  longitude: -123.414161224537
+  botanical_name: Abies concolor
+  common_name: Colorado White fir
+  species: Abies concolor
+  source: Agriculture Canada
+  object_id: A221
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '1022'
+  confirmed: true
+  data:
+    cbh: '0.27'
+    tree_code: A221
+    site_number: '1022'
+    date_measured: 16-Feb-17
+- latitude: 48.62145
+  longitude: -123.41407
+  botanical_name: Acer cratagifolia 'Veitchii'
+  common_name: Hawthorn Maple
+  species: Acer cratagifolia
+  source: Agriculture Canada
+  object_id: A222
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '15554'
+  data:
+    cbh: null
+    tree_code: A222
+    site_number: '15554'
+    date_measured: 16-Feb-17
+- latitude: 48.6218148955686
+  longitude: -123.413974898148
+  botanical_name: Quercus lobata
+  common_name: Valley Oak
+  species: Quercus lobata
+  source: Agriculture Canada
+  object_id: A223
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '0202'
+  data:
+    cbh: '0.38'
+    tree_code: A223
+    site_number: '0202'
+    date_measured: 16-Feb-17
+- latitude: 48.6216846809551
+  longitude: -123.413826006117
+  botanical_name: Fagus atropunica
+  common_name: Purple European Beech
+  species: Fagus atropunica
+  source: Agriculture Canada
+  object_id: A224
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '1020'
+  data:
+    cbh: '0.35'
+    tree_code: A224
+    site_number: '1020'
+    date_measured: 21-Feb-17
+- latitude: 48.6215309935651
+  longitude: -123.413796851521
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
+  source: Agriculture Canada
+  object_id: A225
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '1021'
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A225
+    site_number: '1021'
+    date_measured: 21-Feb-17
+- latitude: 48.62264
+  longitude: -123.41462
+  botanical_name: Thuja occidentalis 'Smaragd'
+  common_name: White cedar 'Smaragd'
+  species: Thuja occidentalis
+  source: Agriculture Canada
+  object_id: A226
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '14338'
+  confirmed: true
+  data:
+    cbh: '0.47'
+    tree_code: A226
+    site_number: '14338'
+    date_measured: 21-Feb-17
+- latitude: 48.6226414837957
+  longitude: -123.416552682209
+  botanical_name: Buxus
+  common_name: Boxwood
+  species: Buxus
+  source: Agriculture Canada
+  object_id: A228
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '17031'
+  data:
+    cbh: null
+    tree_code: A228
+    site_number: '17031'
+    date_measured: 26-Feb-17
+- latitude: 48.6225815573093
+  longitude: -123.416107084656
+  botanical_name: Chamaecyparis pisifera 'Filifera Aurea'
+  common_name: Sawara cypress
+  species: Chamaecyparis pisifera
+  source: Agriculture Canada
+  object_id: A229
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '15164'
+  data:
+    cbh: '0.51'
+    tree_code: A229
+    site_number: '15164'
+    date_measured: 26-Feb-17
+- latitude: 48.6226334709582
+  longitude: -123.416092186508
+  botanical_name: Juniperus chinensis Pfitzeriana variegata
+  common_name: Chinese Juniper
+  species: Juniperus chinensis
+  source: Agriculture Canada
+  object_id: A230
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8431'
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A230
+    site_number: '8431'
+    date_measured: 26-Feb-17
+- latitude: 48.6217973744667
+  longitude: -123.417380525131
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas-fir
+  species: Pseudosuga menziesii
+  source: Agriculture Canada
+  object_id: A28
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: '5.9'
+    tree_code: A28
+    site_number: null
+    date_measured: null
+- latitude: 48.62275
+  longitude: -123.41746
+  botanical_name: Taxus X media 'Hatfieldii'
+  species: Taxus x
+  source: Agriculture Canada
+  object_id: A194
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '12887'
+- latitude: 48.6226044152618
+  longitude: -123.417226624447
+  botanical_name: 'Picea Omorika '
+  species: Picea omorika
+  source: Agriculture Canada
+  object_id: A200
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8444'
+- latitude: 48.6226702
+  longitude: -123.41661
+  botanical_name: Rhododendron Sir William Gladstone
+  species: Rhododendron
+  source: Agriculture Canada
+  object_id: A210
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7921'
+- latitude: 48.621767
+  longitude: -123.41563
+  botanical_name: Ulmus Americana
+  species: Ulmus americana
+  source: Agriculture Canada
+  object_id: A213
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7867'
+- latitude: 48.62171
+  longitude: -123.41546
+  botanical_name: Fraxinus Americana
+  species: Fraxinus americana
+  source: Agriculture Canada
+  object_id: A214
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7868'
+- latitude: 48.62188
+  longitude: -123.41535
+  botanical_name: Acer macrophyllum
+  species: Acer macrophyllum
+  source: Agriculture Canada
+  object_id: A215
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  confirmed: true
+- latitude: 48.62227
+  longitude: -123.41566
+  botanical_name: 'Cedrus Atlantica '
+  species: Cedrus atlantica
+  source: Agriculture Canada
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7873'
+  confirmed: true
+- latitude: 48.6227
+  longitude: -123.41471
+  botanical_name: 'Tsuga Canadensis '
+  species: Tsuga canadensis
+  source: Agriculture Canada
+  object_id: A227
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8496'
+- latitude: 48.4704673059826
+  longitude: -123.337750233135
+  botanical_name: Pinis radiata
+  common_name: Monterey Pine
+  species: Pinis radiata
+  source: Chaster & Ross 1988
+  object_id: A108
+  address: 3941 Oakdale Place
+  notes: 'Heritage tree # 31'
+  data:
+    cbh: '2.92'
+    tree_code: A108
+    site_number: null
+    date_measured: 23-Jul-15
+- latitude: 48.488393996965
+  longitude: -123.402135364418
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
+  source: Chaster & Ross 1988
+  object_id: A116
+  address: 4362 Wilkinson Road
+  notable: true
+  confirmed: true
+  notes: Heritage tree site, LAYRITZ TREES
+  data:
+    cbh: '6.9'
+    tree_code: A116
+    site_number: '2'
+    date_measured: 07-Aug-15
 - latitude: 48.4220904157628
   longitude: -123.408850116568
   botanical_name: Pinus ponderosa
   common_name: Ponderosa Pine
+  species: Pinus ponderosa
   source: Chaster & Ross 1988
+  object_id: A117
   address: 357 Lampson Street
   notable: true
   confirmed: true
@@ -18,7 +645,9 @@
   longitude: -123.41453
   botanical_name: Pinus ponderosa
   common_name: Ponderosa Pine
+  species: Pinus ponderosa
   source: Chaster & Ross 1988
+  object_id: A118
   address: 1183 Munro Street
   notable: true
   confirmed: true
@@ -31,7 +660,9 @@
   longitude: -123.364294635582
   botanical_name: Sequoiadendron giganteum
   common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
   source: Chaster & Ross 1988
+  object_id: A123
   address: Beacon Hill Park
   notable: true
   confirmed: true
@@ -40,11 +671,28 @@
     tree_code: A123
     site_number: null
     date_measured: null
+- latitude: 48.4569416321273
+  longitude: -123.325349650297
+  botanical_name: Pinus jeffreyi
+  common_name: Jeffrey Pine
+  species: Pinus jeffreyi
+  source: Chaster & Ross 1988
+  object_id: A135
+  address: Mount Tolmie Park
+  notable: true
+  confirmed: true
+  data:
+    cbh: '3.37'
+    tree_code: A135
+    site_number: null
+    date_measured: 07-Sep-15
 - latitude: 48.4145809910499
   longitude: -123.320341078539
   botanical_name: Quercus garriana
   common_name: Garry Oak
+  species: Quercus garriana
   source: Chaster & Ross 1988
+  object_id: A136
   address: 570 Falkland Rd.
   notable: true
   confirmed: true
@@ -54,11 +702,68 @@
     tree_code: A136
     site_number: null
     date_measured: 08-Feb-16
+- latitude: 48.65556
+  longitude: -123.44444
+  botanical_name: Quercus garriana
+  common_name: Garry Oak
+  species: Quercus garriana
+  source: Chaster & Ross 1988
+  object_id: A146
+  address: Mills Rd at W. Saanich Rd
+  data:
+    cbh: '4.55'
+    tree_code: A146
+    site_number: null
+    date_measured: 29-Feb-16
+- latitude: 48.4522
+  longitude: -123.4414
+  botanical_name: Juniperus scopulorum
+  common_name: Rocky Mountain Juniper
+  species: Juniperus scopulorum
+  source: Chaster & Ross 1988
+  object_id: A174
+  address: Kerwood Street, View Royal
+  confirmed: true
+  data:
+    cbh: '2.46'
+    tree_code: A174
+    site_number: null
+    date_measured: 04-Jul-16
+- latitude: 48.4522
+  longitude: -123.4414
+  botanical_name: Juniperus scopulorum
+  common_name: Rocky Mountain Juniper
+  species: Juniperus scopulorum
+  source: Chaster & Ross 1988
+  object_id: A175
+  address: Kerwood Street, View Royal
+  confirmed: true
+  data:
+    cbh: '2.80'
+    tree_code: A175
+    site_number: null
+    date_measured: 04-Jul-16
+- latitude: 48.6694439452641
+  longitude: -123.477751720238
+  botanical_name: Juniperus scopulorum
+  common_name: Rocky Mountan Juniper
+  species: Juniperus scopulorum
+  source: Chaster & Ross 1988
+  object_id: A231
+  address: Towner Bay
+  confirmed: true
+  data:
+    cbh: '2.31'
+    tree_code: A231
+    site_number: null
+    date_measured: 07-Mar-17
 - latitude: 48.41052
   longitude: -123.33785569
   botanical_name: Pinus thunbergii
   common_name: Aleppo pine
+  species: Pinus thunbergii
   source: Chaster & Ross 1988
+  object_id: A240
   address: Ross Bay Cemetery, Fairfield Road
   tag: '1241'
   notable: true
@@ -68,11 +773,190 @@
     tree_code: A240
     site_number: '1241'
     date_measured: 18-Jul-17
+- latitude: 48.6485105072057
+  longitude: -123.450395160713
+  botanical_name: Abies cephlonica
+  common_name: Greek fir
+  species: Abies cephlonica
+  source: Chaster & Ross 1988
+  object_id: A253
+  address: Institue of Ocean Sciences, 9860 W Saanich Rd
+  tag: '170'
+  confirmed: true
+  data:
+    cbh: '2.40'
+    tree_code: A253
+    site_number: '170'
+    date_measured: 08-Nov-18
+- latitude: 48.57256
+  longitude: -123.40315
+  botanical_name: Abies pinsapo
+  common_name: Spanish fir
+  species: Abies pinsapo
+  source: Chaster & Ross 1988
+  object_id: A257
+  address: Michell Park, Central Saanich Rd and East Saanich Road
+  notable: true
+  confirmed: true
+  data:
+    cbh: '2.26'
+    tree_code: A257
+    site_number: null
+    date_measured: 05-Feb-19
+- latitude: 48.6439638004041
+  longitude: -123.457035626984
+  botanical_name: Abies pinsapo
+  common_name: Spanish fir
+  species: Abies pinsapo
+  source: Chaster & Ross 1988
+  object_id: A279
+  address: 9635 West Saanich Rd.
+  confirmed: true
+  data:
+    cbh: '1.55'
+    tree_code: A279
+    site_number: null
+    date_measured: 16-Jul-19
+- latitude: 48.67269
+  longitude: -123.47769
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A280
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.325'
+    tree_code: A280
+    site_number: null
+    date_measured: 05-Aug-19
+- latitude: 48.67268
+  longitude: -123.47767
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A281
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.55'
+    tree_code: A281
+    site_number: null
+    date_measured: 05-Aug-19
+- latitude: 48.67271
+  longitude: -123.47772
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A282
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.78'
+    tree_code: A282
+    site_number: null
+    date_measured: 05-Aug-19
+- latitude: 48.67281
+  longitude: -123.4774
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A283
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.59'
+    tree_code: A283
+    site_number: null
+    date_measured: 05-Aug-19
+- latitude: 48.67326
+  longitude: -123.47719
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A284
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.20'
+    tree_code: A284
+    site_number: null
+    date_measured: 05-Aug-19
+- latitude: 48.67274
+  longitude: -123.47763
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A285
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.65'
+    tree_code: A285
+    site_number: null
+    date_measured: 12-Aug-19
+- latitude: 48.67288
+  longitude: -123.47766
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A286
+  address: 507 Downey Road
+  confirmed: true
+  data:
+    cbh: '1.92'
+    tree_code: A286
+    site_number: null
+    date_measured: 12-Aug-19
+- latitude: 48.67296
+  longitude: -123.47776
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A287
+  address: 507 Downey Road
+  notable: true
+  data:
+    cbh: '1.50'
+    tree_code: A287
+    site_number: null
+    date_measured: 12-Aug-19
+- latitude: 48.67297
+  longitude: -123.4773
+  botanical_name: Abies numidica
+  common_name: Algerian fir
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  object_id: A288
+  address: 507 Downey Road
+  notable: true
+  data:
+    cbh: '1.79'
+    tree_code: A288
+    site_number: null
+    date_measured: 12-Aug-19
+- latitude: 48.6726960282648
+  longitude: -123.47775606954
+  botanical_name: Abies numidica
+  species: Abies numidica
+  source: Chaster & Ross 1988
+  address: 507 Downey Road
+  notable: true
 - latitude: 48.4095341172307
   longitude: -123.343772907742
   botanical_name: Pinus nigra
   common_name: Austrian Pine
+  species: Pinus nigra
   source: clowater
+  object_id: '11588'
   tag: '738'
   confirmed: true
   data:
@@ -105,7 +989,9 @@
   longitude: -123.343793897494
   botanical_name: Pinus thunbergii
   common_name: Pine
+  species: Pinus thunbergii
   source: clowater
+  object_id: '24667'
   tag: '737'
   confirmed: true
   data:
@@ -134,11 +1020,104 @@
     PlantingDateEst: 21-40
     BlossomDateStart: null
     DiameterAtBreastHeight: 23
+- latitude: 48.48989
+  longitude: -123.33787
+  botanical_name: Platanus acerifolia
+  common_name: London Plane tree
+  species: Platanus × acerifolia
+  source: clowater
+  object_id: A02
+  address: Shelbourne Street and Cedar Hill Road
+  notable: true
+  confirmed: true
+  notes: >-
+    One of the 600 London Plane trees planted starting in 1912, as a First World War memorial. The Plane trees were
+    planted on both sides of Shelbourne Street from Victoria through Saanich to Mount Douglas Park.
+  data:
+    cbh: '1.55'
+    tree_code: A02
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.44386
+  longitude: -123.29532
+  botanical_name: Magnolia campbellii
+  common_name: Campbell's Magnolia ?
+  species: Magnolia campbellii
+  source: clowater
+  object_id: A06
+  address: 2985 Rutland Road
+  notable: true
+  notes: "\"An oriental magnolia, quite rare in British Columbia, is the Chinese Magnolia campbelli\r\nmollicomota, a form of Campbell's magnolia, from the Himalayas where it is considered\r\nthe aristocrat of all magnolias. The Chinese variety is hardier, blooming within 7-8 years\r\nof being started, while the true species takes nearly 30 years. A heritage specimen at 2985\r\nRutland Road in the Uplands area of Oak Bay is about 25 feet (7.6 m) tall, with an equal\r\nspread. Flowers are rose coloured and quite large. (Chaster and Ross 1988)\""
+  data:
+    cbh: null
+    tree_code: A06
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.44382
+  longitude: -123.29495
+  botanical_name: Taxodium distichum
+  common_name: Bald Cypress
+  species: Taxodium distichum
+  source: clowater
+  object_id: A07
+  address: 3000 Rutland Road
+  notable: true
+  confirmed: true
+  notes: Unusual specimen
+  data:
+    cbh: '2.8'
+    tree_code: A07
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.44408
+  longitude: -123.29839
+  botanical_name: Cedrus atlantica glauca
+  common_name: Blue Atlas Cedar
+  species: Cedrus atlantica
+  source: clowater
+  object_id: A08
+  address: Lansdowne Road at Southdowne Road
+  notable: true
+  notes: "\"The Atlas cedar, Cedrus atlantica, native to the Atlas Mountains of Morocco, is a\r\npopular attractive conifer, particularly the blue form 'Giauca'. A large example, notable\r\nfor its spread, may be viewed along Lansdowne Road at Southdowne, on the green. (Chaster and Ross 1988)\""
+  data:
+    cbh: '5.6'
+    tree_code: A08
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.444028157494
+  longitude: -123.294292565641
+  botanical_name: Ulmus glabra camperdownii
+  common_name: Camperdown Elm
+  species: Ulmus glabra
+  source: clowater
+  object_id: A100
+  address: 3000 Rutland Dr
+  data:
+    cbh: '1.6'
+    tree_code: A100
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.444
+  longitude: -123.29417
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
+  source: clowater
+  object_id: A101
+  address: 3000 Rutland Road
+  notes: 'Large specimen, DBH: 1.9m'
+  data:
+    cbh: '5.9'
+    tree_code: A101
+    site_number: null
+    date_measured: 16-Jul-15
 - latitude: 48.41833
   longitude: -123.37152
   botanical_name: Ulmus americana
   common_name: American Elm
+  species: Ulmus americana
   source: clowater
+  object_id: A102
   address: Parliment Buildings, Superior Street
   notable: true
   confirmed: true
@@ -148,11 +1127,25 @@
     tree_code: A102
     site_number: null
     date_measured: 20-Jul-15
+- latitude: 48.50229
+  longitude: -123.35812
+  botanical_name: Pinus nigra
+  common_name: Austrian Pine ?
+  species: Pinus nigra
+  source: clowater
+  object_id: A103
+  data:
+    cbh: '1.45'
+    tree_code: A103
+    site_number: null
+    date_measured: 21-Jul-15
 - latitude: 48.4109530325689
   longitude: -123.338181632523
   botanical_name: Pinus nigra
   common_name: Austrian Pine ?
+  species: Pinus nigra
   source: clowater
+  object_id: A104
   address: Ross Bay Cemetery, Fairfield Road
   tag: '1238'
   confirmed: true
@@ -165,17 +1158,46 @@
   longitude: -123.34129
   botanical_name: Pinus thunbergii
   common_name: Japanese Black Pine
+  species: Pinus thunbergii
   source: clowater
+  object_id: A105
   data:
     cbh: '2.2'
     tree_code: A105
     site_number: null
     date_measured: 21-Jul-15
+- latitude: 48.47051
+  longitude: -123.33767
+  botanical_name: Pinus strobus
+  common_name: Eastern White Pine
+  species: Pinus strobus
+  source: clowater
+  object_id: A106
+  data:
+    cbh: '0.85'
+    tree_code: A106
+    site_number: null
+    date_measured: 23-Jul-15
+- latitude: 48.4704918471583
+  longitude: -123.337710321427
+  botanical_name: Pinis radiata
+  common_name: Monterey Pine
+  species: Pinis radiata
+  source: clowater
+  object_id: A107
+  address: 3941 Oakdale Place
+  data:
+    cbh: '1.4'
+    tree_code: A107
+    site_number: null
+    date_measured: 23-Jul-15
 - latitude: 48.4318602238086
   longitude: -123.307097667494
   botanical_name: Cedrus atlantica glauca
   common_name: Blue Atlas Cedar
+  species: Cedrus atlantica
   source: clowater
+  object_id: A11
   address: Beach Drive at Bowker Ave.
   confirmed: true
   data:
@@ -183,11 +1205,38 @@
     tree_code: A11
     site_number: null
     date_measured: 19-Jan-15
+- latitude: 48.4705
+  longitude: -123.3378
+  botanical_name: Pinus montecola
+  common_name: Western White Pine
+  species: Pinus montecola
+  source: clowater
+  object_id: A110
+  data:
+    cbh: '1.1'
+    tree_code: A110
+    site_number: null
+    date_measured: 27-Jul-15
+- latitude: 48.47048
+  longitude: -123.3376
+  botanical_name: Pinus ponderosa
+  common_name: Ponderosa Pine
+  species: Pinus ponderosa
+  source: clowater
+  object_id: A111
+  address: 3941 Oakdale Place
+  data:
+    cbh: '0.65'
+    tree_code: A111
+    site_number: null
+    date_measured: 27-Jul-15
 - latitude: 48.4155781882283
   longitude: -123.365647842922
   botanical_name: Pinus jeffreyi
   common_name: Jeffrey Pine
+  species: Pinus jeffreyi
   source: clowater
+  object_id: A119
   address: Beacon Hill Park
   notable: true
   confirmed: true
@@ -200,7 +1249,9 @@
   longitude: -123.30677
   botanical_name: Pinus thunbergii
   common_name: Japanese Black Pine
+  species: Pinus thunbergii
   source: clowater
+  object_id: A12
   address: Beach Drive and Bowker Ave.
   notable: true
   notes: "The First of a historical planting of 14 Japanese black pines in a row from 1881 to\r\n1959 Beach Drive. (Chaster And Ross, 1988)"
@@ -209,31 +1260,212 @@
     tree_code: A12
     site_number: null
     date_measured: 19-Jan-15
+- latitude: 48.50166
+  longitude: -123.35851
+  botanical_name: Populus angustifolia
+  common_name: Narrowleaf Cottonwood
+  species: Populus angustifolia
+  source: clowater
+  object_id: A122
+  address: Outerbridge Park, Royal Oak Drive
+  confirmed: true
+  data:
+    cbh: '1.73'
+    tree_code: A122
+    site_number: null
+    date_measured: 11-Aug-15
+- latitude: 48.38901
+  longitude: -123.52426
+  botanical_name: Arbutus menziesii
+  common_name: Arbutus
+  species: Arbutus menziesii
+  source: clowater
+  object_id: A128
+  address: Witty's Lagoon Regional Park
+  data:
+    cbh: '4.43'
+    tree_code: A128
+    site_number: null
+    date_measured: 30-Aug-15
+- latitude: 48.38878
+  longitude: -123.51437
+  botanical_name: Taxus brevifolia
+  common_name: Yew
+  species: Taxus brevifolia
+  source: clowater
+  object_id: A130
+  address: Witty's Lagoon Regional Park
+  data:
+    cbh: '0.8'
+    tree_code: A130
+    site_number: null
+    date_measured: 30-Aug-15
+- latitude: 48.3907
+  longitude: -123.51573
+  botanical_name: Taxus brevifolia
+  common_name: Yew
+  species: Taxus brevifolia
+  source: clowater
+  object_id: A131
+  address: Witty's Lagoon Regional Park
+  data:
+    cbh: '1.5'
+    tree_code: A131
+    site_number: null
+    date_measured: 30-Aug-15
+- latitude: 48.3892216596485
+  longitude: -123.516392100525
+  botanical_name: Taxus brevifolia
+  common_name: Yew
+  species: Taxus brevifolia
+  source: clowater
+  object_id: A132
+  address: Witty's Lagoon Regional Park
+  data:
+    cbh: '1.9'
+    tree_code: A132
+    site_number: null
+    date_measured: 30-Aug-15
+- latitude: 48.62216
+  longitude: -123.41561
+  botanical_name: Acer saccharum
+  common_name: Sugar Maple
+  species: Acer macrophyllum
+  source: clowater
+  object_id: A133
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: '3'
+    tree_code: A133
+    site_number: null
+    date_measured: 01-Sep-15
+- latitude: 48.62245
+  longitude: -123.41559
+  botanical_name: Magnolia Kobus
+  common_name: Kobushi magnolia
+  source: clowater
+  object_id: A134
+  data:
+    cbh: '1.1'
+    tree_code: A134
+    site_number: '15366'
+    date_measured: 01-Sep-15
+- latitude: 48.62278
+  longitude: -123.41583
+  botanical_name: Chamaecyparis pisifera 'Boulevard'
+  common_name: Boulevard False Cypress
+  species: Chamaecyparis pisifera
+  source: clowater
+  object_id: A138
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '1008'
+  data:
+    cbh: '0.1'
+    tree_code: A138
+    site_number: '1008'
+    date_measured: 22-Feb-16
+- latitude: 48.6085084383375
+  longitude: -123.421267647019
+  botanical_name: Arbutus menziesii
+  common_name: Arbutus
+  species: Arbutus menziesii
+  source: clowater
+  object_id: A139
+  address: East Saanich Road
+  data:
+    cbh: '6.85'
+    tree_code: A139
+    site_number: null
+    date_measured: 23-Feb-16
+- latitude: 48.6754402588079
+  longitude: -123.416154402447
+  botanical_name: Cupressus macrocarpa
+  common_name: Monteray Cypress
+  species: Hesperocyparis macrocarpa
+  source: clowater
+  object_id: A14
+  address: 1949 Marina Way
+  notable: true
+  confirmed: true
+  notes: Behind North Saanich Yacht Club
+  data:
+    cbh: '5.05'
+    tree_code: A14
+    site_number: null
+    date_measured: 20-Jan-15
 - latitude: 48.4111
   longitude: -123.3477
   botanical_name: Prunus X blireiana
   common_name: Blireana Plum
   source: clowater
+  object_id: A143
   data:
     cbh: null
     tree_code: A143
     site_number: null
     date_measured: 27-Feb-16
+- latitude: 48.36557937579
+  longitude: -123.596754780426
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A144
+  address: Matheson Lake Park
+  notable: true
+  confirmed: true
+  data:
+    cbh: '6.8'
+    tree_code: A144
+    site_number: null
+    date_measured: 28-Feb-16
+- latitude: 48.6555493181476
+  longitude: -123.444504373016
+  botanical_name: Quercus garriana
+  common_name: Garry Oak
+  species: Quercus garriana
+  source: clowater
+  object_id: A145
+  address: Mills Rd at W. Saanich Rd
+  data:
+    cbh: '4.45'
+    tree_code: A145
+    site_number: null
+    date_measured: 29-Feb-16
 - latitude: 48.4314
   longitude: -123.3431
   botanical_name: Prunus X yedoensis
   common_name: Yoshino Cherry
   source: clowater
+  object_id: A149
   data:
     cbh: '1.55'
     tree_code: A149
     site_number: null
     date_measured: null
+- latitude: 48.675697861043
+  longitude: -123.415940699406
+  botanical_name: Cupressus macrocarpa
+  common_name: Monteray Cypress
+  species: Hesperocyparis macrocarpa
+  source: clowater
+  object_id: A15
+  address: 1949 Marina Way
+  notable: true
+  confirmed: true
+  notes: Large specimen, behind North Saanich Yacht Club
+  data:
+    cbh: '5.4'
+    tree_code: A15
+    site_number: null
+    date_measured: 20-Jan-15
 - latitude: 48.4111
   longitude: -123.3375
   botanical_name: Abies homolepis
   common_name: Nikko fir
+  species: Abies homolepis
   source: clowater
+  object_id: A153
   address: Ross Bay Cemetery, Fairfield Road
   tag: '665'
   confirmed: true
@@ -242,11 +1474,78 @@
     tree_code: A153
     site_number: '665'
     date_measured: 07-Apr-16
+- latitude: 48.4683100601296
+  longitude: -123.400901923943
+  botanical_name: Acer negundo
+  common_name: Box Elder
+  species: Acer negundo
+  source: clowater
+  object_id: A154
+  address: Hyacinth Park, Marigold Ave.
+  data:
+    cbh: '0.90'
+    tree_code: A154
+    site_number: null
+    date_measured: null
+- latitude: 48.50228
+  longitude: -123.35763
+  botanical_name: Pinus strobus Pendula
+  common_name: Weeping White Pine
+  species: Pinus strobus
+  source: clowater
+  object_id: A155
+  address: Outerbridge Park, Royal Oak Drive
+  data:
+    cbh: '0.43'
+    tree_code: A155
+    site_number: null
+    date_measured: 24-Apr-16
+- latitude: 48.5925354807875
+  longitude: -123.462887347221
+  botanical_name: Robinia pseudoacacia
+  common_name: Black Locust
+  species: Robinia pseudoacacia
+  source: clowater
+  object_id: A156
+  address: 7742 West Saanich Road
+  data:
+    cbh: '2.76'
+    tree_code: A156
+    site_number: null
+    date_measured: 23-May-16
+- latitude: 48.5025
+  longitude: -123.3573
+  botanical_name: Gladitsia
+  common_name: Honey Locust
+  species: Gladitsia
+  source: clowater
+  object_id: A157
+  address: Outerbridge Park, Royal Oak Drive
+  data:
+    cbh: null
+    tree_code: A157
+    site_number: null
+    date_measured: 23-May-16
+- latitude: 48.5023
+  longitude: -123.3578
+  botanical_name: Junipeus chinensis chinensis
+  common_name: Chinese Juniper
+  species: Junipeus chinensis
+  source: clowater
+  object_id: A158
+  address: Outerbridge Park, Royal Oak Drive
+  data:
+    cbh: '0.66'
+    tree_code: A158
+    site_number: null
+    date_measured: 14-Dec-16
 - latitude: 48.4134
   longitude: -123.3645
   botanical_name: Styrax japonicus
   common_name: Japanese Snowbell
+  species: Styrax japonicus
   source: clowater
+  object_id: A159
   address: Beacon Hill Park
   tag: '1582'
   data:
@@ -254,21 +1553,503 @@
     tree_code: A159
     site_number: '1582'
     date_measured: 13-Dec-16
+- latitude: 48.6757047831829
+  longitude: -123.415928326069
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
+  source: clowater
+  object_id: A16
+  address: 1949 Marina Way
+  notable: true
+  confirmed: true
+  notes: Large specimen, behind North Saanich Yacht Club
+  data:
+    cbh: '6.03'
+    tree_code: A16
+    site_number: null
+    date_measured: 20-Jan-15
 - latitude: 48.4132
   longitude: -123.3646
   botanical_name: Sorbus X thuriniaca
   common_name: Oakleaf Mountain Ash
   source: clowater
+  object_id: A160
   data:
     cbh: null
     tree_code: A160
     site_number: null
     date_measured: 13-Dec-16
+- latitude: 48.5022793594305
+  longitude: -123.357821457672
+  botanical_name: Prunus
+  common_name: Golden Plum
+  species: Prunus
+  source: clowater
+  object_id: A163
+  address: Outerbridge Park, Royal Oak Drive
+  data:
+    cbh: null
+    tree_code: A163
+    site_number: null
+    date_measured: null
+- latitude: 48.62178
+  longitude: -123.41764
+  botanical_name: Chamaecyparis lawsoniana
+  common_name: Lawson Cypress
+  species: Chamaecyparis lawsoniana
+  source: clowater
+  object_id: A168
+  data:
+    cbh: null
+    tree_code: A168
+    site_number: '7338'
+    date_measured: 23-Jun-16
+- latitude: 48.6226
+  longitude: -123.4179
+  botanical_name: Juniperus chinensis Olympia
+  common_name: Chinese Juniper
+  species: Juniperus chinensis
+  source: clowater
+  object_id: A169
+  data:
+    cbh: '0.53'
+    tree_code: A169
+    site_number: '6426'
+    date_measured: 27-Jun-16
+- latitude: 48.67565
+  longitude: -123.41593
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
+  source: clowater
+  object_id: A17
+  address: 1949 Marina Way
+  notable: true
+  confirmed: true
+  notes: Large specimen, behind North Saanich Yacht Club
+  data:
+    cbh: '6.95'
+    tree_code: A17
+    site_number: null
+    date_measured: 20-Jan-15
+- latitude: 48.6227230487268
+  longitude: -123.417645597553
+  botanical_name: Juniperus squamata 'Meyeri'
+  common_name: Juniper
+  species: Juniperus squamata
+  source: clowater
+  object_id: A170
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '10475'
+  confirmed: true
+  data:
+    cbh: '0.43'
+    tree_code: A170
+    site_number: '10475'
+    date_measured: 27-Jun-16
+- latitude: 48.6226505628607
+  longitude: -123.41459317791
+  botanical_name: Picea abies 'Pumila'
+  common_name: Norway Spruce
+  species: Picea abies
+  source: clowater
+  object_id: A171
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '14419'
+  confirmed: true
+  data:
+    cbh: '1.60'
+    tree_code: A171
+    site_number: '14419'
+    date_measured: 27-Jun-16
+- latitude: 48.6225831895329
+  longitude: -123.414578046627
+  botanical_name: Chamaecyparis pisifera 'Filifera Nana'
+  common_name: Dwarf Threadleaf Falsecypress
+  species: Chamaecyparis pisifera
+  source: clowater
+  object_id: A172
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '6603'
+  confirmed: true
+  data:
+    cbh: '0.48'
+    tree_code: A172
+    site_number: '6603'
+    date_measured: 27-Jun-16
+- latitude: 48.989
+  longitude: -123.6794
+  botanical_name: Arbutus menziesii
+  common_name: Arbutus
+  species: Arbutus menziesii
+  source: clowater
+  object_id: A176
+  address: Mission Road, Thetis Island
+  notable: true
+  notes: "Dead tree\r\nCBH 1 stem- 3.63\r\nCBH 2 stem- 3.46\r\nC at 1.25m - 6.49"
+  data:
+    cbh: '6.49'
+    tree_code: A176
+    site_number: null
+    date_measured: 08-Jul-16
+- latitude: 48.62194
+  longitude: -123.41778
+  botanical_name: Chamaecyparis lawsoniana 'Alumii'
+  common_name: ALUM LAWSON CYPRESS
+  species: Chamaecyparis lawsoniana
+  source: clowater
+  object_id: A178
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A178
+    site_number: '7343'
+    date_measured: 27-Dec-16
+- latitude: 48.62206
+  longitude: -123.41775
+  botanical_name: Cedrus atlantica
+  common_name: Atlas Cedar
+  species: Cedrus atlantica
+  source: clowater
+  object_id: A179
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A179
+    site_number: '7346'
+    date_measured: 27-Dec-16
+- latitude: 48.6768
+  longitude: -123.48029
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas-fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A18
+  address: R.O. Bull Park, Wain Road
+  notable: true
+  confirmed: true
+  data:
+    cbh: '5.4'
+    tree_code: A18
+    site_number: null
+    date_measured: 21-Jan-15
+- latitude: 48.62218
+  longitude: -123.41783
+  botanical_name: Cedrus deodara
+  common_name: Deodara Cedar
+  species: Cedrus deodara
+  source: clowater
+  object_id: A180
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A180
+    site_number: '7349'
+    date_measured: 27-Dec-16
+- latitude: 48.62217
+  longitude: -123.41787
+  botanical_name: Cedrus libani
+  common_name: Lebanon Cedar
+  species: Cedrus libani
+  source: clowater
+  object_id: A181
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A181
+    site_number: '7361'
+    date_measured: 27-Dec-16
+- latitude: 48.62237
+  longitude: -123.41782
+  botanical_name: Quercus phillyraeoides
+  common_name: Ubame Oak
+  species: Quercus phillyraeoides
+  source: clowater
+  object_id: A182
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: null
+    tree_code: A182
+    site_number: '7356'
+    date_measured: 27-Dec-16
+- latitude: 48.62221
+  longitude: -123.41768
+  botanical_name: Cryptomeria japnoica 'Yoshino'
+  common_name: Japanese cryptomeria
+  species: Cryptomeria japonica
+  source: clowater
+  notable: true
+  data: '{"cbh"=>nil, "tree_code"=>"A185", "site_number"=>"7856", "date_measured"=>"27-Dec-16"}'
+- latitude: 48.6768
+  longitude: -123.48029
+  botanical_name: Thuja plicata
+  common_name: Western Redcedar
+  species: Thuja plicata
+  source: clowater
+  object_id: A19
+  address: R.O. Bull Park, Wain Road
+  notable: true
+  confirmed: true
+  data:
+    cbh: '4.8'
+    tree_code: A19
+    site_number: null
+    date_measured: 21-Jan-15
+- latitude: 48.62241
+  longitude: -123.41802
+  botanical_name: Taxus X media 'Brownii'
+  common_name: Anglojap Yew
+  source: clowater
+  object_id: A193
+  data:
+    cbh: null
+    tree_code: A193
+    site_number: '14819'
+    date_measured: 23-Jan-17
+- latitude: 48.62275
+  longitude: -123.41746
+  botanical_name: Taxus X media 'Hatfieldii'
+  common_name: Anglojap Yew
+  source: clowater
+  object_id: A194
+  data:
+    cbh: null
+    tree_code: A194
+    site_number: '12887'
+    date_measured: 23-Jan-17
+- latitude: 48.62237
+  longitude: -123.41772
+  botanical_name: Quercus dentata
+  common_name: Daimyo oak
+  species: Quercus dentata
+  source: clowater
+  object_id: A20
+  address: 8801 E Saanich Rd
+  notable: true
+  data:
+    cbh: '2.5'
+    tree_code: A20
+    site_number: '7357'
+    date_measured: null
+- latitude: 48.62261
+  longitude: -123.41727
+  botanical_name: Picea Omorika 'Nana'
+  common_name: Serbian Spruce
+  source: clowater
+  object_id: A200
+  data:
+    cbh: '0.90'
+    tree_code: A200
+    site_number: '8444'
+    date_measured: 23-Jan-17
+- latitude: 48.62262
+  longitude: -123.41776
+  botanical_name: Platanus orientalis
+  common_name: Oriental Plane Tree
+  species: Platanus orientalis
+  source: clowater
+  object_id: A21
+  address: 8801 E Saanich Rd
+  notable: true
+  confirmed: true
+  notes: Rare species
+  data:
+    cbh: '5.75'
+    tree_code: A21
+    site_number: null
+    date_measured: null
+- latitude: 48.62267
+  longitude: -123.41661
+  botanical_name: Rhododendron Sir William Gladstone
+  common_name: Rhododendron
+  source: clowater
+  object_id: A210
+  data:
+    cbh: null
+    tree_code: A210
+    site_number: '7921'
+    date_measured: 23-Jan-17
+- latitude: 48.62177
+  longitude: -123.41563
+  botanical_name: Ulmus Americana
+  common_name: American Elm
+  source: clowater
+  object_id: A213
+  data:
+    cbh: '2.60'
+    tree_code: A213
+    site_number: '7867'
+    date_measured: 10-Feb-17
+- latitude: 48.62171
+  longitude: -123.41546
+  botanical_name: Fraxinus Americana
+  common_name: White Ash
+  source: clowater
+  object_id: A214
+  data:
+    cbh: '1.60'
+    tree_code: A214
+    site_number: '7868'
+    date_measured: 10-Feb-17
+- latitude: 48.62188
+  longitude: -123.41535
+  botanical_name: Acer ?
+  common_name: Maple ?
+  source: clowater
+  object_id: A215
+  data:
+    cbh: '5.05'
+    tree_code: A215
+    site_number: null
+    date_measured: 10-Feb-17
+- latitude: 48.56077
+  longitude: -123.46777
+  botanical_name: Acer Macrophyllum
+  common_name: Bigleaf Maple
+  source: clowater
+  object_id: A219
+  data:
+    cbh: '5.8'
+    tree_code: A219
+    site_number: null
+    date_measured: 16-Feb-17
+- latitude: 48.62266
+  longitude: -123.41732
+  botanical_name: Picea Smithiana
+  common_name: Himilayan Spruce
+  source: clowater
+  object_id: A22
+  data:
+    cbh: '0.5'
+    tree_code: A22
+    site_number: null
+    date_measured: null
+- latitude: 48.62227
+  longitude: -123.41566
+  botanical_name: Cedrus Atlantica Pendula
+  common_name: Weeping Blue Atlas Cedar
+  source: clowater
+  object_id: A220
+  data:
+    cbh: '1.22'
+    tree_code: A220
+    site_number: '7873'
+    date_measured: 16-Feb-17
+- latitude: 48.6227
+  longitude: -123.41471
+  botanical_name: Tsuga Canadensis 'Stranger'
+  common_name: Stranger Eastern Hemlock
+  source: clowater
+  object_id: A227
+  data:
+    cbh: '0.61'
+    tree_code: A227
+    site_number: '8496'
+    date_measured: 21-Feb-17
+- latitude: 48.62265
+  longitude: -123.41587
+  botanical_name: Platanus orientalis
+  common_name: Oriental Plane Tree
+  species: Platanus orientalis
+  source: clowater
+  object_id: A23
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7988'
+  notable: true
+  confirmed: true
+  notes: Rare species
+  data:
+    cbh: '5.25'
+    tree_code: A23
+    site_number: '7988'
+    date_measured: null
+- latitude: 48.6620348242907
+  longitude: -124.225590842922
+  botanical_name: Picea sitchensis
+  common_name: Sitka Spruce
+  species: Picea sitchensis
+  source: clowater
+  object_id: A232
+  address: Pacific Marine Road, East of Port Renfrew
+  notable: true
+  confirmed: true
+  notes: Harris Creek Spruce, one of the largest Sitka Spruce
+  data:
+    cbh: '11.90'
+    tree_code: A232
+    site_number: null
+    date_measured: 30-Mar-17
+- latitude: 48.43552
+  longitude: -123.48014
+  botanical_name: pseudotsuga menziesii
+  common_name: Grand Fir
+  species: Pseudotsuga menziesii
+  source: clowater
+  object_id: A233
+  address: Royal Roads University
+  confirmed: true
+  notes: Incorrectly identified as Grand Fir by others
+  data:
+    cbh: '7.5'
+    tree_code: A233
+    site_number: null
+    date_measured: 31-Mar-17
+- latitude: 48.47688
+  longitude: -124.24507
+  botanical_name: Thuja plicata
+  common_name: Western Red Cedar
+  species: Thuja plicata
+  source: clowater
+  object_id: A238
+  address: Juan de Fuca Trail,  Chin Beach Trail
+  notable: true
+  confirmed: true
+  data:
+    cbh: '11.66'
+    tree_code: A238
+    site_number: null
+    date_measured: 09-Apr-17
+- latitude: 48.47522
+  longitude: -124.24698
+  botanical_name: Picea sitchensis
+  common_name: Sitka Spruce
+  species: Picea sitchensis
+  source: clowater
+  object_id: A239
+  address: Juan de Fuca Trail,  Chin Beach Trail
+  confirmed: true
+  data:
+    cbh: '7.55'
+    tree_code: A239
+    site_number: null
+    date_measured: 09-Apr-17
+- latitude: 48.62268
+  longitude: -123.4156
+  botanical_name: Platanus orientalis
+  common_name: Oriental Plane Tree
+  species: Platanus orientalis
+  source: clowater
+  object_id: A24
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7589'
+  notable: true
+  notes: Rare species
+  data:
+    cbh: '4.9'
+    tree_code: A24
+    site_number: '7989'
+    date_measured: null
 - latitude: 48.41051
   longitude: -123.33727
   botanical_name: Abies cephalonica
   common_name: Amabilis fir
+  species: Abies cephalonica
   source: clowater
+  object_id: A241
   address: Ross Bay Cemetery, Fairfield Road
   tag: '1286'
   confirmed: true
@@ -281,7 +2062,9 @@
   longitude: -123.366757813492
   botanical_name: Abies homolepis
   common_name: Nikko fir
+  species: Abies homolepis
   source: clowater
+  object_id: A242
   address: Beacon Hill Park
   tag: '580'
   confirmed: true
@@ -290,11 +2073,40 @@
     tree_code: A242
     site_number: '580'
     date_measured: 19-Oct-17
+- latitude: 48.46058
+  longitude: -123.3164
+  botanical_name: Pinus wallichiana
+  common_name: Bhutan pine
+  species: Pinus wallichiana
+  source: clowater
+  object_id: A245
+  data:
+    cbh: '0.61'
+    tree_code: A245
+    site_number: null
+    date_measured: 15-Feb-18
+- latitude: 48.4914127916539
+  longitude: -123.30942475215
+  botanical_name: Pinus aristata
+  common_name: Bristlecone Pine
+  species: Pinus aristata
+  source: clowater
+  object_id: A248
+  address: Montford Crescent
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.49'
+    tree_code: A248
+    site_number: null
+    date_measured: 10-Mar-18
 - latitude: 48.4117409275605
   longitude: -123.338501457672
   botanical_name: Abies nordmanniana
   common_name: Caucasian fir
+  species: Abies nordmanniana
   source: clowater
+  object_id: A249
   address: Ross Bay Cemetery, Fairfield Road
   tag: '499'
   data:
@@ -302,21 +2114,55 @@
     tree_code: A249
     site_number: '499'
     date_measured: 04-Jul-18
+- latitude: 48.62263
+  longitude: -123.41441
+  botanical_name: Carpinus betulus
+  common_name: European Hornbeam
+  species: Carpinus betulus
+  source: clowater
+  object_id: A25
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8090'
+  notable: true
+  notes: Rare species
+  data:
+    cbh: '4.9'
+    tree_code: A25
+    site_number: '8090'
+    date_measured: null
 - latitude: 48.41243
   longitude: -123.36568
   botanical_name: Abies nordmanniana
   common_name: Caucasian fir
+  species: Abies nordmanniana
   source: clowater
+  object_id: A252
   data:
     cbh: '2.33'
     tree_code: A252
     site_number: '589'
     date_measured: 04-Jul-18
+- latitude: 48.5203642522152
+  longitude: -123.535668220901
+  botanical_name: Arbutus menziesii
+  common_name: Arbutus
+  species: Arbutus menziesii
+  source: clowater
+  object_id: A255
+  address: Mount Work Regional Park
+  confirmed: true
+  data:
+    cbh: '3.62'
+    tree_code: A255
+    site_number: null
+    date_measured: 09-Sep-18
 - latitude: 48.4117539907678
   longitude: -123.340280961971
   botanical_name: Abies homolepis
   common_name: Nikko fir
+  species: Abies homolepis
   source: clowater
+  object_id: A259
   address: Ross Bay Cemetery, Fairfield Road
   tag: '384'
   confirmed: true
@@ -329,7 +2175,9 @@
   longitude: -123.340124635582
   botanical_name: Abies amabilis
   common_name: Amabilis fir
+  species: Abies amabilis
   source: clowater
+  object_id: A260
   address: Ross Bay Cemetery, Fairfield Road
   tag: '401'
   confirmed: true
@@ -342,18 +2190,36 @@
   longitude: -123.339814576721
   botanical_name: Abies balsamea
   common_name: Balsam fir
+  species: Abies balsamea
   source: clowater
+  object_id: A262
   address: Belmont Ave. and Ryan Street
   data:
     cbh: '0.68'
     tree_code: A262
     site_number: null
     date_measured: 12-Mar-19
+- latitude: 48.4348177956999
+  longitude: -123.473889271164
+  botanical_name: Abies cephlonica
+  common_name: Greek fir
+  species: Abies cephlonica
+  source: clowater
+  object_id: A263
+  address: Royal Roads University
+  confirmed: true
+  data:
+    cbh: '2.18'
+    tree_code: A263
+    site_number: null
+    date_measured: 12-Mar-19
 - latitude: 48.4115849643159
   longitude: -123.339130262566
   botanical_name: Abies firma
   common_name: Momi fir
+  species: Abies firma
   source: clowater
+  object_id: A264
   address: Ross Bay Cemetery, Fairfield Road
   tag: '458'
   data:
@@ -365,7 +2231,9 @@
   longitude: -123.342712389772
   botanical_name: Abies homolepis
   common_name: Caucasian fir
+  species: Abies homolepis
   source: clowater
+  object_id: A266
   address: Ross Bay Cemetery, Fairfield Road
   tag: '252'
   confirmed: true
@@ -378,7 +2246,9 @@
   longitude: -123.366141049109
   botanical_name: Juniperus
   common_name: Juniper
+  species: Juniperus
   source: clowater
+  object_id: A267
   address: Beacon Hill Park
   data:
     cbh: '0.91'
@@ -389,7 +2259,9 @@
   longitude: -123.36419
   botanical_name: Juniperus
   common_name: Juniper
+  species: Juniperus
   source: clowater
+  object_id: A268
   address: Beacon Hill Park
   data:
     cbh: '0.71'
@@ -400,7 +2272,9 @@
   longitude: -123.343367580357
   botanical_name: Pinus sylvestris
   common_name: Scotts Pine
+  species: Pinus sylvestris
   source: clowater
+  object_id: A272
   address: Ross Bay Cemetery, Fairfield Road
   tag: '219'
   confirmed: true
@@ -409,11 +2283,856 @@
     tree_code: A272
     site_number: '219'
     date_measured: 30-Jun-19
+- latitude: 48.6438902560229
+  longitude: -123.45708317791
+  botanical_name: Pinus radiata
+  common_name: Monterey Pine
+  species: Pinus radiata
+  source: clowater
+  object_id: A278
+  address: 9635 West Saanich Rd.
+  notable: true
+  confirmed: true
+  data:
+    cbh: '4.29'
+    tree_code: A278
+    site_number: null
+    date_measured: 16-Jul-19
+- latitude: 48.6226709192664
+  longitude: -123.418119067459
+  botanical_name: Platanus orientalis
+  common_name: Oriental Plane Tree
+  species: Platanus orientalis
+  source: clowater
+  object_id: A29
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  notable: true
+  notes: Rare species
+  data:
+    cbh: '3.5'
+    tree_code: A29
+    site_number: null
+    date_measured: null
+- latitude: 48.62214
+  longitude: -123.41791
+  botanical_name: Cedrus libani
+  common_name: Lebanon Cedar
+  species: Cedrus libani
+  source: clowater
+  object_id: A30
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7360'
+  data:
+    cbh: '4'
+    tree_code: A30
+    site_number: '7360'
+    date_measured: null
+- latitude: 48.62204
+  longitude: -123.41518
+  botanical_name: Abies grandis
+  common_name: Grand fir
+  species: Abies grandis
+  source: clowater
+  object_id: A32
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: '4'
+    tree_code: A32
+    site_number: null
+    date_measured: null
+- latitude: 48.62208
+  longitude: -123.4152
+  botanical_name: Abies grandis
+  common_name: Grand fir
+  species: Abies grandis
+  source: clowater
+  object_id: A33
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: '3.25'
+    tree_code: A33
+    site_number: null
+    date_measured: null
+- latitude: 48.655
+  longitude: -123.44505
+  botanical_name: Quercus robur
+  common_name: English Oak
+  species: Quercus robur
+  source: clowater
+  object_id: A34
+  address: Holy Trinity Church, 1319 Mills Road
+  notable: true
+  confirmed: true
+  notes: "Coronation Oaks: The \"Coronation Oaks\", grown from seed of the great English\r\noaks of Windsor Park in England, although planted in various locations, are listed as\r\na Heritage Tree Group. Acorns were distributed throughout the British Empire by the\r\nAutomobile Association of Great Britain to be planted on May 12, 1937 to commemorate\r\nthe coronation of King George VI. (Chaster and Ross, 1988)"
+  data:
+    cbh: '1.6'
+    tree_code: A34
+    site_number: null
+    date_measured: 28-Jan-15
+- latitude: 48.65501
+  longitude: -123.44506
+  botanical_name: Pinus sylvestris
+  common_name: Scotts Pine
+  species: Pinus sylvestris
+  source: clowater
+  object_id: A35
+  address: Holy Trinity Church, 1319 Mills Road
+  notable: true
+  confirmed: true
+  data:
+    cbh: '1.35'
+    tree_code: A35
+    site_number: null
+    date_measured: 28-Jan-15
+- latitude: 48.59641
+  longitude: -123.45498
+  botanical_name: Cedrus atlantica
+  common_name: Atlas Cedar
+  species: Cedrus atlantica
+  source: clowater
+  object_id: A36
+  address: St. Stephens Anglican Church, St. Stephens Road
+  data:
+    cbh: '3.1'
+    tree_code: A36
+    site_number: null
+    date_measured: 19-Feb-15
+- latitude: 48.6455501260427
+  longitude: -123.416627930059
+  botanical_name: Salix caprea pendula
+  common_name: Kilmarnock Willow
+  species: Salix caprea
+  source: clowater
+  object_id: A37
+  address: Brethour Family Cemetery, 9600 Canora Rd
+  notable: true
+  confirmed: true
+  notes: >-
+    Located near the airport hangers along Canora Road is the Brethour Family Cemetery. It is the burial site started in
+    1877 for Samuel Brethour’s family.  The Brethour family acquired the lands from the Hudson Bay Company and the
+    original 500 acres were divided amongst his children who helped to establish the township of Sidney. In 1891, fifty
+    acres of land owned by the Brethour family was subdivided into lots and registered as the Township of Sidney.
+    (https://oldcem.bc.ca/cem/brethour-family/)
+  data:
+    cbh: '1.95'
+    tree_code: A37
+    site_number: null
+    date_measured: null
+- latitude: 48.6457315191077
+  longitude: -123.416430116568
+  botanical_name: Ulmus glabra camperdownii
+  common_name: Camperdown Elm
+  species: Ulmus glabra
+  source: clowater
+  object_id: A38
+  address: Brethour Family Cemetery, 9600 Canora Rd
+  notable: true
+  confirmed: true
+  notes: https://oldcem.bc.ca/cem/brethour-family/
+  data:
+    cbh: '1.35'
+    tree_code: A38
+    site_number: null
+    date_measured: null
+- latitude: 48.6547713837495
+  longitude: -123.44484157424
+  botanical_name: Ulmus americana
+  common_name: American Elm
+  species: Ulmus americana
+  source: clowater
+  object_id: A39
+  address: Holy Trinity Church, 1319 Mills Road
+  data:
+    cbh: null
+    tree_code: A39
+    site_number: null
+    date_measured: 19-Feb-15
+- latitude: 48.6221235459994
+  longitude: -123.41765524785
+  botanical_name: Abies concolor
+  common_name: Colorado White fir
+  species: Abies concolor
+  source: clowater
+  object_id: A40
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7848'
+  confirmed: true
+  data:
+    cbh: '1.75'
+    tree_code: A40
+    site_number: '7848'
+    date_measured: 20-Feb-15
+- latitude: 48.6220680510654
+  longitude: -123.417942831794
+  botanical_name: Pinus densiflora Umbraculifera
+  common_name: Japanese Red Pine
+  species: Pinus densiflora
+  source: clowater
+  object_id: A41
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7244'
+  confirmed: true
+  notes: Tree removed by Agriculture Canada in 2018
+  data:
+    cbh: '1.6'
+    tree_code: A41
+    site_number: '7244'
+    date_measured: 20-Feb-15
+- latitude: 48.62191
+  longitude: -123.41734
+  botanical_name: Thujopsis dolabrata
+  common_name: Hiba arborvitae
+  species: Thujopsis dolabrata
+  source: clowater
+  object_id: A42
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7861'
+  notable: true
+  confirmed: true
+  data:
+    cbh: '1.5'
+    tree_code: A42
+    site_number: '7861'
+    date_measured: 16-Mar-15
+- latitude: 48.6219
+  longitude: -123.41743
+  botanical_name: Abies nordmanniana
+  common_name: Caucasian Fir
+  species: Abies nordmanniana
+  source: clowater
+  object_id: A43
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7851'
+  notable: true
+  confirmed: true
+  notes: Good specimen
+  data:
+    cbh: '3.45'
+    tree_code: A43
+    site_number: '7851'
+    date_measured: 16-Mar-15
+- latitude: 48.62198
+  longitude: -123.41747
+  botanical_name: Abies homolepis
+  common_name: Momi Fir
+  species: Abies homolepis
+  source: clowater
+  object_id: A44
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7850'
+  confirmed: true
+  data:
+    cbh: '1.5'
+    tree_code: A44
+    site_number: '7850'
+    date_measured: 16-Mar-15
+- latitude: 48.622557729847
+  longitude: -123.417017492065
+  botanical_name: Picea orientalis
+  common_name: Oriental Spruce
+  species: Picea orientalis
+  source: clowater
+  object_id: A45
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '6610'
+  notable: true
+  confirmed: true
+  data:
+    cbh: '1.6'
+    tree_code: A45
+    site_number: '6610'
+    date_measured: 22-Mar-15
+- latitude: 48.6226461096398
+  longitude: -123.416661219523
+  botanical_name: Pinus sylvestris Fastigiata
+  common_name: Scotch Sentinel Pine
+  species: Pinus sylvestris
+  source: clowater
+  object_id: A46
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8401'
+  confirmed: true
+  data:
+    cbh: '1'
+    tree_code: A46
+    site_number: '8401'
+    date_measured: 22-Mar-15
+- latitude: 48.62232
+  longitude: -123.41658
+  botanical_name: Chamaecyparis lawsoniana 'Alumii'
+  common_name: Lawson Cedar (variant)
+  species: Chamaecyparis lawsoniana
+  source: clowater
+  object_id: A47
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7865'
+  confirmed: true
+  data:
+    cbh: '5.1'
+    tree_code: A47
+    site_number: '7865'
+    date_measured: 22-Mar-15
+- latitude: 48.45453
+  longitude: -123.28411
+  botanical_name: Alnus ruba
+  common_name: Red Alder
+  species: Alnus ruba
+  source: clowater
+  object_id: A48
+  address: 2825 Seaview Rd
+  notable: true
+  confirmed: true
+  notes: Saanich Municipality Significant Tree Database
+  data:
+    cbh: '2.45'
+    tree_code: A48
+    site_number: 0379-00
+    date_measured: 23-Mar-15
+- latitude: 48.4512313214543
+  longitude: -123.279143790178
+  botanical_name: Quercus garriana
+  common_name: Garry Oak
+  species: Quercus garriana
+  source: clowater
+  object_id: A49
+  address: 2921 Seaview Road
+  notable: true
+  confirmed: true
+  notes: Saanich Municipality Significant tree database
+  data:
+    cbh: '3.1'
+    tree_code: A49
+    site_number: 0258-00
+    date_measured: 23-Mar-15
+- latitude: 48.4513991756182
+  longitude: -123.278980380287
+  botanical_name: Cupressus macrocarpa
+  common_name: Monterey Cypress
+  species: Hesperocyparis macrocarpa
+  source: clowater
+  object_id: A50
+  address: 2921 Seaview Road
+  notable: true
+  confirmed: true
+  notes: Saanich Municipality Significant Tree Database
+  data:
+    cbh: '3.55'
+    tree_code: A50
+    site_number: null
+    date_measured: 23-Mar-15
+- latitude: 48.6341177257859
+  longitude: -123.459733061342
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A51
+  address: ' 930 Ardmore Dr.'
+  notable: true
+  confirmed: true
+  notes: >-
+    Ardmore Golf Course is a private club formed in the nineteen thirties by Mr. Sam Wise. Previously it was the North
+    Saanich Golf Course and contains a unique tree that is worth a visit on this manicured and well maintained property
+    and thus is included as a green space in your backyard. Located near the third tee of the greenway is Th-kuat, a
+    1100 year old Douglas-Fir tree. At about 35 meters tall Th-kaut towers over the other trees on the property and was
+    spared during logging and development of the thorough-bred horse ranch in the early nineteen hundreds.
+    (https://healthynaturalist.wordpress.com/tag/th-kuat/)
+  data:
+    cbh: '8.2'
+    tree_code: A51
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.63417
+  longitude: -123.4595
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A52
+  address: Ardmore Golf Course, 930 Ardmore Dr.
+  notable: true
+  confirmed: true
+  data:
+    cbh: '8'
+    tree_code: A52
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.63419
+  longitude: -123.45951
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A53
+  address: Ardmore Golf Course, 930 Ardmore Dr.
+  notable: true
+  confirmed: true
+  data:
+    cbh: '6.1'
+    tree_code: A53
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.63398
+  longitude: -123.45933
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A54
+  address: Ardmore Golf Course, 930 Ardmore Dr.
+  confirmed: true
+  data:
+    cbh: '6.7'
+    tree_code: A54
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.6340993477233
+  longitude: -123.46009157424
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A55
+  address: Ardmore Golf Course, 930 Ardmore Dr.
+  confirmed: true
+  data:
+    cbh: '6.1'
+    tree_code: A55
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.6342288796214
+  longitude: -123.459962332506
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A56
+  address: Ardmore Golf Course, 930 Ardmore Dr.
+  confirmed: true
+  data:
+    cbh: '6.3'
+    tree_code: A56
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.63419
+  longitude: -123.46044
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas Fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A57
+  address: Ardmore Golf Course, 930 Ardmore Dr.
+  confirmed: true
+  data:
+    cbh: '6'
+    tree_code: A57
+    site_number: null
+    date_measured: 24-Mar-15
+- latitude: 48.4629326988927
+  longitude: -123.358320116568
+  botanical_name: Calocedrus decurrens
+  common_name: Incense Cedar
+  species: Calocedrus decurrens
+  source: clowater
+  object_id: A58
+  address: 1141 Palmer Road
+  notable: true
+  confirmed: true
+  notes: Saanich Municipality Significant Tree Database
+  data:
+    cbh: '5.35'
+    tree_code: A58
+    site_number: 0287-00
+    date_measured: 27-Mar-15
+- latitude: 48.59241
+  longitude: -123.4627
+  botanical_name: Quercus garriana
+  common_name: Garry Oak
+  species: Quercus garriana
+  source: clowater
+  object_id: A61
+  address: '7742 West Saanich Road - across from '
+  confirmed: true
+  data:
+    cbh: '5.05'
+    tree_code: A61
+    site_number: 0328-00
+    date_measured: 27-Mar-15
+- latitude: 48.5924
+  longitude: -123.46295
+  botanical_name: Pinus ponderosa
+  common_name: Ponderosa Pine
+  species: Pinus ponderosa
+  source: clowater
+  object_id: A62
+  address: 7742 West Saanich Road
+  data:
+    cbh: '3.25'
+    tree_code: A62
+    site_number: null
+    date_measured: 27-Mar-15
+- latitude: 48.59218
+  longitude: -123.46292
+  botanical_name: Cedrus atlantica
+  common_name: Atlas Cedar
+  species: Cedrus atlantica
+  source: clowater
+  object_id: A63
+  address: 7742 West Saanich Road
+  confirmed: true
+  data:
+    cbh: '3.85'
+    tree_code: A63
+    site_number: null
+    date_measured: 27-Mar-15
+- latitude: 48.59223
+  longitude: -123.46295
+  botanical_name: Cedrus deodara
+  common_name: Deodara Cedar
+  species: Cedrus deodara
+  source: clowater
+  object_id: A64
+  address: 7742 West Saanich Road
+  confirmed: true
+  data:
+    cbh: '3.35'
+    tree_code: A64
+    site_number: null
+    date_measured: 27-Mar-15
+- latitude: 48.65034
+  longitude: -123.39892
+  botanical_name: Acer platanoides
+  common_name: Norway Maple
+  species: Acer platanoides
+  source: clowater
+  object_id: A65
+  address: Sidney Town Hall, 2440 Sidney Avenue
+  confirmed: true
+  notes: Planted in 1967 to commemorate Canada's centennial
+  data:
+    cbh: '1.4'
+    tree_code: A65
+    site_number: null
+    date_measured: 28-Mar-15
+- latitude: 48.46094
+  longitude: -123.33036
+  botanical_name: Sequoia sempervirens
+  common_name: Coast Redwood
+  species: Sequoia sempervirens
+  source: clowater
+  object_id: A67
+  address: 3700 St. Aidan's Road
+  confirmed: true
+  data:
+    cbh: '3.2'
+    tree_code: A67
+    site_number: 0436-02
+    date_measured: 02-Apr-15
+- latitude: 48.4621
+  longitude: -123.3135
+  botanical_name: Acer saccharinium
+  common_name: Silver Maple
+  species: Acer saccharinium
+  source: clowater
+  object_id: A68
+  address: University of Victoria
+  data:
+    cbh: '1.9'
+    tree_code: A68
+    site_number: null
+    date_measured: 03-Apr-15
+- latitude: 48.4622163496745
+  longitude: -123.313279125166
+  botanical_name: Paulowinia tomentosa
+  common_name: Empress Tree
+  species: Paulowinia tomentosa
+  source: clowater
+  object_id: A69
+  address: University of Victoria
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.95'
+    tree_code: A69
+    site_number: null
+    date_measured: 03-Apr-15
+- latitude: 48.6491070882068
+  longitude: -123.449677084656
+  botanical_name: Calocedrus decurrens
+  common_name: Incense Cedar
+  species: Calocedrus decurrens
+  source: clowater
+  object_id: A70
+  address: Institue of Ocean Sciences, 9860 W Saanich Rd
+  data:
+    cbh: '3.95'
+    tree_code: A70
+    site_number: null
+    date_measured: 03-Apr-15
+- latitude: 48.6498580985561
+  longitude: -123.448272682209
+  botanical_name: Pinus ponderosa
+  common_name: Ponerosa Pine
+  species: Pinus ponderosa
+  source: clowater
+  object_id: A71
+  address: Institue of Ocean Sciences, 9860 W Saanich Rd
+  data:
+    cbh: '1.1'
+    tree_code: A71
+    site_number: null
+    date_measured: 03-Apr-15
+- latitude: 48.4634
+  longitude: -123.297
+  botanical_name: Acer Macrophyllum
+  common_name: Bigleaf Maple
+  source: clowater
+  object_id: A72
+  data:
+    cbh: '8.05'
+    tree_code: A72
+    site_number: '0399-00   #7'
+    date_measured: 07-Apr-15
+- latitude: 48.464052914225
+  longitude: -123.296439546637
+  botanical_name: Taxus brevifolia
+  common_name: Pacific Yew
+  species: Taxus brevifolia
+  source: clowater
+  object_id: A73
+  address: 2536  Hobbs Road
+  confirmed: true
+  data:
+    cbh: '1.35'
+    tree_code: A73
+    site_number: 0447-00
+    date_measured: 07-Apr-15
+- latitude: 48.4669
+  longitude: -123.297
+  botanical_name: Sequoia sempervirens
+  common_name: Coast Redwood
+  species: Sequoia sempervirens
+  source: clowater
+  object_id: A74
+  address: Goward House 2495 Arbutsus Road
+  confirmed: true
+  data:
+    cbh: '4.57'
+    tree_code: A74
+    site_number: null
+    date_measured: 07-Apr-15
+- latitude: 48.5298294181488
+  longitude: -123.373098250332
+  botanical_name: Acer negundo
+  common_name: Boxelder
+  species: Acer negundo
+  source: clowater
+  object_id: A75
+  address: 'Matticks Farm, 5325 Cordova Bay Rd. '
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.8'
+    tree_code: A75
+    site_number: null
+    date_measured: 07-Apr-15
+- latitude: 48.6227298920285
+  longitude: -123.416207696924
+  botanical_name: Fagus sylvatica Rohanii
+  common_name: Cutleaf Purple Beech
+  species: Fagus sylvatica
+  source: clowater
+  object_id: A76
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '8466'
+  data:
+    cbh: '1.85'
+    tree_code: A76
+    site_number: '8466'
+    date_measured: 07-Apr-15
+- latitude: 48.62175
+  longitude: -123.41543
+  botanical_name: Fraxinus Americana
+  common_name: White Ash
+  source: clowater
+  object_id: A77
+  data:
+    cbh: '1.6'
+    tree_code: A77
+    site_number: '7868'
+    date_measured: 07-Apr-15
+- latitude: 48.46063
+  longitude: -123.31533
+  botanical_name: Koelreuteria bipinnata antagrapholia
+  common_name: Chinese Flame-Tree
+  species: Koelreuteria bipinnata
+  source: clowater
+  object_id: A79
+  address: Finnerty Gardens, University of Victoria
+  notable: true
+  data:
+    cbh: '0.8'
+    tree_code: A79
+    site_number: null
+    date_measured: 08-Apr-15
+- latitude: 48.6319
+  longitude: -123.46097
+  botanical_name: P. x roulwauiana Boivin
+  common_name: Hybridied populus alba X grandidentata
+  source: clowater
+  object_id: A84
+  data:
+    cbh: '5.75'
+    tree_code: A84
+    site_number: null
+    date_measured: 22-Aug-15
+- latitude: 48.63165
+  longitude: -123.46098
+  botanical_name: P. x roulwauiana Boivin
+  common_name: Hybridied populus alba X grandidentata
+  source: clowater
+  object_id: A85
+  data:
+    cbh: '3.8'
+    tree_code: A85
+    site_number: null
+    date_measured: 22-Aug-15
+- latitude: 48.6222928997234
+  longitude: -123.418050379133
+  botanical_name: Liriodendron tulipifera
+  common_name: Tulip Tree
+  species: Liriodendron tulipifera
+  source: clowater
+  object_id: A89
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  confirmed: true
+  data:
+    cbh: '3.05'
+    tree_code: A89
+    site_number: null
+    date_measured: 25-May-15
+- latitude: 48.6220249631262
+  longitude: -123.415725889549
+  botanical_name: Quercus gambelii var. novomexicana
+  common_name: Gambel's Oak
+  species: Quercus gambelii
+  source: clowater
+  object_id: A90
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7875'
+  notable: true
+  confirmed: true
+  data:
+    cbh: '2.2'
+    tree_code: A90
+    site_number: '7875'
+    date_measured: 25-May-15
+- latitude: 48.62192
+  longitude: -123.41571
+  botanical_name: Fagus sylvatica
+  common_name: Common Beech
+  species: Fagus sylvatica
+  source: clowater
+  object_id: A91
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7874'
+  data:
+    cbh: '1.5'
+    tree_code: A91
+    site_number: '7874'
+    date_measured: 25-May-15
+- latitude: 48.62167
+  longitude: -123.41514
+  botanical_name: Betula alba
+  common_name: Silver Birch
+  species: Betula alba
+  source: clowater
+  object_id: A92
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  data:
+    cbh: '1.5'
+    tree_code: A92
+    site_number: '7870'
+    date_measured: 25-May-15
+- latitude: 48.46498
+  longitude: -123.29951
+  botanical_name: Acer Macrophyllum
+  common_name: Bigleaf Maple
+  source: clowater
+  object_id: A95
+  data:
+    cbh: '2.65'
+    tree_code: A95
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.44576
+  longitude: -123.29428
+  botanical_name: Sequoiadendron giganteum 'Pendulum'
+  common_name: Weeping Sequoia
+  species: Sequoiadendron giganteum
+  source: clowater
+  data: '{"cbh"=>"2.5", "tree_code"=>"A98", "site_number"=>nil, "date_measured"=>"16-Jul-15"}'
+- latitude: 48.4774
+  longitude: -123.3334
+  botanical_name: Platanus acerifolia
+  common_name: London Plane tree
+  species: Platanus × acerifolia
+  source: clowater
+  object_id: A01
+  address: Shelbourne Street and Torquay Drive
+  notable: true
+  confirmed: true
+  notes: >-
+    One of the 600 London Plane trees planted starting in 1912, as a First World War memorial. The Plane trees were
+    planted on both sides of Shelbourne Street from Victoria through Saanich to Mount Douglas Park.
+  data:
+    cbh: '2.37'
+    tree_code: A01
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.49285
+  longitude: -123.33007
+  botanical_name: Pseudosuga menziesii
+  common_name: Douglas-fir
+  species: Pseudosuga menziesii
+  source: clowater
+  object_id: A04
+  address: 1554 Ash Street
+  notable: true
+  confirmed: true
+  notes: >-
+    Located on what was once the Todd family farm, the tree was known as the Cougar Tree, so named because when each of
+    the 17 Tod children had to take turns as lookouts "for cougars in the sheep pasture, they sat in the 'Y' crotch of
+    the tree. (Chaster and Ross 1988)"
+  data:
+    cbh: '2.85'
+    tree_code: A04
+    site_number: null
+    date_measured: 19-Jan-15
+- latitude: 48.48856
+  longitude: -123.31841
+  botanical_name: Calocedrus decurrens
+  common_name: Incense Cedar
+  species: Calocedrus decurrens
+  source: clowater
+  object_id: A05
+  address: 4458 Tyndall Ave
+  tag: '76'
+  notable: true
+  confirmed: true
+  notes: Large specimen, diameter at breast height (DBH) = 1.7m
+  data:
+    cbh: '5.3'
+    tree_code: A05
+    site_number: '76'
+    date_measured: 19-Jan-15
 - latitude: 48.44041
   longitude: -123.30768
   botanical_name: Quercus robur
   common_name: English Oak
+  species: Quercus robur
   source: clowater
+  object_id: A09
   address: 2632 Burdick Ave.
   notable: true
   confirmed: true
@@ -427,7 +3146,9 @@
   longitude: -123.30508
   botanical_name: Acer saccharinium
   common_name: Silver Maple
+  species: Acer saccharinium
   source: clowater
+  object_id: A10
   address: Bowker Avenue and Bowker Place
   notable: true
   confirmed: true
@@ -437,21 +3158,67 @@
     tree_code: A10
     site_number: null
     date_measured: 19-Jan-15
+- latitude: 48.44412
+  longitude: -123.29431
+  botanical_name: Ulmus glabra camperdownii
+  common_name: Camperdown Elm
+  species: Ulmus glabra
+  source: clowater
+  object_id: A100
+  address: 3000 Rutland Road
+  notable: true
+  notes: Unusual specimen
+  data:
+    cbh: '1.6'
+    tree_code: A100
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.444
+  longitude: -123.29417
+  botanical_name: Sequoiadendron giganteum
+  common_name: Giant Sequoia
+  species: Sequoiadendron giganteum
+  source: clowater
+  object_id: A101
+  address: 3000 Rutland  Road
+  data:
+    cbh: '5.9'
+    tree_code: A101
+    site_number: null
+    date_measured: 16-Jul-15
 - latitude: 48.41833
   longitude: -123.37152
   botanical_name: Ulmus americana
   common_name: American Elm
+  species: Ulmus americana
   source: clowater
+  object_id: A102
   data:
     cbh: '4.35'
     tree_code: A102
     site_number: null
     date_measured: 20-Jul-15
+- latitude: 48.50229
+  longitude: -123.35812
+  botanical_name: Pinus nigra
+  common_name: Austrian Pine ?
+  species: Pinus nigra
+  source: clowater
+  object_id: A103
+  address: Outerbridge Park, Royal Oak Drive
+  confirmed: true
+  data:
+    cbh: '1.45'
+    tree_code: A103
+    site_number: null
+    date_measured: 21-Jul-15
 - latitude: 48.41079
   longitude: -123.33813
   botanical_name: Pinus nigra
   common_name: Austrian Pine ?
+  species: Pinus nigra
   source: clowater
+  object_id: A104
   data:
     cbh: null
     tree_code: A104
@@ -461,22 +3228,571 @@
   longitude: -123.34129
   botanical_name: Pinus thunbergii
   common_name: Japanese Black Pine
+  species: Pinus thunbergii
   source: clowater
+  object_id: A105
   address: Ross Bay Cemetery, Fairfield Road
   data:
     cbh: '2.2'
     tree_code: A105
     site_number: null
     date_measured: 21-Jul-15
+- latitude: 48.47051
+  longitude: -123.33767
+  botanical_name: Pinus strobus
+  common_name: Eastern White Pine
+  species: Pinus strobus
+  source: clowater
+  object_id: A106
+  address: 3941 Oakdale Place
+  data:
+    cbh: '0.85'
+    tree_code: A106
+    site_number: null
+    date_measured: 23-Jul-15
+- latitude: 48.4704
+  longitude: -123.338
+  botanical_name: Pinis radiata
+  common_name: Monterey Pine
+  species: Pinis radiata
+  source: clowater
+  object_id: A107
+  data:
+    cbh: '1.4'
+    tree_code: A107
+    site_number: null
+    date_measured: 23-Jul-15
+- latitude: 48.622451
+  longitude: -123.415585
+  botanical_name: Kobushi magnolia
+  species: Magnolia kobus
+  source: clowater
+  object_id: A134
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '15366'
+- latitude: 48.5608844972906
+  longitude: -123.467464228172
+  botanical_name: Acer macrophyllum
+  species: Acer macrophyllum
+  source: clowater
+  object_id: A219
+  address: Todd Inlet
+  notable: true
+  confirmed: true
+- latitude: 48.43334
+  longitude: -123.47469
+  botanical_name: Eucalyptus pauciflora niphophila
+  common_name: Snow Gum
+  species: Eucalyptus pauciflora
+  source: Hatley Park Gardens
+  object_id: A234
+  address: Hatley Gardens Royal Roads University
+  tag: 1986-00716
+  data:
+    cbh: null
+    tree_code: A234
+    site_number: 1986-00716
+    date_measured: 31-Mar-17
+- latitude: 48.43339
+  longitude: -123.47454
+  botanical_name: Pinus bungeana
+  common_name: Lacebark Pine
+  species: Pinus bungeana
+  source: Hatley Park Gardens
+  object_id: A235
+  address: Hatley Gardens Royal Roads University
+  data:
+    cbh: null
+    tree_code: A235
+    site_number: null
+    date_measured: 31-Mar-17
+- latitude: 48.43343
+  longitude: -123.47439
+  botanical_name: Acer tegmentosum
+  common_name: Manchurian Stried Maple
+  species: Acer tegmentosum
+  source: Hatley Park Gardens
+  object_id: A236
+  address: Hatley Gardens Royal Roads University
+  data:
+    cbh: null
+    tree_code: A236
+    site_number: null
+    date_measured: 31-Mar-17
 - latitude: 48.4140419332957
   longitude: -123.364798335147
   botanical_name: Black locust
+  species: Robinia pseudoacacia
   source: mcfarland
+- latitude: 48.46093
+  longitude: -123.33036
+  botanical_name: Pinus jeffreyi
+  common_name: Jeffrey Pine
+  species: Pinus jeffreyi
+  source: other
+  object_id: A66
+  address: 3700 St. Aidan's Road
+  notable: true
+  notes: Saanich Significant tree and heritage tree, but ID is suspect.
+  data:
+    cbh: '3.2'
+    tree_code: A66
+    site_number: 0436-01
+    date_measured: 02-Apr-15
+- latitude: 48.6217694003455
+  longitude: -123.415425797567
+  botanical_name: Fraxinus americana
+  species: Fraxinus americana
+  source: other
+  object_id: A77
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  tag: '7868'
+  notable: true
+- latitude: 48.4628641372924
+  longitude: -123.29762669922
+  botanical_name: Acer macrophyllum
+  species: Acer macrophyllum
+  source: Saanich Municipality
+  object_id: A72
+  address: 3870 Hobbs Road
+  tag: 0399-00
+  notable: true
+  confirmed: true
+  notes: Very large bulbous trunk
+- latitude: 48.460637854517
+  longitude: -123.316429504299
+  botanical_name: Pinus wallichiana
+  common_name: Bhutan pine
+  species: Pinus wallichiana
+  source: University of Victoria
+  object_id: A245
+  address: Finnerty Gardens, University of Victoria
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.61'
+    tree_code: A245
+    site_number: null
+    date_measured: 15-Feb-18
+- latitude: 48.4603539601222
+  longitude: -123.315992204427
+  botanical_name: Abies balsamea
+  common_name: Balsam fir
+  species: Abies balsamea
+  source: University of Victoria
+  object_id: A246
+  address: Finnerty Gardens, University of Victoria
+  confirmed: true
+  data:
+    cbh: '2.96'
+    tree_code: A246
+    site_number: '2643'
+    date_measured: 24-Feb-18
+- latitude: 48.460244205294
+  longitude: -123.315888076057
+  botanical_name: Cedrus brevifolia
+  common_name: ' Cyprus Cedar'
+  species: Cedrus brevifolia
+  source: University of Victoria
+  object_id: A247
+  address: Finnerty Gardens, University of Victoria
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.87'
+    tree_code: A247
+    site_number: null
+    date_measured: 24-Feb-18
+- latitude: 48.4600537950375
+  longitude: -123.316099504299
+  botanical_name: Koelreuteria paniculata
+  common_name: Goldenrain  Tree
+  species: Koelreuteria paniculata
+  source: University of Victoria
+  object_id: A78
+  address: Finnerty Gardens, University of Victoria
+  confirmed: true
+  data:
+    cbh: '1'
+    tree_code: A78
+    site_number: null
+    date_measured: 08-Apr-15
+- latitude: 48.45993
+  longitude: -123.31583
+  botanical_name: Betula nigra
+  common_name: River Birch
+  species: Betula nigra
+  source: University of Victoria
+  object_id: A80
+  address: Finnerty Gardens, University of Victoria
+  notable: true
+  confirmed: true
+  data:
+    cbh: '0.75'
+    tree_code: A80
+    site_number: null
+    date_measured: 08-Apr-15
+- latitude: 48.46063
+  longitude: -123.31611
+  botanical_name: Acer japonicum 'Aconitifolium
+  common_name: Downey Japanese Maple
+  species: Acer japonicum
+  source: University of Victoria
+  object_id: A81
+  address: Finnerty Gardens, University of Victoria
+  data:
+    cbh: '0.6'
+    tree_code: A81
+    site_number: null
+    date_measured: 08-Apr-15
+- latitude: 48.4613267749291
+  longitude: -123.314657201223
+  botanical_name: Parrotia persica
+  common_name: Persian Ironwood
+  species: Parrotia persica
+  source: University of Victoria
+  object_id: A82
+  address: University of Victoria
+  notable: true
+  confirmed: true
+  data:
+    cbh: '1.4'
+    tree_code: A82
+    site_number: null
+    date_measured: 08-Apr-15
+- latitude: 48.46097
+  longitude: -123.31534
+  botanical_name: Quercus rubra
+  common_name: Red Oak
+  species: Quercus rubra
+  source: University of Victoria
+  object_id: A87
+  address: University of Victoria
+  data:
+    cbh: '2.3'
+    tree_code: A87
+    site_number: null
+    date_measured: 18-Aug-15
+- latitude: 48.4606
+  longitude: -123.3166
+  botanical_name: Davidia involucrata
+  common_name: Dove Tree
+  species: Davidia involucrata
+  source: University of Victoria
+  object_id: A88
+  address: Finnerty Gardens, University of Victoria
+  notable: true
+  confirmed: true
+  data:
+    cbh: '1.15'
+    tree_code: A88
+    site_number: null
+    date_measured: 18-Aug-15
+- latitude: 48.41083
+  longitude: -123.34101
+  botanical_name: Pinus ponderosa
+  common_name: Ponderosa Pine
+  species: Pinus ponderosa
+  source: victoria
+  object_id: A115
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '320'
+  confirmed: true
+  data:
+    cbh: '3.25'
+    tree_code: A115
+    site_number: '334'
+    date_measured: 30-Jul-15
+- latitude: 48.42572
+  longitude: -123.35025
+  botanical_name: Acer campestre
+  common_name: Hedge Maple
+  species: Acer campestre
+  source: victoria
+  object_id: A120
+  address: Johnson Street at Chambers
+  confirmed: true
+  data:
+    cbh: '1.25'
+    tree_code: A120
+    site_number: null
+    date_measured: 10-Aug-15
+- latitude: 48.4382499339148
+  longitude: -123.357571253967
+  botanical_name: Robinia pseudoacacia Bessoniana
+  common_name: Mop Head False Acacia
+  species: Robinia pseudoacacia
+  source: victoria
+  object_id: A121
+  address: Fifth Street adjacent to Fairway Grocery
+  confirmed: true
+  data:
+    cbh: '2.2'
+    tree_code: A121
+    site_number: null
+    date_measured: 10-Aug-15
+- latitude: 48.4130789437488
+  longitude: -123.364405656936
+  botanical_name: Cedrus atlantica glauca
+  common_name: Blue Atlas cedar
+  species: Cedrus atlantica
+  source: victoria
+  object_id: A124
+  address: Beacon Hill Park
+  data:
+    cbh: null
+    tree_code: A124
+    site_number: null
+    date_measured: null
+- latitude: 48.4276666335616
+  longitude: -123.339167171793
+  botanical_name: Koelreuteria paniculata
+  common_name: Golden Rain-tree
+  species: Koelreuteria paniculata
+  source: victoria
+  object_id: A125
+  address: Stadacona Park
+  data:
+    cbh: '0.9'
+    tree_code: A125
+    site_number: null
+    date_measured: 22-Aug-15
+- latitude: 48.42667
+  longitude: -123.33962
+  botanical_name: Pinus coulteri
+  common_name: Coulter Pine
+  species: Pinus coulteri
+  source: victoria
+  object_id: A126
+  address: Stadacona Park, Pandora side
+  data:
+    cbh: '2.32'
+    tree_code: A126
+    site_number: null
+    date_measured: 22-Aug-15
+- latitude: 48.42192
+  longitude: -123.36046
+  botanical_name: Ailanthus atissima
+  common_name: Tree-of-Heaven
+  species: Ailanthus atissima
+  source: victoria
+  object_id: A127
+  address: Court House property
+  notable: true
+  data:
+    cbh: '1.78'
+    tree_code: A127
+    site_number: null
+    date_measured: 22-Aug-15
+- latitude: 48.4188226573591
+  longitude: -123.332162449074
+  botanical_name: Prunus cerastifera 'Lindsayiae'
+  common_name: Lindsay Plum
+  species: Prunus cerastifera
+  source: victoria
+  object_id: A142
+  address: 680 Richmond Ave.
+  data:
+    cbh: '2.37'
+    tree_code: A142
+    site_number: null
+    date_measured: 27-Feb-16
+- latitude: 48.4399501771071
+  longitude: -123.336405364418
+  botanical_name: Prunus subhirtella Accolade
+  common_name: Acolade Cherry
+  species: Prunus subhirtella
+  source: victoria
+  object_id: A148
+  address: 1572 Ryan Street
+  data:
+    cbh: '0.6'
+    tree_code: A148
+    site_number: null
+    date_measured: null
+- latitude: 48.4146798584925
+  longitude: -123.357339067459
+  botanical_name: Prunus sargentii
+  common_name: Sargent's Cherry
+  species: Prunus sargentii
+  source: victoria
+  object_id: A150
+  address: Sutlej St
+  data:
+    cbh: '0.36'
+    tree_code: A150
+    site_number: null
+    date_measured: null
+- latitude: 48.4133
+  longitude: -123.365
+  botanical_name: Prunus subhirtella autumnalis
+  common_name: Autumn Cherry
+  species: Prunus subhirtella
+  source: victoria
+  object_id: A152
+  address: Beacon Hill Park
+  data:
+    cbh: '0.60'
+    tree_code: A152
+    site_number: null
+    date_measured: 18-Mar-16
+- latitude: 48.4197915184732
+  longitude: -123.364268863754
+  botanical_name: Larix decidua pendula
+  common_name: Weeping European Larch
+  species: Larix decidua
+  source: victoria
+  object_id: A237
+  address: St. Anns Academy
+  confirmed: true
+  data:
+    cbh: '1.42'
+    tree_code: A237
+    site_number: null
+    date_measured: 08-Apr-17
+- latitude: 48.4127881936163
+  longitude: -123.367197784061
+  botanical_name: Picea glauca
+  common_name: White spruce
+  species: Picea glauca
+  source: victoria
+  object_id: A243
+  address: Beacon Hill Park
+  data:
+    cbh: '1.47'
+    tree_code: A243
+    site_number: null
+    date_measured: 19-Oct-17
+- latitude: 48.4458312587444
+  longitude: -123.363096444111
+  botanical_name: Pinus flexilis
+  common_name: Limber Pine
+  species: Pinus flexilis
+  source: victoria
+  object_id: A244
+  address: Topaz Park, Finlayson St
+  data:
+    cbh: '2.72'
+    tree_code: A244
+    site_number: null
+    date_measured: 29-Nov-17
+- latitude: 48.4113717324473
+  longitude: -123.340103673611
+  botanical_name: Juniperus
+  common_name: Juniper
+  species: Juniperus
+  source: victoria
+  object_id: A270
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '382'
+  data:
+    cbh: '1.0'
+    tree_code: A270
+    site_number: '382'
+    date_measured: 30-Jun-19
+- latitude: 48.4115729949663
+  longitude: -123.337886093254
+  botanical_name: Pinus strobus
+  common_name: Eastern White Pine
+  species: Pinus strobus
+  source: victoria
+  object_id: A273
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '1252'
+  data:
+    cbh: '2.86'
+    tree_code: A273
+    site_number: '1252'
+    date_measured: 03-Jul-19
+- latitude: 48.4114477677487
+  longitude: -123.337526588955
+  botanical_name: Chamaecyparis obtusa
+  common_name: Hinoki Falsecypress
+  species: Chamaecyparis obtusa
+  source: victoria
+  object_id: A274
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '1292'
+  confirmed: true
+  data:
+    cbh: null
+    tree_code: A274
+    site_number: '1292'
+    date_measured: 03-Jul-19
+- latitude: 48.41095
+  longitude: -123.33902
+  botanical_name: Pinus strobus
+  common_name: Eastern White Pine
+  species: Pinus strobus
+  source: victoria
+  object_id: A275
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '452'
+  data:
+    cbh: '2.45'
+    tree_code: A275
+    site_number: '452'
+    date_measured: 03-Jul-19
+- latitude: 48.41083
+  longitude: -123.33886
+  botanical_name: Pinus strobus
+  common_name: Eastern White Pine
+  species: Pinus strobus
+  source: victoria
+  object_id: A276
+  address: Ross Bay Cemetery, Fairfield Road
+  data:
+    cbh: '1.82'
+    tree_code: A276
+    site_number: null
+    date_measured: 03-Jul-19
+- latitude: 48.4103855371034
+  longitude: -123.340831457672
+  botanical_name: Pinus banksiana
+  common_name: Jack Pine (?)
+  species: Pinus banksiana
+  source: victoria
+  object_id: A277
+  address: Ross Bay Cemetery, Fairfield Road
+  tag: '957'
+  data:
+    cbh: null
+    tree_code: A277
+    site_number: '957'
+    date_measured: 03-Jul-19
+- latitude: 48.62266
+  longitude: -123.41732
+  botanical_name: Picea Smithiana
+  species: Picea smithiana
+  source: victoria
+  object_id: A22
+  address: Dominion Brook Park, 8801 E Saanich Rd
+  notable: true
+  confirmed: true
+- latitude: 48.4702351051594
+  longitude: -123.3375805249
+  botanical_name: Pinus banksiana
+  species: Pinus banksiana
+  source: victoria
+  address: 3941 Oakdale Place
+  tag: A109
+  notable: true
+  confirmed: true
+  notes: Heritage tree misidentified as a Slash Pine by Chaster & Ross and Saanich Municipality
+- latitude: 48.4132
+  longitude: -123.3646
+  botanical_name: Sorbus X thuriniaca
+  species: Sorbus x
+  source: victoria
+  object_id: A160
+  address: Beacon Hill Park
 - latitude: 48.4111071962987
   longitude: -123.357675830688
   botanical_name: Populus balsamifera
   common_name: Black Cottonwood
+  species: Populus balsamifera
   source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A86
   address: Cook St.,
   notable: true
   confirmed: true
@@ -485,7 +3801,95 @@
     tree_code: A86
     site_number: null
     date_measured: 16-Apr-15
+- latitude: 48.49021
+  longitude: -123.32224
+  botanical_name: Arbutus menziesii
+  common_name: Arbutus
+  species: Arbutus menziesii
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A93
+  address: 4474 Torquay Dr.
+  data:
+    cbh: '5'
+    tree_code: A93
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.490266920366
+  longitude: -123.312329387731
+  botanical_name: Quercus robur
+  common_name: English Oak
+  species: Quercus robur
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A94
+  address: 1895 Ferndale Rd.
+  notable: true
+  notes: "\"The English oak at 1895 Ferndale Road in Victoria, the old McClung estate, grew from\r\nan acorn planted by Nellie McClung, outstanding writer and feminist, after whom a branch\r\nof the Greater Victoria library is named. The tree stands as a memorial to her. (Chaster & Ross, 1988)\""
+  data:
+    cbh: '1.75'
+    tree_code: A94
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.4596765360311
+  longitude: -123.281558775463
+  botanical_name: Populus balsamifera trichocarpa
+  common_name: Black Cottonwood
+  species: Populus balsamifera
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A96
+  address: 2762 Arbutus Road
+  notable: true
+  confirmed: true
+  data:
+    cbh: '9.5'
+    tree_code: A96
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.44688
+  longitude: -123.29469
+  botanical_name: Trachycarpus fortunei
+  common_name: Chinese Windmill Palm
+  species: Trachycarpus fortunei
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A97
+  address: 3220 Beach Drive
+  data:
+    cbh: '0.7'
+    tree_code: A97
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.446088645774
+  longitude: -123.293889825726
+  botanical_name: Cedrus atlantica glauca
+  common_name: Blue Atlas Cedar
+  species: Cedrus atlantica
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A99
+  address: 3175 Beach Drive
+  data:
+    cbh: '3.65'
+    tree_code: A99
+    site_number: null
+    date_measured: 16-Jul-15
+- latitude: 48.4649218500743
+  longitude: -123.298814068801
+  botanical_name: Acer macrophyllum
+  species: Acer macrophyllum
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A95
+  address: Frank Hobbs School, 3875 Haro Rd
+  notable: true
+  confirmed: true
+  notes: "\"The lyre tree at 3875 Haro Rd. on the Frank Hobbs School grounds gets its name from the symmetrical\r\ntwin trunks, resembling a lyre harp. (Chaster & Ross, 1988)\""
+- latitude: 48.446198934257
+  longitude: -123.293857750362
+  botanical_name: Sequoiadendron giganteum 'Pendulum'
+  species: Sequoiadendron giganteum
+  source: Victoria Horticultural Society Heritage Tree Group
+  object_id: A98
+  address: 3175 Beach Drive
+  confirmed: true
 - latitude: 48.4168523269298
   longitude: -123.360982637575
   botanical_name: Tilia cordata
+  species: Tilia cordata
   source: wmceff@gmail.com

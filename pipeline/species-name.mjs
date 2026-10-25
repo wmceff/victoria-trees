@@ -14,6 +14,10 @@ export function speciesNameFor(botanicalName) {
   const words = botanicalName.split(" ");
   if (words.length <= 1) return botanicalName;
 
+  // species epithets are always lowercase, eg. "Acer Macrophyllum"
+  if (/^[A-Z][a-z-]+$/.test(words[1])) words[1] = words[1].toLowerCase();
+  botanicalName = words.join(" ");
+
   // cultivar straight after the genus, eg. "Malus 'Golden Apple'"
   if (words[1].includes("'")) return words[0];
 
