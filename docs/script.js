@@ -1,17 +1,14 @@
 // show console logs
 const DEBUG = false;
 
-let openInfoWindow;
 let markers = [];
 let currentPositionMarker;
 let lastPos = { lat: 0, lng: 0 };
-let lastFetchPos;
 let map;
-let victoriaShape, beaconHillParkShape;
+let cityOfVictoriaPoly, beaconHillParkPoly;
 let centerOnLocationUpdate = true;
 let dragging = false;
 let locating = false; // used to allow drag without moving center when relocating
-let watchingPosition = false;
 
 // every tree in the city, built by pipeline/build.mjs
 let treeData;
@@ -36,20 +33,6 @@ function initMap() {
     tilt: 0,
     disableDefaultUI: true
   });
-
-  const findTreesForCurrentPosition = function() {
-    // get bounding box
-    // use those co-ords
-    const box = {
-      xmin: map.getBounds().getNorthEast().lng(),
-      xmax: map.getBounds().getSouthWest().lng(),
-      ymin: map.getBounds().getSouthWest().lat(),
-      ymax: map.getBounds().getNorthEast().lat()
-    }
-    fetchTrees(box);
-  };
-
-  // document.getElementById('search-button').addEventListener('click', findTreesForCurrentPosition);
 
   // add the map & park sections
   addShapes();
@@ -207,35 +190,6 @@ function centerOnCurrentLocationAndFetch() {
   }
 }
 
-// watch for position updates, update and fetch, but dont re-center
-function watchAndUpdatePosition() {
-  if (!watchingPosition) {
-    watchingPosition = true;
-
-    navigator.geolocation.watchPosition(function(position) {
-      const pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      updateCurrentPositionMarker(pos);
-
-      // fetch if the last fetch was far away
-      const lastFetchDiff = Math.abs(pos.lat - lastFetchPos.lat) + Math.abs(pos.lng - lastFetchPos.lng)
-      if (lastFetchDiff > 0.0005) {
-        l('last fetch diff is big, fetching');
-        fetchTreesForPosition(pos);
-      };
-    }, function() {
-      l("Error watching geolocation position");
-    }, {
-      enableHighAccuracy: true,
-      // maximumAge: 0 // no location caching
-    })
-  }
-  locating = false;
-};
-
 function updateCurrentPositionMarker(pos) {
   if (currentPositionMarker) {
     currentPositionMarker.setPosition(pos);
@@ -293,8 +247,6 @@ function fetchTreesForPosition(pos) {
     ymin: pos.lat - radius,
     ymax: pos.lat + radius
   }
-
-  lastFetchPos = pos;
 
   fetchTrees(boundingBox);
 }
@@ -378,18 +330,6 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
           labelOrigin: new google.maps.Point(10, 20),
           scaledSize: new google.maps.Size(10, 10),
         },
-        /*, SVG
-        icon: ({
-          path: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z",
-          fillColor: (feature.species_order == 'Pinales') ? '#0a6402' : '#1dd70d',
-          fillOpacity: 1,
-          anchor: new google.maps.Point(600,600),
-          labelOrigin: new google.maps.Point(300,900),
-          strokeWeight: 2,
-          strokeColor: '#FFFFFF',
-          scale: 0.02
-        },
-        */
         name: commonName,
         id: feature.id
       });
@@ -403,15 +343,14 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
         }
       }
 
-      let infoWindowTemplate = `
+      const infoWindowTemplate = `
         <div style='margin:10px;padding:10px'>
           <h3>${feature.species_common_name}${(sencotenName) ? ' - ' + sencotenName : ''}</h3>
           <p><b>${(feature.botanical_name.includes("'")) ? feature.botanical_name : feature.species_name}</b></p>
           <p id="tree-content-custom"></p>
           <p><b><a href='https://en.m.wikipedia.org/?title=${feature.botanical_name}' target='_blank'>Wikipedia</a></b></p>
+        </div>
       `;
-
-      infoWindowTemplate += '</div>';
 
       marker.addListener('click', function() {
         document.getElementById('tree-modal').classList.add('is-active');
@@ -456,69 +395,11 @@ function fetchTrees({ xmin, xmax, ymin, ymax }) {
 
       markers.push(marker);
     });
-
-    /*
-    const markerCluster = new MarkerClusterer(map, markers, {
-      imagePath: 'images/m',
-      // gridSize: 40,
-      maxZoom: 18
-    });
-    */
   }).catch((error) => {
     l(error);
     displayError();
   });
 } // fetchTrees
-
-// override geolocation to simuluate being outside
-let testMode = false;
-if (testMode) {
-  let i = 0;
-  navigator.geolocation.getCurrentPosition = function(callback) {
-    coords = [
-      {
-        latitude: 48.414222,
-        longitude: -123.360474
-      },
-      {
-        latitude: 48.414136,
-        longitude: -123.362073
-      },
-      {
-        latitude: 48.414378,
-        longitude: -123.361644
-      },
-      {
-        latitude: 48.414434,
-        longitude: -123.361819
-      },
-      {
-        latitude: 48.414324,
-        longitude: -123.361846
-      },
-      {
-        latitude: 48.414334,
-        longitude: -123.361846
-      },
-      {
-        latitude: 48.414324,
-        longitude: -123.361746
-      },
-      {
-        latitude: 48.414334,
-        longitude: -123.361746
-      },
-    ];
-
-    const return_value = {
-      coords: coords[i]
-    }
-
-    i += 1;
-
-    setTimeout(callback(return_value), 200);
-  }
-}
 
 const aboutModal = document.getElementById('about-modal');
 document.getElementById('about').addEventListener('click', function() {

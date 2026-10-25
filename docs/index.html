@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151402182-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-151402182-2');
-    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,12 +17,6 @@
       }
       #map {
         height: 100%;
-      }
-      .info-section {
-        position: absolute;
-        top: 50px;
-        left: 0; right: 0;
-        background-color: white;
       }
     </style>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -92,10 +77,6 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&libraries=visualization"></script>
-  -->
   <script src="geo.js"></script>
   <script src="script.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
