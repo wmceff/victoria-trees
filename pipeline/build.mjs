@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import yaml from "js-yaml";
 import { cleanBotanicalName, speciesNameFor } from "./species-name.mjs";
+import { slugFor, writePages } from "./pages.mjs";
 
 const root = new URL("..", import.meta.url).pathname;
 const cityLayer = "https://maps.victoria.ca/server/rest/services/OpenData/OpenData_Parks/MapServer/15";
@@ -14,7 +15,7 @@ async function fetchCityTrees() {
   for (let offset = 0; ; offset += pageSize) {
     const params = new URLSearchParams({
       where: "1=1",
-      outFields: "OBJECTID,Species,CommonName",
+      outFields: "OBJECTID,Species,CommonName,Area",
       outSR: "4326",
       orderByFields: "OBJECTID",
       resultOffset: offset,
@@ -43,7 +44,8 @@ const botanicalIndex = new Map();
 const newSpecies = new Set();
 
 const trees = [];
-function addTree(latitude, longitude, rawBotanicalName, commonName, assignedSpecies) {
+const treeAreas = []; // each tree's City neighbourhood, for the neighbourhood pages
+function addTree(latitude, longitude, rawBotanicalName, commonName, assignedSpecies, area) {
   const botanicalName = cleanBotanicalName(rawBotanicalName);
   const derivedName = assignedSpecies ?? speciesNameFor(botanicalName);
   const speciesName = overrides[botanicalName] ?? overrides[derivedName] ?? derivedName;
@@ -61,12 +63,13 @@ function addTree(latitude, longitude, rawBotanicalName, commonName, assignedSpec
   const s = speciesIndex.get(speciesName);
   species[s].tree_count += 1;
   trees.push([+latitude.toFixed(6), +longitude.toFixed(6), s, botanicalIndex.get(botanicalName)]);
+  treeAreas.push(area?.trim() || null);
 }
 
 const cityTrees = await fetchCityTrees();
 for (const { attributes, geometry } of cityTrees) {
   if (!geometry || !attributes.Species || nonTreeRecords.has(attributes.Species.trim())) continue;
-  addTree(geometry.y, geometry.x, attributes.Species, attributes.CommonName);
+  addTree(geometry.y, geometry.x, attributes.Species, attributes.CommonName, undefined, attributes.Area);
 }
 const cityTreeCount = trees.length;
 
@@ -75,8 +78,18 @@ for (const t of extraTrees) {
   addTree(t.latitude, t.longitude, t.botanical_name ?? t.species, t.common_name, t.species);
 }
 
+// species page URLs, which the map's ?species= param also takes
+const speciesBySlug = new Map();
+for (const s of species) {
+  s.slug = slugFor(s.name);
+  if (s.tree_count && speciesBySlug.has(s.slug)) {
+    throw new Error(`"${s.name}" and "${speciesBySlug.get(s.slug).name}" would share the URL species/${s.slug}/`);
+  }
+  if (s.tree_count) speciesBySlug.set(s.slug, s);
+}
+
 // Only the fields the site displays
-const siteFields = ["name", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count"];
+const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count"];
 const output = {
   source: cityLayer,
   total: trees.length,
@@ -88,11 +101,13 @@ const output = {
 
 fs.mkdirSync(root + "docs/data", { recursive: true });
 fs.writeFileSync(root + "docs/data/trees.json", JSON.stringify(output));
+const pages = writePages(root + "docs", { species, trees, treeAreas, total: trees.length });
 
 console.log(
   `${cityTreeCount} City trees (${cityTrees.length - cityTreeCount} skipped: no location, no species, or not a tree), ` +
     `${extraTrees.length} extra trees, ${species.length} species`
 );
+console.log(`${pages.species} species pages, ${pages.neighbourhoods} neighbourhood pages, ${pages.urls} URLs in sitemap.xml`);
 if (newSpecies.size) {
   console.log(`\n${newSpecies.size} species not in data/species.yml (add them, or map them in data/botanical-overrides.yml):`);
   for (const name of [...newSpecies].sort()) console.log(`  ${name} (${species[speciesIndex.get(name)].tree_count})`);

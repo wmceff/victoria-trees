@@ -28,12 +28,25 @@ const mapLoaded = new Promise(function(resolve) {
   map.on('load', resolve);
 });
 
+// links from the species and neighbourhood pages: ?species=<slug> highlights that species,
+// ?bounds=<west,south,east,north> frames an area
+const urlParams = new URLSearchParams(window.location.search);
+
 Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   addCityOutline();
   addTrees(treeData);
 
+  const speciesIndex = treeData.species.findIndex((s) => s.slug === urlParams.get('species'));
+  if (speciesIndex !== -1) {
+    highlightSpecies(treeData, speciesIndex);
+  }
+  const bounds = (urlParams.get('bounds') || '').split(',').map(Number);
+  if (bounds.length === 4 && bounds.every(Number.isFinite)) {
+    map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: 40, animate: false });
+  }
+
   // phones are usually out looking at a tree, so start at their location
-  if (window.matchMedia('(pointer: coarse)').matches) {
+  if (speciesIndex === -1 && !urlParams.has('bounds') && window.matchMedia('(pointer: coarse)').matches) {
     geolocate.trigger();
   }
 }).catch(function(error) {
@@ -102,6 +115,30 @@ function addTrees(treeData) {
   map.on('mouseleave', 'trees', function() {
     map.getCanvas().style.cursor = '';
   });
+}
+
+// colours the species' trees and greys out the rest, then frames them unless ?bounds= is set
+function highlightSpecies(treeData, speciesIndex) {
+  const isSpecies = ['==', ['get', 'species'], speciesIndex];
+  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, '#e65100', '#9e9e9e']);
+  map.setPaintProperty('trees', 'circle-opacity', ['case', isSpecies, 1, 0.35]);
+  map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);
+
+  const points = treeData.trees.filter((tree) => tree[2] === speciesIndex);
+  if (!urlParams.has('bounds')) {
+    const bounds = new maplibregl.LngLatBounds();
+    points.forEach(([latitude, longitude]) => bounds.extend([longitude, latitude]));
+    map.fitBounds(bounds, { padding: 40, maxZoom: 17, animate: false });
+  }
+
+  const species = treeData.species[speciesIndex];
+  const name = species.common_name || species.name;
+  const footer = document.getElementById('footer-text');
+  footer.textContent = `Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in orange. `;
+  const showAll = document.createElement('a');
+  showAll.href = window.location.pathname;
+  showAll.textContent = 'Show all trees';
+  footer.append(showAll);
 }
 
 function showTree(treeData, properties) {

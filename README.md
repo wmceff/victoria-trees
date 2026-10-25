@@ -42,3 +42,8 @@ The build joins the City's trees with the curated data in `data/`:
 - `extra-trees.yml` - trees from other surveys and municipalities that aren't in the City's data.
 
 The build lists any species it finds that aren't in `species.yml` yet.
+
+It also generates the search-indexable pages, so they stay in sync with the data:
+`docs/species/`, `docs/neighbourhoods/`, `docs/sitemap.xml` and `docs/robots.txt`.
+Don't edit these by hand; change `pipeline/pages.mjs` and rebuild. The map takes
+`?species=<slug>` to highlight a species and `?bounds=<west,south,east,north>` to frame an area.
