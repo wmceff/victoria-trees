@@ -55,6 +55,10 @@
   common_name: Caucasian fir
   order: Pinales
   inaturalist_taxon_id: 136894
+- name: Abies numidica
+  common_name: Algerian fir
+  order: Pinales
+  inaturalist_taxon_id: 136895
 - name: Abies pinsapo
   common_name: Spanish Fir
   order: Pinales
@@ -92,6 +96,9 @@
   native: true
   sencoten_name: PENÁEȽĆ
   inaturalist_taxon_id: 48258
+- name: Acer crataegifolium
+  common_name: Hawthorn Maple
+  order: Sapindales
 - name: Acer freemanii
   common_name: Maple
   order: Sapindales
@@ -116,6 +123,10 @@
   common_name: Maple
   order: Sapindales
   inaturalist_taxon_id: 707456
+- name: Acer japonicum
+  common_name: Downey Japanese Maple
+  order: Sapindales
+  inaturalist_taxon_id: 63510
 - name: Acer macrophyllum
   common_name: Bigleaf maple
   order: Sapindales
@@ -178,6 +189,10 @@
   common_name: Sugar Maple
   order: Sapindales
   inaturalist_taxon_id: 52543
+- name: Acer tegmentosum
+  common_name: Manchurian Stried Maple
+  order: Sapindales
+  inaturalist_taxon_id: 496247
 - name: Acer truncatum
   common_name: Maple
   order: Sapindales
@@ -334,6 +349,10 @@
   common_name: Birch
   order: Fagales
   inaturalist_taxon_id: 49883
+- name: Betula alba
+  common_name: Silver Birch
+  order: Fagales
+  inaturalist_taxon_id: 119061
 - name: Betula nigra
   common_name: Black birch
   native_region: the Eastern United States
@@ -367,6 +386,10 @@
   common_name: Broadleaf Deciduous Medium
 - name: Broadleaf Evergreen
   common_name: Broadleaf Evergreen Medium
+- name: Buxus
+  common_name: Boxwood
+  order: Buxales
+  inaturalist_taxon_id: 133397
 - name: Calocedrus decurrens
   common_name: Incense cedar
   native_region: western North America
@@ -427,6 +450,12 @@
     C. atlantica is common in cultivation as an ornamental tree in temperate climates. In garden
     settings, often the glaucous (bluish green) forms are planted as ornamental trees, distinguished
     as the Glauca group, a cultivar group.
+- name: Cedrus brevifolia
+  common_name: Cyprus cedar
+  order: Pinales
+  native_region: the Troödos Mountains of central Cyprus
+  notable: true
+  inaturalist_taxon_id: 136296
 - name: Cedrus deodara
   common_name: Deodar cedar
   order: Pinales
@@ -733,6 +762,10 @@
     along with another cypress, Thuja plicata (western red cedar). While western red cedar was
     preferred for larger projects (houses, canoes), Nootka cypress was used for smaller carvings
     such as vessels and utensils.
+- name: Davidia involucrata
+  common_name: Dove Tree
+  order: Cornales
+  inaturalist_taxon_id: 128506
 - name: Davidia involucrate
   common_name: Dove Tree
 - name: Elaeagnus angustifolia
@@ -747,6 +780,10 @@
   common_name: Gum Tree
   order: Myrtales
   inaturalist_taxon_id: 53398
+- name: Eucalyptus pauciflora
+  common_name: Snow Gum
+  order: Myrtales
+  inaturalist_taxon_id: 208115
 - name: Eucryphia x
   common_name: Rostrevor
   inaturalist_taxon_id: 782371
@@ -917,6 +954,17 @@
   common_name: Common Juniper
   order: Pinales
   inaturalist_taxon_id: 58725
+- name: Juniperus scopulorum
+  common_name: Rocky Mountain Juniper
+  order: Pinales
+  native: true
+  sencoten_name: PEȾN¸Á¸IȽĆ
+  sencoten_url: http://saanich.montler.net/WordList/plants.html#380.
+  inaturalist_taxon_id: 135883
+- name: Juniperus squamata
+  common_name: Juniper
+  order: Pinales
+  inaturalist_taxon_id: 135885
 - name: Juniperus virginiana
   common_name: Eastern redcedar
   native_region: >-
@@ -959,6 +1007,10 @@
   common_name: Western Larch
   order: Pinales
   inaturalist_taxon_id: 69849
+- name: Ligustrum sinense
+  common_name: Chinese privet
+  order: Lamiales
+  inaturalist_taxon_id: 128769
 - name: Liquidambar styraciflua
   common_name: American sweetgum
   order: Saxifragales
@@ -1193,10 +1245,16 @@
     Ts’msyen, Kwakwaka’wakw, other Northwest
 
     Coast peoples).
+- name: Picea smithiana
+  order: Pinales
 - name: Pinus
   common_name: Pine
   inaturalist_taxon_id: 52391
   description: This is a genus only identification, not species.
+- name: Pinus aristata
+  common_name: Bristlecone Pine
+  order: Pinales
+  inaturalist_taxon_id: 135774
 - name: Pinus ayacahuite
   common_name: Pine
   order: Pinales
@@ -1205,6 +1263,15 @@
   common_name: Jack Pine
   order: Pinales
   inaturalist_taxon_id: 58724
+- name: Pinus bungeana
+  common_name: Lacebark Pine
+  order: Pinales
+  native_region: northeastern and central China
+  notable: true
+  inaturalist_taxon_id: 135808
+  description: >-
+    Pinus bungeana is native to mountains of China, but is widely cultivated as an ornamental,
+    especially for its attractive metallic bark.
 - name: Pinus contorta
   common_name: Lodgepole pine
   native: true
@@ -1292,6 +1359,10 @@
   order: Pinales
   native_region: Mountainous regions of western North America
   inaturalist_taxon_id: 48461
+- name: Pinus radiata
+  common_name: Monterey Pine
+  order: Pinales
+  inaturalist_taxon_id: 53421
 - name: Pinus sabiniana
   common_name: Gray pine
   native_region: California
@@ -1329,6 +1400,14 @@
   common_name: Japanese Black Pine
   order: Pinales
   inaturalist_taxon_id: 135655
+- name: Pinus wallichiana
+  common_name: Bhutan pine
+  order: Pinales
+  native_region: >-
+    the Himalaya, Karakoram and Hindu Kush mountains, from eastern Afghanistan east across northern
+    Pakistan and north west India to Yunnan in southwest China
+  notable: true
+  inaturalist_taxon_id: 135668
 - name: Pistachia chinensis
   common_name: Pistachio
 - name: Platanus × acerifolia
@@ -1348,6 +1427,17 @@
   common_name: Sycamore
   order: Proteales
   inaturalist_taxon_id: 49662
+- name: Platanus orientalis
+  common_name: Oriental plane
+  order: Proteales
+  inaturalist_taxon_id: 181682
+  description: >-
+    From earliest days, P. orientalis has been an important tree in Persian gardens, which are built
+    around water and shade. There it is known as the chenar. 
+
+
+    The Tree of Hippocrates, under which Hippocrates — the "Father of Medicine" — taught at Kos, is
+    reputed to have been an oriental plane.
 - name: Platycladus orientalis
   common_name: Chinese thuja
   native_region: northeastern parts of eastern Asia and north Asia
@@ -1368,6 +1458,10 @@
   common_name: European White Poplar
   order: Malpighiales
   inaturalist_taxon_id: 47570
+- name: Populus angustifolia
+  common_name: Narrowleaf Cottonwood
+  order: Malpighiales
+  inaturalist_taxon_id: 52130
 - name: Populus balsamifera
   common_name: Balsam Poplar
   order: Malpighiales
@@ -1632,6 +1726,10 @@
   common_name: Oak
   order: Fagales
   inaturalist_taxon_id: 461386
+- name: Quercus gambelii
+  common_name: Gambel oak
+  order: Fagales
+  inaturalist_taxon_id: 116377
 - name: Quercus garriana
   common_name: Garry Oak
 - name: Quercus garryana
@@ -1671,6 +1769,10 @@
   common_name: Oak
   order: Fagales
   inaturalist_taxon_id: 82946
+- name: Quercus lobata
+  common_name: Valley Oak
+  order: Fagales
+  inaturalist_taxon_id: 49011
 - name: Quercus macrocarpa
   common_name: Bur Oak
   order: Fagales
@@ -1686,6 +1788,10 @@
   common_name: Oak
   order: Fagales
   inaturalist_taxon_id: 119983
+- name: Quercus phillyraeoides
+  common_name: Ubame Oak
+  order: Fagales
+  inaturalist_taxon_id: 428732
 - name: Quercus prinus
   common_name: Oak
   order: Fagales
@@ -1714,6 +1820,8 @@
   common_name: Cascara Buckthorn
   order: Rosales
   inaturalist_taxon_id: 77156
+- name: Rhododendron
+  order: Ericales
 - name: Rhus
   common_name: Sumac
   order: Sapindales
@@ -1756,6 +1864,10 @@
     related common names "Babylon willow" or "Babylon weeping willow", derive from a
     misunderstanding by Linnaeus that this willow was the tree described in the Bible in the opening
     of Psalm 137.
+- name: Salix caprea
+  common_name: Kilmarnock Willow
+  order: Malpighiales
+  inaturalist_taxon_id: 55846
 - name: Salix matsudana
   common_name: Chinese Willow
   order: Malpighiales
@@ -1932,6 +2044,8 @@
   common_name: Japanese Yew
   order: Pinales
   inaturalist_taxon_id: 133386
+- name: Taxus x
+  order: Pinales
 - name: Thuja occidentalis
   common_name: Northern white-cedar
   order: Pinales

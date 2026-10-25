@@ -43,9 +43,9 @@ const botanicalIndex = new Map();
 const newSpecies = new Set();
 
 const trees = [];
-function addTree(latitude, longitude, rawBotanicalName, commonName) {
+function addTree(latitude, longitude, rawBotanicalName, commonName, assignedSpecies) {
   const botanicalName = cleanBotanicalName(rawBotanicalName);
-  const derivedName = speciesNameFor(botanicalName);
+  const derivedName = assignedSpecies ?? speciesNameFor(botanicalName);
   const speciesName = overrides[botanicalName] ?? overrides[derivedName] ?? derivedName;
 
   if (!speciesIndex.has(speciesName)) {
@@ -72,7 +72,7 @@ const cityTreeCount = trees.length;
 
 const extraTrees = readYaml("data/extra-trees.yml");
 for (const t of extraTrees) {
-  addTree(t.latitude, t.longitude, t.botanical_name, t.common_name);
+  addTree(t.latitude, t.longitude, t.botanical_name ?? t.species, t.common_name, t.species);
 }
 
 // Only the fields the site displays
