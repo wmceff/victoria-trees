@@ -22,6 +22,27 @@ const formatCount = (n) => n.toLocaleString("en-CA");
 const percentOf = (count, total) => `${(Math.round((count / total) * 10000) / 100).toLocaleString("en-CA")}%`;
 const displayName = (s) => s.common_name || s.name;
 
+// How common a species is, in words rather than a percentage. The map's tree modal shows it too.
+export function commonnessFact(s, species, total) {
+  const count = s.tree_count;
+  const rank = 1 + species.filter((other) => other.tree_count > count).length;
+  const speciesCount = species.filter((other) => other.tree_count > 0).length;
+  const oneIn = Math.round(total / count);
+  if (rank === 1) {
+    return `Victoria's most common tree: ${formatCount(count)} on the map, about 1 in ${oneIn} trees.`;
+  }
+  if (count / total >= 0.01) {
+    return `One of Victoria's most common trees: ${formatCount(count)} on the map, about 1 in ${oneIn} trees ` +
+      `(#${rank} of ${speciesCount} species).`;
+  }
+  if (count === 1) return "The only one on the map.";
+  if (count <= 10) return `A rare one here: only ${count} on the map (#${rank} of ${speciesCount} species).`;
+  return `${formatCount(count)} on the map, the #${rank} most common of ${speciesCount} species.`;
+}
+
+// curated ranges are written to follow "native to", sometimes as "from X to Y"
+const nativeRange = (s) => s.native_region.replace(/^from /, "");
+
 // [west, south, east, north], the format the map's ?bounds= param takes
 function boundsOf(points) {
   const b = [Infinity, Infinity, -Infinity, -Infinity];
@@ -97,13 +118,13 @@ function paragraphs(text) {
 
 function speciesPage(s, ctx) {
   const name = displayName(s);
-  const share = percentOf(s.tree_count, ctx.total);
   const heading = s.common_name ? `${name} <small class="has-text-grey"><i>${escapeHtml(s.name)}</i></small>` : `<i>${escapeHtml(name)}</i>`;
   const title = s.common_name ? `${name} (${s.name}) trees in Victoria, BC` : `${name} trees in Victoria, BC`;
   const treeWord = s.tree_count === 1 ? "tree" : "trees";
   const description =
     `There ${s.tree_count === 1 ? "is" : "are"} ${formatCount(s.tree_count)} ${name} ${treeWord}` +
-    `${s.common_name ? ` (${s.name})` : ""} on public land in Victoria, BC: ${share} of the trees on record. ` +
+    `${s.common_name ? ` (${s.name})` : ""} on public land in Victoria, BC` +
+    (s.tree_count / ctx.total >= 0.01 ? `, about 1 in ${Math.round(ctx.total / s.tree_count)} of the trees on record. ` : ". ") +
     `See where they are on the map.`;
 
   let body = `<h1>${heading}</h1>\n`;
@@ -114,11 +135,11 @@ function speciesPage(s, ctx) {
     body += `<p>SENĆOŦEN name: <b>${sencoten}</b></p>\n`;
   }
   if (s.native_region) {
-    body += `<p>Native to ${escapeHtml(s.native_region)}${s.native ? ", including Victoria" : ""}.</p>\n`;
+    body += `<p>Native to ${escapeHtml(nativeRange(s))}${s.native ? ", including Victoria" : ""}.</p>\n`;
   } else if (s.native) {
     body += `<p>Native to Victoria.</p>\n`;
   }
-  body += `<p>The City of Victoria has <b>${formatCount(s.tree_count)}</b> ${treeWord} of this species on record, <b>${share}</b> of the ${formatCount(ctx.total)} trees on the map.</p>\n`;
+  body += `<p>${escapeHtml(commonnessFact(s, ctx.species, ctx.total))}</p>\n`;
   body += `<p><a class="button is-success" href="../../?species=${s.slug}">Show ${escapeHtml(name)} ${treeWord} on the map</a></p>\n`;
   if (s.description) body += paragraphs(s.description) + "\n";
 

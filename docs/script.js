@@ -186,7 +186,7 @@ function showTree(treeData, properties) {
   if (size) {
     details += `<p>${size}</p>`;
   }
-  details += `<p>${commonnessFact(treeData, species, name)}</p>`;
+  details += `<p>${species.commonness}</p>`;
   if (species.top_area && species.tree_count >= 5) {
     details += `<p>Most are in ${species.top_area.name} (${species.top_area.count.toLocaleString()}). ` +
       `<a href="species/${species.slug}/">See where they grow</a></p>`;
@@ -229,28 +229,6 @@ function sizeFacts(treeData, tree, name) {
     }
   }
   return text;
-}
-
-// how common the species is, in words rather than a percentage
-function commonnessFact(treeData, species, name) {
-  const count = species.tree_count;
-  const rank = 1 + treeData.species.filter((s) => s.tree_count > count).length;
-  const speciesCount = treeData.species.filter((s) => s.tree_count > 0).length;
-  const oneIn = Math.round(treeData.total / count);
-  if (rank === 1) {
-    return `Victoria's most common tree: about 1 in ${oneIn} trees on the map is a ${name}.`;
-  }
-  if (count / treeData.total >= 0.01) {
-    return `One of Victoria's most common trees: about 1 in ${oneIn} trees on the map ` +
-      `(#${rank} of ${speciesCount} species).`;
-  }
-  if (count === 1) {
-    return 'The only one on the map.';
-  }
-  if (count <= 10) {
-    return `A rare one here: only ${count} on the map (#${rank} of ${speciesCount} species).`;
-  }
-  return `${count.toLocaleString()} on the map, the #${rank} most common of ${speciesCount} species.`;
 }
 
 function addCityOutline() {

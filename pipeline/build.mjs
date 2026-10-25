@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import yaml from "js-yaml";
 import { cleanBotanicalName, speciesNameFor } from "./species-name.mjs";
-import { slugFor, writePages } from "./pages.mjs";
+import { commonnessFact, slugFor, writePages } from "./pages.mjs";
 
 const root = new URL("..", import.meta.url).pathname;
 const cityLayer = "https://maps.victoria.ca/server/rest/services/OpenData/OpenData_Parks/MapServer/15";
@@ -134,9 +134,12 @@ for (const s of species) {
   }
   if (s.tree_count) speciesBySlug.set(s.slug, s);
 }
+for (const s of species) {
+  if (s.tree_count) s.commonness = commonnessFact(s, species, trees.length);
+}
 
 // Only the fields the site displays
-const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count", "top_area"];
+const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness"];
 const output = {
   source: cityLayer,
   updated: new Date().toISOString().slice(0, 10), // when this file was last built from the City's data
