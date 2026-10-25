@@ -1,5 +1,5 @@
-// Maps a City botanical name to the species name we curate under.
-// Same rules the original Postgres import used (data_scripts/assign_species.sql + Tree.import_species).
+// Maps a City botanical name to the species name we curate under: the genus and epithet,
+// with cultivar names dropped and hybrids written with ×.
 
 export function cleanBotanicalName(botanicalName) {
   return botanicalName
