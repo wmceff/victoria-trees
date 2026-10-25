@@ -200,8 +200,29 @@ function showTree(treeData, properties) {
     <p><b>${botanicalName.includes("'") ? botanicalName : species.name}</b> ${origin}</p>
     ${details}
     <p><b><a href='https://en.m.wikipedia.org/?title=${botanicalName}' target='_blank'>Wikipedia</a></b></p>
+    <p class="is-size-7">Something wrong with this tree?
+      <a href="${treeFeedbackUrl(treeData, tree, name)}" target="_blank" rel="noopener">Let us know</a></p>
   `;
   document.getElementById('tree-modal').classList.add('is-active');
+}
+
+// The feedback form, opened with "Wrong data / missing tree" chosen and the tree described in the message
+const feedbackForm = 'https://docs.google.com/forms/d/e/1FAIpQLSdNRGWK0oKwgXxuYTQGoDz7d3TIEknw-KqP0TkyjcJsTMIi4Q/viewform';
+function treeFeedbackUrl(treeData, tree, name) {
+  const [latitude, longitude, speciesIndex, botanicalIndex, , , placeIndex] = tree;
+  const lines = [
+    `Tree: ${name} (${treeData.botanical[botanicalIndex] || treeData.species[speciesIndex].name})`,
+    placeIndex !== null ? treeData.places[placeIndex] : null,
+    `Location: ${latitude}, ${longitude}`,
+    '',
+    ''
+  ].filter((line) => line !== null);
+  const params = new URLSearchParams({
+    usp: 'pp_url',
+    'entry.1170232527': 'Wrong data / missing tree',
+    'entry.1271914933': lines.join('\n')
+  });
+  return `${feedbackForm}?${params}`;
 }
 
 // "About 16 m tall, roughly a 5-storey building, with a trunk 90 cm across. Taller than 9 in 10 ..."
