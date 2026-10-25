@@ -92,6 +92,7 @@ for (const s of species) {
 const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count"];
 const output = {
   source: cityLayer,
+  updated: new Date().toISOString().slice(0, 10), // when this file was last built from the City's data
   total: trees.length,
   species: species.map((s) => Object.fromEntries(siteFields.filter((f) => s[f] !== undefined).map((f) => [f, s[f]]))),
   botanical,

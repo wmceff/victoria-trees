@@ -46,10 +46,16 @@
     <div id="map"></div>
   </div>
 
-  <div id="footer">
-    <div class="box has-text-centered" id="footer-text">
-      tap a tree to learn about it, or press the arrow to go to your position
+  <div id="hint" class="bottom-box">
+    <div class="box has-text-centered">
+      Tap a tree to learn about it, or tap
+      <span class="icon"><i class="fas fa-location-arrow"></i></span>
+      to see the trees around you
     </div>
+  </div>
+
+  <div id="footer" class="bottom-box">
+    <div class="box has-text-centered" id="footer-text"></div>
   </div>
 
   <div id="map-controls">
@@ -65,25 +71,36 @@
     </div>
   </div>
 
-  <div id="header">
-    <div class="box has-text-centered">
-      <h1>Trees of Victoria</h1>
-    </div>
-  </div>
-
-  <div class="modal" id="about-modal">
-    <div class="modal-background" id="tree-modal-background"></div>
+  <div class="modal" id="welcome-modal">
+    <div class="modal-background"></div>
     <div class="modal-content">
       <div class="box">
         <div class="content">
-          <h1>About Victoria Trees</h1>
-          <p>Identify and learn about the many diverse trees in the City of Victoria. Press the arrow icon to geolocate to your position and tap the tree to see information about the tree species. <b>Add this to your home screen to get rid of the bottom bars and for easy access by pressing the Share icon below.</b></p>
+          <h1 class="title is-4">Trees of Victoria</h1>
+          <p>Identify the trees on public land around you in Victoria, BC.</p>
+          <ul class="welcome-steps">
+            <li><span class="icon"><i class="fas fa-location-arrow"></i></span> Tap the arrow to see the trees around you</li>
+            <li><span class="icon has-text-success"><i class="fas fa-circle"></i></span> Tap a tree to learn about it</li>
+            <li><span class="icon"><i class="fas fa-question"></i></span> Tap the question mark to see this again</li>
+          </ul>
+          <div class="buttons">
+            <button class="button is-success" id="welcome-locate">
+              <span class="icon"><i class="fas fa-location-arrow"></i></span>
+              <span>Find trees near me</span>
+            </button>
+            <button class="button" id="welcome-explore">Explore the map</button>
+          </div>
+          <p class="is-size-7 has-text-grey" id="data-updated"></p>
+          <hr>
+          <div class="is-size-7">
+          <p><b>Tip:</b> add this page to your home screen for quick access. On iPhone, use the Share button, then Add to Home Screen.</p>
           <p>Victoria stands on the traditional territories of the lək̓ʷəŋən peoples, the Songhees and Esquimalt Nations. Where known, <a href="https://en.wikipedia.org/wiki/Saanich_dialect">SENĆOŦEN</a> tree names are provided, with a link to a <a href="http://saanich.montler.net/WordList/plants.html">website</a> where you can hear the pronounciation. SENĆOŦEN is the language of the W̱SÁNEĆ People, and a member of the North Straits Salish dialect continuum along with lək̓ʷəŋən.</p>
           <p>The tree information is from the City of Victoria's <a href="http://opendata.victoria.ca/datasets/tree-species">trees dataset</a>. We have amended and added to the data where necessary. <b>If your tree is missing</b>, it's most likely because it's not on public property (the city isn't keeping track of it). Check out apps like iNaturalist or PictureThis to help with identification.</p>
           <p>Built to complement <a href="http://naturevictoria.com">James Clowater</a>'s website <a href="http://treesofvictoria.com/">Trees of Victoria</a>.</p>
           <p>Descriptions are sourced from Wikipedia, and Indigenous uses for trees native to this area are primarily sourced from Nancy Turner's Ancient Pathways, Ancestral Knowledge.</p>
           <p>Browse the <a href="species/">tree species</a> and <a href="neighbourhoods/">neighbourhoods</a> of Victoria.</p>
           <p><a href="https://github.com/wmceff/victoria-trees">Source on Github</a></p>
+          </div>
         </div>
       </div>
     </div>
@@ -91,7 +108,7 @@
   </div>
 
   <div class="modal" id="tree-modal">
-    <div class="modal-background" id="tree-modal-background"></div>
+    <div class="modal-background"></div>
     <div class="modal-content">
       <div class="box"><div class="content" id="tree-modal-content"></div></div>
     </div>

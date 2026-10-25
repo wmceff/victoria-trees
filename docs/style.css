@@ -16,14 +16,8 @@
   display: none;
 }
 
-#header {
-  position: absolute;
-  top: -10px;
-  left: 10%;
-  right: 10%;
-}
-
-#footer {
+/* the hint, and the footer that replaces it with messages */
+.bottom-box {
   position: absolute;
   bottom: 1.5rem;
   left: 10%;
@@ -31,11 +25,24 @@
 }
 /* phones: keep clear of the buttons in the bottom right */
 @media (max-width: 768px) {
-  #footer {
+  .bottom-box {
     left: 1rem;
     right: 5.5rem;
   }
 }
-#footer .box {
-  background-color: rgba(255,255,255,0.8);
+.bottom-box .box {
+  background-color: rgba(255,255,255,0.85);
+}
+#footer {
+  display: none;
+}
+
+.welcome-steps {
+  list-style: none;
+  margin-left: 0 !important;
+}
+.welcome-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

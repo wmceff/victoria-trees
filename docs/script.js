@@ -32,6 +32,15 @@ const mapLoaded = new Promise(function(resolve) {
 // ?bounds=<west,south,east,north> frames an area
 const urlParams = new URLSearchParams(window.location.search);
 
+const arrivedFromLink = urlParams.has('species') || urlParams.has('bounds');
+
+treeDataLoaded.then(function(treeData) {
+  const refreshed = new Date(treeData.updated + 'T12:00:00');
+  document.getElementById('data-updated').textContent =
+    'Tree data last refreshed from the City of Victoria on ' +
+    refreshed.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' }) + '.';
+});
+
 Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   addCityOutline();
   addTrees(treeData);
@@ -45,9 +54,12 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
     map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: 40, animate: false });
   }
 
-  // phones are usually out looking at a tree, so start at their location
-  if (speciesIndex === -1 && !urlParams.has('bounds') && window.matchMedia('(pointer: coarse)').matches) {
-    geolocate.trigger();
+  // phones are usually out looking at a tree, so returning visitors who already allowed
+  // location start there; everyone else is asked from the welcome modal
+  if (!arrivedFromLink && !welcomeModal.classList.contains('is-active') && window.matchMedia('(pointer: coarse)').matches) {
+    locationAlreadyAllowed().then(function(allowed) {
+      if (allowed) geolocate.trigger();
+    });
   }
 }).catch(function(error) {
   console.error(error);
@@ -133,12 +145,11 @@ function highlightSpecies(treeData, speciesIndex) {
 
   const species = treeData.species[speciesIndex];
   const name = species.common_name || species.name;
-  const footer = document.getElementById('footer-text');
-  footer.textContent = `Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in orange. `;
+  showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in orange. `);
   const showAll = document.createElement('a');
   showAll.href = window.location.pathname;
   showAll.textContent = 'Show all trees';
-  footer.append(showAll);
+  document.getElementById('footer-text').append(showAll);
 }
 
 function showTree(treeData, properties) {
@@ -222,22 +233,39 @@ function addCityOutline() {
   });
 }
 
-// the title and hint make room for the trees once you zoom in
-map.on('zoom', function() {
-  const zoom = map.getZoom();
-  document.getElementById('header').style.display = zoom > 14 ? 'none' : 'block';
-  document.getElementById('footer').style.display = zoom >= 17 ? 'none' : 'block';
+// the hint gets out of the way as soon as someone starts using the map
+function hideHint() {
+  document.getElementById('hint').style.display = 'none';
+}
+map.on('dragstart', hideHint);
+map.on('zoomstart', function(event) {
+  if (event.originalEvent) hideHint();
 });
+map.on('click', hideHint);
 
+// errors and the species highlight; replaces the hint
 function showFooterMessage(message) {
+  hideHint();
   document.getElementById('footer-text').textContent = message;
   document.getElementById('footer').style.display = 'block';
 }
 
+function locationAlreadyAllowed() {
+  if (!navigator.permissions) return Promise.resolve(false);
+  return navigator.permissions.query({ name: 'geolocation' })
+    .then((status) => status.state === 'granted')
+    .catch(() => false);
+}
+
+function locateUser() {
+  hideHint();
+  mapLoaded.then(function() {
+    geolocate.trigger();
+  });
+}
+
 const geolocateIcon = document.querySelector('#geolocate .icon');
-document.getElementById('geolocate').addEventListener('click', function() {
-  geolocate.trigger();
-});
+document.getElementById('geolocate').addEventListener('click', locateUser);
 geolocate.on('trackuserlocationstart', function() {
   geolocateIcon.classList.add('has-text-info');
 });
@@ -249,12 +277,35 @@ geolocate.on('error', function() {
   showFooterMessage('We couldn\'t get your location. Check that location permissions are enabled and try again.');
 });
 
-const aboutModal = document.getElementById('about-modal');
+// welcome modal: shown on a first visit and from the ? button
+const welcomeModal = document.getElementById('welcome-modal');
+function welcomeSeen() {
+  try {
+    return localStorage.getItem('welcomeSeen') === 'yes';
+  } catch (e) {
+    return false;
+  }
+}
+if (!arrivedFromLink && !welcomeSeen()) {
+  welcomeModal.classList.add('is-active');
+}
 document.getElementById('about').addEventListener('click', function() {
-  aboutModal.classList.add('is-active');
+  welcomeModal.classList.add('is-active');
 });
+document.getElementById('welcome-locate').addEventListener('click', function() {
+  closeModal();
+  locateUser();
+});
+document.getElementById('welcome-explore').addEventListener('click', closeModal);
 
-const closeModal = () => {
+function closeModal() {
+  if (welcomeModal.classList.contains('is-active')) {
+    try {
+      localStorage.setItem('welcomeSeen', 'yes');
+    } catch (e) {
+      // private browsing: the welcome shows again next visit
+    }
+  }
   document.querySelectorAll('.modal').forEach((el) => {
     el.classList.remove('is-active');
   });
