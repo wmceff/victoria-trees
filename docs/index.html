@@ -11,18 +11,23 @@
       gtag('config', 'G-8TL8VBBHK4');
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="description" content="Identify and learn about the many diverse trees in the City of Victoria through geolocation.">
     <title>Victoria Trees - Identify trees in the City of Victoria</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+      }
+      #map-container {
+        position: fixed;
+        inset: 0;
       }
       #map {
         height: 100%;
@@ -37,7 +42,7 @@
 
   <div id="footer">
     <div class="box has-text-centered" id="footer-text">
-      press the button on the right to zoom to your position
+      tap a tree to learn about it, or press the arrow to go to your position
     </div>
   </div>
 
@@ -86,8 +91,7 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <script src="geo.js"></script>
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
   <script src="script.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lUZaV1OxuFUzdFbhTvihC8SeUDkxqf8&callback=initMap"></script>
 </body>
 </html>

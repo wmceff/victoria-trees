@@ -11,11 +11,9 @@
   padding: 1rem;
 }
 
-/* taking a gamle there won't be any other text nested this far down */
-.gm-style div div div div div div div {
-  font-weight: bold;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+/* the #geolocate button drives the map's geolocate control */
+.maplibregl-ctrl-top-right {
+  display: none;
 }
 
 #header {
@@ -27,9 +25,16 @@
 
 #footer {
   position: absolute;
-  bottom: -10px;
+  bottom: 1.5rem;
   left: 10%;
   right: 10%;
+}
+/* phones: keep clear of the buttons in the bottom right */
+@media (max-width: 768px) {
+  #footer {
+    left: 1rem;
+    right: 5.5rem;
+  }
 }
 #footer .box {
   background-color: rgba(255,255,255,0.8);
