@@ -67,7 +67,7 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
 });
 
 function addTrees(treeData) {
-  const features = treeData.trees.map(function([latitude, longitude, speciesIndex, botanicalIndex]) {
+  const features = treeData.trees.map(function([latitude, longitude, speciesIndex], treeIndex) {
     const species = treeData.species[speciesIndex];
     return {
       type: 'Feature',
@@ -76,7 +76,7 @@ function addTrees(treeData) {
         name: species.common_name || species.name,
         conifer: species.order === 'Pinales',
         species: speciesIndex,
-        botanical: botanicalIndex
+        tree: treeIndex
       }
     };
   });
@@ -153,8 +153,11 @@ function highlightSpecies(treeData, speciesIndex) {
 }
 
 function showTree(treeData, properties) {
-  const species = treeData.species[properties.species];
-  const botanicalName = treeData.botanical[properties.botanical];
+  const tree = treeData.trees[properties.tree];
+  const [, , speciesIndex, botanicalIndex, , , placeIndex] = tree;
+  const species = treeData.species[speciesIndex];
+  const botanicalName = treeData.botanical[botanicalIndex];
+  const name = properties.name;
 
   let sencotenName = '';
   if (species.sencoten_name) {
@@ -165,33 +168,89 @@ function showTree(treeData, properties) {
     }
   }
 
+  const origin = species.native
+    ? '<span class="tag is-native">Native to Victoria</span>'
+    : species.native_region
+      ? '<span class="tag is-planted">Planted</span>'
+      : '';
+
   let details = '';
-  if (species.native_region) {
-    details += `<p>This tree is native to ${species.native_region}${species.native ? ', including Victoria' : ''}.</p>`;
-  } else if (species.native) {
-    details += '<p>This tree is native to Victoria.</p>';
+  if (placeIndex !== null) {
+    details += `<p class="tree-place">${treeData.places[placeIndex]}</p>`;
   }
-
-  const treePercentage = Math.round(((species.tree_count / treeData.total) * 100 * 100) + Number.EPSILON) / 100;
-  details += `
-    <p>
-      The City of Victoria has <b>${species.tree_count}</b> of these trees on record.
-      (<b>${treePercentage}%</b>)
-    </p>`;
-
+  if (!species.native && species.native_region) {
+    // curated ranges are written to follow "native to", sometimes as "from X to Y"
+    details += `<p>Native to ${species.native_region.replace(/^from /, '')}.</p>`;
+  }
+  const size = sizeFacts(treeData, tree, name);
+  if (size) {
+    details += `<p>${size}</p>`;
+  }
+  details += `<p>${commonnessFact(treeData, species, name)}</p>`;
+  if (species.top_area && species.tree_count >= 5) {
+    details += `<p>Most are in ${species.top_area.name} (${species.top_area.count.toLocaleString()}). ` +
+      `<a href="species/${species.slug}/">See where they grow</a></p>`;
+  }
   if (species.description) {
     details += `<p>${species.description.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p>`;
   }
 
   document.getElementById('tree-modal-content').innerHTML = `
-    <div style='margin:10px;padding:10px'>
-      <h3>${properties.name}${sencotenName ? ' - ' + sencotenName : ''}</h3>
-      <p><b>${botanicalName.includes("'") ? botanicalName : species.name}</b></p>
-      ${details}
-      <p><b><a href='https://en.m.wikipedia.org/?title=${botanicalName}' target='_blank'>Wikipedia</a></b></p>
-    </div>
+    <h3>${name}${sencotenName ? ' - ' + sencotenName : ''}</h3>
+    <p><b>${botanicalName.includes("'") ? botanicalName : species.name}</b> ${origin}</p>
+    ${details}
+    <p><b><a href='https://en.m.wikipedia.org/?title=${botanicalName}' target='_blank'>Wikipedia</a></b></p>
   `;
   document.getElementById('tree-modal').classList.add('is-active');
+}
+
+// "About 16 m tall, roughly a 5-storey building, with a trunk 90 cm across. Taller than 9 in 10 ..."
+function sizeFacts(treeData, tree, name) {
+  const [, , speciesIndex, , height, diameter] = tree;
+  const parts = [];
+  if (height !== null) {
+    const storeys = Math.round(height / 3);
+    parts.push(`About ${height} m tall` + (storeys >= 2 ? `, roughly a ${storeys}-storey building` : ''));
+  }
+  if (diameter !== null) {
+    parts.push(`${parts.length ? 'with a' : 'A'} trunk ${diameter} cm across`);
+  }
+  if (!parts.length) return '';
+  let text = parts.join(', ') + '.';
+
+  // only compare against species with enough measured trees for it to mean something
+  const heights = treeData.trees.filter((t) => t[2] === speciesIndex && t[4] !== null).map((t) => t[4]);
+  if (height !== null && heights.length >= 5) {
+    const shorter = heights.filter((h) => h < height).length / heights.length;
+    if (height === Math.max(...heights)) {
+      text += ` The tallest ${name} on the map.`;
+    } else if (shorter >= 0.6) {
+      text += ` Taller than ${Math.floor(shorter * 10)} in 10 ${name} trees on the map.`;
+    }
+  }
+  return text;
+}
+
+// how common the species is, in words rather than a percentage
+function commonnessFact(treeData, species, name) {
+  const count = species.tree_count;
+  const rank = 1 + treeData.species.filter((s) => s.tree_count > count).length;
+  const speciesCount = treeData.species.filter((s) => s.tree_count > 0).length;
+  const oneIn = Math.round(treeData.total / count);
+  if (rank === 1) {
+    return `Victoria's most common tree: about 1 in ${oneIn} trees on the map is a ${name}.`;
+  }
+  if (count / treeData.total >= 0.01) {
+    return `One of Victoria's most common trees: about 1 in ${oneIn} trees on the map ` +
+      `(#${rank} of ${speciesCount} species).`;
+  }
+  if (count === 1) {
+    return 'The only one on the map.';
+  }
+  if (count <= 10) {
+    return `A rare one here: only ${count} on the map (#${rank} of ${speciesCount} species).`;
+  }
+  return `${count.toLocaleString()} on the map, the #${rank} most common of ${speciesCount} species.`;
 }
 
 function addCityOutline() {
