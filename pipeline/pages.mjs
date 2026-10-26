@@ -161,14 +161,14 @@ function speciesPage(s, ctx) {
 
 function speciesIndexPage(species, ctx) {
   const rows = [...species]
-    .sort((a, b) => displayName(a).localeCompare(displayName(b), "en"))
+    .sort((a, b) => b.tree_count - a.tree_count || displayName(a).localeCompare(displayName(b), "en"))
     .map(
       (s) =>
         `<tr><td><a href="${s.slug}/">${escapeHtml(displayName(s))}</a></td><td><i>${escapeHtml(s.name)}</i></td><td>${formatCount(s.tree_count)}</td></tr>`
     )
     .join("\n");
   const body = `<h1>Tree species in Victoria, BC</h1>
-<p>The ${formatCount(species.length)} species of tree on public land in the City of Victoria, with how many of each the City has on record.</p>
+<p>The ${formatCount(species.length)} species of tree on public land in the City of Victoria, from most to least common.</p>
 <div class="table-container"><table class="table is-narrow is-hoverable">
 <thead><tr><th>Common name</th><th>Botanical name</th><th>Trees</th></tr></thead>
 <tbody>
