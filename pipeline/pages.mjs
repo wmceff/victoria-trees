@@ -88,7 +88,7 @@ function layout({ path, title, description, body }) {
 <body>
   <nav class="navbar is-success" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item has-text-weight-bold" href="${home}">Trees of Victoria</a>
+      <a class="navbar-item has-text-weight-bold" href="${home}">Victoria Trees</a>
       <a class="navbar-item" href="${home}species/">Species</a>
       <a class="navbar-item" href="${home}neighbourhoods/">Neighbourhoods</a>
     </div>
