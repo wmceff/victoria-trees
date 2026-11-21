@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import yaml from "js-yaml";
 import { cleanBotanicalName, speciesNameFor } from "./species-name.mjs";
-import { commonnessFact, slugFor, writePages } from "./pages.mjs";
+import { blossomHues, commonnessFact, slugFor, writePages } from "./pages.mjs";
 
 const root = new URL("..", import.meta.url).pathname;
 const cityLayer = "https://maps.victoria.ca/server/rest/services/OpenData/OpenData_Parks/MapServer/15";
@@ -138,8 +138,19 @@ for (const s of species) {
   if (s.tree_count) s.commonness = commonnessFact(s, species, trees.length);
 }
 
+// The map colours blossom trees by their flowers: a hue per species, and per variety where
+// the City records one (a Kwanzan is deep pink, a Shirofugen white)
+for (const s of species) {
+  if (!s.bloom) continue;
+  const { hue, varieties = {} } = s.bloom;
+  for (const h of [hue, ...Object.values(varieties)]) {
+    if (!blossomHues.includes(h)) throw new Error(`${s.name}: bloom hue "${h}" isn't one of ${blossomHues.join(", ")}`);
+  }
+  s.blossom = { hue, varieties: Object.fromEntries(Object.entries(varieties).map(([k, v]) => [k.toLowerCase(), v])) };
+}
+
 // Only the fields the site displays
-const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness"];
+const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness", "blossom"];
 const output = {
   source: cityLayer,
   updated: new Date().toISOString().slice(0, 10), // when this file was last built from the City's data

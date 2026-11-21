@@ -232,3 +232,18 @@ hr {
     font-size: 0.8125rem;
   }
 }
+
+/* flower colours, as on the map */
+.hue-swatch {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.3em;
+  border-radius: 50%;
+  border: 1px solid #7d2a48;
+  vertical-align: baseline;
+}
+.hue-white { background-color: #ffffff; }
+.hue-pale-pink { background-color: #f4b6c8; }
+.hue-pink { background-color: #e0739a; }
+.hue-deep-pink { background-color: #b02a62; }

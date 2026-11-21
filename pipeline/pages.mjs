@@ -291,6 +291,10 @@ export function bloomSlot(text, speciesName) {
 }
 const bloomWindow = (bloom) => `from ${bloom.from} to ${bloom.to}`;
 
+// The flower colours the map uses for blossom trees; docs/script.js has the matching swatches
+export const blossomHues = ["white", "pale pink", "pink", "deep pink"];
+const hueSwatch = (hue) => `<span class="hue-swatch hue-${slugFor(hue)}" aria-hidden="true"></span>`;
+
 // The City's cultivar names, eg. "Prunus serrulata kwanzan" -> "Kwanzan", for the species table
 function varietyName(botanicalName, speciesName) {
   const words = botanicalName.replace(/[×'‘’"]/g, " ").split(/\s+/).filter((w) => w && w.toLowerCase() !== "x");
@@ -380,7 +384,7 @@ ${rows}
       // the notes get a full-width row of their own, so the table stays readable on a phone
       return `<tbody class="bloom-species" data-start="${s.start}" data-end="${s.end}">` +
         `<tr><td><a href="../species/${s.slug}/">${escapeHtml(displayName(s))}</a><br><i class="is-size-7">${escapeHtml(s.name)}</i></td>` +
-        `<td>${escapeHtml(s.bloom.from)} to ${escapeHtml(s.bloom.to)}<br><span class="is-size-7">${escapeHtml(s.bloom.colour)}</span></td>` +
+        `<td>${escapeHtml(s.bloom.from)} to ${escapeHtml(s.bloom.to)}<br><span class="is-size-7">${hueSwatch(s.bloom.hue)}${escapeHtml(s.bloom.colour)}</span></td>` +
         `<td class="bloom-count"><a href="../?species=${s.slug}">${formatCount(s.tree_count)}</a></td><td>${placeCell}</td></tr>` +
         (notes ? `\n<tr class="bloom-notes"><td colspan="4" class="is-size-7">${escapeHtml(notes)}</td></tr>` : "") +
         `</tbody>`;
@@ -420,6 +424,7 @@ ${placeRows(list)}
 <p>Victoria has <b>${formatCount(cherryCount)}</b> flowering cherry and plum trees on public land, and ${formatCount(blossomTrees.length - cherryCount)} more magnolias, crabapples, pears and serviceberries. Blossom season starts with the winter-flowering cherries, peaks with the cherry plums and Yoshino cherries in March, and ends with the Japanese cherries and crabapples in early May.</p>
 <p class="bloom-now box" hidden></p>
 <p><a class="button is-success" href="../?species=${allSlugs}">Show all ${formatCount(blossomTrees.length)} blossom trees on the map</a></p>
+<p class="is-size-7">On the map they're coloured by their flowers: ${blossomHues.map((h) => `${hueSwatch(h)}${h}`).join(", ")}.</p>
 <h2>When the blossoms are out</h2>
 <p>Typical flowering times in Victoria. A warm or cold spell moves them a week or two either way, and trees in sheltered spots flower first.</p>
 ${calendar}

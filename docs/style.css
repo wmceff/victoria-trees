@@ -172,3 +172,17 @@
   margin-top: 1rem;
   color: var(--ink-soft);
 }
+
+/* the flower-colour key in the footer when blossom trees are highlighted */
+.hue-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.9rem;
+  margin: 0.35rem 0;
+  font-size: 0.875rem;
+}
+.hue-legend > span {
+  display: inline-flex;
+  align-items: center;
+}

@@ -67,8 +67,24 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   showFooterMessage('Whoops, something went wrong loading the trees. Try refreshing the page.');
 });
 
+// blossom trees' flower colours; pages.mjs's blossomHues and theme.css's .hue-* swatches match
+const blossomColours = {
+  'white': '#ffffff',
+  'pale pink': '#f4b6c8',
+  'pink': '#e0739a',
+  'deep pink': '#b02a62'
+};
+
+// a blossom tree's flower colour: its variety's if the City recorded one we know, else its species'
+function blossomHue(species, botanicalName) {
+  if (!species.blossom) return null;
+  const name = (botanicalName || '').toLowerCase();
+  const variety = Object.keys(species.blossom.varieties).find((v) => name.includes(v));
+  return variety ? species.blossom.varieties[variety] : species.blossom.hue;
+}
+
 function addTrees(treeData) {
-  const features = treeData.trees.map(function([latitude, longitude, speciesIndex], treeIndex) {
+  const features = treeData.trees.map(function([latitude, longitude, speciesIndex, botanicalIndex], treeIndex) {
     const species = treeData.species[speciesIndex];
     return {
       type: 'Feature',
@@ -77,6 +93,7 @@ function addTrees(treeData) {
         name: species.common_name || species.name,
         conifer: species.order === 'Pinales',
         species: speciesIndex,
+        hue: blossomHue(species, treeData.botanical[botanicalIndex]),
         tree: treeIndex
       }
     };
@@ -133,28 +150,76 @@ function addTrees(treeData) {
 // colours the species' trees and greys out the rest, then frames them unless ?bounds= is set
 function highlightSpecies(treeData, speciesIndexes) {
   const isSpecies = ['in', ['get', 'species'], ['literal', speciesIndexes]];
-  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, '#b5652b', '#b9b4a0']);
+  // blossom trees are coloured by their flowers, with a dark ring so white ones show on the map
+  const blossoms = speciesIndexes.every((i) => treeData.species[i].blossom);
+  const highlight = blossoms
+    ? ['match', ['get', 'hue'], ...Object.entries(blossomColours).flat(), '#b5652b']
+    : '#b5652b';
+  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, highlight, '#b9b4a0']);
   map.setPaintProperty('trees', 'circle-opacity', ['case', isSpecies, 1, 0.35]);
   map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);
+  if (blossoms) {
+    map.setPaintProperty('trees', 'circle-stroke-color', ['case', isSpecies, '#7d2a48', '#f7f2e3']);
+    map.setPaintProperty('trees', 'circle-stroke-width', ['case', isSpecies,
+      ['interpolate', ['linear'], ['zoom'], 11, 0.5, 17, 1.5],
+      ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1]]);
+    map.setPaintProperty('trees', 'circle-radius', ['interpolate', ['linear'], ['zoom'],
+      11, ['case', isSpecies, 1.5, 1], 14, ['case', isSpecies, 3, 2], 17, ['case', isSpecies, 5, 4],
+      19, 7, 21, 12]);
+  }
 
   const points = treeData.trees.filter((tree) => speciesIndexes.includes(tree[2]));
   if (!urlParams.has('bounds')) {
-    const bounds = new maplibregl.LngLatBounds();
-    points.forEach(([latitude, longitude]) => bounds.extend([longitude, latitude]));
-    map.fitBounds(bounds, { padding: 40, maxZoom: 17, animate: false });
+    const [west, south, east, north] = framingBounds(points);
+    map.fitBounds([[west, south], [east, north]], { padding: 40, maxZoom: 17, animate: false });
   }
 
-  if (speciesIndexes.length === 1) {
+  const colour = blossoms ? 'by flower colour' : 'in rust';
+  // links that frame an area (a street, a neighbourhood) count the trees in it, not the whole city's
+  const area = (urlParams.get('bounds') || '').split(',').map(Number);
+  if (area.length === 4 && area.every(Number.isFinite)) {
+    const [west, south, east, north] = area;
+    const inArea = points.filter(([lat, lng]) => lat >= south && lat <= north && lng >= west && lng <= east).length;
+    const what = speciesIndexes.length === 1
+      ? (treeData.species[speciesIndexes[0]].common_name || treeData.species[speciesIndexes[0]].name)
+      : blossoms ? 'blossom' : 'highlighted';
+    showFooterMessage(`${inArea.toLocaleString()} ${what} ${inArea === 1 ? 'tree' : 'trees'} in this area, ${colour}. `);
+  } else if (speciesIndexes.length === 1) {
     const species = treeData.species[speciesIndexes[0]];
     const name = species.common_name || species.name;
-    showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in rust. `);
+    showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} ${colour}. `);
   } else {
-    showFooterMessage(`Showing ${points.length.toLocaleString()} trees of ${speciesIndexes.length} species in rust. `);
+    showFooterMessage(`Showing ${points.length.toLocaleString()} ${blossoms ? 'blossom trees' : 'trees'} of ${speciesIndexes.length} species ${colour}. `);
+  }
+  if (blossoms) {
+    const legend = document.createElement('span');
+    legend.className = 'hue-legend';
+    // only the colours these trees use
+    const hues = new Set(points.map((tree) => blossomHue(treeData.species[tree[2]], treeData.botanical[tree[3]])));
+    Object.keys(blossomColours).filter((hue) => hues.has(hue)).forEach(function(hue) {
+      const item = document.createElement('span');
+      const swatch = document.createElement('span');
+      swatch.className = 'hue-swatch';
+      swatch.style.backgroundColor = blossomColours[hue];
+      item.append(swatch, hue);
+      legend.append(item);
+    });
+    document.getElementById('footer-text').append(legend);
   }
   const showAll = document.createElement('a');
   showAll.href = window.location.pathname;
   showAll.textContent = 'Show all trees';
   document.getElementById('footer-text').append(showAll);
+}
+
+// [west, south, east, north] around the trees; with many trees, around the middle 98% of them,
+// so a few far-off trees (Dominion Brook Park, out on the Saanich Peninsula) don't zoom the map out
+function framingBounds(points) {
+  const lats = points.map((p) => p[0]).sort((a, b) => a - b);
+  const lngs = points.map((p) => p[1]).sort((a, b) => a - b);
+  const trim = points.length >= 50 ? Math.floor(points.length * 0.01) : 0;
+  const last = points.length - 1 - trim;
+  return [lngs[trim], lats[trim], lngs[last], lats[last]];
 }
 
 function showTree(treeData, properties) {

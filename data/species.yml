@@ -268,6 +268,7 @@
     from: early April
     to: late April
     colour: white
+    hue: white
 - name: Amelanchier arborea
   common_name: Downy Serviceberry
   order: Rosales
@@ -276,6 +277,7 @@
     from: early April
     to: late April
     colour: white
+    hue: white
 - name: Amelanchier canadensis
   common_name: Shadbush
   order: Rosales
@@ -1054,6 +1056,7 @@
     from: early April
     to: late April
     colour: deep pink
+    hue: deep pink
 - name: Magnolia × Galaxy
   common_name: Magnolia
 - name: Magnolia × soulangeana
@@ -1067,6 +1070,7 @@
     from: mid March
     to: mid April
     colour: pink and white
+    hue: pink
 - name: Magnolia acuminata
   common_name: Cucumber-Tree
   order: Magnoliales
@@ -1094,6 +1098,7 @@
     from: mid March
     to: early April
     colour: white
+    hue: white
 - name: Magnolia macrophylla
   common_name: Magnolia
   order: Magnoliales
@@ -1106,6 +1111,7 @@
     from: early March
     to: late March
     colour: white
+    hue: white
 - name: Malus
   common_name: Apple
   order: Rosales
@@ -1114,6 +1120,7 @@
     from: mid April
     to: mid May
     colour: pink to white
+    hue: pale pink
 - name: Malus × purpurea
   common_name: Flowering crabapple
   description: >-
@@ -1123,6 +1130,7 @@
     from: mid April
     to: mid May
     colour: deep pink
+    hue: deep pink
 - name: Malus × zumi
   common_name: Japanese crabapple
   native_region: Japan
@@ -1132,6 +1140,7 @@
     from: mid April
     to: mid May
     colour: white
+    hue: white
 - name: Malus adams
   common_name: Apple
 - name: Malus apple
@@ -1148,6 +1157,7 @@
     from: mid April
     to: mid May
     colour: pink fading to white
+    hue: pale pink
 - name: Malus red
   common_name: Apple
 - name: Malus sylvestris
@@ -1521,6 +1531,7 @@
     from: early March
     to: late March
     colour: pink
+    hue: pink
     note: "Double flowers before its purple leaves come out."
 - name: Prunus × yedoensis
   common_name: Yoshino cherry
@@ -1533,6 +1544,7 @@
     from: mid March
     to: early April
     colour: white to pale pink
+    hue: pale pink
     note: "The classic cloud of blossom; the trees flower all at once, before their leaves."
 - name: Prunus accolade
   common_name: cherry plum
@@ -1553,6 +1565,7 @@
     from: early April
     to: late April
     colour: white
+    hue: white
 - name: Prunus cerasifera
   common_name: Cherry plum
   order: Rosales
@@ -1562,6 +1575,10 @@
     from: mid February
     to: mid March
     colour: pink to white
+    hue: pale pink
+    varieties:
+      Nigra: pink
+      Thundercloud: pink
     note: "Usually the first big show of the year, on dark purple-leaved trees ('Nigra', 'Thundercloud')."
 - name: Prunus cerasus
   common_name: Sour cherry
@@ -1572,6 +1589,7 @@
     from: mid April
     to: early May
     colour: white
+    hue: white
 - name: Prunus domestica
   common_name: European plum
   order: Rosales
@@ -1586,6 +1604,7 @@
     from: late March
     to: mid April
     colour: white
+    hue: white
 - name: Prunus dulcis
   common_name: Almond
   order: Rosales
@@ -1614,6 +1633,7 @@
     from: mid April
     to: mid May
     colour: white
+    hue: white
     note: "Victoria's native cherry; small flowers in flat clusters."
 - name: Prunus laurocerasus
   common_name: Cherry laurel
@@ -1653,6 +1673,7 @@
     from: mid March
     to: early April
     colour: pink
+    hue: pink
 - name: Prunus serotina
   common_name: Black cherry
   order: Rosales
@@ -1673,6 +1694,13 @@
     from: early April
     to: early May
     colour: pink or white
+    hue: pink
+    varieties:
+      Kwanzan: deep pink
+      Royal Burgandy: deep pink
+      Shirofugen: white
+      Shirotae: white
+      Amanogawa: pale pink
     note: "'Accolade' opens first; the deep pink, double 'Kwanzan' and white 'Shirofugen' are the late show."
 - name: Prunus subhirtella
   common_name: Winter-flowering cherry
@@ -1682,6 +1710,7 @@
     from: early November
     to: early April
     colour: pale pink to white
+    hue: pale pink
     note: "Flowers on and off through mild winter spells, most heavily in March."
 - name: Prunus virginiana
   common_name: Bitter-berry / chokecherry
@@ -1760,6 +1789,7 @@
     from: mid March
     to: early April
     colour: white
+    hue: white
 - name: Pyrus communis
   common_name: Callery Pear
   order: Rosales
