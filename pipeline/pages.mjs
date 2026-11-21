@@ -1,5 +1,6 @@
 // Writes the static, search-indexable pages: one per species and neighbourhood, their
-// index pages, the cherry blossom calendar, the about page, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
+// index pages, the cherry blossom calendar, the about page, sitemap.xml, robots.txt, and for
+// tools and AI assistants, data/trees.csv and llms.txt. The map page (docs/index.html) is hand-written.
 import crypto from "node:crypto";
 import fs from "node:fs";
 
@@ -75,7 +76,7 @@ function boundsOf(points) {
   return b.map((n) => +n.toFixed(5)).join(",");
 }
 
-function layout({ path, title, description, body, indexed = true, breadcrumbs = [], script = "" }) {
+function layout({ path, title, description, body, indexed = true, breadcrumbs = [], script = "", structuredData = null }) {
   const depth = path.split("/").filter(Boolean).length;
   const home = depth ? "../".repeat(depth) : "./";
   const canonical = siteUrl + path;
@@ -115,7 +116,8 @@ function layout({ path, title, description, body, indexed = true, breadcrumbs = 
     <meta property="og:url" content="${canonical}">
     <meta property="og:image" content="${siteUrl}og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">${jsonLd(breadcrumbList)}</script>
+    <script type="application/ld+json">${jsonLd(breadcrumbList)}</script>${structuredData ? `
+    <script type="application/ld+json">${jsonLd(structuredData)}</script>` : ""}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap">
     <link rel="stylesheet" href="${home}${asset("theme.css")}">
@@ -432,8 +434,23 @@ ${placeRows(list)}
 
   const streets = places.filter((p) => p.place.startsWith("On "));
   const parks = places.filter((p) => p.place.startsWith("In "));
+
+  // the season in one paragraph, for people skimming and for search engines and AI assistants
+  // quoting an answer: the first big show, the peak, the last, and the best street and park
+  const named = (name) => blossomSpecies.find((s) => s.name === name);
+  const phase = (s, what) => s && `${what} the ${formatCount(s.tree_count)} ${escapeHtml(displayName(s))} trees from ${s.bloom.from} to ${s.bloom.to}`;
+  const phases = [
+    phase(named("Prunus cerasifera"), "starts with"),
+    phase(named("Prunus × yedoensis"), "peaks with"),
+    phase(named("Prunus serrulata"), "ends with"),
+  ].filter(Boolean);
+  const summary = (phases.length ? `<p>In a typical year, Victoria's cherry blossom season ${phases.length > 1 ? `${phases.slice(0, -1).join(", ")} and ${phases.at(-1)}` : phases[0]}.` : "<p>") +
+    (streets[0] ? ` ${escapeHtml(placeLabel(streets[0].index))} has more blossom trees than any other street (${formatCount(streets[0].trees.length)})` : "") +
+    (parks[0] ? `, and ${escapeHtml(placeLabel(parks[0].index))} more than any other park (${formatCount(parks[0].trees.length)}).` : ".") +
+    `</p>`;
   const body = `<h1>Cherry blossoms in Victoria, BC</h1>
-<p>Victoria has <b>${formatCount(cherryCount)}</b> flowering cherry and plum trees on public land, and ${formatCount(blossomTrees.length - cherryCount)} more magnolias, crabapples, pears and serviceberries. Blossom season starts with the winter-flowering cherries, peaks with the cherry plums and Yoshino cherries in March, and ends with the Japanese cherries and crabapples in early May.</p>
+<p>Victoria has <b>${formatCount(cherryCount)}</b> flowering cherry and plum trees on public land, and ${formatCount(blossomTrees.length - cherryCount)} more magnolias, crabapples, pears and serviceberries.</p>
+${summary}
 <p class="bloom-now box" hidden></p>
 <p><a class="button is-success" id="bloom-map" href="../?species=${allSlugs}">Show all blossom trees on the map</a></p>
 <p class="is-size-7">On the map they're coloured by their flowers: ${blossomHues.map((h) => `${hueSwatch(h)}${h}`).join(", ")}.</p>
@@ -526,15 +543,97 @@ function aboutPage(ctx) {
 <h2>Sources and credits</h2>
 <p>Descriptions are sourced from Wikipedia, and Indigenous uses for trees native to this area are primarily sourced from Nancy Turner's <i>Ancient Pathways, Ancestral Knowledge</i>.</p>
 <p>Built to complement <a href="http://naturevictoria.com">James Clowater</a>'s website <a href="http://treesofvictoria.com/">Trees of Victoria</a>. The <a href="https://github.com/wmceff/victoria-trees">source code is on GitHub</a>.</p>
+<h2>Download the data</h2>
+<p>Everything on the map is in two files, rebuilt from the City's data with the corrections and additions above:</p>
+<ul>
+<li><a href="../data/trees.csv"><code>trees.csv</code></a>: one row per tree, with its location, species, common and botanical names, height, trunk diameter, street or park, and neighbourhood.</li>
+<li><a href="../data/trees.json"><code>trees.json</code></a>: the compact file the map loads, with each species' details (native range, SENĆOŦEN name, description).</li>
+</ul>
+<p>There's also a plain-text summary of the site for AI assistants at <a href="../llms.txt"><code>llms.txt</code></a>.</p>
+<h2>Linking to the map</h2>
+<p>The map takes two parameters, so you can link straight to a species or an area:</p>
+<ul>
+<li><code>?species=</code> highlights a species by its page's name, eg. <a href="../?species=prunus-x-yedoensis"><code>?species=prunus-x-yedoensis</code></a> for the Yoshino cherries. Separate several with commas.</li>
+<li><code>?bounds=</code> frames an area as west,south,east,north in degrees, eg. <a href="../?species=quercus-garryana&amp;bounds=-123.38,48.405,-123.36,48.42"><code>?species=quercus-garryana&amp;bounds=-123.38,48.405,-123.36,48.42</code></a> for the Garry oaks around Beacon Hill Park.</li>
+</ul>
 <h2>Using it on your phone</h2>
 <p>Add the map to your home screen for quick access. On iPhone, use the Share button, then Add to Home Screen.</p>`;
   return layout({
     path: "about/",
     breadcrumbs: [["About", "about/"]],
     title: "About Victoria Trees: data, sources and SENĆOŦEN names",
+    // describes the data for Google Dataset Search and other machine readers
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      name: "Trees on public land in Victoria, BC",
+      description:
+        `Location, species, height and trunk diameter of the ${ctx.total} trees on public land in Victoria, BC, ` +
+        `from the City of Victoria's open data with corrections and trees from other surveys, joined with curated ` +
+        `species details including native ranges and SENĆOŦEN names.`,
+      url: `${siteUrl}about/`,
+      isBasedOn: "https://opendata.victoria.ca/datasets/tree-species",
+      dateModified: ctx.updated,
+      spatialCoverage: { "@type": "Place", name: "Victoria, British Columbia, Canada" },
+      keywords: ["urban trees", "street trees", "tree inventory", "Victoria BC", "cherry blossoms", "Garry oak"],
+      distribution: [
+        { "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${siteUrl}data/trees.csv` },
+        { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${siteUrl}data/trees.json` },
+      ],
+    },
     description: `Victoria Trees maps the ${formatCount(ctx.total)} trees on public land in Victoria, BC, from the City's open data, with SENĆOŦEN names and Indigenous uses for native trees.`,
     body,
   });
+}
+
+// One row per tree for people and tools that want the data without the map
+function treesCsv(ctx) {
+  const cell = (value) => {
+    if (value === null || value === undefined) return "";
+    const text = String(value);
+    return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+  };
+  const header = ["latitude", "longitude", "species", "common_name", "botanical_name", "height_m", "trunk_diameter_cm", "place", "neighbourhood"];
+  const rows = ctx.trees.map(([lat, lng, s, b, height, diameter, place], i) =>
+    [lat, lng, ctx.species[s].name, ctx.species[s].common_name, ctx.botanical[b], height, diameter,
+      place === null ? null : ctx.places[place], ctx.treeAreas[i]].map(cell).join(",")
+  );
+  return [header.join(","), ...rows].join("\n") + "\n";
+}
+
+// A plain-text guide to the site for AI assistants (the proposed llms.txt convention)
+function llmsTxt(ctx, blossomCount) {
+  const common = [...ctx.listed].sort((a, b) => b.tree_count - a.tree_count).slice(0, 15);
+  return `# Victoria Trees
+
+> A map of the ${formatCount(ctx.total)} trees on public land in Victoria, British Columbia, Canada, from ${formatCount(ctx.listed.length)} species, built from the City of Victoria's open tree data (last refreshed ${ctx.updated}). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
+
+## Pages
+
+- [Map](${siteUrl}): every tree; tap one for its details
+- [Cherry blossom calendar](${siteUrl}blossoms/): when Victoria's ${formatCount(blossomCount)} blossom species usually flower and the streets and parks with the most
+- [Tree species](${siteUrl}species/): all species from most to least common, each with a page listing where it grows
+- [Trees by neighbourhood](${siteUrl}neighbourhoods/): species counts for each of the City's neighbourhoods
+- [About](${siteUrl}about/): sources, credits and the data downloads
+
+## Data
+
+- [trees.csv](${siteUrl}data/trees.csv): one row per tree: latitude, longitude, species, common_name, botanical_name, height_m, trunk_diameter_cm, place, neighbourhood
+- [trees.json](${siteUrl}data/trees.json): what the map loads; \`trees\` rows are [latitude, longitude, species index, botanical name index, height m, trunk diameter cm, place index]
+
+## Linking to the map
+
+- \`${siteUrl}?species=<slug>\` highlights a species, using the slug from its page's URL (eg. \`prunus-x-yedoensis\`); separate several with commas
+- \`&bounds=<west,south,east,north>\` frames an area, in degrees
+
+## Most common species
+
+${common.map((s) => `- [${displayName(s)} (${s.name})](${siteUrl}species/${s.slug}/): ${formatCount(s.tree_count)} trees`).join("\n")}
+
+## Neighbourhoods
+
+${ctx.areas.map((a) => `- [${a.name}](${siteUrl}neighbourhoods/${a.slug}/): ${formatCount(a.total)} trees`).join("\n")}
+`;
 }
 
 // species: every species with its slug and tree_count; trees: [lat, lng, speciesIndex, ...];
@@ -577,6 +676,8 @@ export function writePages(docsDir, { species, trees, treeAreas, places, botanic
   const blossoms = blossomPage(ctx);
   paths.push(write("blossoms/", blossoms.html));
   paths.push(write("about/", aboutPage(ctx)));
+  fs.writeFileSync(`${docsDir}/data/trees.csv`, treesCsv(ctx));
+  fs.writeFileSync(`${docsDir}/llms.txt`, llmsTxt(ctx, blossoms.count));
 
   const urls = paths.map((p) => `  <url><loc>${siteUrl}${p}</loc></url>`).join("\n");
   fs.writeFileSync(

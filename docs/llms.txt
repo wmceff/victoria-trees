@@ -1,0 +1,56 @@
+# Victoria Trees
+
+> A map of the 35,125 trees on public land in Victoria, British Columbia, Canada, from 376 species, built from the City of Victoria's open tree data (last refreshed 2026-11-21). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
+
+## Pages
+
+- [Map](https://victoriatrees.ca/): every tree; tap one for its details
+- [Cherry blossom calendar](https://victoriatrees.ca/blossoms/): when Victoria's 21 blossom species usually flower and the streets and parks with the most
+- [Tree species](https://victoriatrees.ca/species/): all species from most to least common, each with a page listing where it grows
+- [Trees by neighbourhood](https://victoriatrees.ca/neighbourhoods/): species counts for each of the City's neighbourhoods
+- [About](https://victoriatrees.ca/about/): sources, credits and the data downloads
+
+## Data
+
+- [trees.csv](https://victoriatrees.ca/data/trees.csv): one row per tree: latitude, longitude, species, common_name, botanical_name, height_m, trunk_diameter_cm, place, neighbourhood
+- [trees.json](https://victoriatrees.ca/data/trees.json): what the map loads; `trees` rows are [latitude, longitude, species index, botanical name index, height m, trunk diameter cm, place index]
+
+## Linking to the map
+
+- `https://victoriatrees.ca/?species=<slug>` highlights a species, using the slug from its page's URL (eg. `prunus-x-yedoensis`); separate several with commas
+- `&bounds=<west,south,east,north>` frames an area, in degrees
+
+## Most common species
+
+- [Garry oak (Quercus garryana)](https://victoriatrees.ca/species/quercus-garryana/): 5,206 trees
+- [Cherry plum (Prunus cerasifera)](https://victoriatrees.ca/species/prunus-cerasifera/): 2,065 trees
+- [Japanese cherry (Prunus serrulata)](https://victoriatrees.ca/species/prunus-serrulata/): 2,017 trees
+- [Douglas-fir (Pseudotsuga menziesii)](https://victoriatrees.ca/species/pseudotsuga-menziesii/): 1,313 trees
+- [Red maple (Acer rubrum)](https://victoriatrees.ca/species/acer-rubrum/): 1,194 trees
+- [Field elm (Ulmus carpinifolia)](https://victoriatrees.ca/species/ulmus-carpinifolia/): 1,081 trees
+- [Bigleaf maple (Acer macrophyllum)](https://victoriatrees.ca/species/acer-macrophyllum/): 1,012 trees
+- [Common hawthorn (Crataegus oxyacantha)](https://victoriatrees.ca/species/crataegus-oxyacantha/): 988 trees
+- [Horse-chestnut (Aesculus hippocastanum)](https://victoriatrees.ca/species/aesculus-hippocastanum/): 793 trees
+- [Common hornbeam (Carpinus betulus)](https://victoriatrees.ca/species/carpinus-betulus/): 779 trees
+- [Austrian pine (Pinus nigra)](https://victoriatrees.ca/species/pinus-nigra/): 716 trees
+- [Yoshino cherry (Prunus × yedoensis)](https://victoriatrees.ca/species/prunus-x-yedoensis/): 698 trees
+- [Red horse-chestnut (Aesculus × carnea)](https://victoriatrees.ca/species/aesculus-x-carnea/): 624 trees
+- [Paper birch (Betula papyrifera)](https://victoriatrees.ca/species/betula-papyrifera/): 621 trees
+- [Field maple (Acer campestre)](https://victoriatrees.ca/species/acer-campestre/): 582 trees
+
+## Neighbourhoods
+
+- [Burnside](https://victoriatrees.ca/neighbourhoods/burnside/): 2,838 trees
+- [Downtown](https://victoriatrees.ca/neighbourhoods/downtown/): 1,034 trees
+- [Fairfield](https://victoriatrees.ca/neighbourhoods/fairfield/): 7,101 trees
+- [Fernwood](https://victoriatrees.ca/neighbourhoods/fernwood/): 2,443 trees
+- [Gonzales](https://victoriatrees.ca/neighbourhoods/gonzales/): 2,121 trees
+- [Harris Green](https://victoriatrees.ca/neighbourhoods/harris-green/): 397 trees
+- [Hillside/Quadra](https://victoriatrees.ca/neighbourhoods/hillside-quadra/): 3,894 trees
+- [James Bay](https://victoriatrees.ca/neighbourhoods/james-bay/): 6,683 trees
+- [North Jubilee](https://victoriatrees.ca/neighbourhoods/north-jubilee/): 610 trees
+- [North Park](https://victoriatrees.ca/neighbourhoods/north-park/): 788 trees
+- [Oaklands](https://victoriatrees.ca/neighbourhoods/oaklands/): 2,075 trees
+- [Rockland](https://victoriatrees.ca/neighbourhoods/rockland/): 1,039 trees
+- [South Jubilee](https://victoriatrees.ca/neighbourhoods/south-jubilee/): 483 trees
+- [Victoria West](https://victoriatrees.ca/neighbourhoods/victoria-west/): 3,335 trees
