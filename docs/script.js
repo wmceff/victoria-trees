@@ -170,11 +170,13 @@ function highlightSpecies(treeData, speciesIndexes) {
   map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);
   if (blossoms) {
     map.setPaintProperty('trees', 'circle-stroke-color', ['case', isSpecies, '#7d2a48', '#f7f2e3']);
-    map.setPaintProperty('trees', 'circle-stroke-width', ['case', isSpecies,
-      ['interpolate', ['linear'], ['zoom'], 11, 0.5, 17, 1.5],
-      ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1]]);
+    // the ring stays a full pixel wide when zoomed out, or white and pale pink blur into the map;
+    // the dots are a little bigger to keep their fill visible inside it. MapLibre only takes zoom
+    // at the top of an expression, so the zoom stops come first and each one checks the species.
+    map.setPaintProperty('trees', 'circle-stroke-width', ['interpolate', ['linear'], ['zoom'],
+      11, ['case', isSpecies, 1, 0], 14, ['case', isSpecies, 1.25, 0], 17, ['case', isSpecies, 1.5, 1]]);
     map.setPaintProperty('trees', 'circle-radius', ['interpolate', ['linear'], ['zoom'],
-      11, ['case', isSpecies, 1.5, 1], 14, ['case', isSpecies, 3, 2], 17, ['case', isSpecies, 5, 4],
+      11, ['case', isSpecies, 2, 1], 14, ['case', isSpecies, 3.5, 2], 17, ['case', isSpecies, 5.5, 4],
       19, 7, 21, 12]);
   }
 
