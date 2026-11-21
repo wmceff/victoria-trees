@@ -61,8 +61,17 @@ export function commonnessFact(s, species, total) {
   return `${formatCount(count)} on the map, the #${rank} most common of ${speciesCount} species.`;
 }
 
+// The book most Indigenous uses come from; species.yml's turner_pages say where in it
+export const turnerCitation =
+  "Turner, Nancy J. 2014. <i>Ancient Pathways, Ancestral Knowledge: Ethnobotany and Ecological Wisdom of " +
+  "Indigenous Peoples of Northwestern North America</i>. 2 vols. Montreal and Kingston: McGill-Queen's University Press.";
+const turnerSource = (pages, home) =>
+  `Indigenous uses from Nancy Turner, <a href="${home}about/#sources"><i>Ancient Pathways, Ancestral Knowledge</i></a> (2014), ${escapeHtml(pages)}.`;
+
 // curated ranges are written to follow "native to", sometimes as "from X to Y"
 const nativeRange = (s) => s.native_region.replace(/^from /, "");
+// hybrids and garden plants that don't grow wild: where and when they were raised, as a sentence
+const gardenOrigin = (s) => `${s.garden_origin[0].toUpperCase()}${s.garden_origin.slice(1)}.`;
 
 // [west, south, east, north], the format the map's ?bounds= param takes
 function boundsOf(points) {
@@ -180,6 +189,8 @@ function speciesPage(s, ctx) {
     body += `<p>Native to ${escapeHtml(nativeRange(s))}${s.native ? ", including Victoria" : ""}.</p>\n`;
   } else if (s.native) {
     body += `<p>Native to Victoria.</p>\n`;
+  } else if (s.garden_origin) {
+    body += `<p>${escapeHtml(gardenOrigin(s))}</p>\n`;
   }
   body += `<p>${escapeHtml(commonnessFact(s, ctx.species, ctx.total))}</p>\n`;
   if (s.bloom) {
@@ -188,6 +199,23 @@ function speciesPage(s, ctx) {
   }
   body += `<p><a class="button is-success" href="../../?species=${s.slug}">Show ${escapeHtml(name)} ${treeWord} on the map</a></p>\n`;
   if (s.description) body += paragraphs(s.description) + "\n";
+  if (s.turner_pages) body += `<p class="is-size-7">${turnerSource(s.turner_pages, "../../")}</p>\n`;
+  if (s.cultivars) {
+    const counts = s.cultivars.map(() => 0);
+    for (const tree of ctx.trees) {
+      if (tree[2] !== s.index) continue;
+      const name = ctx.botanical[tree[3]].toLowerCase();
+      const i = s.cultivars.findIndex((c) => name.includes(c.match));
+      if (i !== -1) counts[i]++;
+    }
+    const planted = s.cultivars.map((c, i) => ({ ...c, count: counts[i] })).filter((c) => c.count).sort((a, b) => b.count - a.count);
+    if (planted.length) {
+      body += `<h2>Cultivars in Victoria</h2>\n`;
+      for (const c of planted) {
+        body += `<p><b>'${escapeHtml(c.name)}'</b> (${formatCount(c.count)} ${c.count === 1 ? "tree" : "trees"}): ${escapeHtml(c.description)}</p>\n`;
+      }
+    }
+  }
 
   const areas = ctx.areas
     .map((a) => ({ ...a, count: a.speciesCounts.get(s.index) ?? 0 }))
@@ -540,8 +568,12 @@ function aboutPage(ctx) {
 <p><b>If a tree is missing</b>, it's most likely on private property, which the City doesn't keep track of. Apps like iNaturalist or PictureThis can help identify it. Spotted a wrong or missing tree, or have an idea? <a href="${feedbackForm}">Send feedback</a>.</p>
 <h2>SENĆOŦEN names</h2>
 <p>Victoria stands on the traditional territories of the lək̓ʷəŋən peoples, the Songhees and Esquimalt Nations. Where known, <a href="https://en.wikipedia.org/wiki/Saanich_dialect">SENĆOŦEN</a> tree names are provided, with a link to a <a href="http://saanich.montler.net/WordList/plants.html">website</a> where you can hear the pronunciation. SENĆOŦEN is the language of the W̱SÁNEĆ People, and a member of the North Straits Salish dialect continuum along with lək̓ʷəŋən.</p>
-<h2>Sources and credits</h2>
-<p>Descriptions are sourced from Wikipedia, and Indigenous uses for trees native to this area are primarily sourced from Nancy Turner's <i>Ancient Pathways, Ancestral Knowledge</i>.</p>
+<h2 id="sources">Sources and credits</h2>
+<p>Descriptions are sourced from Wikipedia, and Indigenous uses for trees native to this area are primarily sourced from Nancy Turner's <i>Ancient Pathways, Ancestral Knowledge</i>. Species pages give the volume and pages each use comes from.</p>
+<ul>
+<li>${turnerCitation}</li>
+<li><a href="https://en.wikipedia.org/">Wikipedia</a>, the article linked from each species page.</li>
+</ul>
 <p>Built to complement <a href="http://naturevictoria.com">James Clowater</a>'s website <a href="http://treesofvictoria.com/">Trees of Victoria</a>. The <a href="https://github.com/wmceff/victoria-trees">source code is on GitHub</a>.</p>
 <h2>Download the data</h2>
 <p>Everything on the map is in two files, rebuilt from the City's data with the corrections and additions above:</p>

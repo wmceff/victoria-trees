@@ -30,6 +30,9 @@
   order: Pinales
   native: true
   sencoten_name: SḰEMÍ¸EḴS
+  native_region: >-
+    the Pacific Northwest, from southern British Columbia to northern California and inland to Idaho
+    and Montana
   inaturalist_taxon_id: 63690
   description: >-
     Needles were used for hair perfume (Nuxalk, Hesquiaht); boughs for purification (Kwakwaka’wakw);
@@ -37,6 +40,7 @@
     on skin of girls for protection against predators, used as a protective wash (Nlaka’pamux)
     Boughs for bedding, flooring, incense; pitch for glue. (Boas 1921, 1966; H.I. Smith 1928; Turner
     1973; Turner and Bell 1973; Turner and Efrat 1982; Turner, Thomas, et al. 1983, 1990).
+  turner_pages: vol. 1, p. 343; vol. 2, p. 301
 - name: Abies homolepis
   common_name: Nikko fir
   native_region: the mountains of central and southern Honshū and Shikoku, Japan
@@ -76,10 +80,11 @@
 - name: Acer campestre
   common_name: Field maple
   order: Sapindales
-  native_region: >-
-    Continental Europe, Britain, southwest Asia from Turkey to the Caucasus, and north Africa in the
-    Atlas Mountains
+  native_region: most of Europe, from Britain to Turkey and the Caucasus, and the mountains of North Africa
   inaturalist_taxon_id: 56193
+  description: >-
+    Field maple is the only maple native to Britain, where it's a common hedgerow tree. Its
+    fine-grained wood has long been used for turning and carving.
 - name: Acer capillipes
   common_name: Maple
   order: Sapindales
@@ -102,9 +107,7 @@
   order: Sapindales
 - name: Acer ginnala
   common_name: Amur maple
-  native_region: >-
-    northeastern Asia from easternmost Mongolia east to Korea and Japan, and north to the Russian
-    Far East in the Amur River valley
+  native_region: 'northeast Asia: Mongolia, northern China, Korea, Japan and the Russian Far East'
   inaturalist_taxon_id: 123638
   description: >-
     It is a small maple with deciduous leaves that is sometimes grown as a garden subject or
@@ -129,15 +132,14 @@
   common_name: Bigleaf maple
   order: Sapindales
   native: true
-  native_region: >-
-    western North America, mostly near the Pacific coast, from southernmost Alaska to southern
-    California
+  native_region: the Pacific coast of North America, from southern Alaska to southern California
   sencoten_name: ȾŦÁ¸EȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#329.
   inaturalist_taxon_id: 48227
   description: >-
     Indigenous peoples used bigleaf maple for canoe paddles, spindle whorls, bowls, dishes, masks,
     and clubs.
+  turner_pages: vol. 1, p. 341
 - name: Acer miyabei
   common_name: Maple
   order: Sapindales
@@ -149,7 +151,7 @@
 - name: Acer palmatum
   common_name: Red emperor maple
   order: Sapindales
-  native_region: Japan, Korea, China, eastern Mongolia, and southeast Russia
+  native_region: Japan, Korea, eastern China and southeast Russia
   inaturalist_taxon_id: 63512
   description: >-
     Acer palmatum has been cultivated in Japan for centuries and in temperate areas around the world
@@ -157,22 +159,64 @@
 - name: Acer platanoides
   common_name: Norway maple
   order: Sapindales
-  native_region: >-
-    eastern and central Europe and western Asia, from France east to Russia, north to southern
-    Scandinavia and southeast to northern Iran
+  native_region: Europe and western Asia, from France and Scandinavia east to Russia and northern Iran
   inaturalist_taxon_id: 54763
+  cultivars:
+    - name: Crimson King
+      description: A Norway maple whose leaves stay deep maroon all summer.
+  description: >-
+    Norway maple was brought to North America in the mid-1700s as a shade tree, and became one of the
+    most planted street trees of the 20th century. Its dense shade and many seedlings now make it an
+    invasive species in many North American forests. A broken leaf stalk oozes milky sap, which tells
+    it apart from sugar maple.
 - name: Acer pseudoplatanus
   common_name: Sycamore maple
   order: Sapindales
-  native_region: >-
-    Central Europe and Western Asia, from France eastwards to Ukraine, northern Turkey and the
-    Caucasus and southwards in the mountains of northern Spain and Italy
+  native_region: central Europe and western Asia, from France east to Ukraine, Turkey and the Caucasus
   inaturalist_taxon_id: 119791
+  cultivars:
+    - name: Spaethii
+      description: A sycamore maple whose leaves are dark green above and purple underneath.
+  description: >-
+    Sycamore maple tolerates wind and salt spray, which made it a common tree on coasts and in exposed
+    places in Britain, where it's simply called sycamore. Its winged seeds twirl to the ground in
+    pairs and sprout freely, so it can spread into nearby woods.
 - name: Acer rubrum
   common_name: Red maple
   order: Sapindales
-  native_region: Eastern and central North America
+  native_region: eastern North America, from Manitoba and Newfoundland south to Florida and Texas
   inaturalist_taxon_id: 48098
+  cultivars:
+    - name: Armstrong
+      description: >-
+        A very narrow, columnar red maple selected in Ohio in the 1940s. It's often treated as a
+        hybrid with silver maple (Acer × freemanii).
+    - name: Sun Valley
+      description: >-
+        A seedless red maple from the U.S. National Arboretum, with a dense oval crown and bright red
+        autumn colour.
+    - name: Columnare
+      match: columnar
+      description: An upright, narrow form of red maple, used along streets where space is tight.
+    - name: Bowhall
+      description: An upright, narrowly oval red maple with orange-red autumn colour.
+    - name: October Glory
+      description: >-
+        A red maple with a rounded crown that colours late, holding its red-orange leaves well into
+        autumn.
+    - name: Karpick
+      description: A narrow red maple with red twigs. It's a male tree, so it doesn't drop seeds.
+    - name: Autumn Blaze
+      match: autumn blaze
+      description: >-
+        A fast-growing hybrid of red and silver maple (Acer × freemanii 'Jeffersred'), with orange-red
+        autumn colour.
+    - name: Red Sunset
+      description: One of the most planted red maples in North America, colouring early to a bright orange-red.
+  description: >-
+    Red maple is one of the most common and widespread trees of eastern North America, growing
+    everywhere from swamps to dry ridges. Its flowers, leaf stalks, twigs and seeds are all red to
+    some degree, and it's widely planted for its red autumn colour.
 - name: Acer rufinerve
   common_name: Maple
   order: Sapindales
@@ -185,6 +229,9 @@
   common_name: Sugar Maple
   order: Sapindales
   inaturalist_taxon_id: 52543
+  cultivars:
+    - name: Green Mountain
+      description: A sugar maple selected for heat and drought tolerance, with orange-red autumn colour.
 - name: Acer tegmentosum
   common_name: Manchurian Stried Maple
   order: Sapindales
@@ -193,14 +240,33 @@
   common_name: Maple
   order: Sapindales
   inaturalist_taxon_id: 461754
+  cultivars:
+    - name: Pacific Sunset
+      description: >-
+        A hybrid of Shantung maple and Norway maple from J. Frank Schmidt & Son, with glossy leaves
+        and early yellow-orange to red autumn colour.
+    - name: Urban Sunset
+      description: An upright hybrid of Shantung maple and Norway maple, bred as a tough street tree.
+    - name: Crimson Sunset
+      description: >-
+        A hybrid of Shantung maple and the purple Norway maple 'Crimson King', with deep purple leaves
+        through summer.
 - name: Aesculus
   common_name: Horse Chestnut
   order: Sapindales
   inaturalist_taxon_id: 84298
 - name: Aesculus × carnea
   common_name: Red horse-chestnut
+  garden_origin: >-
+    a hybrid of the European horse-chestnut and the American red buckeye, which probably first
+    appeared in Germany in the early 1800s
   inaturalist_taxon_id: 478638
   description: Artificial hybrid between A. pavia (red buckeye) and A. hippocastanum (horse-chestnut)
+  cultivars:
+    - name: Fort McNair
+      description: >-
+        A pink-flowered red horse-chestnut named after Fort McNair in Washington, D.C., more resistant
+        to leaf blotch than most.
 - name: Aesculus briottii
   common_name: Horse Chestnut
 - name: Aesculus carnea
@@ -208,7 +274,7 @@
   inaturalist_taxon_id: 478638
 - name: Aesculus hippocastanum
   common_name: Horse-chestnut
-  native_region: the Balkans, Southeast Europe
+  native_region: the mountains of the Balkans, in Greece, Albania and North Macedonia
   inaturalist_taxon_id: 84298
   description: >-
     The common name "horse-chestnut" (often unhyphenated) is reported as having originated from the
@@ -222,6 +288,12 @@
     protect the cellars from the summer heat, they would plant chestnut trees, which have spreading,
     dense canopies but shallow roots which would not intrude on the caverns. The practice of serving
     beer at these sites evolved into the modern beer garden.
+  cultivars:
+    - name: Baumannii
+      match: baumn
+      description: >-
+        A double white-flowered horse-chestnut found near Geneva around 1820 by A. N. Baumann. Its
+        flowers are sterile, so it drops no conkers, which makes it a favourite for streets.
 - name: Aesculus indica
   common_name: Indian horse-chestnut
   native_region: >-
@@ -230,7 +302,7 @@
   inaturalist_taxon_id: 367294
 - name: Ailanthus altissima
   common_name: Tree of heaven
-  native_region: both northeast and central China, as well as Taiwan
+  native_region: northern and central China, and Taiwan
   inaturalist_taxon_id: 57278
   description: >-
     In China, the tree of heaven has a long and rich history. It was mentioned in the oldest extant
@@ -249,6 +321,7 @@
   native: true
   sencoten_name: SḰOṈEȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#325.
+  native_region: the Pacific coast of North America, from southeast Alaska to California
   inaturalist_taxon_id: 56034
   description: >-
     Used by First Peoples for bowls and trays, masks, canoe bailers, paddles, firedrills. Cooking &
@@ -260,8 +333,10 @@
     the establishment of conifers. It is a prolific seed producer, but the small, wind-dispersed
     seeds require an open area of mineral soil to germinate, and so skid trails and other areas
     disturbed by logging or fire are ideal seedbeds.
+  turner_pages: vol. 1, p. 341; vol. 2, p. 179
 - name: Amelanchier × grandiflora
   common_name: Serviceberry
+  garden_origin: a garden hybrid of two serviceberries from eastern North America
   inaturalist_taxon_id: 363450
   description: A hybrid of garden origin between A. arborea and A. laevis.
   bloom:
@@ -278,6 +353,11 @@
     to: late April
     colour: white
     hue: white
+  cultivars:
+    - name: Autumn Brilliance
+      description: >-
+        A serviceberry (usually listed as Amelanchier × grandiflora) with white flowers in spring and
+        bright orange-red autumn colour.
 - name: Amelanchier canadensis
   common_name: Shadbush
   order: Rosales
@@ -287,7 +367,7 @@
   inaturalist_taxon_id: 363450
 - name: Araucaria araucana
   common_name: Monkey puzzle
-  native_region: central and southern Chile and western Argentina
+  native_region: the Andes of central Chile and western Argentina
   inaturalist_taxon_id: 126404
   description: >-
     Because of the prevalence of similar species in ancient prehistory, it is sometimes called a
@@ -307,7 +387,7 @@
   common_name: Arbutus / Pacific madrone
   order: Ericales
   native: true
-  native_region: the western coastal areas of North America, from British Columbia to California
+  native_region: the Pacific coast of North America, from British Columbia to California
   sencoten_name: ḰEḰEYIȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.2.
   inaturalist_taxon_id: 51046
@@ -337,6 +417,7 @@
     Americans also used the berries to make necklaces and other decorations, and as bait for
     fishing. Bark and leaves were used to treat stomach aches, cramps, skin ailments, and sore
     throats. The bark was often made into a tea to be drunk for these medicinal purposes.
+  turner_pages: vol. 2, p. 185
 - name: Arbutus unedo
   common_name: Arbutus
   order: Ericales
@@ -361,10 +442,16 @@
   common_name: Black birch
   native_region: the Eastern United States
   inaturalist_taxon_id: 117429
+  cultivars:
+    - name: Dura Heat
+      description: A compact river birch selected for heat and drought tolerance, with peeling creamy-white bark.
+    - name: Heritage
+      description: The best-known river birch cultivar, with peeling bark in salmon, tan and cream.
 - name: Betula papyrifera
   common_name: Paper birch
   order: Fagales
   native: true
+  native_region: northern North America, across Canada, Alaska and the northern United States
   inaturalist_taxon_id: 49883
   description: >-
     Indigenous peoples used the bark for baskets, lining cache pits, burials, etc. It would be
@@ -377,11 +464,16 @@
     by paper birch are wildfire, avalanche, or windthrow areas where the wind has blown down all
     trees. When it grows in these pioneer, or early successional, woodlands, it often forms stands
     of trees where it is the only species.
+  turner_pages: vol. 2, p. 186
 - name: Betula pendula
   common_name: European white birch
   order: Fagales
-  native_region: Europe and parts of Asia
+  native_region: Europe and northern Asia, from Ireland to Siberia
   inaturalist_taxon_id: 83992
+  description: >-
+    Silver birch is named for its white bark, which peels away in papery strips, and is also called
+    weeping birch for its hanging branch tips. It's the national tree of Finland, and has become
+    invasive in parts of North America.
 - name: Betula populifolia
   common_name: Gray Birch
   native_region: eastern North America
@@ -407,8 +499,17 @@
 - name: Carpinus betulus
   common_name: Common hornbeam
   order: Fagales
-  native_region: Western Asia and central, eastern, and southern Europe, including southern England
+  native_region: Europe and western Asia, from southern England and France to Ukraine, Turkey and Iran
   inaturalist_taxon_id: 55801
+  cultivars:
+    - name: Fastigiata
+      description: >-
+        An upright form of European hornbeam, narrow when young and widening into a flame shape with
+        age. A popular street tree for its tidy crown.
+  description: >-
+    European hornbeam has some of the hardest wood of any European tree, once used for ox yokes
+    (giving it the old name yoke elm), butchers' blocks, mallets and piano hammers. It takes clipping
+    well, and is a traditional hedging tree in European gardens.
 - name: Carpinus caroliniana
   common_name: Blue-Beech
   order: Fagales
@@ -427,7 +528,7 @@
   inaturalist_taxon_id: 49192
 - name: Castanea sativa
   common_name: Sweet chestnut
-  native_region: Southern Europe and Asia Minor
+  native_region: southern Europe and Turkey, around the Mediterranean and Black Sea
   inaturalist_taxon_id: 121763
   description: >-
     A substantial, long-lived deciduous tree, it produces an edible seed, the chestnut, which has
@@ -446,9 +547,7 @@
   inaturalist_taxon_id: 56617
 - name: Cedrus atlantica
   common_name: Atlas cedar
-  native_region: >-
-    Atlas Mountains of Morocco (Middle Atlas, High Atlas), to the Rif, and to the Tell Atlas in
-    Algeria
+  native_region: the Atlas Mountains of Morocco and Algeria, in North Africa
   inaturalist_taxon_id: 136234
   description: >-
     C. atlantica is common in cultivation as an ornamental tree in temperate climates. In garden
@@ -463,9 +562,7 @@
 - name: Cedrus deodara
   common_name: Deodar cedar
   order: Pinales
-  native_region: >-
-    western Himalayas in Eastern Afghanistan, Northern Pakistan and India, Southwestern Tibet and
-    Western Nepal
+  native_region: the western Himalayas, in Afghanistan, Pakistan, India, Tibet and Nepal
   inaturalist_taxon_id: 69820
   description: >-
     The botanical name, which is also the English common name, derives from the Sanskrit term
@@ -474,7 +571,7 @@
 - name: Cedrus libani
   common_name: Cedar of Lebanon
   order: Pinales
-  native_region: mountains of the Eastern Mediterranean basin
+  native_region: the mountains of Lebanon, Syria and southern Turkey
   inaturalist_taxon_id: 136234
   description: >-
     It is a large evergreen conifer that has great religious and historical significance in the
@@ -492,7 +589,7 @@
 - name: Cercidiphyllum japonicum
   common_name: Katsura
   order: Saxifragales
-  native_region: Japan
+  native_region: Japan and China
   inaturalist_taxon_id: 133356
   description: >-
     The Katsura tree is sometimes called caramel tree for the light caramel smell it emits during
@@ -512,7 +609,7 @@
 - name: Chamaecyparis obtusa
   common_name: Hinoki cypress
   order: Pinales
-  native_region: Japan
+  native_region: central and southern Japan
   inaturalist_taxon_id: 133369
   description: >-
     It is grown for its very high quality timber in Japan, where it is used as a material for
@@ -572,9 +669,7 @@
 - name: Cornus nuttallii
   common_name: Pacific dogwood
   native: true
-  native_region: >-
-    western North America from the lowlands of southern British Columbia to the mountains of
-    southern California, with an inland population in central Idaho
+  native_region: the Pacific coast of North America, from southern British Columbia to southern California
   sencoten_name: ȻETXIȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.3.
   inaturalist_taxon_id: 76447
@@ -624,6 +719,7 @@
   native_region: Arboretum de Grignon, France
 - name: Crataegus × lavalleei
   common_name: Hybrid cockspurthorn
+  garden_origin: a hybrid hawthorn raised in France in the 1870s, at the arboretum of Alphonse Lavallée
   inaturalist_taxon_id: 143798
   description: >-
     The female parent was C. mexicana (sometimes mistakenly called C. pubescens), and the male
@@ -631,6 +727,9 @@
 - name: Crataegus × mordenensis
   common_name: Hawthorn
   inaturalist_taxon_id: 706684
+  cultivars:
+    - name: Snowbird
+      description: A hardy hawthorn from Canada, raised from 'Toba', with double white flowers that stay white.
 - name: Crataegus crus-galli
   common_name: Cockspur hawthorn
   order: Rosales
@@ -639,7 +738,7 @@
 - name: Crataegus douglasii
   common_name: Black Hawthorn
   native: true
-  native_region: northern and western North America
+  native_region: western North America, with outlying populations around the Great Lakes
   inaturalist_taxon_id: 76469
   description: >-
     Hard wood used by First Peoples for digging sticks, hammers, and implement handles.
@@ -647,23 +746,37 @@
 
     It is named after David Douglas, who collected seed from the plant during his botanical
     explorations.
+  turner_pages: vol. 1, p. 341
 - name: Crataegus laevigata
   common_name: Midland hawthorn
   order: Rosales
-  native_region: >-
-    western and central Europe, from Great Britain (where it is largely confined to lowland ancient
-    woodland) and Spain east to the Czech Republic and Hungary.
+  native_region: western and central Europe, from Britain and Spain east to Ukraine
   inaturalist_taxon_id: 54428
+  description: >-
+    Midland hawthorn is a tree of ancient woodland and old hedgerows in Britain. Many of the red- and
+    pink-flowered hawthorns planted along streets, such as 'Paul's Scarlet', are cultivars of this
+    species or its hybrids.
 - name: Crataegus mordensis
   common_name: Hawthorn
+  cultivars:
+    - name: Toba
+      description: >-
+        A hardy hawthorn bred at the Morden Research Station in Manitoba, with double white flowers
+        that turn pink as they age.
 - name: Crataegus oxyacantha
   common_name: Common hawthorn
   order: Rosales
-  native_region: Northern Europe
+  native_region: Europe, North Africa and western Asia
   inaturalist_taxon_id: 54428
   description: >-
     The name Crataegus oxyacantha L. has been rejected as being of uncertain application, but is
     sometimes still used. Likely the same as Crataegus monogyna
+  cultivars:
+    - name: Paul's Scarlet
+      match: paul
+      description: >-
+        A hawthorn with double scarlet-pink flowers in May, introduced by William Paul's nursery in
+        England in the 1860s.
 - name: Crataegus phaenopyrum
   common_name: Washington Hawthorn
   order: Rosales
@@ -678,7 +791,7 @@
   inaturalist_taxon_id: 127068
 - name: Cryptomeria japonica
   common_name: Japanese cedar
-  native_region: China, Japan
+  native_region: Japan
   inaturalist_taxon_id: 71147
   description: >-
     Sugi is the national tree of Japan, commonly planted around temples and shrines, with many
@@ -686,7 +799,7 @@
 - name: Cunninghamia lanceolata
   common_name: Cunninghamia / China-fir
   order: Pinales
-  native_region: China, northern Vietnam and Laos, and perhaps also Cambodia
+  native_region: southern China, northern Vietnam and Laos
   inaturalist_taxon_id: 127861
   description: >-
     The genus name Cunninghamia honours Dr. James Cunningham, a British doctor who introduced this
@@ -703,7 +816,9 @@
   description: These trees haven't been fully identified.
 - name: Cupressus × leylandii
   common_name: Leyland cypress
-  native_region: Wales
+  garden_origin: >-
+    a chance cross between Monterey cypress and yellow-cedar, first found on an estate in Wales in
+    1888
   description: >-
     In 1888 at Leighton Hall, an estate in Wales, the hybrid cross occurred when the female flowers
     or cones of Yellow cedar were fertilised by pollen from Monterey cypress in gardens owned by
@@ -728,7 +843,7 @@
 - name: Cupressus cashmeriana
   common_name: Kashmir cypress / Bhutan cypress
   order: Pinales
-  native_region: the eastern Himalaya in Bhutan and adjacent areas of Arunachal Pradesh in northeastern India
+  native_region: the eastern Himalayas, in Bhutan and northeast India
   inaturalist_taxon_id: 136152
   description: >-
     It is the official national tree of Bhutan, where it is often associated with Buddhist religious
@@ -737,7 +852,7 @@
 - name: Cupressus nootkatensis
   common_name: Yellow-cedar
   native: true
-  native_region: coastal regions of northwestern North America
+  native_region: the Pacific coast of North America, from Alaska to northern California
   sencoten_name: POŚELEḰ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#322.
   inaturalist_taxon_id: 126792
@@ -764,6 +879,7 @@
     along with another cypress, Thuja plicata (western red cedar). While western red cedar was
     preferred for larger projects (houses, canoes), Nootka cypress was used for smaller carvings
     such as vessels and utensils.
+  turner_pages: vol. 1, p. 342; vol. 2, pp. 184, 302
 - name: Davidia involucrata
   common_name: Dove Tree
   order: Cornales
@@ -802,8 +918,26 @@
 - name: Fagus sylvatica
   common_name: European beech
   order: Fagales
-  native_region: Europe
+  native_region: most of Europe, from southern England and Spain to Sweden and Ukraine
   inaturalist_taxon_id: 54227
+  cultivars:
+    - name: Dawyck
+      match: fastigiata
+      description: >-
+        A columnar European beech, descended from a tree found at Dawyck in the Scottish Borders in
+        the 1800s.
+    - name: Atropunicea
+      description: Copper beech, the purple-leaved form of European beech.
+    - name: Purpurea
+      description: Copper beech, the purple-leaved form of European beech.
+    - name: Riversii
+      description: >-
+        A copper beech with especially dark purple leaves, raised by Rivers nursery in England in the
+        late 1800s.
+  description: >-
+    European beech can grow over 40 m (130 ft) tall, with smooth silver-grey bark. Its many cultivars
+    include the purple-leaved copper beech and the columnar 'Dawyck'. Beech nuts were once gathered to
+    feed pigs and pressed for oil.
 - name: Ficus carica
   common_name: Fig
   order: Rosales
@@ -836,9 +970,7 @@
 - name: Fraxinus ornus
   common_name: Manna ash
   order: Lamiales
-  native_region: >-
-    Southern Europe and southwestern Asia, from Spain and Italy north to Austria, Poland and the
-    Czech Republic, and east through the Balkans, Turkey, and western Syria to Lebanon and Armenia
+  native_region: southern Europe and southwest Asia, from Spain and Italy east to Turkey and Lebanon
   inaturalist_taxon_id: 319281
   description: >-
     A sugary extract from the sap may be obtained by making a cut in the bark; this was compared in
@@ -846,6 +978,9 @@
     English name of the tree, and some of the vernacular names from its native area (fresno del maná
     in Spanish, frassino da manna in Italian). In fact, the sugar mannose and the sugar alcohol
     mannitol both derive their names from the extract.
+  cultivars:
+    - name: Arie Peters
+      description: A compact, rounded Dutch selection of manna ash, with fragrant white flowers in late spring.
 - name: Fraxinus oxycarpa
   common_name: Ash
   order: Lamiales
@@ -873,19 +1008,41 @@
     Ginkgoopsida, order Ginkgoales, family Ginkgoaceae, genus Ginkgo and is the only extant species
     within this group. It is one of the best-known examples of a living fossil, because Ginkgoales
     other than G. biloba are not known from the fossil record after the Pliocene.
+  cultivars:
+    - name: Princeton Sentry
+      match: princeton
+      description: >-
+        A narrow, upright male ginkgo. Only female ginkgos produce the foul-smelling seeds, so male
+        cultivars are preferred for streets.
+    - name: Female
+      match: (f)
+      description: A female ginkgo. In autumn it drops fleshy seeds that smell strongly of rancid butter.
+    - name: Autumn Gold
+      description: A broad, male ginkgo with especially bright golden autumn colour.
 - name: Gleditsia inermis
   common_name: Honey locust
 - name: Gleditsia triacanthos
   common_name: Honey locust
   order: Fabales
-  native_region: central North America
+  native_region: central and eastern North America, mainly the Mississippi and Ohio river valleys
   inaturalist_taxon_id: 54797
   description: >-
     Honey locust is highly adaptable to different environments, has been introduced worldwide, and
     is an aggressive invasive species.
+  cultivars:
+    - name: Street Keeper
+      description: A narrow, upright, thornless honey locust bred for streets.
+    - name: Halka
+      description: A fast-growing, thornless honey locust with a spreading crown.
+    - name: Shademaster
+      match: shadem
+      description: A thornless, nearly seedless honey locust with an upright, spreading crown.
+    - name: Skyline
+      match: skylin
+      description: A thornless honey locust with a pyramidal crown and golden autumn colour.
 - name: Gleditsia triacanthos var. inermis
   common_name: Honey locust
-  native_region: central North America
+  native_region: central and eastern North America, mainly the Mississippi and Ohio river valleys
   description: >-
     Honey locust is highly adaptable to different environments, has been introduced worldwide, and
     is an aggressive invasive species. var. inermis is the thornless form.
@@ -893,6 +1050,9 @@
   common_name: Kentucky Coffeetree
   order: Fabales
   inaturalist_taxon_id: 163451
+  cultivars:
+    - name: Espresso
+      description: A male Kentucky coffeetree, so it doesn't drop the species' large seed pods.
 - name: Halesia monticola
   common_name: Carolina Silverbell
   order: Ericales
@@ -903,7 +1063,7 @@
 - name: Hesperocyparis macrocarpa
   common_name: Monterey cypress
   order: Pinales
-  native_region: the Central Coast of California
+  native_region: two small groves on the California coast, near Monterey
   inaturalist_taxon_id: 322545
   description: >-
     Because of the large trunk size some trees develop, people have assumed that individual H.
@@ -921,8 +1081,12 @@
 - name: Ilex aquifolium
   common_name: English holly
   order: Aquifoliales
-  native_region: western and southern Europe, northwest Africa, and southwest Asia
+  native_region: western and southern Europe, North Africa and southwest Asia
   inaturalist_taxon_id: 53856
+  description: >-
+    English holly's glossy, spiny leaves and red berries have been used as winter decoration since
+    before Christianity. Only female trees bear berries. Birds spread the seeds, and holly has become
+    an invasive species in the forests of southwestern British Columbia.
 - name: Ilex opaca
   common_name: American Holly
   order: Aquifoliales
@@ -935,7 +1099,7 @@
   inaturalist_taxon_id: 54504
 - name: Juglans regia
   common_name: English Walnut
-  native_region: the region stretching from the Balkans eastward to the Himalayas and southwest China
+  native_region: the mountains of Central Asia, from the Balkans east to the Himalayas and southwest China
   inaturalist_taxon_id: 63935
   description: >-
     In the fourth century BC, Alexander the Great introduced this "Persian nut" in Macedonian and
@@ -984,7 +1148,7 @@
   inaturalist_taxon_id: 58320
 - name: Laburnum × watereri
   common_name: Golden chain tree
-  native_region: Central Europe
+  native_region: the Alps, where its two parent species grow together
   inaturalist_taxon_id: 899503
   description: >-
     A naturally occurring hybrid, its parents are common laburnum, Laburnum anagyroides, and alpine
@@ -1012,20 +1176,21 @@
 - name: Liquidambar styraciflua
   common_name: American sweetgum
   order: Saxifragales
-  native_region: >-
-    warm temperate areas of eastern North America and tropical montane regions of Mexico and Central
-    America
+  native_region: the southeastern United States, Mexico and Central America
   inaturalist_taxon_id: 49658
   description: >-
     Sweetgum is one of the most important commercial hardwoods in the Southeastern United States. It
     is also a popular ornamental and forestal tree, cultivated for its distinctive foliage and
     intense autumn colors.
+  cultivars:
+    - name: Worplesdon
+      description: >-
+        A sweetgum raised in England, with deeply lobed leaves that reliably turn orange, red and
+        purple in autumn.
 - name: Liriodendron tulipifera
   common_name: Tulip tree
   order: Magnoliales
-  native_region: >-
-    eastern North America from Southern Ontario and possibly southern Quebec to Illinois eastward to
-    southwestern Massachusetts and Rhode Island, and south to central Florida and Louisiana
+  native_region: eastern North America, from southern Ontario to Florida and Louisiana
   inaturalist_taxon_id: 53582
   description: >-
     The tulip tree is the tallest eastern hardwood.
@@ -1039,6 +1204,13 @@
     The tulip tree has been referenced in many poems and the namesakes of other poems, such as
     William Stafford's "Tulip Tree." It is also a plot element in the Edgar Allan Poe short story
     "The Gold-Bug".
+  cultivars:
+    - name: Emerald City
+      description: An upright tulip tree with dark, glossy leaves.
+    - name: Arnold
+      description: >-
+        A columnar tulip tree (sometimes sold as 'Fastigiatum') that flowers at a younger age than the
+        species.
 - name: Maackia amurensis
   common_name: Maackia
   order: Fabales
@@ -1049,6 +1221,7 @@
   inaturalist_taxon_id: 83074
 - name: Magnolia × 'Galaxy'
   common_name: Galaxy magnolia
+  garden_origin: a hybrid bred at the U.S. National Arboretum in Washington, D.C., and released in 1980
   description: >-
     Magnolia 'Galaxy' is the result of a cross between Magnolia liliiflora and Magnolia sprengeri
     'Diva'.
@@ -1061,6 +1234,7 @@
   common_name: Magnolia
 - name: Magnolia × soulangeana
   common_name: Saucer magnolia
+  garden_origin: a hybrid of two Chinese magnolias, first raised near Paris in 1820
   description: >-
     Magnolia × soulangeana was initially bred by French plantsman Étienne Soulange-Bodin
     (1774–1846), a retired cavalry officer in Napoleon's army, at his château de Fromont near Paris.
@@ -1075,13 +1249,18 @@
   common_name: Cucumber-Tree
   order: Magnoliales
   inaturalist_taxon_id: 117426
+  cultivars:
+    - name: Yellow Bird
+      description: >-
+        A hybrid of cucumber tree magnolia from the Brooklyn Botanic Garden, with yellow, tulip-shaped
+        flowers that open with the leaves.
 - name: Magnolia campbellii
   common_name: Magnolia
   order: Magnoliales
   inaturalist_taxon_id: 439967
 - name: Magnolia grandiflora
   common_name: Southern magnolia
-  native_region: the southeastern United States
+  native_region: the southeastern United States, from North Carolina to Florida and Texas
   inaturalist_taxon_id: 83074
   description: >-
     Squirrels, opossums, quail, and turkey are known to eat the seeds.
@@ -1092,13 +1271,17 @@
 - name: Magnolia kobus
   common_name: Kobus magnolia
   order: Magnoliales
-  native_region: Japan (Kyushu, Honshu, and Hokkaido) and Korea
+  native_region: Japan and Korea
   inaturalist_taxon_id: 143787
   bloom:
     from: mid March
     to: early April
     colour: white
     hue: white
+  description: >-
+    Kobus magnolia is slow to start flowering, but mature trees cover themselves in white flowers
+    before the leaves open. Its Japanese name, kobushi, means "fist", after the shape of its knobbly
+    fruit.
 - name: Magnolia macrophylla
   common_name: Magnolia
   order: Magnoliales
@@ -1121,8 +1304,14 @@
     to: mid May
     colour: pink to white
     hue: pale pink
+  cultivars:
+    - name: Royal Raindrops
+      description: >-
+        A disease-resistant crabapple with purple, deeply cut leaves and magenta-pink flowers,
+        followed by small red fruit.
 - name: Malus × purpurea
   common_name: Flowering crabapple
+  garden_origin: a hybrid crabapple raised by the Barbier nursery in Orléans, France, around 1900
   description: >-
     This crab was raised by Messrs Barbier of Orleans around 1900 by crossing M. niedzwetzkyana with
     M. × atrosanguinea (M. floribunda atrosanguinea)
@@ -1166,7 +1355,7 @@
   inaturalist_taxon_id: 469472
 - name: Metasequoia glyptostroboides
   common_name: Dawn redwood
-  native_region: The border region of Hubei and Hunan provinces and Chongqing municipality in south-central China
+  native_region: a few valleys in central China
   inaturalist_taxon_id: 69150
   description: >-
     This species was known only from fossils and thought to be extinct, until its rediscovery in
@@ -1186,6 +1375,11 @@
     eastern North America from the coastal Northeastern United States and southern Ontario south to
     central Florida and eastern Texas, as well as Mexico
   inaturalist_taxon_id: 54802
+  cultivars:
+    - name: Red Rage
+      description: >-
+        A black tupelo with glossy leaves and brilliant red autumn colour, selected for resistance to
+        leaf spot.
 - name: Other
   common_name: Other
 - name: Oxydendrum arboreum
@@ -1195,8 +1389,20 @@
 - name: Parrotia persica
   common_name: Persian ironwood
   order: Saxifragales
-  native_region: northern Iran and southern Azerbaijan
+  native_region: the mountain forests of northern Iran and Azerbaijan, near the Caspian Sea
   inaturalist_taxon_id: 464251
+  cultivars:
+    - name: Ruby Vase
+      description: >-
+        An upright, vase-shaped selection of Persian ironwood, with reddish new leaves and red to
+        orange autumn colour.
+    - name: Vanessa
+      description: >-
+        A narrow, upright selection of Persian ironwood from the Netherlands, used where there's
+        little room to spread.
+  description: >-
+    Persian ironwood is a relative of witch-hazel, named for its very hard wood. It's planted for its
+    autumn colour, which runs from yellow through orange to red, and its patchwork, peeling bark.
 - name: Paulownia tomentosa
   common_name: Princess Or Empress Tree
   order: Lamiales
@@ -1211,7 +1417,7 @@
   inaturalist_taxon_id: 48734
 - name: Picea abies
   common_name: Norway Spruce
-  native_region: Northern, Central and Eastern Europe
+  native_region: northern, central and eastern Europe, from Norway to Russia and the Alps
   inaturalist_taxon_id: 63567
   description: >-
     The Norway spruce is one of the most widely planted spruces, both in and outside of its native
@@ -1229,7 +1435,7 @@
   inaturalist_taxon_id: 117326
 - name: Picea omorika
   common_name: Serbian spruce
-  native_region: the Drina River valley in western Serbia, and eastern Bosnia and Herzegovina
+  native_region: a small stretch of the Drina River valley, on the border of Serbia and Bosnia
   inaturalist_taxon_id: 135773
   description: >-
     It has a total range of only about 60 ha. Outside its native range, Serbian spruce is of major
@@ -1241,13 +1447,14 @@
   inaturalist_taxon_id: 135802
 - name: Picea pungens
   common_name: Blue spruce
-  native_region: North America
+  native_region: the Rocky Mountains of the United States, from Wyoming to New Mexico
   inaturalist_taxon_id: 119092
   description: The blue spruce is the State Tree of Colorado.
 - name: Picea sitchensis
   common_name: Sitka Spruce
   order: Pinales
   native: true
+  native_region: the Pacific coast of North America, from Alaska to northern California
   inaturalist_taxon_id: 68131
   description: >-
     Said to bring supernatural protection (Haida, Kwakwaka’wakw, Klallam, Ditidaht); bark mixture in
@@ -1279,6 +1486,7 @@
     Ts’msyen, Kwakwaka’wakw, other Northwest
 
     Coast peoples).
+  turner_pages: vol. 1, pp. 340, 342, 344; vol. 2, pp. 179, 184, 195, 302
 - name: Picea smithiana
   order: Pinales
 - name: Pinus
@@ -1300,16 +1508,16 @@
 - name: Pinus bungeana
   common_name: Lacebark Pine
   order: Pinales
-  native_region: northeastern and central China
+  native_region: the mountains of northern and central China
   notable: true
   inaturalist_taxon_id: 135808
   description: >-
-    Pinus bungeana is native to mountains of China, but is widely cultivated as an ornamental,
-    especially for its attractive metallic bark.
+    Lacebark pine is widely cultivated as an ornamental, especially for its attractive metallic bark,
+    which flakes away in patches of white, grey and green.
 - name: Pinus contorta
   common_name: Lodgepole pine
   native: true
-  native_region: western North America
+  native_region: western North America, from Alaska and the Yukon to California and the Rockies
   inaturalist_taxon_id: 48934
   description: >-
     Pinus contorta is a fire-dependent species, requiring wildfires to maintain healthy populations
@@ -1318,7 +1526,7 @@
     regenerate and maintain its place in the forest habitat.
 - name: Pinus coulteri
   common_name: Big-cone pine
-  native_region: the coastal mountains of Southern California and northern Baja California (Mexico)
+  native_region: the coastal mountains of southern California and northern Mexico
   inaturalist_taxon_id: 67330
   description: >-
     The outstanding characteristic of this tree is the large, spiny cones which are 20–40 cm
@@ -1336,9 +1544,7 @@
   inaturalist_taxon_id: 78585
 - name: Pinus jeffreyi
   common_name: Jeffrey pine
-  native_region: >-
-    California, also in the westernmost part of Nevada, southwestern Oregon, and northern Baja
-    California
+  native_region: the mountains of California, southern Oregon, western Nevada and northern Mexico
   inaturalist_taxon_id: 48463
   description: >-
     The scent of Pinus jeffreyi is variously described as reminiscent of vanilla, lemon, pineapple,
@@ -1361,12 +1567,13 @@
   common_name: Western white pine
   native: true
   native_region: >-
-    the mountains of the western United States and Canada, specifically the Sierra Nevada, the
-    Cascade Range, the Coast Range, and the northern Rocky Mountains
+    the mountains of western North America, from British Columbia to California and the northern
+    Rockies
   sencoten_name: ₭ÍYÁL¸EŚEȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#320.
   inaturalist_taxon_id: 68084
   description: Sheets of bark harvested for baskets and canoes from living trees (Ktunaxa, Lakes, Secwepemc)
+  turner_pages: vol. 2, p. 184
 - name: Pinus mugo
   common_name: Mugo Pine
   native_region: high elevation habitats from southwestern to Central Europe and Southeast Europe
@@ -1374,15 +1581,19 @@
 - name: Pinus nigra
   common_name: Austrian pine
   order: Pinales
-  native_region: Turkey, Southern Italy, Morocco, Algeria
+  native_region: southern Europe, from Spain to Turkey, and North Africa
   inaturalist_taxon_id: 135790
+  description: >-
+    European black pine has several regional forms with their own names, including Austrian, Corsican
+    and Crimean pine. Austrian pine tolerates wind, salt and poor soil, and has been widely planted as
+    a windbreak and street tree.
 - name: Pinus parviflora
   common_name: Five-needle pine
   order: Pinales
 - name: Pinus pinaster
   common_name: Maritime pine
   order: Pinales
-  native_region: Western Mediterranean
+  native_region: the western Mediterranean, in Spain, Portugal, France, Italy and North Africa
   notable: true
   description: >-
     Tree A296 has been misidentified by others as the Allepo Pine, Pinus halepensis. For details of
@@ -1391,8 +1602,12 @@
 - name: Pinus ponderosa
   common_name: Ponderosa pine
   order: Pinales
-  native_region: Mountainous regions of western North America
+  native_region: the mountains and dry interior of western North America, including southern British Columbia
   inaturalist_taxon_id: 48461
+  description: >-
+    Ponderosa pine is the most widely distributed pine in North America. David Douglas named it in
+    1829 for its heavy wood. Mature trees have orange, jigsaw-puzzle bark that smells of vanilla when
+    warmed by the sun.
 - name: Pinus radiata
   common_name: Monterey Pine
   order: Pinales
@@ -1409,9 +1624,7 @@
 - name: Pinus sylvestris
   common_name: Scots pine
   order: Pinales
-  native_region: >-
-    Eurasia, ranging from Western Europe to Eastern Siberia, south to the Caucasus Mountains and
-    Anatolia, and north to well inside the Arctic Circle in Fennoscandia.
+  native_region: Europe and northern Asia, from Scotland and Spain to eastern Siberia
   inaturalist_taxon_id: 58722
   description: >-
     Scots pine was one of the first trees introduced to North America, in about 1600.
@@ -1446,6 +1659,7 @@
   common_name: Pistachio
 - name: Platanus × acerifolia
   common_name: London plane
+  garden_origin: a hybrid of the oriental plane and American sycamore, which arose in Spain or England in the 1600s
   inaturalist_taxon_id: 897876
   description: >-
     The London plane is usually thought to be a hybrid of Platanus orientalis (oriental plane) and
@@ -1464,6 +1678,7 @@
 - name: Platanus orientalis
   common_name: Oriental plane
   order: Proteales
+  native_region: southeastern Europe and western Asia, from the Balkans to Iran
   inaturalist_taxon_id: 181682
   description: >-
     From earliest days, P. orientalis has been an important tree in Persian gardens, which are built
@@ -1474,7 +1689,7 @@
     reputed to have been an oriental plane.
 - name: Platycladus orientalis
   common_name: Chinese thuja
-  native_region: northeastern parts of eastern Asia and north Asia
+  native_region: northern China and Korea
   inaturalist_taxon_id: 135659
   description: >-
     The wood is used in Buddhist temples both for construction work, and chipped, for incense
@@ -1499,7 +1714,15 @@
 - name: Populus balsamifera
   common_name: Balsam Poplar
   order: Malpighiales
+  native: true
+  native_region: >-
+    northern North America, with its black cottonwood subspecies along the Pacific coast from Alaska
+    to California
   inaturalist_taxon_id: 78699
+  description: >-
+    Most of Victoria's balsam poplars are black cottonwood (subspecies trichocarpa), one of the
+    tallest broadleaf trees in western North America. Each spring it releases its seeds on drifts of
+    cottony fluff, and its sticky, fragrant buds give the balsam poplars their name.
 - name: Populus nigra
   common_name: Black poplar
   order: Malpighiales
@@ -1513,6 +1736,7 @@
   common_name: Trembling aspen
   order: Malpighiales
   native: true
+  native_region: northern North America, from Alaska to Newfoundland and south through the Rockies to Mexico
   inaturalist_taxon_id: 54840
   description: >-
     The species often propagates through its roots to form large clonal groves originating from a
@@ -1524,6 +1748,7 @@
   description: This is the genus, lacking species identification.
 - name: Prunus × blireiana
   common_name: Purple-leafed plum
+  garden_origin: a hybrid raised in France in the 1890s
   description: >-
     It is a cross between the Japanese apricot (Prunus mume) and the purple-leaved plum (Prunus
     cerasifera var. 'Pissardii').
@@ -1535,7 +1760,7 @@
     note: "Double flowers before its purple leaves come out."
 - name: Prunus × yedoensis
   common_name: Yoshino cherry
-  native_region: Japan
+  garden_origin: a Japanese hybrid, bred by gardeners in the village of Somei in Edo (now Tokyo) in the 1800s
   description: >-
     A hybrid cherry of between Prunus speciosa (Oshima zakura) as father plant and Prunus pendula f.
     ascendens (Edo higan) as mother. It is a clone from a single tree and propagated by grafting to
@@ -1569,7 +1794,7 @@
 - name: Prunus cerasifera
   common_name: Cherry plum
   order: Rosales
-  native_region: Southeast Europe, Western Asia
+  native_region: southeast Europe and western Asia, from the Balkans to Iran and Central Asia
   inaturalist_taxon_id: 55837
   bloom:
     from: mid February
@@ -1580,6 +1805,17 @@
       Nigra: pink
       Thundercloud: pink
     note: "Usually the first big show of the year, on dark purple-leaved trees ('Nigra', 'Thundercloud')."
+  cultivars:
+    - name: Nigra
+      description: >-
+        A cherry plum with dark purple leaves and pink flowers, one of the first trees to bloom each
+        year.
+    - name: Thundercloud
+      description: A cherry plum with deep purple leaves that keep their colour through summer, and pink flowers.
+  description: >-
+    Cherry plum is thought to be one of the parents of the cultivated plum, Prunus domestica. Most of
+    Victoria's are purple-leaved cultivars such as 'Nigra' and 'Thundercloud', whose pink flowers are
+    among the first blossoms of the year.
 - name: Prunus cerasus
   common_name: Sour cherry
   order: Rosales
@@ -1593,6 +1829,7 @@
 - name: Prunus domestica
   common_name: European plum
   order: Rosales
+  garden_origin: a domesticated plum, thought to have arisen in western Asia around the Caucasus
   inaturalist_taxon_id: 63735
   description: >-
     Its hybrid parentage was believed to be Prunus spinosa and Prunus cerasifera. 
@@ -1616,6 +1853,7 @@
   native: true
   sencoten_name: SȻEȾEṈIȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#379.
+  native_region: western North America, from British Columbia to California and east to the Rockies
   inaturalist_taxon_id: 63905
   description: >-
     The bitter cherries are not edible by humans. However, they are eaten by some birds (especially
@@ -1635,12 +1873,11 @@
     colour: white
     hue: white
     note: "Victoria's native cherry; small flowers in flat clusters."
+  turner_pages: vol. 1, p. 343
 - name: Prunus laurocerasus
   common_name: Cherry laurel
   order: Rosales
-  native_region: >-
-    regions bordering the Black Sea in southwestern Asia and southeastern Europe, from Albania and
-    Bulgaria east through Turkey to the Caucasus Mountains and northern Iran
+  native_region: the lands around the Black Sea, from the Balkans through Turkey to the Caucasus and northern Iran
   inaturalist_taxon_id: 61432
   description: >-
     Prunus laurocerasus is a widely cultivated ornamental plant, used for planting in gardens and
@@ -1667,13 +1904,25 @@
 - name: Prunus sargentii
   common_name: North Japanese hill cherry
   order: Rosales
-  native_region: Japan, Korea, and Sakhalin (Russia)
+  native_region: northern Japan, Korea and Sakhalin
   inaturalist_taxon_id: 325895
   bloom:
     from: mid March
     to: early April
     colour: pink
     hue: pink
+  cultivars:
+    - name: Columnaris
+      match: columnar
+      description: >-
+        An upright form of Sargent cherry, with single pink flowers in spring and orange-red autumn
+        colour.
+    - name: Rancho
+      description: A narrow, upright Sargent cherry with single pink flowers, used along streets.
+  description: >-
+    Sargent's cherry is named for Charles Sprague Sargent, the first director of Harvard's Arnold
+    Arboretum. It's one of the hardiest flowering cherries, with single pink flowers in spring and
+    some of the best orange-red autumn colour of any cherry.
 - name: Prunus serotina
   common_name: Black cherry
   order: Rosales
@@ -1682,13 +1931,13 @@
 - name: Prunus serrula
   common_name: Birch bark cherry
   order: Rosales
-  native_region: China
+  native_region: the mountains of western China and Tibet
   inaturalist_taxon_id: 125742
   description: It is used as an ornamental in many parts of the world for its striking coppery-red bark.
 - name: Prunus serrulata
   common_name: Japanese cherry
   order: Rosales
-  native_region: China, Japan, Korea
+  native_region: Japan, Korea and China
   inaturalist_taxon_id: 125742
   bloom:
     from: early April
@@ -1702,16 +1951,37 @@
       Shirotae: white
       Amanogawa: pale pink
     note: "'Accolade' opens first; the deep pink, double 'Kwanzan' and white 'Shirofugen' are the late show."
+  cultivars:
+    - name: Kanzan
+      match: kwanzan
+      description: >-
+        The most widely planted Japanese flowering cherry, with large, double, deep pink flowers in
+        late April and a stiff, vase-shaped crown. Often sold as 'Kwanzan'.
+    - name: Shirofugen
+      description: >-
+        One of the last cherries to flower, in May. Pink buds open to double white flowers that fade
+        to pink, against bronze young leaves. The name refers to the bodhisattva Fugen.
+    - name: Royal Burgundy
+      match: royal burgandy
+      description: A purple-leaved form of 'Kanzan', with the same double pink flowers set against dark foliage.
+  description: >-
+    Japan's ornamental cherries, the Sato-zakura group, were bred over centuries from the Oshima
+    cherry and other wild species. Cherry blossom viewing, hanami, has been a Japanese custom for more
+    than a thousand years.
 - name: Prunus subhirtella
   common_name: Winter-flowering cherry
   order: Rosales
-  native_region: Japan
+  garden_origin: a Japanese hybrid known only in gardens
   bloom:
     from: early November
     to: early April
     colour: pale pink to white
     hue: pale pink
     note: "Flowers on and off through mild winter spells, most heavily in March."
+  description: >-
+    Winter-flowering cherry is a hybrid of two Japanese cherries, the Edo higan (Prunus itosakura) and
+    the Fuji cherry (Prunus incisa). Its 'Autumnalis' form flowers on and off through the winter
+    whenever the weather is mild.
 - name: Prunus virginiana
   common_name: Bitter-berry / chokecherry
   order: Rosales
@@ -1719,6 +1989,7 @@
   inaturalist_taxon_id: 54835
 - name: Prunus wadai
   common_name: Cherry blossom
+  garden_origin: a hybrid cherry from Japan
   description: >-
     Hybrid of Prunus pseudocerasus (Chinese sour cherry) and Prunus subhirtella (Winter-flowering
     cherry).
@@ -1732,7 +2003,7 @@
   common_name: Douglas-fir
   order: Pinales
   native: true
-  native_region: western North America
+  native_region: western North America, from central British Columbia to Mexico
   sencoten_name: JSȺ¸IȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#318.
   inaturalist_taxon_id: 48256
@@ -1776,6 +2047,7 @@
     extraordinary nature and potential of the species. The specific epithet menziesii is after
     Archibald Menzies, a Scottish physician and rival naturalist to David Douglas. Menzies first
     documented the tree on Vancouver Island in 1791.
+  turner_pages: vol. 1, pp. 340, 344; vol. 2, pp. 184, 303
 - name: Pyrus
   common_name: Callery Pear
   order: Rosales
@@ -1790,6 +2062,13 @@
     to: early April
     colour: white
     hue: white
+  cultivars:
+    - name: Chanticleer
+      match: chanticlear
+      description: >-
+        A narrow, pyramidal Callery pear with white flowers in early spring and red-purple autumn
+        colour. Widely planted as a street tree, though Callery pear has become invasive in parts of
+        the eastern U.S.
 - name: Pyrus communis
   common_name: Callery Pear
   order: Rosales
@@ -1834,7 +2113,7 @@
   common_name: Garry oak
   order: Fagales
   native: true
-  native_region: southern California to southwestern British Columbia
+  native_region: the Pacific coast, from southwestern British Columbia to southern California
   sencoten_name: ĆEṈ¸IȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.1.
   inaturalist_taxon_id: 68632
@@ -1878,10 +2157,15 @@
 - name: Quercus palustris
   common_name: Pin oak
   order: Fagales
-  native_region: >-
-    eastern and central United States from Connecticut west to eastern Kansas, and south to Georgia,
-    west to eastern Oklahoma and Kansas. It is also native in the extreme south of Ontario, Canada
+  native_region: the eastern and central United States and the southern tip of Ontario
   inaturalist_taxon_id: 54785
+  cultivars:
+    - name: Green Pillar
+      description: A narrow, columnar pin oak for tight spaces.
+  description: >-
+    Pin oak is one of the most planted oaks in North America, because it transplants easily, grows
+    quickly and tolerates pollution. Its lower branches droop downward, and its dead leaves often hang
+    on through winter.
 - name: Quercus phellos
   common_name: Oak
   order: Fagales
@@ -1897,13 +2181,26 @@
 - name: Quercus robur
   common_name: Common oak
   order: Fagales
-  native_region: Most of Europe west of the Caucasus
+  native_region: most of Europe, from Ireland and Spain to Russia and the Caucasus
   inaturalist_taxon_id: 56133
+  cultivars:
+    - name: Fastigiata
+      match: columnar
+      description: Cypress oak, a columnar form of English oak.
+  description: >-
+    English oak supports more wildlife than almost any other European tree, from insects to the birds
+    and mammals that eat its acorns. It can live for more than 500 years, and some trees are believed
+    to be over 1,000 years old. The name pedunculate oak refers to its acorns, which grow on long
+    stalks.
 - name: Quercus rubra
   common_name: Northern red oak
   order: Fagales
-  native_region: North America, in the eastern and central United States and southeast and south-central Canada
+  native_region: eastern North America, from southern Quebec and Ontario to Georgia and Oklahoma
   inaturalist_taxon_id: 49005
+  description: >-
+    Northern red oak is one of the most important timber oaks in North America, and the provincial
+    tree of Prince Edward Island. It's one of the fastest-growing oaks, and like other red oaks its
+    acorns take two years to ripen.
 - name: Quercus velutina
   common_name: Black Oak
   order: Fagales
@@ -1933,8 +2230,13 @@
 - name: Robinia pseudoacacia
   common_name: Black locust
   order: Fabales
-  native_region: eastern United States
+  native_region: the Appalachian and Ozark mountains of the eastern United States
   inaturalist_taxon_id: 56088
+  description: >-
+    Black locust is a legume, so it fixes nitrogen and grows well on poor ground. Its other name,
+    false acacia, is a translation of pseudoacacia. The rot-resistant wood has long been used for
+    fence posts, and its fragrant white flowers make a prized honey, sold in Europe as acacia honey.
+    It's invasive in many regions.
 - name: Robinia x
   common_name: Black Locust
 - name: Salix
@@ -1943,6 +2245,7 @@
   inaturalist_taxon_id: 54847
 - name: Salix × sepulcralis 'Chrysocoma'
   common_name: Weeping Golden Willow
+  garden_origin: a garden hybrid of white willow and Peking willow, raised in Europe in the 1800s
   description: >-
     It is an artificial hybrid between S. alba 'Vitellina' and S. babylonica. The first parent
     provides the frost hardiness and the golden shoots and the second parent the strong weeping
@@ -1953,7 +2256,7 @@
   inaturalist_taxon_id: 54841
 - name: Salix babylonica
   common_name: Weeping willow
-  native_region: dry areas of northern China
+  native_region: northern China
   inaturalist_taxon_id: 58316
   description: >-
     The epithet babylonica in this Chinese species' scientific name (S. babylonica), as well as the
@@ -1978,7 +2281,7 @@
   common_name: Scouler's willow
   order: Malpighiales
   native: true
-  native_region: western North America
+  native_region: western North America, from Alaska to New Mexico
   sencoten_name: SX̱ELE¸IȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.
   inaturalist_taxon_id: 71076
@@ -2001,6 +2304,7 @@
     The Secwepemc people of British Columbia used the wood for smoking fish, drying meat, and
     constructing fishing weirs, the inner bark for lashing, sowing, cordage, and headbands, and
     decoctions of twigs for treating pimples, body odor, and diaper rash.
+  turner_pages: vol. 2, p. 191
 - name: Salix sitchensis
   common_name: Sitka willow
   native: true
@@ -2021,7 +2325,7 @@
 - name: Sequoiadendron giganteum
   common_name: Giant sequoia
   order: Pinales
-  native_region: groves on the western slopes of the Sierra Nevada Mountains of California
+  native_region: about 70 groves on the western slopes of California's Sierra Nevada
   inaturalist_taxon_id: 59567
   description: >-
     Giant sequoia specimens are the most massive trees on Earth. 
@@ -2057,10 +2361,11 @@
 - name: Sorbus intermedia
   common_name: Swedish whitebeam
   order: Rosales
-  native_region: >-
-    southern Sweden, with scattered occurrences in easternmost Denmark (Bornholm), the far southwest
-    of Finland, Estonia, Latvia and northern Poland
+  native_region: southern Sweden and the Baltic coast
   inaturalist_taxon_id: 908314
+  description: >-
+    Swedish whitebeam, now classified as Hedlundia intermedia, is planted as a street tree for its
+    tolerance of wind and poor soil, with white flowers in spring and orange-red berries in autumn.
 - name: Sorbus x
 - name: Stewartia monadelpha
   common_name: Deciduous Camellia
@@ -2068,7 +2373,7 @@
   inaturalist_taxon_id: 452251
 - name: Stewartia pseudocamellia
   common_name: Deciduous camellia
-  native_region: Japan (southern Honshū, Kyūshū, Shikoku) and Korea
+  native_region: the mountains of southern Japan and South Korea
   inaturalist_taxon_id: 133373
   description: >-
     The Latin specific epithet pseudocamellia references the flower’s resemblance to the related
@@ -2091,13 +2396,19 @@
   common_name: Lilac
   order: Lamiales
   inaturalist_taxon_id: 135416
+  cultivars:
+    - name: Ivory Silk
+      match: ivory
+      description: >-
+        A compact Japanese tree lilac with large plumes of creamy white flowers in June, later than
+        other lilacs.
 - name: Syringa vulgaris
   common_name: Common Lilac
   order: Lamiales
   inaturalist_taxon_id: 83072
 - name: Taxodium distichum
   common_name: Bald cypress
-  native_region: the southeastern United States
+  native_region: the swamps and rivers of the southeastern United States, from Delaware to Texas
   inaturalist_taxon_id: 49666
   description: >-
     Bald cypress trees are deciduous (not evergreen) and when growing in swamps have a peculiarity
@@ -2114,7 +2425,9 @@
 - name: Taxus brevifolia
   common_name: Pacific yew
   native: true
-  native_region: Pacific Northwest of North America
+  native_region: >-
+    the Pacific Northwest, from southeast Alaska to northern California and inland to Idaho and
+    Montana
   sencoten_name: ṮEṈ¸KIȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#331.
   inaturalist_taxon_id: 55209
@@ -2130,6 +2443,7 @@
     Traditionally, the wood was used by Native Americans to make bows and paddles for canoes, in
     addition many other items from daily life. The Japanese have also used the wood for decorative
     purposes.
+  turner_pages: vol. 1, p. 340; vol. 2, p. 303
 - name: Taxus cuspidata
   common_name: Japanese Yew
   order: Pinales
@@ -2144,7 +2458,7 @@
 - name: Thuja plicata
   common_name: Western redcedar
   native: true
-  native_region: western North America
+  native_region: the Pacific Northwest, from southeast Alaska to northern California and inland to the Rockies
   sencoten_name: XPȺ¸
   sencoten_url: http://saanich.montler.net/WordList/plants.html#321.
   inaturalist_taxon_id: 48252
@@ -2173,10 +2487,7 @@
     commonly planted around temples as well as in gardens, and also in Europe and North America.
 - name: Tilia americana
   common_name: American basswood
-  native_region: >-
-    eastern North America, from southeast Manitoba east to New Brunswick, southwest to northeast
-    Oklahoma, southeast to South Carolina, and west along the Niobrara River to Cherry County,
-    Nebraska
+  native_region: eastern North America, from Manitoba and New Brunswick south to the Carolinas and Oklahoma
   inaturalist_taxon_id: 54854
   description: >-
     Its flowers provide abundant nectar for insects. The seeds are eaten by chipmunks, mice, and
@@ -2184,7 +2495,7 @@
 - name: Tilia cordata
   common_name: Little-leaf linden
   order: Malvales
-  native_region: from Britain through mainland Europe to the Caucasus and western Asia
+  native_region: most of Europe, from Britain to the Caucasus and western Siberia
   inaturalist_taxon_id: 132600
   description: >-
     Tilia cordata is widely grown as an ornamental tree. It was much planted to form avenues in 17th
@@ -2195,7 +2506,7 @@
   inaturalist_taxon_id: 143800
 - name: Torreya californica
   common_name: California nutmeg
-  native_region: the Pacific Coast Ranges and the foothills of the Sierra Nevada
+  native_region: California's Coast Ranges and Sierra Nevada foothills
   inaturalist_taxon_id: 55193
   description: >-
     California nutmeg is not closely related to true nutmeg. The wood is sometimes used in making Go
@@ -2215,6 +2526,9 @@
   native: true
   sencoten_name: ȾKÁ¸IȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#324.
+  native_region: >-
+    the Pacific Northwest, from southeast Alaska to northern California and inland to Idaho and
+    Montana
   inaturalist_taxon_id: 48254
   description: >-
     Western hemlock is a very shade-tolerant tree; among associated species in the Pacific
@@ -2259,6 +2573,7 @@
     living trees; branches and sapling trunks cut for herring egg harvesting, lining acorn-leaching
     pits, and reinforcing weirs; poles cut for weirs and twisting eelgrass (general, Northwest
     Coast)
+  turner_pages: vol. 1, pp. 340, 344, 351; vol. 2, pp. 179, 185, 195, 303
 - name: Ulmus
   common_name: Elm
   order: Rosales
@@ -2267,11 +2582,18 @@
   common_name: White Elm
   order: Rosales
   inaturalist_taxon_id: 53547
+  cultivars:
+    - name: Brandon
+      description: A vase-shaped American elm selected in Brandon, Manitoba.
 - name: Ulmus carpinifolia
   common_name: Field elm
   order: Rosales
-  native_region: Southern Europe
+  native_region: southern Europe, Turkey and Iran
   inaturalist_taxon_id: 464260
+  description: >-
+    Field elm is the most variable of the European elms, and botanists still disagree on how to divide
+    it. Dutch elm disease killed most mature elms in Europe and eastern North America in the 20th
+    century, but British Columbia has so far been free of it.
 - name: Ulmus glabra
   common_name: Scotch Elm
   order: Rosales
@@ -2304,3 +2626,12 @@
   order: Rosales
   native_region: Japan, Korea, eastern China and Taiwan
   inaturalist_taxon_id: 129055
+  cultivars:
+    - name: Green Vase
+      description: >-
+        A fast-growing, vase-shaped Japanese zelkova, often planted in place of American elm since it
+        resists Dutch elm disease.
+  description: >-
+    Japanese zelkova, keyaki in Japanese, is a relative of the elms. In Japan its strong, handsome
+    timber is used for temple buildings, furniture and taiko drums, and it's a classic bonsai tree. It
+    resists Dutch elm disease, so it's often planted in place of American elm.

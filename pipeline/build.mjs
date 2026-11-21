@@ -149,8 +149,18 @@ for (const s of species) {
   s.blossom = { hue, varieties: Object.fromEntries(Object.entries(varieties).map(([k, v]) => [k.toLowerCase(), v])) };
 }
 
+// Cultivar notes are matched against each tree's City botanical name, eg. "Prunus serrulata kwanzan",
+// by their `match` text, or by their name when the City spells it the same way
+for (const s of species) {
+  if (!s.cultivars) continue;
+  s.cultivars = s.cultivars.map(({ name, match, description }) => {
+    if (!name || !description) throw new Error(`${s.name}: each cultivar needs a name and a description`);
+    return { name, match: (match ?? name).toLowerCase(), description };
+  });
+}
+
 // Only the fields the site displays
-const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "description", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness", "blossom"];
+const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "garden_origin", "description", "turner_pages", "cultivars", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness", "blossom"];
 const output = {
   source: cityLayer,
   updated: new Date().toISOString().slice(0, 10), // when this file was last built from the City's data

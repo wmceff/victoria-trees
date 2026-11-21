@@ -83,6 +83,12 @@ function blossomHue(species, botanicalName) {
   return variety ? species.blossom.varieties[variety] : species.blossom.hue;
 }
 
+// a tree's cultivar note, when the City's botanical name names one we've described
+function cultivarOf(species, botanicalName) {
+  const name = (botanicalName || '').toLowerCase();
+  return (species.cultivars || []).find((c) => name.includes(c.match)) || null;
+}
+
 // how trees look when nothing is highlighted; clearHighlight() goes back to it
 const treePaint = {
   'circle-color': ['case', ['get', 'conifer'], '#35553a', '#8aa65f'],
@@ -259,7 +265,7 @@ function showTree(treeData, properties) {
 
   const origin = species.native
     ? '<span class="tag is-native">Native to Victoria</span>'
-    : species.native_region
+    : species.native_region || species.garden_origin
       ? '<span class="tag is-planted">Planted</span>'
       : '';
 
@@ -270,6 +276,9 @@ function showTree(treeData, properties) {
   if (!species.native && species.native_region) {
     // curated ranges are written to follow "native to", sometimes as "from X to Y"
     details += `<p>Native to ${species.native_region.replace(/^from /, '')}.</p>`;
+  } else if (!species.native && species.garden_origin) {
+    // hybrids and garden plants that don't grow wild: where and when they were raised
+    details += `<p>${species.garden_origin[0].toUpperCase()}${species.garden_origin.slice(1)}.</p>`;
   }
   const size = sizeFacts(treeData, tree, name);
   if (size) {
@@ -280,13 +289,21 @@ function showTree(treeData, properties) {
     details += `<p>Most are in ${species.top_area.name} (${species.top_area.count.toLocaleString()}). ` +
       `<a href="species/${species.slug}/">See where they grow</a></p>`;
   }
+  const cultivar = cultivarOf(species, botanicalName);
+  if (cultivar) {
+    details += `<p><b>'${cultivar.name}'</b>: ${cultivar.description}</p>`;
+  }
   if (species.description) {
     details += `<p>${species.description.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p>`;
   }
+  if (species.turner_pages) {
+    details += `<p class="is-size-7">Indigenous uses from Nancy Turner, <a href="about/#sources"><i>Ancient Pathways, Ancestral Knowledge</i></a> (2014), ${species.turner_pages}.</p>`;
+  }
 
+  const shownName = cultivar ? `${species.name} '${cultivar.name}'` : botanicalName.includes("'") ? botanicalName : species.name;
   document.getElementById('tree-modal-content').innerHTML = `
     <h3>${name}${sencotenName ? ' - ' + sencotenName : ''}</h3>
-    <p><b>${botanicalName.includes("'") ? botanicalName : species.name}</b> ${origin}</p>
+    <p><b>${shownName}</b> ${origin}</p>
     ${details}
     <p><b><a href='https://en.m.wikipedia.org/?title=${botanicalName}' target='_blank'>Wikipedia</a></b></p>
     <p class="is-size-7">Something wrong with this tree?
