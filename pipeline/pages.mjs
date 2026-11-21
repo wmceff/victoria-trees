@@ -18,9 +18,17 @@ export function slugFor(name) {
 
 const escapeHtml = (text) =>
   String(text).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+// JSON for a <script> tag: "<" escaped so a name can never close the tag
+const jsonLd = (data) => JSON.stringify(data).replace(/</g, "\\u003c");
 const formatCount = (n) => n.toLocaleString("en-CA");
 const percentOf = (count, total) => `${(Math.round((count / total) * 10000) / 100).toLocaleString("en-CA")}%`;
 const displayName = (s) => s.common_name || s.name;
+
+// Species pages worth a search result: ones with a curated description, or enough trees
+// that the neighbourhood table says something. The rest stay up for the map's links but
+// are kept out of search results and the sitemap, so they don't read as thin pages.
+const minIndexedTrees = 10;
+export const isIndexed = (s) => Boolean(s.description) || s.tree_count >= minIndexedTrees;
 
 // How common a species is, in words rather than a percentage. The map's tree modal shows it too.
 export function commonnessFact(s, species, total) {
@@ -55,10 +63,21 @@ function boundsOf(points) {
   return b.map((n) => +n.toFixed(5)).join(",");
 }
 
-function layout({ path, title, description, body }) {
+function layout({ path, title, description, body, indexed = true, breadcrumbs = [] }) {
   const depth = path.split("/").filter(Boolean).length;
   const home = depth ? "../".repeat(depth) : "./";
   const canonical = siteUrl + path;
+  const trail = [["Victoria Trees", ""], ...breadcrumbs];
+  const breadcrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map(([name, crumbPath], i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name,
+      item: siteUrl + crumbPath,
+    })),
+  };
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -75,12 +94,16 @@ function layout({ path, title, description, body }) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}">
-    <link rel="canonical" href="${canonical}">
+    <link rel="canonical" href="${canonical}">${indexed ? "" : `
+    <meta name="robots" content="noindex, follow">`}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Victoria Trees">
     <meta property="og:title" content="${escapeHtml(title)}">
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:url" content="${canonical}">
+    <meta property="og:image" content="${siteUrl}og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">${jsonLd(breadcrumbList)}</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap">
     <link rel="stylesheet" href="${home}theme.css">
@@ -156,7 +179,14 @@ function speciesPage(s, ctx) {
   }
 
   body += `<p><a href="https://en.wikipedia.org/wiki/${encodeURIComponent(s.name.replace(/ /g, "_"))}">${escapeHtml(s.name)} on Wikipedia</a></p>`;
-  return layout({ path: `species/${s.slug}/`, title, description, body });
+  return layout({
+    path: `species/${s.slug}/`,
+    title,
+    description,
+    body,
+    indexed: isIndexed(s),
+    breadcrumbs: [["Species", "species/"], [name, `species/${s.slug}/`]],
+  });
 }
 
 function speciesIndexPage(species, ctx) {
@@ -177,6 +207,7 @@ ${rows}
 </table></div>`;
   return layout({
     path: "species/",
+    breadcrumbs: [["Species", "species/"]],
     title: "Tree species in Victoria, BC",
     description: `All ${species.length} tree species on public land in Victoria, BC, from Garry oaks to Japanese cherries, with how many of each the City has on record.`,
     body,
@@ -205,6 +236,7 @@ ${rows}
 </table></div>`;
   return layout({
     path: `neighbourhoods/${area.slug}/`,
+    breadcrumbs: [["Neighbourhoods", "neighbourhoods/"], [area.name, `neighbourhoods/${area.slug}/`]],
     title: `Trees in ${area.name}, Victoria BC`,
     description: `${formatCount(area.total)} trees from ${species.length} species line the streets and parks of ${area.name} in Victoria, BC. The most common are ${top}.`,
     body,
@@ -225,6 +257,7 @@ ${rows}
 </table></div>`;
   return layout({
     path: "neighbourhoods/",
+    breadcrumbs: [["Neighbourhoods", "neighbourhoods/"]],
     title: "Trees by neighbourhood in Victoria, BC",
     description: `Tree species and counts for each of Victoria's ${areas.length} neighbourhoods, from James Bay and Fairfield to Fernwood and Oaklands.`,
     body,
@@ -258,10 +291,11 @@ export function writePages(docsDir, { species, trees, treeAreas, total }) {
     return path;
   };
 
+  for (const s of listed) write(`species/${s.slug}/`, speciesPage(s, ctx));
   const paths = [
     "",
     write("species/", speciesIndexPage(listed, ctx)),
-    ...listed.map((s) => write(`species/${s.slug}/`, speciesPage(s, ctx))),
+    ...listed.filter(isIndexed).map((s) => `species/${s.slug}/`),
     write("neighbourhoods/", areaIndexPage(areas)),
     ...areas.map((a) => write(`neighbourhoods/${a.slug}/`, areaPage(a, ctx))),
   ];
@@ -273,5 +307,32 @@ export function writePages(docsDir, { species, trees, treeAreas, total }) {
   );
   fs.writeFileSync(`${docsDir}/robots.txt`, `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}sitemap.xml\n`);
 
+  writeHomeLinks(docsDir, listed, areas);
+
   return { species: listed.length, neighbourhoods: areas.length, urls: paths.length };
+}
+
+// The map page is hand-written, but its links to the most common species and every
+// neighbourhood come from the data, between these markers in docs/index.html
+const homeLinksStart = "<!-- home-links:start (generated by pipeline/pages.mjs) -->";
+const homeLinksEnd = "<!-- home-links:end -->";
+const homeSpeciesCount = 12;
+
+function writeHomeLinks(docsDir, species, areas) {
+  const file = `${docsDir}/index.html`;
+  const html = fs.readFileSync(file, "utf8");
+  const start = html.indexOf(homeLinksStart);
+  const end = html.indexOf(homeLinksEnd);
+  if (start === -1 || end === -1) throw new Error(`docs/index.html is missing the ${homeLinksStart} markers`);
+
+  const link = (href, text) => `<a href="${href}">${escapeHtml(text)}</a>`;
+  const common = [...species]
+    .sort((a, b) => b.tree_count - a.tree_count)
+    .slice(0, homeSpeciesCount)
+    .map((s) => link(`species/${s.slug}/`, displayName(s)));
+  const block = `${homeLinksStart}
+          <p>The most common trees in Victoria: ${common.join(", ")}, and <a href="species/">${formatCount(species.length)} more species</a>.</p>
+          <p>Trees by neighbourhood: ${areas.map((a) => link(`neighbourhoods/${a.slug}/`, a.name)).join(", ")}.</p>
+          `;
+  fs.writeFileSync(file, html.slice(0, start) + block + html.slice(end));
 }

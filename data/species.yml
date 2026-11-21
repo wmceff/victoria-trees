@@ -17,8 +17,6 @@
   common_name: Greek Fir
   order: Pinales
   inaturalist_taxon_id: 136886
-- name: Abies cephlonica
-  common_name: Greek fir
 - name: Abies concolor
   common_name: White Fir
   order: Pinales
@@ -179,8 +177,6 @@
   common_name: Maple
   order: Sapindales
   inaturalist_taxon_id: 447110
-- name: Acer saccharinium
-  common_name: Silver Maple
 - name: Acer saccharinum
   common_name: Silver Maple
   order: Sapindales
@@ -243,8 +239,6 @@
 
     It is considered a noxious weed and vigorous invasive species, and one of the worst invasive
     plant species in Europe and North America.
-- name: Ailanthus atissima
-  common_name: Tree-of-Heaven
 - name: Albizia julibrissin
   common_name: Mimosa Or Silk Tree
   order: Fabales
@@ -620,12 +614,10 @@
   native_region: Arboretum de Grignon, France
 - name: Crataegus × lavalleei
   common_name: Hybrid cockspurthorn
+  inaturalist_taxon_id: 143798
   description: >-
     The female parent was C. mexicana (sometimes mistakenly called C. pubescens), and the male
     parent is thought to be C. calpodendron.
-- name: Crataegus × lavallei
-  common_name: Hawthorn
-  inaturalist_taxon_id: 143798
 - name: Crataegus × mordenensis
   common_name: Hawthorn
   inaturalist_taxon_id: 706684
@@ -766,8 +758,6 @@
   common_name: Dove Tree
   order: Cornales
   inaturalist_taxon_id: 128506
-- name: Davidia involucrate
-  common_name: Dove Tree
 - name: Elaeagnus angustifolia
   common_name: Russian-Olive
   order: Rosales
@@ -896,8 +886,6 @@
 - name: Halesia monticola
   common_name: Carolina Silverbell
   order: Ericales
-- name: Halesia tetaptera
-  common_name: Carolina Silverbell
 - name: Halesia tetraptera
   common_name: Carolina Silverbell
   order: Ericales
@@ -1063,10 +1051,6 @@
     (1774–1846), a retired cavalry officer in Napoleon's army, at his château de Fromont near Paris.
     He crossed Magnolia denudata with M. liliiflora in 1820, and was impressed with the resulting
     progeny's first precocious flowering in 1826.
-- name: Magnolia × soulangiana
-  common_name: Magnolia
-- name: Magnolia accuminata
-  common_name: Magnolia
 - name: Magnolia acuminata
   common_name: Cucumber-Tree
   order: Magnoliales
@@ -1520,15 +1504,11 @@
   order: Rosales
   native_region: Southeast Europe, Western Asia
   inaturalist_taxon_id: 55837
-- name: Prunus cerastifera
-  common_name: Lindsay Plum
 - name: Prunus cerasus
   common_name: Sour cherry
   order: Rosales
   native_region: much of Europe and southwest Asia
   inaturalist_taxon_id: 68763
-- name: Prunus ceresifera
-  common_name: Cherry Plum
 - name: Prunus domestica
   common_name: European plum
   order: Rosales
@@ -1730,8 +1710,6 @@
   common_name: Gambel oak
   order: Fagales
   inaturalist_taxon_id: 116377
-- name: Quercus garriana
-  common_name: Garry Oak
 - name: Quercus garryana
   common_name: Garry oak
   order: Fagales
@@ -1806,8 +1784,6 @@
   order: Fagales
   native_region: North America, in the eastern and central United States and southeast and south-central Canada
   inaturalist_taxon_id: 49005
-- name: Quercus rubur
-  common_name: Oak
 - name: Quercus velutina
   common_name: Black Oak
   order: Fagales
@@ -1970,8 +1946,6 @@
   common_name: Deciduous Camellia
   order: Ericales
   inaturalist_taxon_id: 452251
-- name: Stewartia pseudo-camellia
-  common_name: Deciduous camellia
 - name: Stewartia pseudocamellia
   common_name: Deciduous camellia
   native_region: Japan (southern Honshū, Kyūshū, Shikoku) and Korea
@@ -1979,10 +1953,6 @@
   description: >-
     The Latin specific epithet pseudocamellia references the flower’s resemblance to the related
     camellia.
-- name: Styrax japonica
-  common_name: Japanese Snowbell
-  order: Ericales
-  inaturalist_taxon_id: 128570
 - name: Styrax japonicus
   common_name: Japanese Snowbell
   order: Ericales
@@ -2115,8 +2085,6 @@
   common_name: Chinese Windmill Palm
   order: Arecales
   inaturalist_taxon_id: 64323
-- name: Trachycarpus fortuneii
-  common_name: Chinese Windmill Palm
 - name: Tsuga canadensis
   common_name: Eastern Hemlock
   order: Pinales

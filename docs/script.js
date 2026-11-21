@@ -159,6 +159,11 @@ function showTree(treeData, properties) {
   const botanicalName = treeData.botanical[botanicalIndex];
   const name = properties.name;
 
+  // GA event, so real visitors (who open trees) can be told apart from bots and link previews
+  if (typeof gtag === 'function') {
+    gtag('event', 'view_tree', { species: species.slug });
+  }
+
   let sencotenName = '';
   if (species.sencoten_name) {
     if (species.sencoten_url) {

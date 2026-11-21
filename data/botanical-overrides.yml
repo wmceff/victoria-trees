@@ -58,3 +58,18 @@ Fagus atropunica: Fagus sylvatica
 Acer cratagifolia: Acer crataegifolium
 Kobus magnolia: Magnolia kobus
 Conifer evergreen: Conifer Evergreen
+
+# Misspelled species names in the City data and extra-trees.yml
+Abies cephlonica: Abies cephalonica
+Acer saccharinium: Acer saccharinum
+Ailanthus atissima: Ailanthus altissima
+Davidia involucrate: Davidia involucrata
+Halesia tetaptera: Halesia tetraptera
+Magnolia accuminata: Magnolia acuminata
+Prunus cerastifera: Prunus cerasifera
+Prunus ceresifera: Prunus cerasifera
+Quercus garriana: Quercus garryana
+Quercus rubur: Quercus robur
+Styrax japonica: Styrax japonicus
+Crataegus × lavallei: Crataegus × lavalleei
+Magnolia × soulangiana: Magnolia × soulangeana
