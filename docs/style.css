@@ -5,11 +5,32 @@
 }
 
 #map-controls .box {
+  display: block;
   cursor: pointer;
   background-color: var(--paper-glass);
   color: var(--ink);
+  border: none;
   border-radius: 100px;
   padding: 1rem;
+  font: inherit;
+}
+#map-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#map-controls #menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 3.5rem;
+  padding: 0.6rem 0 0.5rem;
+  border-radius: 1.75rem;
+}
+#menu-button .menu-button-label {
+  font-size: 0.6875rem;
+  line-height: 1;
+  margin-top: 0.1rem;
 }
 #geolocate .icon.has-text-info {
   color: var(--moss) !important;
@@ -60,4 +81,94 @@
 .tree-place {
   color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+/* desktop: a nav bar like the other pages, above the map; phones get the Menu button */
+#map-navbar {
+  display: none;
+}
+@media (min-width: 769px) {
+  #map-navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  #map-container {
+    top: 3.25rem !important;
+  }
+  #menu-button {
+    display: none !important;
+  }
+}
+
+#hint-season {
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
+/* the menu: a sheet from the bottom of the screen */
+#menu-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+}
+#menu-sheet[hidden] {
+  display: none;
+}
+.menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(47, 59, 44, 0.45);
+}
+.menu-panel.box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 85vh;
+  overflow-y: auto;
+  margin: 0;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom));
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.menu-title {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.menu-links {
+  list-style: none;
+  margin: 0;
+}
+.menu-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.25rem;
+  color: var(--ink);
+  font-size: 1.0625rem;
+  border-bottom: 1px solid var(--paper-edge);
+}
+.menu-links a:hover {
+  color: var(--moss-dark);
+}
+.menu-links .icon {
+  color: var(--moss);
+}
+.tag.is-season {
+  background-color: #f6dde3;
+  color: #8f3150;
+  margin-left: auto;
+}
+.menu-browse {
+  margin-top: 1rem;
+  color: var(--ink-soft);
 }

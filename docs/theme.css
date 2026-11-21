@@ -65,7 +65,9 @@ a:hover {
 .navbar.is-success .navbar-item {
   color: #fffdf6;
 }
-.navbar.is-success a.navbar-item:hover {
+.navbar.is-success a.navbar-item:hover,
+.navbar.is-success .navbar-brand > a.navbar-item:hover,
+.navbar.is-success .navbar-brand > a.navbar-item:focus {
   background-color: var(--moss-dark);
   color: #fffdf6;
 }

@@ -345,7 +345,7 @@ geolocate.on('error', function() {
   showFooterMessage('We couldn\'t get your location. Check that location permissions are enabled and try again.');
 });
 
-// welcome modal: shown on a first visit and from the ? button
+// welcome modal: shown on a first visit and from "How it works" in the menu
 const welcomeModal = document.getElementById('welcome-modal');
 function welcomeSeen() {
   try {
@@ -357,9 +357,45 @@ function welcomeSeen() {
 if (!arrivedFromLink && !welcomeSeen()) {
   welcomeModal.classList.add('is-active');
 }
-document.getElementById('about').addEventListener('click', function() {
+function showWelcome(event) {
+  event.preventDefault();
+  closeMenu();
   welcomeModal.classList.add('is-active');
+}
+document.getElementById('menu-help').addEventListener('click', showWelcome);
+document.getElementById('navbar-help').addEventListener('click', showWelcome);
+
+// the phone menu: a sheet from the bottom with the site's pages
+const menuSheet = document.getElementById('menu-sheet');
+const menuButton = document.getElementById('menu-button');
+function openMenu() {
+  hideHint();
+  menuSheet.hidden = false;
+  menuButton.setAttribute('aria-expanded', 'true');
+  menuSheet.querySelector('.menu-links a').focus();
+  gtag('event', 'open_menu');
+}
+function closeMenu() {
+  if (menuSheet.hidden) return;
+  menuSheet.hidden = true;
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.focus();
+}
+menuButton.addEventListener('click', openMenu);
+document.getElementById('menu-close').addEventListener('click', closeMenu);
+menuSheet.querySelector('.menu-backdrop').addEventListener('click', closeMenu);
+document.getElementById('menu-locate').addEventListener('click', function(event) {
+  event.preventDefault();
+  closeMenu();
+  locateUser();
 });
+
+// February to mid May, when something is usually in flower, the hint and menu point to the blossom calendar
+const today = new Date();
+if (today.getMonth() >= 1 && (today.getMonth() < 4 || (today.getMonth() === 4 && today.getDate() <= 15))) {
+  document.getElementById('hint-season').hidden = false;
+  document.getElementById('menu-season').hidden = false;
+}
 document.getElementById('welcome-locate').addEventListener('click', function() {
   closeModal();
   locateUser();
@@ -383,4 +419,10 @@ document.querySelectorAll('.modal-background').forEach((el) => {
 });
 document.querySelectorAll('.modal-close').forEach((el) => {
   el.addEventListener('click', closeModal);
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key !== 'Escape') return;
+  closeMenu();
+  closeModal();
 });

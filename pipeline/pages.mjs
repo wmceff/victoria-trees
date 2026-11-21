@@ -1,5 +1,5 @@
 // Writes the static, search-indexable pages: one per species and neighbourhood, their
-// index pages, the cherry blossom calendar, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
+// index pages, the cherry blossom calendar, the about page, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
 import fs from "node:fs";
 
 export const siteUrl = "https://victoriatrees.ca/";
@@ -115,6 +115,7 @@ function layout({ path, title, description, body, indexed = true, breadcrumbs = 
       <a class="navbar-item" href="${home}species/">Species</a>
       <a class="navbar-item" href="${home}neighbourhoods/">Neighbourhoods</a>
       <a class="navbar-item" href="${home}blossoms/">Blossoms</a>
+      <a class="navbar-item" href="${home}about/">About</a>
     </div>
   </nav>
   <section class="section">
@@ -483,9 +484,37 @@ ${areaRows}
   };
 }
 
+const feedbackForm = "https://docs.google.com/forms/d/e/1FAIpQLSdNRGWK0oKwgXxuYTQGoDz7d3TIEknw-KqP0TkyjcJsTMIi4Q/viewform";
+
+// What the site is, where its data comes from, and who to credit. Moved here from the map's
+// welcome modal so it's a page people and search engines can find.
+function aboutPage(ctx) {
+  const updated = new Date(`${ctx.updated}T12:00:00`).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" });
+  const body = `<h1>About Victoria Trees</h1>
+<p>Victoria Trees is a map of the <b>${formatCount(ctx.total)}</b> trees on public land in Victoria, BC, from ${formatCount(ctx.listed.length)} species. Find the trees near you, tap one to learn its species, where it comes from and its SENĆOŦEN name, or browse by <a href="../species/">species</a>, <a href="../neighbourhoods/">neighbourhood</a> and <a href="../blossoms/">blossom season</a>.</p>
+<p><a class="button is-success" href="../">Open the map</a></p>
+<h2>Where the data comes from</h2>
+<p>The trees are from the City of Victoria's <a href="http://opendata.victoria.ca/datasets/tree-species">trees dataset</a>, last refreshed on ${escapeHtml(updated)}. We have amended and added to the data where necessary, including trees from other surveys and nearby municipalities.</p>
+<p><b>If a tree is missing</b>, it's most likely on private property, which the City doesn't keep track of. Apps like iNaturalist or PictureThis can help identify it. Spotted a wrong or missing tree, or have an idea? <a href="${feedbackForm}">Send feedback</a>.</p>
+<h2>SENĆOŦEN names</h2>
+<p>Victoria stands on the traditional territories of the lək̓ʷəŋən peoples, the Songhees and Esquimalt Nations. Where known, <a href="https://en.wikipedia.org/wiki/Saanich_dialect">SENĆOŦEN</a> tree names are provided, with a link to a <a href="http://saanich.montler.net/WordList/plants.html">website</a> where you can hear the pronunciation. SENĆOŦEN is the language of the W̱SÁNEĆ People, and a member of the North Straits Salish dialect continuum along with lək̓ʷəŋən.</p>
+<h2>Sources and credits</h2>
+<p>Descriptions are sourced from Wikipedia, and Indigenous uses for trees native to this area are primarily sourced from Nancy Turner's <i>Ancient Pathways, Ancestral Knowledge</i>.</p>
+<p>Built to complement <a href="http://naturevictoria.com">James Clowater</a>'s website <a href="http://treesofvictoria.com/">Trees of Victoria</a>. The <a href="https://github.com/wmceff/victoria-trees">source code is on GitHub</a>.</p>
+<h2>Using it on your phone</h2>
+<p>Add the map to your home screen for quick access. On iPhone, use the Share button, then Add to Home Screen.</p>`;
+  return layout({
+    path: "about/",
+    breadcrumbs: [["About", "about/"]],
+    title: "About Victoria Trees: data, sources and SENĆOŦEN names",
+    description: `Victoria Trees maps the ${formatCount(ctx.total)} trees on public land in Victoria, BC, from the City's open data, with SENĆOŦEN names and Indigenous uses for native trees.`,
+    body,
+  });
+}
+
 // species: every species with its slug and tree_count; trees: [lat, lng, speciesIndex, ...];
 // treeAreas: each tree's City neighbourhood (or null), in the same order as trees
-export function writePages(docsDir, { species, trees, treeAreas, places, botanical, total }) {
+export function writePages(docsDir, { species, trees, treeAreas, places, botanical, total, updated }) {
   const areasByName = new Map();
   trees.forEach((tree, i) => {
     const name = treeAreas[i];
@@ -501,10 +530,10 @@ export function writePages(docsDir, { species, trees, treeAreas, places, botanic
 
   const listed = species.map((s, index) => ({ ...s, index })).filter((s) => s.tree_count > 0);
   const speciesByName = new Map(listed.map((s) => [s.name, s]));
-  const ctx = { species, total, areas, listed, trees, treeAreas, places, botanical, speciesByName };
+  const ctx = { species, total, areas, listed, trees, treeAreas, places, botanical, speciesByName, updated };
 
   // both folders are fully generated, so clear out pages for species that are gone
-  for (const dir of ["species", "neighbourhoods", "blossoms"]) fs.rmSync(`${docsDir}/${dir}`, { recursive: true, force: true });
+  for (const dir of ["species", "neighbourhoods", "blossoms", "about"]) fs.rmSync(`${docsDir}/${dir}`, { recursive: true, force: true });
   const write = (path, html) => {
     fs.mkdirSync(`${docsDir}/${path}`, { recursive: true });
     fs.writeFileSync(`${docsDir}/${path}index.html`, html);
@@ -521,6 +550,7 @@ export function writePages(docsDir, { species, trees, treeAreas, places, botanic
   ];
   const blossoms = blossomPage(ctx);
   paths.push(write("blossoms/", blossoms.html));
+  paths.push(write("about/", aboutPage(ctx)));
 
   const urls = paths.map((p) => `  <url><loc>${siteUrl}${p}</loc></url>`).join("\n");
   fs.writeFileSync(
@@ -555,7 +585,6 @@ function writeHomeLinks(docsDir, species, areas) {
   const block = `${homeLinksStart}
           <p>The most common trees in Victoria: ${common.join(", ")}, and <a href="species/">${formatCount(species.length)} more species</a>.</p>
           <p>Trees by neighbourhood: ${areas.map((a) => link(`neighbourhoods/${a.slug}/`, a.name)).join(", ")}.</p>
-          <p>Blossom season: <a href="blossoms/">when and where to see cherry blossoms in Victoria</a>.</p>
           `;
   fs.writeFileSync(file, html.slice(0, start) + block + html.slice(end));
 }

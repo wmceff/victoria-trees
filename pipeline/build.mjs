@@ -154,7 +154,7 @@ const output = {
 
 fs.mkdirSync(root + "docs/data", { recursive: true });
 fs.writeFileSync(root + "docs/data/trees.json", JSON.stringify(output));
-const pages = writePages(root + "docs", { species, trees, treeAreas, places, botanical, total: trees.length });
+const pages = writePages(root + "docs", { species, trees, treeAreas, places, botanical, total: trees.length, updated: output.updated });
 
 console.log(
   `${cityTreeCount} City trees (${cityTrees.length - cityTreeCount} skipped: no location, no species, or not a tree), ` +

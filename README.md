@@ -46,8 +46,8 @@ The build joins the City's trees with the curated data in `data/`:
 The build lists any species it finds that aren't in `species.yml` yet.
 
 It also generates the search-indexable pages, so they stay in sync with the data:
-`docs/species/`, `docs/neighbourhoods/`, `docs/blossoms/`, `docs/sitemap.xml`, `docs/robots.txt`, and the
-links between the `home-links` markers in `docs/index.html`.
+`docs/species/`, `docs/neighbourhoods/`, `docs/blossoms/`, `docs/about/`, `docs/sitemap.xml`, `docs/robots.txt`, and the
+links between the `home-links` markers in `docs/index.html` (in the map's menu).
 Don't edit these by hand; change `pipeline/pages.mjs` and rebuild. Species pages with no
 description and fewer than 10 trees are marked `noindex` and left out of the sitemap, so
 search engines don't see them as thin pages; adding a description in `species.yml` gets one
