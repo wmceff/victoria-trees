@@ -28,8 +28,8 @@ const mapLoaded = new Promise(function(resolve) {
   map.on('load', resolve);
 });
 
-// links from the species and neighbourhood pages: ?species=<slug> highlights that species,
-// ?bounds=<west,south,east,north> frames an area
+// links from the species and neighbourhood pages: ?species=<slug> highlights that species
+// (or several, comma-separated, as the blossom page links), ?bounds=<west,south,east,north> frames an area
 const urlParams = new URLSearchParams(window.location.search);
 
 const arrivedFromLink = urlParams.has('species') || urlParams.has('bounds');
@@ -45,13 +45,14 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   addCityOutline();
   addTrees(treeData);
 
-  const speciesIndex = treeData.species.findIndex((s) => s.slug === urlParams.get('species'));
-  if (speciesIndex !== -1) {
-    highlightSpecies(treeData, speciesIndex);
+  const slugs = (urlParams.get('species') || '').split(',');
+  const speciesIndexes = treeData.species.flatMap((s, i) => (s.tree_count && slugs.includes(s.slug) ? [i] : []));
+  if (speciesIndexes.length) {
+    highlightSpecies(treeData, speciesIndexes);
   }
   const bounds = (urlParams.get('bounds') || '').split(',').map(Number);
   if (bounds.length === 4 && bounds.every(Number.isFinite)) {
-    map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: 40, animate: false });
+    map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: framePadding, animate: false });
   }
 
   // phones are usually out looking at a tree, so returning visitors who already allowed
@@ -66,8 +67,33 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   showFooterMessage('Whoops, something went wrong loading the trees. Try refreshing the page.');
 });
 
+// blossom trees' flower colours; pages.mjs's blossomHues and theme.css's .hue-* swatches match
+const blossomColours = {
+  'white': '#ffffff',
+  'pale pink': '#f4b6c8',
+  'pink': '#e0739a',
+  'deep pink': '#b02a62'
+};
+
+// a blossom tree's flower colour: its variety's if the City recorded one we know, else its species'
+function blossomHue(species, botanicalName) {
+  if (!species.blossom) return null;
+  const name = (botanicalName || '').toLowerCase();
+  const variety = Object.keys(species.blossom.varieties).find((v) => name.includes(v));
+  return variety ? species.blossom.varieties[variety] : species.blossom.hue;
+}
+
+// how trees look when nothing is highlighted; clearHighlight() goes back to it
+const treePaint = {
+  'circle-color': ['case', ['get', 'conifer'], '#35553a', '#8aa65f'],
+  'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 1, 14, 2, 17, 4, 19, 7, 21, 12],
+  'circle-stroke-color': '#f7f2e3',
+  'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1],
+  'circle-opacity': 0.9
+};
+
 function addTrees(treeData) {
-  const features = treeData.trees.map(function([latitude, longitude, speciesIndex], treeIndex) {
+  const features = treeData.trees.map(function([latitude, longitude, speciesIndex, botanicalIndex], treeIndex) {
     const species = treeData.species[speciesIndex];
     return {
       type: 'Feature',
@@ -76,6 +102,7 @@ function addTrees(treeData) {
         name: species.common_name || species.name,
         conifer: species.order === 'Pinales',
         species: speciesIndex,
+        hue: blossomHue(species, treeData.botanical[botanicalIndex]),
         tree: treeIndex
       }
     };
@@ -90,13 +117,7 @@ function addTrees(treeData) {
     id: 'trees',
     type: 'circle',
     source: 'trees',
-    paint: {
-      'circle-color': ['case', ['get', 'conifer'], '#35553a', '#8aa65f'],
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 1, 14, 2, 17, 4, 19, 7, 21, 12],
-      'circle-stroke-color': '#f7f2e3',
-      'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1],
-      'circle-opacity': 0.9
-    }
+    paint: { ...treePaint }
   });
 
   map.addLayer({
@@ -130,26 +151,89 @@ function addTrees(treeData) {
 }
 
 // colours the species' trees and greys out the rest, then frames them unless ?bounds= is set
-function highlightSpecies(treeData, speciesIndex) {
-  const isSpecies = ['==', ['get', 'species'], speciesIndex];
-  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, '#b5652b', '#b9b4a0']);
+function highlightSpecies(treeData, speciesIndexes) {
+  const isSpecies = ['in', ['get', 'species'], ['literal', speciesIndexes]];
+  // highlighted trees keep their usual colours against the grey; blossom trees are coloured by their
+  // flowers instead, with a dark ring so white ones show on the map
+  const blossoms = speciesIndexes.every((i) => treeData.species[i].blossom);
+  const highlight = blossoms
+    ? ['match', ['get', 'hue'], ...Object.entries(blossomColours).flat(), treePaint['circle-color']]
+    : treePaint['circle-color'];
+  map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, highlight, '#b9b4a0']);
   map.setPaintProperty('trees', 'circle-opacity', ['case', isSpecies, 1, 0.35]);
   map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);
-
-  const points = treeData.trees.filter((tree) => tree[2] === speciesIndex);
-  if (!urlParams.has('bounds')) {
-    const bounds = new maplibregl.LngLatBounds();
-    points.forEach(([latitude, longitude]) => bounds.extend([longitude, latitude]));
-    map.fitBounds(bounds, { padding: 40, maxZoom: 17, animate: false });
+  if (blossoms) {
+    map.setPaintProperty('trees', 'circle-stroke-color', ['case', isSpecies, '#7d2a48', '#f7f2e3']);
+    map.setPaintProperty('trees', 'circle-stroke-width', ['case', isSpecies,
+      ['interpolate', ['linear'], ['zoom'], 11, 0.5, 17, 1.5],
+      ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1]]);
+    map.setPaintProperty('trees', 'circle-radius', ['interpolate', ['linear'], ['zoom'],
+      11, ['case', isSpecies, 1.5, 1], 14, ['case', isSpecies, 3, 2], 17, ['case', isSpecies, 5, 4],
+      19, 7, 21, 12]);
   }
 
-  const species = treeData.species[speciesIndex];
-  const name = species.common_name || species.name;
-  showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in rust. `);
-  const showAll = document.createElement('a');
-  showAll.href = window.location.pathname;
-  showAll.textContent = 'Show all trees';
-  document.getElementById('footer-text').append(showAll);
+  const points = treeData.trees.filter((tree) => speciesIndexes.includes(tree[2]));
+  if (!urlParams.has('bounds')) {
+    const [west, south, east, north] = framingBounds(points);
+    map.fitBounds([[west, south], [east, north]], { padding: framePadding, maxZoom: 17, animate: false });
+  }
+
+  // links that frame an area (a street, a neighbourhood) count the trees in it, not the whole city's
+  const area = (urlParams.get('bounds') || '').split(',').map(Number);
+  if (area.length === 4 && area.every(Number.isFinite)) {
+    const [west, south, east, north] = area;
+    const inArea = points.filter(([lat, lng]) => lat >= south && lat <= north && lng >= west && lng <= east).length;
+    const what = speciesIndexes.length === 1
+      ? (treeData.species[speciesIndexes[0]].common_name || treeData.species[speciesIndexes[0]].name)
+      : blossoms ? 'blossom' : 'highlighted';
+    showFooterMessage(`${inArea.toLocaleString()} ${what} ${inArea === 1 ? 'tree' : 'trees'} in this area`);
+  } else if (speciesIndexes.length === 1) {
+    const species = treeData.species[speciesIndexes[0]];
+    const name = species.common_name || species.name;
+    showFooterMessage(points.length === 1 ? `The only ${name} tree on the map` : `All ${points.length.toLocaleString()} ${name} trees`);
+  } else {
+    showFooterMessage(blossoms
+      ? `${points.length.toLocaleString()} blossom trees, coloured by flower`
+      : `${points.length.toLocaleString()} trees of ${speciesIndexes.length} species`);
+  }
+  if (blossoms) {
+    const legend = document.createElement('span');
+    legend.className = 'hue-legend';
+    // only the colours these trees use
+    const hues = new Set(points.map((tree) => blossomHue(treeData.species[tree[2]], treeData.botanical[tree[3]])));
+    Object.keys(blossomColours).filter((hue) => hues.has(hue)).forEach(function(hue) {
+      const item = document.createElement('span');
+      const swatch = document.createElement('span');
+      swatch.className = 'hue-swatch';
+      swatch.style.backgroundColor = blossomColours[hue];
+      item.append(swatch, hue);
+      legend.append(item);
+    });
+    document.getElementById('footer-text').append(legend);
+  }
+  footerClear.setAttribute('aria-label', 'Clear the highlight and show all trees');
+  footerClear.onclick = clearHighlight;
+}
+
+// back to every tree in its usual colours, without reloading the map
+function clearHighlight() {
+  Object.entries(treePaint).forEach(([property, value]) => map.setPaintProperty('trees', property, value));
+  map.setLayoutProperty('trees', 'circle-sort-key', undefined);
+  hideFooter();
+  history.replaceState(null, '', window.location.pathname);
+}
+
+// room at the top for the message card when framing trees
+const framePadding = { top: 100, bottom: 40, left: 40, right: 40 };
+
+// [west, south, east, north] around the trees; with many trees, around the middle 98% of them,
+// so a few far-off trees (Dominion Brook Park, out on the Saanich Peninsula) don't zoom the map out
+function framingBounds(points) {
+  const lats = points.map((p) => p[0]).sort((a, b) => a - b);
+  const lngs = points.map((p) => p[1]).sort((a, b) => a - b);
+  const trim = points.length >= 50 ? Math.floor(points.length * 0.01) : 0;
+  const last = points.length - 1 - trim;
+  return [lngs[trim], lats[trim], lngs[last], lats[last]];
 }
 
 function showTree(treeData, properties) {
@@ -307,10 +391,17 @@ map.on('zoomstart', function(event) {
 map.on('click', hideHint);
 
 // errors and the species highlight; replaces the hint
+// the × closes a message, or clears a highlight (highlightSpecies sets that)
+const footerClear = document.getElementById('footer-clear');
 function showFooterMessage(message) {
   hideHint();
   document.getElementById('footer-text').textContent = message;
-  document.getElementById('footer').style.display = 'block';
+  document.getElementById('footer').hidden = false;
+  footerClear.setAttribute('aria-label', 'Close');
+  footerClear.onclick = hideFooter;
+}
+function hideFooter() {
+  document.getElementById('footer').hidden = true;
 }
 
 function locationAlreadyAllowed() {
@@ -340,7 +431,7 @@ geolocate.on('error', function() {
   showFooterMessage('We couldn\'t get your location. Check that location permissions are enabled and try again.');
 });
 
-// welcome modal: shown on a first visit and from the ? button
+// welcome modal: shown on a first visit and from "How it works" in the menu
 const welcomeModal = document.getElementById('welcome-modal');
 function welcomeSeen() {
   try {
@@ -352,9 +443,45 @@ function welcomeSeen() {
 if (!arrivedFromLink && !welcomeSeen()) {
   welcomeModal.classList.add('is-active');
 }
-document.getElementById('about').addEventListener('click', function() {
+function showWelcome(event) {
+  event.preventDefault();
+  closeMenu();
   welcomeModal.classList.add('is-active');
+}
+document.getElementById('menu-help').addEventListener('click', showWelcome);
+document.getElementById('navbar-help').addEventListener('click', showWelcome);
+
+// the phone menu: a sheet from the bottom with the site's pages
+const menuSheet = document.getElementById('menu-sheet');
+const menuButton = document.getElementById('menu-button');
+function openMenu() {
+  hideHint();
+  menuSheet.hidden = false;
+  menuButton.setAttribute('aria-expanded', 'true');
+  menuSheet.querySelector('.menu-links a').focus();
+  gtag('event', 'open_menu');
+}
+function closeMenu() {
+  if (menuSheet.hidden) return;
+  menuSheet.hidden = true;
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.focus();
+}
+menuButton.addEventListener('click', openMenu);
+document.getElementById('menu-close').addEventListener('click', closeMenu);
+menuSheet.querySelector('.menu-backdrop').addEventListener('click', closeMenu);
+document.getElementById('menu-locate').addEventListener('click', function(event) {
+  event.preventDefault();
+  closeMenu();
+  locateUser();
 });
+
+// February to mid May, when something is usually in flower, the hint and menu point to the blossom calendar
+const today = new Date();
+if (today.getMonth() >= 1 && (today.getMonth() < 4 || (today.getMonth() === 4 && today.getDate() <= 15))) {
+  document.getElementById('hint-season').hidden = false;
+  document.getElementById('menu-season').hidden = false;
+}
 document.getElementById('welcome-locate').addEventListener('click', function() {
   closeModal();
   locateUser();
@@ -378,4 +505,10 @@ document.querySelectorAll('.modal-background').forEach((el) => {
 });
 document.querySelectorAll('.modal-close').forEach((el) => {
   el.addEventListener('click', closeModal);
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key !== 'Escape') return;
+  closeMenu();
+  closeModal();
 });
