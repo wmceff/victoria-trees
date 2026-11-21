@@ -1,5 +1,5 @@
 // Writes the static, search-indexable pages: one per species and neighbourhood, their
-// index pages, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
+// index pages, the cherry blossom calendar, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
 import fs from "node:fs";
 
 export const siteUrl = "https://victoriatrees.ca/";
@@ -63,7 +63,7 @@ function boundsOf(points) {
   return b.map((n) => +n.toFixed(5)).join(",");
 }
 
-function layout({ path, title, description, body, indexed = true, breadcrumbs = [] }) {
+function layout({ path, title, description, body, indexed = true, breadcrumbs = [], script = "" }) {
   const depth = path.split("/").filter(Boolean).length;
   const home = depth ? "../".repeat(depth) : "./";
   const canonical = siteUrl + path;
@@ -114,6 +114,7 @@ function layout({ path, title, description, body, indexed = true, breadcrumbs = 
       <a class="navbar-item has-text-weight-bold" href="${home}">Victoria Trees</a>
       <a class="navbar-item" href="${home}species/">Species</a>
       <a class="navbar-item" href="${home}neighbourhoods/">Neighbourhoods</a>
+      <a class="navbar-item" href="${home}blossoms/">Blossoms</a>
     </div>
   </nav>
   <section class="section">
@@ -126,7 +127,10 @@ ${body}
       <p>Tree data from the City of Victoria's <a href="http://opendata.victoria.ca/datasets/tree-species">open trees dataset</a>, amended where necessary. Trees on private property aren't included.</p>
       <p><a href="https://github.com/wmceff/victoria-trees">Source on GitHub</a></p>
     </div>
-  </footer>
+  </footer>${script ? `
+  <script>
+${script}
+  </script>` : ""}
 </body>
 </html>
 `;
@@ -163,6 +167,10 @@ function speciesPage(s, ctx) {
     body += `<p>Native to Victoria.</p>\n`;
   }
   body += `<p>${escapeHtml(commonnessFact(s, ctx.species, ctx.total))}</p>\n`;
+  if (s.bloom) {
+    body += `<p>Usually in flower ${escapeHtml(bloomWindow(s.bloom))}, with ${escapeHtml(s.bloom.colour)} blossoms. ` +
+      `<a href="../../blossoms/">See when Victoria's other blossom trees flower</a>.</p>\n`;
+  }
   body += `<p><a class="button is-success" href="../../?species=${s.slug}">Show ${escapeHtml(name)} ${treeWord} on the map</a></p>\n`;
   if (s.description) body += paragraphs(s.description) + "\n";
 
@@ -264,9 +272,220 @@ ${rows}
   });
 }
 
+// The blossom calendar. Bloom windows in species.yml are written "early March", "mid April",
+// "late May"; they're typical years, and a warm or cold spell moves them a week or two.
+// The calendar runs November to May so the winter-flowering cherries fit.
+const calendarMonths = ["November", "December", "January", "February", "March", "April", "May"];
+const monthParts = ["early", "mid", "late"];
+const calendarSlots = calendarMonths.length * monthParts.length;
+
+// "mid March" -> its third-of-a-month slot in the calendar, 0 for early November
+export function bloomSlot(text, speciesName) {
+  const [part, month] = String(text).trim().split(/\s+/);
+  const slot = calendarMonths.indexOf(month) * monthParts.length + monthParts.indexOf(part);
+  if (calendarMonths.indexOf(month) === -1 || monthParts.indexOf(part) === -1) {
+    throw new Error(`${speciesName}: bloom dates are written like "mid March" (${calendarMonths.join(", ")}), not "${text}"`);
+  }
+  return slot;
+}
+const bloomWindow = (bloom) => `from ${bloom.from} to ${bloom.to}`;
+
+// The City's cultivar names, eg. "Prunus serrulata kwanzan" -> "Kwanzan", for the species table
+function varietyName(botanicalName, speciesName) {
+  const words = botanicalName.replace(/[×'‘’"]/g, " ").split(/\s+/).filter((w) => w && w.toLowerCase() !== "x");
+  const speciesWords = speciesName.replace(/[×'‘’"]/g, " ").split(/\s+/).filter((w) => w && w.toLowerCase() !== "x");
+  const rest = words.length > 2 ? words.slice(2) : words.slice(1);
+  if (!rest.length || rest.join(" ").toLowerCase() === speciesWords.slice(1).join(" ").toLowerCase()) return null;
+  return rest.map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase()).join(" ");
+}
+const minVarietyTrees = 10;
+const blossomPlaceCount = 12;
+
+function blossomPage(ctx) {
+  const blossomSpecies = ctx.listed
+    .filter((s) => s.bloom)
+    .map((s) => ({ ...s, start: bloomSlot(s.bloom.from, s.name), end: bloomSlot(s.bloom.to, s.name) }));
+  for (const s of blossomSpecies) {
+    if (s.end < s.start) throw new Error(`${s.name}: bloom "to" (${s.bloom.to}) is before "from" (${s.bloom.from})`);
+  }
+  blossomSpecies.sort((a, b) => a.start - b.start || a.end - b.end || b.tree_count - a.tree_count);
+  const isCherry = (s) => s.name.startsWith("Prunus");
+  const bySpecies = new Map(blossomSpecies.map((s) => [s.index, s]));
+
+  const blossomTrees = [];
+  const varieties = new Map(blossomSpecies.map((s) => [s.index, new Map()]));
+  const topPlace = new Map(blossomSpecies.map((s) => [s.index, new Map()]));
+  const placeTrees = new Map();
+  const areaCounts = new Map();
+  ctx.trees.forEach((tree, i) => {
+    const s = bySpecies.get(tree[2]);
+    if (!s) return;
+    blossomTrees.push(tree);
+    const variety = varietyName(ctx.botanical[tree[3]], s.name);
+    if (variety) varieties.get(s.index).set(variety, (varieties.get(s.index).get(variety) ?? 0) + 1);
+    if (tree[6] !== null) {
+      topPlace.get(s.index).set(tree[6], (topPlace.get(s.index).get(tree[6]) ?? 0) + 1);
+      if (!placeTrees.has(tree[6])) placeTrees.set(tree[6], []);
+      placeTrees.get(tree[6]).push(tree);
+    }
+    const area = ctx.treeAreas[i];
+    if (area) areaCounts.set(area, (areaCounts.get(area) ?? 0) + 1);
+  });
+
+  const cherryCount = blossomTrees.filter((t) => isCherry(bySpecies.get(t[2]))).length;
+  const slugs = (trees) => [...new Set(trees.map((t) => bySpecies.get(t[2]).slug))].join(",");
+  const allSlugs = blossomSpecies.map((s) => s.slug).join(",");
+  // The City's place names: "On Moss St", "In Beacon Hill Park"
+  const placeLabel = (index) => ctx.places[index].replace(/^(On|In|At) /, "");
+  const places = [...placeTrees]
+    .map(([index, trees]) => ({ index, trees, place: ctx.places[index] }))
+    // named City streets and parks only: not lanes and placeholders ("Lane 080-1", "Z Add 01") or addresses
+    .filter((p) => /^(On|In) /.test(p.place) && !/\d/.test(p.place))
+    .sort((a, b) => b.trees.length - a.trees.length);
+
+  // the calendar: a bar for each species across November to May
+  const monthHeads = calendarMonths
+    .map((m, i) => `<span class="bloom-month" style="left:${((i * 3) / calendarSlots) * 100}%">${m.slice(0, 3)}</span>`)
+    .join("");
+  const rows = blossomSpecies
+    .map((s) => {
+      const left = (s.start / calendarSlots) * 100;
+      const width = ((s.end - s.start + 1) / calendarSlots) * 100;
+      const label = `${displayName(s)}: ${bloomWindow(s.bloom)}, ${formatCount(s.tree_count)} trees`;
+      return `<li class="bloom-row" data-start="${s.start}" data-end="${s.end}">
+<a class="bloom-name" href="../species/${s.slug}/">${escapeHtml(displayName(s))}</a>
+<span class="bloom-track"><span class="bloom-bar" style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%" title="${escapeHtml(label)}"></span></span>
+</li>`;
+    })
+    .join("\n");
+  const calendar = `<figure class="bloom-calendar" aria-label="When each blossom tree usually flowers, November to May">
+<div class="bloom-axis"><span class="bloom-name"></span><span class="bloom-track">${monthHeads}<span class="bloom-today" hidden></span></span></div>
+<ol>
+${rows}
+</ol>
+</figure>`;
+
+  const tableRows = blossomSpecies
+    .map((s) => {
+      const top = [...varieties.get(s.index)].filter(([, n]) => n >= minVarietyTrees).sort((a, b) => b[1] - a[1]).slice(0, 3);
+      const [bestPlace] = [...topPlace.get(s.index)].sort((a, b) => b[1] - a[1]);
+      const placeCell = bestPlace && bestPlace[1] >= 3
+        ? `${escapeHtml(placeLabel(bestPlace[0]))} (${formatCount(bestPlace[1])})`
+        : "";
+      const notes = [
+        top.length ? `Varieties on record: ${top.map(([v, n]) => `${v} (${formatCount(n)})`).join(", ")}.` : "",
+        s.bloom.note ?? "",
+      ].filter(Boolean).join(" ");
+      // the notes get a full-width row of their own, so the table stays readable on a phone
+      return `<tbody class="bloom-species" data-start="${s.start}" data-end="${s.end}">` +
+        `<tr><td><a href="../species/${s.slug}/">${escapeHtml(displayName(s))}</a><br><i class="is-size-7">${escapeHtml(s.name)}</i></td>` +
+        `<td>${escapeHtml(s.bloom.from)} to ${escapeHtml(s.bloom.to)}<br><span class="is-size-7">${escapeHtml(s.bloom.colour)}</span></td>` +
+        `<td class="bloom-count"><a href="../?species=${s.slug}">${formatCount(s.tree_count)}</a></td><td>${placeCell}</td></tr>` +
+        (notes ? `\n<tr class="bloom-notes"><td colspan="4" class="is-size-7">${escapeHtml(notes)}</td></tr>` : "") +
+        `</tbody>`;
+    })
+    .join("\n");
+
+  const placeRows = (list) =>
+    list
+      .slice(0, blossomPlaceCount)
+      .map(
+        (p) =>
+          `<tr><td>${escapeHtml(placeLabel(p.index))}</td><td>${formatCount(p.trees.length)}</td>` +
+          `<td><a href="../?species=${slugs(p.trees)}&amp;bounds=${boundsOf(p.trees)}">map</a></td></tr>`
+      )
+      .join("\n");
+  const placeTable = (list) => `<div class="table-container"><table class="table is-narrow is-hoverable">
+<thead><tr><th>Place</th><th>Blossom trees</th><th></th></tr></thead>
+<tbody>
+${placeRows(list)}
+</tbody>
+</table></div>`;
+
+  const areaRows = ctx.areas
+    .map((a) => ({ ...a, count: areaCounts.get(a.name) ?? 0 }))
+    .filter((a) => a.count)
+    .sort((a, b) => b.count - a.count)
+    .map(
+      (a) =>
+        `<tr><td><a href="../neighbourhoods/${a.slug}/">${escapeHtml(a.name)}</a></td><td>${formatCount(a.count)}</td>` +
+        `<td>${percentOf(a.count, a.total)}</td><td><a href="../?species=${allSlugs}&amp;bounds=${a.bounds}">map</a></td></tr>`
+    )
+    .join("\n");
+
+  const streets = places.filter((p) => p.place.startsWith("On "));
+  const parks = places.filter((p) => p.place.startsWith("In "));
+  const body = `<h1>Cherry blossoms in Victoria, BC</h1>
+<p>Victoria has <b>${formatCount(cherryCount)}</b> flowering cherry and plum trees on public land, and ${formatCount(blossomTrees.length - cherryCount)} more magnolias, crabapples, pears and serviceberries. Blossom season starts with the winter-flowering cherries, peaks with the cherry plums and Yoshino cherries in March, and ends with the Japanese cherries and crabapples in early May.</p>
+<p class="bloom-now box" hidden></p>
+<p><a class="button is-success" href="../?species=${allSlugs}">Show all ${formatCount(blossomTrees.length)} blossom trees on the map</a></p>
+<h2>When the blossoms are out</h2>
+<p>Typical flowering times in Victoria. A warm or cold spell moves them a week or two either way, and trees in sheltered spots flower first.</p>
+${calendar}
+<div class="table-container"><table class="table is-narrow is-fullwidth bloom-table">
+<colgroup><col style="width:32%"><col style="width:27%"><col style="width:15%"><col style="width:26%"></colgroup>
+<thead><tr><th>Tree</th><th>Usually in flower</th><th>Trees</th><th>Most on</th></tr></thead>
+${tableRows}
+</table></div>
+<h2>Best streets for cherry blossoms</h2>
+<p>The streets with the most blossom trees on record. Each map link shows just the blossom trees on that street.</p>
+${placeTable(streets)}
+<h2>Parks with the most blossom trees</h2>
+${placeTable(parks)}
+<h2>Blossom trees by neighbourhood</h2>
+<div class="table-container"><table class="table is-narrow is-hoverable">
+<thead><tr><th>Neighbourhood</th><th>Blossom trees</th><th>Share of its trees</th><th></th></tr></thead>
+<tbody>
+${areaRows}
+</tbody>
+</table></div>
+<p class="is-size-7">Counts are the City of Victoria's records for trees on public land; ${formatCount(ctx.speciesByName.get("Prunus")?.tree_count ?? 0)} cherries and plums recorded only as <i>Prunus</i> aren't counted, and trees on private property aren't included.</p>`;
+
+  // which species are usually in flower today, worked out in the visitor's browser
+  const script = `    (function () {
+      var now = new Date();
+      var month = (now.getMonth() + 2) % 12; // November is 0
+      var part = now.getDate() <= 10 ? 0 : now.getDate() <= 20 ? 1 : 2;
+      var slot = month < ${calendarMonths.length} ? month * 3 + part : -1;
+      var flowering = [];
+      document.querySelectorAll('[data-start]').forEach(function (row) {
+        var on = slot >= +row.dataset.start && slot <= +row.dataset.end;
+        row.classList.toggle('is-blooming', on);
+        var name = row.querySelector('a').textContent;
+        if (on && row.tagName === 'LI') flowering.push(name);
+      });
+      var message = document.querySelector('.bloom-now');
+      if (slot === -1) {
+        message.textContent = 'Blossom season is over for this year. The first winter-flowering cherries open in November.';
+      } else if (flowering.length) {
+        message.textContent = 'Usually in flower around now: ' + flowering.join(', ') + '.';
+        var today = document.querySelector('.bloom-today');
+        today.style.left = ((slot + 0.5) / ${calendarSlots} * 100) + '%';
+        today.hidden = false;
+      } else {
+        message.textContent = 'Nothing is usually in flower right now.';
+      }
+      message.hidden = false;
+    })();`;
+
+  return {
+    count: blossomSpecies.length,
+    html: layout({
+      path: "blossoms/",
+      breadcrumbs: [["Cherry blossoms", "blossoms/"]],
+      title: "Cherry blossoms in Victoria, BC: when and where to see them",
+      description:
+        `When Victoria's ${formatCount(cherryCount)} flowering cherry and plum trees bloom, from the first cherry plums in February ` +
+        `to the Japanese cherries in May, and the streets and parks with the most blossoms.`,
+      body,
+      script,
+    }),
+  };
+}
+
 // species: every species with its slug and tree_count; trees: [lat, lng, speciesIndex, ...];
 // treeAreas: each tree's City neighbourhood (or null), in the same order as trees
-export function writePages(docsDir, { species, trees, treeAreas, total }) {
+export function writePages(docsDir, { species, trees, treeAreas, places, botanical, total }) {
   const areasByName = new Map();
   trees.forEach((tree, i) => {
     const name = treeAreas[i];
@@ -281,10 +500,11 @@ export function writePages(docsDir, { species, trees, treeAreas, total }) {
   for (const a of areas) a.bounds = boundsOf(a.points);
 
   const listed = species.map((s, index) => ({ ...s, index })).filter((s) => s.tree_count > 0);
-  const ctx = { species, total, areas };
+  const speciesByName = new Map(listed.map((s) => [s.name, s]));
+  const ctx = { species, total, areas, listed, trees, treeAreas, places, botanical, speciesByName };
 
   // both folders are fully generated, so clear out pages for species that are gone
-  for (const dir of ["species", "neighbourhoods"]) fs.rmSync(`${docsDir}/${dir}`, { recursive: true, force: true });
+  for (const dir of ["species", "neighbourhoods", "blossoms"]) fs.rmSync(`${docsDir}/${dir}`, { recursive: true, force: true });
   const write = (path, html) => {
     fs.mkdirSync(`${docsDir}/${path}`, { recursive: true });
     fs.writeFileSync(`${docsDir}/${path}index.html`, html);
@@ -299,6 +519,8 @@ export function writePages(docsDir, { species, trees, treeAreas, total }) {
     write("neighbourhoods/", areaIndexPage(areas)),
     ...areas.map((a) => write(`neighbourhoods/${a.slug}/`, areaPage(a, ctx))),
   ];
+  const blossoms = blossomPage(ctx);
+  paths.push(write("blossoms/", blossoms.html));
 
   const urls = paths.map((p) => `  <url><loc>${siteUrl}${p}</loc></url>`).join("\n");
   fs.writeFileSync(
@@ -309,7 +531,7 @@ export function writePages(docsDir, { species, trees, treeAreas, total }) {
 
   writeHomeLinks(docsDir, listed, areas);
 
-  return { species: listed.length, neighbourhoods: areas.length, urls: paths.length };
+  return { species: listed.length, neighbourhoods: areas.length, blossomSpecies: blossoms.count, urls: paths.length };
 }
 
 // The map page is hand-written, but its links to the most common species and every
@@ -333,6 +555,7 @@ function writeHomeLinks(docsDir, species, areas) {
   const block = `${homeLinksStart}
           <p>The most common trees in Victoria: ${common.join(", ")}, and <a href="species/">${formatCount(species.length)} more species</a>.</p>
           <p>Trees by neighbourhood: ${areas.map((a) => link(`neighbourhoods/${a.slug}/`, a.name)).join(", ")}.</p>
+          <p>Blossom season: <a href="blossoms/">when and where to see cherry blossoms in Victoria</a>.</p>
           `;
   fs.writeFileSync(file, html.slice(0, start) + block + html.slice(end));
 }

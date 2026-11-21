@@ -101,3 +101,132 @@ hr {
   background-color: var(--bark-pale);
   color: var(--bark);
 }
+
+/* Blossom calendar: a bar per species across November to May */
+.content .bloom-calendar {
+  --blossom: #c4577b;
+  --blossom-pale: #f6dde3;
+  margin: 0 0 1.5rem;
+  text-align: left;
+}
+.content .bloom-calendar ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.content .bloom-calendar li + li {
+  margin-top: 0;
+}
+.bloom-axis,
+.bloom-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.bloom-row {
+  min-height: 1.75rem;
+}
+.bloom-name {
+  flex: 0 0 34%;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bloom-track {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  /* month gridlines, recessive */
+  background-image: linear-gradient(to right, var(--paper-edge) 1px, transparent 1px);
+  background-size: calc(100% / 7) 100%;
+}
+.bloom-axis .bloom-track {
+  height: 1.5rem;
+  background: none;
+}
+.bloom-month {
+  position: absolute;
+  bottom: 0.2rem;
+  padding-left: 3px;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+.bloom-bar {
+  position: absolute;
+  top: 50%;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: 4px;
+  background-color: var(--blossom);
+  cursor: default;
+}
+.bloom-bar::after {
+  /* a bigger hit area for the title tooltip than the thin bar */
+  content: "";
+  position: absolute;
+  inset: -8px 0;
+}
+.bloom-today {
+  position: absolute;
+  top: 0;
+  bottom: -100vh;
+  width: 2px;
+  margin-left: -1px;
+  background-color: var(--moss);
+  z-index: 1;
+  pointer-events: none;
+}
+.bloom-calendar {
+  overflow: hidden;
+}
+.bloom-calendar .is-blooming .bloom-name {
+  font-weight: 600;
+}
+.content table .is-blooming td {
+  background-color: #f6dde3;
+}
+.content table.bloom-table {
+  table-layout: fixed;
+  background-color: transparent;
+}
+.content table.bloom-table .bloom-count {
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .content table.bloom-table td,
+  .content table.bloom-table th {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+}
+.content table.bloom-table tr:not(.bloom-notes) td {
+  border-bottom: none;
+}
+.content table.bloom-table .bloom-notes td {
+  padding-top: 0;
+  color: var(--ink-soft);
+}
+.bloom-now {
+  border-left: 4px solid #c4577b;
+}
+
+/* four nav links don't fit a phone at the default padding */
+@media (max-width: 480px) {
+  .navbar.is-success .navbar-brand {
+    flex-wrap: wrap;
+  }
+  .navbar.is-success .navbar-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .bloom-month {
+    font-size: 0.6875rem;
+    padding-left: 2px;
+  }
+  .bloom-name {
+    font-size: 0.8125rem;
+  }
+}

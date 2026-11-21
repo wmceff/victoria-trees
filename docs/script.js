@@ -28,8 +28,8 @@ const mapLoaded = new Promise(function(resolve) {
   map.on('load', resolve);
 });
 
-// links from the species and neighbourhood pages: ?species=<slug> highlights that species,
-// ?bounds=<west,south,east,north> frames an area
+// links from the species and neighbourhood pages: ?species=<slug> highlights that species
+// (or several, comma-separated, as the blossom page links), ?bounds=<west,south,east,north> frames an area
 const urlParams = new URLSearchParams(window.location.search);
 
 const arrivedFromLink = urlParams.has('species') || urlParams.has('bounds');
@@ -45,9 +45,10 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   addCityOutline();
   addTrees(treeData);
 
-  const speciesIndex = treeData.species.findIndex((s) => s.slug === urlParams.get('species'));
-  if (speciesIndex !== -1) {
-    highlightSpecies(treeData, speciesIndex);
+  const slugs = (urlParams.get('species') || '').split(',');
+  const speciesIndexes = treeData.species.flatMap((s, i) => (s.tree_count && slugs.includes(s.slug) ? [i] : []));
+  if (speciesIndexes.length) {
+    highlightSpecies(treeData, speciesIndexes);
   }
   const bounds = (urlParams.get('bounds') || '').split(',').map(Number);
   if (bounds.length === 4 && bounds.every(Number.isFinite)) {
@@ -130,22 +131,26 @@ function addTrees(treeData) {
 }
 
 // colours the species' trees and greys out the rest, then frames them unless ?bounds= is set
-function highlightSpecies(treeData, speciesIndex) {
-  const isSpecies = ['==', ['get', 'species'], speciesIndex];
+function highlightSpecies(treeData, speciesIndexes) {
+  const isSpecies = ['in', ['get', 'species'], ['literal', speciesIndexes]];
   map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, '#b5652b', '#b9b4a0']);
   map.setPaintProperty('trees', 'circle-opacity', ['case', isSpecies, 1, 0.35]);
   map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);
 
-  const points = treeData.trees.filter((tree) => tree[2] === speciesIndex);
+  const points = treeData.trees.filter((tree) => speciesIndexes.includes(tree[2]));
   if (!urlParams.has('bounds')) {
     const bounds = new maplibregl.LngLatBounds();
     points.forEach(([latitude, longitude]) => bounds.extend([longitude, latitude]));
     map.fitBounds(bounds, { padding: 40, maxZoom: 17, animate: false });
   }
 
-  const species = treeData.species[speciesIndex];
-  const name = species.common_name || species.name;
-  showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in rust. `);
+  if (speciesIndexes.length === 1) {
+    const species = treeData.species[speciesIndexes[0]];
+    const name = species.common_name || species.name;
+    showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} in rust. `);
+  } else {
+    showFooterMessage(`Showing ${points.length.toLocaleString()} trees of ${speciesIndexes.length} species in rust. `);
+  }
   const showAll = document.createElement('a');
   showAll.href = window.location.pathname;
   showAll.textContent = 'Show all trees';

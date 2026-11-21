@@ -154,13 +154,16 @@ const output = {
 
 fs.mkdirSync(root + "docs/data", { recursive: true });
 fs.writeFileSync(root + "docs/data/trees.json", JSON.stringify(output));
-const pages = writePages(root + "docs", { species, trees, treeAreas, total: trees.length });
+const pages = writePages(root + "docs", { species, trees, treeAreas, places, botanical, total: trees.length });
 
 console.log(
   `${cityTreeCount} City trees (${cityTrees.length - cityTreeCount} skipped: no location, no species, or not a tree), ` +
     `${extraTrees.length} extra trees, ${species.length} species`
 );
-console.log(`${pages.species} species pages, ${pages.neighbourhoods} neighbourhood pages, ${pages.urls} URLs in sitemap.xml`);
+console.log(
+  `${pages.species} species pages, ${pages.neighbourhoods} neighbourhood pages, ` +
+    `a blossom page with ${pages.blossomSpecies} species, ${pages.urls} URLs in sitemap.xml`
+);
 if (newSpecies.size) {
   console.log(`\n${newSpecies.size} species not in data/species.yml (add them, or map them in data/botanical-overrides.yml):`);
   for (const name of [...newSpecies].sort()) console.log(`  ${name} (${species[speciesIndex.get(name)].tree_count})`);
