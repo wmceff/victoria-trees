@@ -62,8 +62,10 @@ a:hover {
 .navbar.is-success {
   background-color: var(--moss);
 }
+/* the links: a step smaller and softer than the name, so the name reads as the brand */
 .navbar.is-success .navbar-item {
-  color: #fffdf6;
+  color: rgba(255, 253, 246, 0.88);
+  font-size: 0.9375rem;
 }
 .navbar.is-success a.navbar-item:hover,
 .navbar.is-success .navbar-brand > a.navbar-item:hover,
@@ -71,8 +73,17 @@ a:hover {
   background-color: var(--moss-dark);
   color: #fffdf6;
 }
+/* the site name, in the heading font: on the left, with the links pushed to the right */
+.navbar.is-success .navbar-brand {
+  flex: 1;
+}
 .navbar.is-success .navbar-brand > .navbar-item:first-child {
   font-family: var(--heading-font);
+  font-size: 1.25rem;
+  color: #fffdf6;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer {
@@ -214,13 +225,20 @@ hr {
 }
 
 /* four nav links don't fit a phone at the default padding */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .navbar.is-success .navbar-brand {
     flex-wrap: wrap;
   }
+  .navbar.is-success .navbar-brand > .navbar-item:first-child {
+    flex-basis: 100%;
+    padding-bottom: 0.25rem;
+  }
   .navbar.is-success .navbar-item {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+  .navbar.is-success .navbar-brand > .navbar-item:nth-child(2) {
+    padding-left: 1rem;
   }
 }
 @media (max-width: 480px) {
