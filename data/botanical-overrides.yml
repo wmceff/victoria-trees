@@ -9,7 +9,7 @@ Amelanchier grandiflora 'Autumn: Amelanchier × grandiflora
 Black locust: Robinia pseudoacacia
 Chamaecyparis nootkatensis: Cupressus nootkatensis
 Chameacyparis: Chamaecyparis
-Cornus x Eddies White Wonder: Cornus x
+Cornus x Eddies White Wonder: Cornus × 'Eddie's White Wonder'
 Cotoneaster x watereri: Cotoneaster x
 Crataegus grignonensis: Crataegus × grignonensis
 Crataegus x lavallei: Crataegus × lavalleei
@@ -73,3 +73,14 @@ Quercus rubur: Quercus robur
 Styrax japonica: Styrax japonicus
 Crataegus × lavallei: Crataegus × lavalleei
 Magnolia × soulangiana: Magnolia × soulangeana
+
+# Duplicates and misspellings in the City's data, merged into the species they belong to
+Aesculus briottii: Aesculus × carnea
+Asminia triloba: Asimina triloba
+Crataegus mordensis: Crataegus × mordenensis
+Fraxinus oxycarpa: Fraxinus angustifolia
+Malus adams: Malus
+Malus apple: Malus domestica
+Malus red: Malus
+Pinus thunbergii: Pinus thunbergiana
+Pistachia chinensis: Pistacia chinensis

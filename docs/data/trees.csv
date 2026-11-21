@@ -1422,7 +1422,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.41328,-123.363208,Prunus laurocerasus,Cherry laurel,Prunus laurocerasus,10,50,In Beacon Hill Park,Fairfield
 48.412808,-123.363359,Sciadopitys verticillata,Umbrella-Pine,Sciadopitys verticillata,3,8,In Beacon Hill Park,Fairfield
 48.41257,-123.363358,Crataegus,Hawthorn,Crataegus,9,29,In Beacon Hill Park,Fairfield
-48.412707,-123.363788,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',,3,In Beacon Hill Park,Fairfield
+48.412707,-123.363788,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',,3,In Beacon Hill Park,Fairfield
 48.412524,-123.363477,Juniperus,Juniper,Juniperus,4,14,In Beacon Hill Park,Fairfield
 48.412341,-123.363462,Salix × sepulcralis 'Chrysocoma',Weeping Golden Willow,Salix x sepulcralis Simonkai,18,105,In Beacon Hill Park,Fairfield
 48.412411,-123.363266,Sequoiadendron giganteum,Giant sequoia,Sequoiadendron giganteum,24,155,In Beacon Hill Park,Fairfield
@@ -1970,7 +1970,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.414054,-123.360943,Fraxinus angustifolia,Narrow-leafed ash,Fraxinus angustifolia,10,23,In Beacon Hill Park,Fairfield
 48.415472,-123.362479,Quercus garryana,Garry oak,Quercus garryana,18,104,In Beacon Hill Park,Fairfield
 48.415249,-123.362581,Metasequoia glyptostroboides,Dawn redwood,Metasequoia glyptostroboides,15,64,In Beacon Hill Park,Fairfield
-48.415145,-123.362469,Malus apple,Apple,Malus apple,1.5,1,In Beacon Hill Park,Fairfield
+48.415145,-123.362469,Malus domestica,Apple,Malus apple,1.5,1,In Beacon Hill Park,Fairfield
 48.414883,-123.361707,Quercus garryana,Garry oak,Quercus garryana,24,117,In Beacon Hill Park,Fairfield
 48.415138,-123.362189,Quercus garryana,Garry oak,Quercus garryana,22,106,In Beacon Hill Park,Fairfield
 48.414826,-123.362293,Quercus garryana,Garry oak,Quercus garryana,20,124,In Beacon Hill Park,Fairfield
@@ -3167,7 +3167,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.412716,-123.366029,Prunus subhirtella,Winter-flowering cherry,Prunus subhirtella,7,28,In Beacon Hill Park,James Bay
 48.412685,-123.366208,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos skylin,5,6,In Beacon Hill Park,James Bay
 48.412668,-123.366344,Prunus subhirtella,Winter-flowering cherry,Prunus subhirtella,6,31,In Beacon Hill Park,James Bay
-48.412685,-123.366562,Malus red,Apple,Malus red baron,7,24,In Beacon Hill Park,James Bay
+48.412685,-123.366562,Malus,Apple,Malus red baron,7,24,In Beacon Hill Park,James Bay
 48.41289,-123.366707,Acer cappadocicum,Maple,Acer cappadocicum,16,71,In Beacon Hill Park,James Bay
 48.413467,-123.366389,Vitex angus-castus,Chaste Tree,Vitex angus-castus,1.5,6,In Beacon Hill Park,James Bay
 48.413452,-123.366106,Magnolia,Magnolia,Magnolia 'Vulcan',3,6,In Beacon Hill Park,James Bay
@@ -7406,7 +7406,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410364,-123.34389,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,6,27,In Ross Bay Cemetery,Fairfield
 48.410406,-123.344074,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,9,47,In Ross Bay Cemetery,Fairfield
 48.410481,-123.34408,Pinus contorta,Lodgepole pine,Pinus contorta,12,49,In Ross Bay Cemetery,Fairfield
-48.410472,-123.343979,Malus red,Apple,Malus red jewel,5,31,In Ross Bay Cemetery,Fairfield
+48.410472,-123.343979,Malus,Apple,Malus red jewel,5,31,In Ross Bay Cemetery,Fairfield
 48.410538,-123.344099,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,54,In Ross Bay Cemetery,Fairfield
 48.410004,-123.343635,Liriodendron tulipifera,Tulip tree,Liriodendron tulipifera 'Arnold',4,4,In Ross Bay Cemetery,Fairfield
 48.410671,-123.343897,Platanus × acerifolia,London plane,Platanus hybrida,16,80,In Ross Bay Cemetery,Fairfield
@@ -7522,7 +7522,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410341,-123.343764,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,8,26,In Ross Bay Cemetery,Fairfield
 48.410466,-123.343762,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,12,33,In Ross Bay Cemetery,Fairfield
 48.410618,-123.343775,Pinus nigra,Austrian pine,Pinus nigra,20,78,In Ross Bay Cemetery,Fairfield
-48.410583,-123.343577,Malus red,Apple,Malus red jewel,6,25,In Ross Bay Cemetery,Fairfield
+48.410583,-123.343577,Malus,Apple,Malus red jewel,6,25,In Ross Bay Cemetery,Fairfield
 48.410849,-123.343679,Quercus robur,Common oak,Quercus robur,20,97,In Ross Bay Cemetery,Fairfield
 48.410526,-123.343604,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,8,32,In Ross Bay Cemetery,Fairfield
 48.410474,-123.343602,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,7,27,In Ross Bay Cemetery,Fairfield
@@ -7572,7 +7572,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.409513,-123.343746,Pinus nigra,Austrian pine,Pinus nigra,14,62,In Ross Bay Cemetery,Fairfield
 48.409556,-123.343743,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,5,23,In Ross Bay Cemetery,Fairfield
 48.409947,-123.343714,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,9,28,In Ross Bay Cemetery,Fairfield
-48.410073,-123.343622,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,2,In Ross Bay Cemetery,Fairfield
+48.410073,-123.343622,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,2,In Ross Bay Cemetery,Fairfield
 48.409912,-123.343641,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,12,38,In Ross Bay Cemetery,Fairfield
 48.40977,-123.343653,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,16,98,In Ross Bay Cemetery,Fairfield
 48.409619,-123.343719,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,8,21,In Ross Bay Cemetery,Fairfield
@@ -7730,8 +7730,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.429159,-123.380923,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,12,In Vista Park,Victoria West
 48.429197,-123.380829,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,14,In Vista Park,Victoria West
 48.429227,-123.380731,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,12,In Vista Park,Victoria West
-48.429245,-123.380627,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,2,In Vista Park,Victoria West
-48.429254,-123.380546,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,3,In Vista Park,Victoria West
+48.429245,-123.380627,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,2,In Vista Park,Victoria West
+48.429254,-123.380546,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,3,In Vista Park,Victoria West
 48.427885,-123.380749,Tilia americana,American basswood,Tilia americana,10,32,In Vista Park,Victoria West
 48.427926,-123.380827,Tilia americana,American basswood,Tilia americana,9,26,In Vista Park,Victoria West
 48.427979,-123.380906,Tilia americana,American basswood,Tilia americana,9,26,In Vista Park,Victoria West
@@ -7836,8 +7836,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.417732,-123.364247,Quercus garryana,Garry oak,Quercus garryana,3,2,In Beacon Hill Park,James Bay
 48.41057,-123.359775,Eucalyptus,Gum Tree,Eucalyptus,12,43,In Beacon Hill Park,Fairfield
 48.413194,-123.334661,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,20,110,In Hollywood Park,Gonzales
-48.439965,-123.336578,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,3,In Oaklands Park,Oaklands
-48.439964,-123.336319,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,4,In Oaklands Park,Oaklands
+48.439965,-123.336578,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,3,In Oaklands Park,Oaklands
+48.439964,-123.336319,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,4,In Oaklands Park,Oaklands
 48.439956,-123.336105,Prunus serrulata,Japanese cherry,Prunus serrulata,5,10,In Oaklands Park,Oaklands
 48.436755,-123.352277,Platanus × acerifolia,London plane,Platanus hybrida,16,48,In Blackwood Green,Hillside/Quadra
 48.433737,-123.343108,Aesculus indica,Indian horse-chestnut,Aesculus indica,8,54,In Bay Street Playground,Fernwood
@@ -8530,7 +8530,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.445766,-123.351639,Quercus garryana,Garry oak,Quercus garryana,12,34,In Summit Park,Hillside/Quadra
 48.445656,-123.35168,Quercus garryana,Garry oak,Quercus garryana,16,50,In Summit Park,Hillside/Quadra
 48.410837,-123.344121,Quercus rubra,Northern red oak,Quercus rubra,14,42,In Ross Bay Cemetery,Fairfield
-48.410951,-123.34407,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,5,In Ross Bay Cemetery,Fairfield
+48.410951,-123.34407,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,5,In Ross Bay Cemetery,Fairfield
 48.411081,-123.343983,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,9,33,In Ross Bay Cemetery,Fairfield
 48.41125,-123.34387,Catalpa bignonioides,Southern Catalpa,Catalpa bignonioides,9,63,In Ross Bay Cemetery,Fairfield
 48.4114,-123.343767,Robinia pseudoacacia,Black locust,Robinia pseudoacacia,14,59,In Ross Bay Cemetery,Fairfield
@@ -8651,7 +8651,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.428672,-123.364931,Sequoiadendron giganteum,Giant sequoia,Sequoiadendron giganteum,16,152,In Centennial Square,Downtown
 48.428767,-123.364797,Prunus serrulata,Japanese cherry,Prunus serrulata 'Shirofugen',5,89,In Centennial Square,Downtown
 48.426524,-123.379934,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',3,4,In Songhees Walkway,Victoria West
-48.426493,-123.380058,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,5,In Songhees Walkway,Victoria West
+48.426493,-123.380058,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,5,In Songhees Walkway,Victoria West
 48.42656,-123.380217,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,35,In Songhees Walkway,Victoria West
 48.426394,-123.380437,Pinus nigra,Austrian pine,Pinus nigra,16,57,In Songhees Walkway,Victoria West
 48.426336,-123.380119,Pinus nigra,Austrian pine,Pinus nigra,14,38,In Songhees Walkway,Victoria West
@@ -9657,7 +9657,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.44705,-123.361509,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,9,42,On Quadra St,Hillside/Quadra
 48.447164,-123.361539,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,7,14,On Quadra St,Hillside/Quadra
 48.447372,-123.361591,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,9,22,On Quadra St,Hillside/Quadra
-48.447729,-123.361697,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Quadra St,Hillside/Quadra
+48.447729,-123.361697,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Quadra St,Hillside/Quadra
 48.448252,-123.361839,Betula papyrifera,Paper birch,Betula papyrifera,9,26,On Quadra St,Hillside/Quadra
 48.448368,-123.361873,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,10,21,On Quadra St,Hillside/Quadra
 48.448544,-123.361922,Ulmus americana,White Elm,Ulmus americana 'Brandon',5,9,On Quadra St,Hillside/Quadra
@@ -9702,7 +9702,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.447542,-123.362869,Fraxinus,Ash,Fraxinus,4,9,On Glasgow St,Hillside/Quadra
 48.4476,-123.362884,Betula,Birch,Betula,2,4,On Glasgow St,Hillside/Quadra
 48.447627,-123.36296,Quercus robur,Common oak,Quercus robur,2,5,On Reed St,Hillside/Quadra
-48.44761,-123.36314,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Reed St,Hillside/Quadra
+48.44761,-123.36314,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Reed St,Hillside/Quadra
 48.44758,-123.36332,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,31,On Reed St,Hillside/Quadra
 48.447548,-123.363457,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,34,On Reed St,Hillside/Quadra
 48.447484,-123.363659,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,38,On Reed St,Hillside/Quadra
@@ -9996,9 +9996,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.425878,-123.369619,Cornus florida,Flowering dogwood,Cornus florida,4,18,In Bastion Square,Downtown
 48.428795,-123.365182,Quercus garryana,Garry oak,Quercus garryana,7,14,In Centennial Square,Downtown
 48.428666,-123.365157,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,13,68,In Centennial Square,Downtown
-48.42883,-123.366035,Cornus x,Dogwood,Cornus x Eddies White Wonder,6,9,In Centennial Square,Downtown
-48.428854,-123.366081,Cornus x,Dogwood,Cornus x Eddies White Wonder,4,9,In Centennial Square,Downtown
-48.428873,-123.366121,Cornus x,Dogwood,Cornus x Eddies White Wonder,6,11.5,In Centennial Square,Downtown
+48.42883,-123.366035,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,6,9,In Centennial Square,Downtown
+48.428854,-123.366081,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,4,9,In Centennial Square,Downtown
+48.428873,-123.366121,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,6,11.5,In Centennial Square,Downtown
 48.428867,-123.365709,Quercus garryana,Garry oak,Quercus garryana,16,63,In Centennial Square,Downtown
 48.428898,-123.365912,Cercidiphyllum japonicum,Katsura,Cercidiphyllum japonicum,12,31,In Centennial Square,Downtown
 48.42889,-123.365957,Cercidiphyllum japonicum,Katsura,Cercidiphyllum japonicum,10,28,In Centennial Square,Downtown
@@ -10507,7 +10507,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.439413,-123.356323,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,31,On Graham St,Hillside/Quadra
 48.439255,-123.356269,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,29,On Graham St,Hillside/Quadra
 48.438999,-123.356191,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,54,On Graham St,Hillside/Quadra
-48.438821,-123.356158,Aesculus briottii,Horse Chestnut,Aesculus briottii,1.5,6,On Graham St,Hillside/Quadra
+48.438821,-123.356158,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,1.5,6,On Graham St,Hillside/Quadra
 48.438711,-123.356113,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,49,On Graham St,Hillside/Quadra
 48.438588,-123.356072,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,39,On Graham St,Hillside/Quadra
 48.438538,-123.356052,Ginkgo biloba,Ginkgo,Ginkgo biloba,3,3,On Graham St,Hillside/Quadra
@@ -10719,11 +10719,11 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.441657,-123.359948,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,37,On Quadra St,Hillside/Quadra
 48.441817,-123.360003,Ulmus americana,White Elm,Ulmus americana 'Brandon',6,14,On Quadra St,Hillside/Quadra
 48.441988,-123.36005,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,5,6,On Quadra St,Hillside/Quadra
-48.442384,-123.360287,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,4,On Topaz Ave,Hillside/Quadra
+48.442384,-123.360287,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,4,On Topaz Ave,Hillside/Quadra
 48.442332,-123.360679,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,58,On Topaz Ave,Hillside/Quadra
-48.442318,-123.360767,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,5,On Topaz Ave,Hillside/Quadra
+48.442318,-123.360767,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,5,On Topaz Ave,Hillside/Quadra
 48.442299,-123.36091,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,24,On Topaz Ave,Hillside/Quadra
-48.442281,-123.361075,Aesculus briottii,Horse Chestnut,Aesculus briottii,6,8,On Topaz Ave,Hillside/Quadra
+48.442281,-123.361075,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,6,8,On Topaz Ave,Hillside/Quadra
 48.442251,-123.361348,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,60,On Topaz Ave,Hillside/Quadra
 48.444386,-123.361657,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,12,On Spruce Ave,Hillside/Quadra
 48.444415,-123.361544,Prunus cerasifera,Cherry plum,Prunus cerasifera,5,10,On Spruce Ave,Hillside/Quadra
@@ -10939,7 +10939,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.448404,-123.353187,Quercus garryana,Garry oak,Quercus garryana,3,3,On Highview St,Hillside/Quadra
 48.448303,-123.353141,Prunus cerasifera,Cherry plum,Prunus cerasifera,9,42,On Highview St,Hillside/Quadra
 48.448246,-123.352905,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,59,On Merritt St,Hillside/Quadra
-48.448262,-123.35278,Malus red,Apple,Malus red jewel,4,6,On Merritt St,Hillside/Quadra
+48.448262,-123.35278,Malus,Apple,Malus red jewel,4,6,On Merritt St,Hillside/Quadra
 48.448296,-123.352548,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,13,55,On Merritt St,Hillside/Quadra
 48.448316,-123.35235,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,7,54,On Merritt St,Hillside/Quadra
 48.448342,-123.352194,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,52,On Merritt St,Hillside/Quadra
@@ -11216,7 +11216,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.441026,-123.356945,Carpinus betulus,Common hornbeam,Carpinus betulus,2,6,On Graham St,Hillside/Quadra
 48.441167,-123.356989,Quercus palustris,Pin oak,Quercus palustris,10,24,On Graham St,Hillside/Quadra
 48.441382,-123.355783,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,1,3,On Vista Hts,Hillside/Quadra
-48.441325,-123.356178,Cornus x,Dogwood,Cornus x Eddies White Wonder,4,7,On Vista Hts,Hillside/Quadra
+48.441325,-123.356178,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,4,7,On Vista Hts,Hillside/Quadra
 48.44131,-123.356369,Betula papyrifera,Paper birch,Betula papyrifera,12,56,On Vista Hts,Hillside/Quadra
 48.441281,-123.356568,Malus,Apple,Malus,5,8,On Vista Hts,Hillside/Quadra
 48.441187,-123.35685,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,58,On Graham St,Hillside/Quadra
@@ -11459,7 +11459,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.446633,-123.349696,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,5,18,On Cook St,Hillside/Quadra
 48.446809,-123.349743,Betula papyrifera,Paper birch,Betula papyrifera,10,30,On Cook St,Hillside/Quadra
 48.44678,-123.350038,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,5,35,On Lang St,Hillside/Quadra
-48.446755,-123.350265,Pistachia chinensis,Pistachio,Pistachia chinensis,4,5,On Lang St,Hillside/Quadra
+48.446755,-123.350265,Pistacia chinensis,Chinese pistache,Pistachia chinensis,4,5,On Lang St,Hillside/Quadra
 48.446725,-123.350464,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,7,51,On Lang St,Hillside/Quadra
 48.446678,-123.350829,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,7,46,On Lang St,Hillside/Quadra
 48.446653,-123.351039,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,6,43,On Lang St,Hillside/Quadra
@@ -11474,7 +11474,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.446779,-123.351258,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,5,33,On Lang St,Hillside/Quadra
 48.446792,-123.351094,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,4,27,On Lang St,Hillside/Quadra
 48.446817,-123.350917,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,5,35,On Lang St,Hillside/Quadra
-48.446848,-123.350733,Pistachia chinensis,Pistachio,Pistachia chinensis,4,5,On Lang St,Hillside/Quadra
+48.446848,-123.350733,Pistacia chinensis,Chinese pistache,Pistachia chinensis,4,5,On Lang St,Hillside/Quadra
 48.446872,-123.350516,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,7,49,On Lang St,Hillside/Quadra
 48.446931,-123.350089,Magnolia acuminata,Cucumber-Tree,Magnolia accuminata 'Yellow Bird',3,3,On Lang St,Hillside/Quadra
 48.446956,-123.3499,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,4,26,On Lang St,Hillside/Quadra
@@ -11526,7 +11526,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.444094,-123.354921,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,20,On Blackwood St,Hillside/Quadra
 48.443888,-123.354834,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha Paul's Scarlet,6,23,On Blackwood St,Hillside/Quadra
 48.443772,-123.354797,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha Paul's Scarlet,7,32,On Blackwood St,Hillside/Quadra
-48.443624,-123.354762,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,4,On Blackwood St,Hillside/Quadra
+48.443624,-123.354762,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,4,On Blackwood St,Hillside/Quadra
 48.443487,-123.354717,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha Paul's Scarlet,7,26,On Blackwood St,Hillside/Quadra
 48.443298,-123.354657,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha Paul's Scarlet,5,20,On Blackwood St,Hillside/Quadra
 48.44349,-123.352848,Ilex aquifolium,English holly,Ilex aquifolium,5,50,On Topaz Ave,Hillside/Quadra
@@ -11694,7 +11694,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.442555,-123.357377,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,46,On Graham St,Hillside/Quadra
 48.442707,-123.357434,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,6,40,On Graham St,Hillside/Quadra
 48.448581,-123.363309,Acer platanoides,Norway maple,Acer platanoides,5,8,On Glasgow St,Hillside/Quadra
-48.447716,-123.363041,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Reed St,Hillside/Quadra
+48.447716,-123.363041,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Reed St,Hillside/Quadra
 48.44657,-123.366181,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',4,4,On Alder St,Hillside/Quadra
 48.446714,-123.366225,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,34,On Alder St,Hillside/Quadra
 48.446876,-123.366274,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,56,On Alder St,Hillside/Quadra
@@ -11742,7 +11742,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.446904,-123.364732,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,40,On Reed St,Hillside/Quadra
 48.446977,-123.364631,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,4,12,On Reed St,Hillside/Quadra
 48.447032,-123.364549,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,4,16,On Reed St,Hillside/Quadra
-48.447107,-123.36441,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,3,On Reed St,Hillside/Quadra
+48.447107,-123.36441,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,3,On Reed St,Hillside/Quadra
 48.447211,-123.364272,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,36,On Reed St,Hillside/Quadra
 48.447332,-123.3641,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,5,13,On Reed St,Hillside/Quadra
 48.447403,-123.363993,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,33,On Reed St,Hillside/Quadra
@@ -11834,9 +11834,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437085,-123.387605,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,14,62,In Banfield Park,Victoria West
 48.437193,-123.387953,Tilia cordata,Little-leaf linden,Tilia cordata,5,11,In Banfield Park,Victoria West
 48.436703,-123.387872,Cedrus atlantica,Atlas cedar,Cedrus atlantica,12,53,In Banfield Park,Victoria West
-48.436882,-123.387973,Malus apple,Apple,Malus apple,2,1,In Banfield Park,Victoria West
-48.436917,-123.387982,Malus apple,Apple,Malus apple,2,1,In Banfield Park,Victoria West
-48.436949,-123.387994,Malus apple,Apple,Malus apple,1,1,In Banfield Park,Victoria West
+48.436882,-123.387973,Malus domestica,Apple,Malus apple,2,1,In Banfield Park,Victoria West
+48.436917,-123.387982,Malus domestica,Apple,Malus apple,2,1,In Banfield Park,Victoria West
+48.436949,-123.387994,Malus domestica,Apple,Malus apple,1,1,In Banfield Park,Victoria West
 48.436961,-123.38808,Pyrus,Callery Pear,Pyrus,2,1,In Banfield Park,Victoria West
 48.436983,-123.388175,Castanea mollissima,Chinese Chestnut,Castanea mollissima,3,13,In Banfield Park,Victoria West
 48.436991,-123.388296,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,3,3,In Banfield Park,Victoria West
@@ -12119,7 +12119,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411994,-123.338001,Pinus coulteri,Big-cone pine,Pinus coulteri,20,112,In Ross Bay Cemetery,Fairfield
 48.412017,-123.337911,Malus,Apple,Malus,5,21,In Ross Bay Cemetery,Fairfield
 48.412051,-123.33786,Acer platanoides,Norway maple,Acer platanoides,14,39,In Ross Bay Cemetery,Fairfield
-48.412116,-123.337731,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,5,In Ross Bay Cemetery,Fairfield
+48.412116,-123.337731,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,5,In Ross Bay Cemetery,Fairfield
 48.412041,-123.337641,Fagus sylvatica,European beech,Fagus sylvatica 'Atropunicea',18,94,In Ross Bay Cemetery,Fairfield
 48.411896,-123.337663,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,7,17,In Ross Bay Cemetery,Fairfield
 48.411979,-123.337589,Fraxinus latifolia,Oregon Ash,Fraxinus latifolia,12,53,In Ross Bay Cemetery,Fairfield
@@ -12148,7 +12148,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411505,-123.338352,Acer rubrum,Red maple,Acer rubrum bowhall,5,4,In Ross Bay Cemetery,Fairfield
 48.411422,-123.337481,Chamaecyparis obtusa,Hinoki cypress,Chamaecyparis obtusa,5,15,In Ross Bay Cemetery,Fairfield
 48.41141,-123.337526,Abies pinsapo,Spanish Fir,Abies pinsapo,12,30,In Ross Bay Cemetery,Fairfield
-48.41137,-123.337518,Cornus x,Dogwood,Cornus x Eddies White Wonder,5,6,In Ross Bay Cemetery,Fairfield
+48.41137,-123.337518,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,5,6,In Ross Bay Cemetery,Fairfield
 48.411297,-123.337708,Abies pinsapo,Spanish Fir,Abies pinsapo,12,30,In Ross Bay Cemetery,Fairfield
 48.411204,-123.337773,Euonymus europaeus,European Euonymus,Euonymus europaeus,4,13,In Ross Bay Cemetery,Fairfield
 48.411171,-123.337779,Pinus thunbergiana,Japanese Black pine,Pinus thunbergiana,10,31,In Ross Bay Cemetery,Fairfield
@@ -12758,14 +12758,14 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.418664,-123.383424,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,55,On Ladysmith St,James Bay
 48.418744,-123.383587,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,42,On Ladysmith St,James Bay
 48.418794,-123.383691,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,5,20,On Ladysmith St,James Bay
-48.418853,-123.383825,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,4,On Ladysmith St,James Bay
+48.418853,-123.383825,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,4,On Ladysmith St,James Bay
 48.418953,-123.384006,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,55,On Ladysmith St,James Bay
 48.419027,-123.384185,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,45,On Ladysmith St,James Bay
 48.419548,-123.383703,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,58,On St Lawrence St,James Bay
 48.419125,-123.384093,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,52,On Ladysmith St,James Bay
 48.41903,-123.383902,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,52,On Ladysmith St,James Bay
 48.418954,-123.383738,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,48,On Ladysmith St,James Bay
-48.418845,-123.383503,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,3,On Ladysmith St,James Bay
+48.418845,-123.383503,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,3,On Ladysmith St,James Bay
 48.418891,-123.383593,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,44,On Ladysmith St,James Bay
 48.418801,-123.383413,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,26,On Ladysmith St,James Bay
 48.418721,-123.383249,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,44,On Ladysmith St,James Bay
@@ -12930,7 +12930,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.414373,-123.380829,Acer rubrum,Red maple,Acer rubrum,10,44,On San Jose Ave,James Bay
 48.414517,-123.380676,Acer rubrum,Red maple,Acer rubrum,14,49,On San Jose Ave,James Bay
 48.414728,-123.380451,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,24,90,On San Jose Ave,James Bay
-48.414837,-123.380341,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,5,On San Jose Ave,James Bay
+48.414837,-123.380341,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,5,On San Jose Ave,James Bay
 48.414964,-123.380199,Acer rubrum,Red maple,Acer rubrum,10,29,On San Jose Ave,James Bay
 48.416832,-123.368179,Pinus sylvestris,Scots pine,Pinus sylvestris,10,43,On Young St,James Bay
 48.415093,-123.380057,Acer rubrum,Red maple,Acer rubrum,12,28,On San Jose Ave,James Bay
@@ -13164,7 +13164,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.413147,-123.370943,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,22,On Government St,James Bay
 48.413207,-123.37088,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,20,On Government St,James Bay
 48.41343,-123.370639,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,27,On Government St,James Bay
-48.413796,-123.370335,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,3,On Government St,James Bay
+48.413796,-123.370335,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,3,On Government St,James Bay
 48.414098,-123.370136,Ilex aquifolium,English holly,Ilex aquifolium,8,50,On Government St,James Bay
 48.414139,-123.370113,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,31,On Government St,James Bay
 48.414338,-123.369981,Ilex aquifolium,English holly,Ilex aquifolium,4,34,On Government St,James Bay
@@ -13366,7 +13366,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410123,-123.371365,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,61,On Paddon Ave,James Bay
 48.410078,-123.371432,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,22,92,On Paddon Ave,James Bay
 48.409943,-123.371549,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,22,101,On Paddon Ave,James Bay
-48.409896,-123.371798,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,6,On Paddon Ave,James Bay
+48.409896,-123.371798,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,6,On Paddon Ave,James Bay
 48.410059,-123.371647,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,20,101,On Paddon Ave,James Bay
 48.410223,-123.371551,Cercidiphyllum japonicum,Katsura,Cercidiphyllum japonicum,6,20,On Paddon Ave,James Bay
 48.418219,-123.372453,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,3,4,On Kingston St,James Bay
@@ -13396,7 +13396,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.420432,-123.375843,Acer rubrum,Red maple,Acer rubrum,14,29,On Kingston St,James Bay
 48.418455,-123.382732,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,54,On Ladysmith St,James Bay
 48.411047,-123.371896,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,23,On Battery St,James Bay
-48.418386,-123.382557,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,6,On Ladysmith St,James Bay
+48.418386,-123.382557,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,6,On Ladysmith St,James Bay
 48.411144,-123.372109,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,17,On Battery St,James Bay
 48.411255,-123.372331,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,15,On Battery St,James Bay
 48.418302,-123.382391,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,39,On Ladysmith St,James Bay
@@ -13654,7 +13654,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.419003,-123.37683,Cornus × 'Venus',Dogwood,Cornus X 'Venus',4,5,On Oswego St,James Bay
 48.418855,-123.376868,Betula populifolia,Gray Birch,Betula populifolia,11,33,On Michigan St,James Bay
 48.418774,-123.376713,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,10,47,On Michigan St,James Bay
-48.417182,-123.369696,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,3,On Michigan St,James Bay
+48.417182,-123.369696,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,3,On Michigan St,James Bay
 48.418682,-123.376519,Betula papyrifera,Paper birch,Betula papyrifera,15,41,On Michigan St,James Bay
 48.418602,-123.37635,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,10,52,On Michigan St,James Bay
 48.418537,-123.376212,Acer rubrum,Red maple,Acer rubrum,8,16,On Michigan St,James Bay
@@ -14623,10 +14623,10 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.422774,-123.353542,Prunus cerasifera,Cherry plum,Prunus cerasifera,10,33,On Meares St,Fairfield
 48.422801,-123.353758,Prunus cerasifera,Cherry plum,Prunus cerasifera,10,41,On Meares St,Fairfield
 48.422822,-123.353929,Prunus cerasifera,Cherry plum,Prunus cerasifera,9,37,On Meares St,Fairfield
-48.423263,-123.353945,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,12,On Cook St,Fairfield
+48.423263,-123.353945,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,12,On Cook St,Fairfield
 48.423173,-123.353949,Syringa reticulata,Lilac,Syringa reticulata Ivory silk,3,7,On Cook St,Fairfield
 48.423083,-123.353966,Syringa reticulata,Lilac,Syringa reticulata Ivory silk,3,8,On Cook St,Fairfield
-48.423006,-123.354013,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,12,On Cook St,Fairfield
+48.423006,-123.354013,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,12,On Cook St,Fairfield
 48.422731,-123.354074,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,16,81,On Cook St,Fairfield
 48.422569,-123.354106,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,12,70,On Cook St,Fairfield
 48.422404,-123.354145,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,12,57,On Cook St,Fairfield
@@ -15109,7 +15109,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.415427,-123.345641,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,15,On Durban St,Fairfield
 48.414724,-123.354307,Prunus sargentii,North Japanese hill cherry,Prunus sargentii,7,58,On Mckenzie St,Fairfield
 48.41474,-123.354512,Prunus sargentii,North Japanese hill cherry,Prunus sargentii,7,52,On Mckenzie St,Fairfield
-48.415837,-123.345541,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,7,On Durban St,Fairfield
+48.415837,-123.345541,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,7,On Durban St,Fairfield
 48.41476,-123.354713,Prunus sargentii,North Japanese hill cherry,Prunus sargentii,8,76,On Mckenzie St,Fairfield
 48.416011,-123.345505,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,70,On Durban St,Fairfield
 48.416167,-123.345472,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,48,On Durban St,Fairfield
@@ -15783,7 +15783,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.413787,-123.354527,Prunus serrulata,Japanese cherry,Prunus serrulata 'Shirofugen',4,20,On Oxford St,Fairfield
 48.41383,-123.354846,Prunus avium,Wild cherry,Prunus avium,10,89,On Oxford St,Fairfield
 48.413852,-123.355034,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,6,58,On Oxford St,Fairfield
-48.41387,-123.35524,Cornus x,Dogwood,Cornus x Eddies White Wonder,3,5,On Oxford St,Fairfield
+48.41387,-123.35524,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,3,5,On Oxford St,Fairfield
 48.413893,-123.355458,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,1.5,4,On Oxford St,Fairfield
 48.413927,-123.35575,Prunus avium,Wild cherry,Prunus avium,8,89,On Oxford St,Fairfield
 48.413943,-123.355918,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,27,On Oxford St,Fairfield
@@ -16245,7 +16245,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410245,-123.351182,Prunus serrulata,Japanese cherry,Prunus serrulata 'Shirofugen',4,52,On Howe St,Fairfield
 48.410087,-123.351204,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,45,On Howe St,Fairfield
 48.409901,-123.351258,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,8,33,On Howe St,Fairfield
-48.409622,-123.350642,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,5,On Faithful St,Fairfield
+48.409622,-123.350642,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,5,On Faithful St,Fairfield
 48.409607,-123.350441,Quercus coccinea,Scarlet Oak,Quercus coccinea,7,12,On Faithful St,Fairfield
 48.409644,-123.350277,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,6,35,On Moss St,Fairfield
 48.409942,-123.350206,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,9,76,On Moss St,Fairfield
@@ -16408,7 +16408,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411969,-123.349724,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,5,10,On Moss St,Fairfield
 48.409905,-123.353197,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,4,5,On Faithful St,Fairfield
 48.409887,-123.353002,Betula pendula,European white birch,Betula pendula,14,50,On Faithful St,Fairfield
-48.409861,-123.352793,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,4,On Faithful St,Fairfield
+48.409861,-123.352793,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,4,On Faithful St,Fairfield
 48.412379,-123.349605,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,4,16,On Moss St,Fairfield
 48.409835,-123.352569,Betula nigra,Black birch,Betula nigra 'Dura Heat',6,15,On Faithful St,Fairfield
 48.409921,-123.352415,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,27,On Wellington Ave,Fairfield
@@ -16522,7 +16522,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410345,-123.357118,Betula papyrifera,Paper birch,Betula papyrifera,14,66,On Faithful St,Fairfield
 48.410315,-123.356871,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,34,On Faithful St,Fairfield
 48.410285,-123.356643,Betula papyrifera,Paper birch,Betula papyrifera,18,69,On Faithful St,Fairfield
-48.410269,-123.356515,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Faithful St,Fairfield
+48.410269,-123.356515,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Faithful St,Fairfield
 48.410235,-123.356181,Betula pendula,European white birch,Betula pendula,8,23,On Faithful St,Fairfield
 48.410213,-123.356025,Magnolia grandiflora,Southern magnolia,Magnolia grandiflora,3,5,On Faithful St,Fairfield
 48.41019,-123.355833,Betula nigra,Black birch,Betula nigra heritage,2,4,On Faithful St,Fairfield
@@ -16584,7 +16584,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.409742,-123.353937,Acer truncatum,Maple,Acer truncatum 'Crimson Sunset',2,6,On Linden Ave,Fairfield
 48.409918,-123.354185,Betula papyrifera,Paper birch,Betula papyrifera,16,59,On Faithful St,Fairfield
 48.409931,-123.35435,Nyssa sylvatica,Black tupelo,Nyssa sylvatica 'Red Rage',3,5,On Faithful St,Fairfield
-48.409968,-123.354694,Fraxinus oxycarpa,Ash,Fraxinus oxycarpa,8,8,On Faithful St,Fairfield
+48.409968,-123.354694,Fraxinus angustifolia,Narrow-leafed ash,Fraxinus oxycarpa,8,8,On Faithful St,Fairfield
 48.409892,-123.354874,Prunus × yedoensis,Yoshino cherry,Prunus x yedoensis,3,4,On Cambridge St,Fairfield
 48.409743,-123.354923,Sorbus aria,Mountain Ash,Sorbus aria,3,5,On Cambridge St,Fairfield
 48.409674,-123.354946,Sorbus aria,Mountain Ash,Sorbus aria,3,4,On Cambridge St,Fairfield
@@ -16605,7 +16605,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.409546,-123.355144,Acer griseum,Maple,Acer griseum,4,9,On Cambridge St,Fairfield
 48.409752,-123.355087,Acer griseum,Maple,Acer griseum,4,4,On Cambridge St,Fairfield
 48.409903,-123.355038,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,8,56,On Cambridge St,Fairfield
-48.410018,-123.355112,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,4,On Faithful St,Fairfield
+48.410018,-123.355112,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,4,On Faithful St,Fairfield
 48.410038,-123.355363,Betula nigra,Black birch,Betula nigra heritage,3,4,On Faithful St,Fairfield
 48.41007,-123.355663,Cornus kousa,Kousa Dogwood,Cornus kousa stellar pink,3,4,On Faithful St,Fairfield
 48.41011,-123.35596,Betula papyrifera,Paper birch,Betula papyrifera,14,39,On Faithful St,Fairfield
@@ -16806,13 +16806,13 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.428121,-123.326256,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,44,On Davie St,South Jubilee
 48.428329,-123.327453,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,38,On Fell St,South Jubilee
 48.428255,-123.327452,Crataegus,Hawthorn,Crataegus,5,10,On Fell St,South Jubilee
-48.428171,-123.327457,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Fell St,South Jubilee
+48.428171,-123.327457,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Fell St,South Jubilee
 48.428103,-123.327449,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,27,On Fell St,South Jubilee
 48.427953,-123.327452,Malus,Apple,Malus,2,4,On Fell St,South Jubilee
 48.427588,-123.327459,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,34,On Fell St,South Jubilee
 48.427504,-123.327455,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,35,On Fell St,South Jubilee
 48.427428,-123.327458,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,24,On Fell St,South Jubilee
-48.427321,-123.327456,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,1,On Fell St,South Jubilee
+48.427321,-123.327456,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,1,On Fell St,South Jubilee
 48.426814,-123.327459,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,3,8,On Fell St,South Jubilee
 48.426639,-123.327465,Crataegus,Hawthorn,Crataegus,4,12,On Fell St,South Jubilee
 48.426658,-123.327626,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos 'Street Keeper',5,2,On Fell St,South Jubilee
@@ -16822,7 +16822,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.427158,-123.327625,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,5,On Fell St,South Jubilee
 48.427213,-123.327625,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,32,On Fell St,South Jubilee
 48.427283,-123.327622,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos 'Street Keeper',5,5,On Fell St,South Jubilee
-48.427391,-123.327624,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,6,On Fell St,South Jubilee
+48.427391,-123.327624,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,6,On Fell St,South Jubilee
 48.427505,-123.327614,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos 'Street Keeper',3,5,On Fell St,South Jubilee
 48.427568,-123.327616,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,35,On Fell St,South Jubilee
 48.427659,-123.327618,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,34,On Fell St,South Jubilee
@@ -16830,7 +16830,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.427832,-123.327615,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,27,On Fell St,South Jubilee
 48.427937,-123.327616,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,38,On Fell St,South Jubilee
 48.428022,-123.327619,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos 'Street Keeper',4,4,On Fell St,South Jubilee
-48.428113,-123.327625,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,1,On Fell St,South Jubilee
+48.428113,-123.327625,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,1,On Fell St,South Jubilee
 48.428306,-123.32762,Crataegus,Hawthorn,Crataegus,3,5,On Fell St,South Jubilee
 48.428279,-123.328811,Acer campestre,Field maple,Acer campestre,6,18,On Bank St,South Jubilee
 48.42815,-123.328812,Acer campestre,Field maple,Acer campestre,5,15,On Bank St,South Jubilee
@@ -16923,7 +16923,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.430262,-123.324541,Cornus nuttallii,Pacific dogwood,Cornus nuttallii,10,43,On Bourchier St,South Jubilee
 48.430254,-123.324361,Cornus nuttallii,Pacific dogwood,Cornus nuttallii,8,27,On Bourchier St,South Jubilee
 48.430256,-123.324172,Quercus garryana,Garry oak,Quercus garryana,6,10,On Bourchier St,South Jubilee
-48.430255,-123.324002,Cornus x,Dogwood,Cornus x Eddies White Wonder,6,10,On Bourchier St,South Jubilee
+48.430255,-123.324002,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,6,10,On Bourchier St,South Jubilee
 48.430256,-123.32387,Quercus garryana,Garry oak,Quercus garryana,6,10,On Bourchier St,South Jubilee
 48.430269,-123.323288,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,10,18,On Bourchier St,South Jubilee
 48.430269,-123.323275,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,12,28,On Bourchier St,South Jubilee
@@ -16941,7 +16941,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.429005,-123.325697,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,29,On Lee Ave,South Jubilee
 48.429154,-123.325695,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,31,On Lee Ave,South Jubilee
 48.429245,-123.325697,Catalpa speciosa,Northern Catalpa,Catalpa speciosa,5,6,On Lee Ave,South Jubilee
-48.429311,-123.325698,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Lee Ave,South Jubilee
+48.429311,-123.325698,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Lee Ave,South Jubilee
 48.429396,-123.325698,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,25,On Lee Ave,South Jubilee
 48.429483,-123.325697,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,4,5,On Lee Ave,South Jubilee
 48.429661,-123.325694,Acer platanoides,Norway maple,Acer platanoides,12,69,On Lee Ave,South Jubilee
@@ -16993,7 +16993,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.429928,-123.32554,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,9,On Lee Ave,South Jubilee
 48.429785,-123.325541,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,29,On Lee Ave,South Jubilee
 48.429674,-123.325539,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,33,On Lee Ave,South Jubilee
-48.429524,-123.325546,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Lee Ave,South Jubilee
+48.429524,-123.325546,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Lee Ave,South Jubilee
 48.429384,-123.325548,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,5,5,On Lee Ave,South Jubilee
 48.429313,-123.325546,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,5,6,On Lee Ave,South Jubilee
 48.429234,-123.325545,Crataegus,Hawthorn,Crataegus,7,20,On Lee Ave,South Jubilee
@@ -17130,7 +17130,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.428131,-123.356182,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',10,32,On Vancouver St,North Park
 48.428266,-123.356167,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',4,4,On Vancouver St,North Park
 48.428436,-123.35613,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',12,28,On Vancouver St,North Park
-48.428561,-123.356113,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,6,On Vancouver St,North Park
+48.428561,-123.356113,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,6,On Vancouver St,North Park
 48.428683,-123.356103,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',10,29,On Vancouver St,North Park
 48.428687,-123.355937,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',10,28,On Vancouver St,North Park
 48.42858,-123.355944,Prunus serrulata,Japanese cherry,Prunus accolade,6,21,On Vancouver St,North Park
@@ -17308,8 +17308,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.433634,-123.354241,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,18,On Queens Ave,North Park
 48.433643,-123.354413,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,26,On Queens Ave,North Park
 48.433652,-123.354584,Koelreuteria paniculata,Chinese Rain Or Flame,Koelreuteria paniculata,2,3,On Queens Ave,North Park
-48.43367,-123.354926,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Queens Ave,North Park
-48.433659,-123.354717,Malus apple,Apple,Malus apple,2,5,On Queens Ave,North Park
+48.43367,-123.354926,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Queens Ave,North Park
+48.433659,-123.354717,Malus domestica,Apple,Malus apple,2,5,On Queens Ave,North Park
 48.433687,-123.355146,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,3,11,On Queens Ave,North Park
 48.433869,-123.355395,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',3,4,On Vancouver St,North Park
 48.434055,-123.355367,Prunus cerasifera,Cherry plum,Prunus cerasifera,5,7,On Vancouver St,North Park
@@ -17340,7 +17340,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.433789,-123.355064,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,19,On Queens Ave,North Park
 48.433775,-123.354819,Koelreuteria paniculata,Chinese Rain Or Flame,Koelreuteria paniculata,3,3,On Queens Ave,North Park
 48.433759,-123.354578,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,5,11,On Queens Ave,North Park
-48.433747,-123.354384,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',2,5,On Queens Ave,North Park
+48.433747,-123.354384,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',2,5,On Queens Ave,North Park
 48.433739,-123.354224,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,30,On Queens Ave,North Park
 48.433727,-123.354005,Tilia cordata,Little-leaf linden,Tilia cordata douglas,6,9,On Queens Ave,North Park
 48.433725,-123.353963,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,3,12,On Queens Ave,North Park
@@ -17595,7 +17595,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.434596,-123.361008,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,26,On Dowler Pl,North Park
 48.434522,-123.361016,Prunus serrulata,Japanese cherry,Prunus serrulata,8,35,On Dowler Pl,North Park
 48.434393,-123.361031,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,14,On Dowler Pl,North Park
-48.434118,-123.360708,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',1.5,5,On Queens Ave,North Park
+48.434118,-123.360708,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',1.5,5,On Queens Ave,North Park
 48.4341,-123.360368,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,20,On Queens Ave,North Park
 48.43408,-123.360098,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,1.5,On Queens Ave,North Park
 48.434073,-123.359868,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,5,22,On Queens Ave,North Park
@@ -18692,7 +18692,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410897,-123.335162,Tilia cordata,Little-leaf linden,Tilia cordata,16,101,On Ross St,Gonzales
 48.410899,-123.335045,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,7,32,On Ross St,Gonzales
 48.41091,-123.334897,Tilia cordata,Little-leaf linden,Tilia cordata,14,82,On Ross St,Gonzales
-48.410918,-123.334752,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,3,On Ross St,Gonzales
+48.410918,-123.334752,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,3,On Ross St,Gonzales
 48.410904,-123.334588,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,5,On Ross St,Gonzales
 48.410895,-123.334419,Tilia cordata,Little-leaf linden,Tilia cordata,11,83,On Ross St,Gonzales
 48.410901,-123.334192,Tilia cordata,Little-leaf linden,Tilia cordata,9,44,On Ross St,Gonzales
@@ -18908,7 +18908,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.421723,-123.324074,Prunus serrulata,Japanese cherry,Prunus accolade,5,27,On Redfern St,Gonzales
 48.421518,-123.324057,Prunus serrulata,Japanese cherry,Prunus accolade,6,21,On Redfern St,Gonzales
 48.421392,-123.324048,Acer campestre,Field maple,Acer campestre,16,53,On Redfern St,Gonzales
-48.421481,-123.324218,Aesculus briottii,Horse Chestnut,Aesculus briottii,2,3,On Redfern St,Gonzales
+48.421481,-123.324218,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,2,3,On Redfern St,Gonzales
 48.421749,-123.324229,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,8,39,On Redfern St,Gonzales
 48.424567,-123.323276,Cedrus deodara,Deodar cedar,Cedrus deodara,7,16,On Amphion St,Gonzales
 48.424249,-123.324903,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,24,On Brighton Ave,Gonzales
@@ -19468,7 +19468,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.421383,-123.338186,Quercus garryana,Garry oak,Quercus garryana,4,6,On Bywood Pl,Rockland
 48.421382,-123.338477,Sequoiadendron giganteum,Giant sequoia,Sequoiadendron giganteum,26,240,On Bywood Pl,Rockland
 48.421384,-123.338664,Prunus cerasifera,Cherry plum,Prunus cerasifera,10,28,On Bywood Pl,Rockland
-48.421184,-123.336705,Malus apple,Apple,Malus apple,3,5,On Piermont Pl,Rockland
+48.421184,-123.336705,Malus domestica,Apple,Malus apple,3,5,On Piermont Pl,Rockland
 48.41804,-123.333588,Picea glauca,White spruce,Picea glauca,3,3,On Warren Gdns,Rockland
 48.417969,-123.333896,Picea glauca,White spruce,Picea glauca,3,4,On Warren Gdns,Rockland
 48.417892,-123.334248,Picea glauca,White spruce,Picea glauca,3,3,On Warren Gdns,Rockland
@@ -20076,7 +20076,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436862,-123.347943,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,43,On Mt Stephen Ave,Oaklands
 48.436787,-123.347885,Quercus palustris,Pin oak,Quercus palustris,7,22,On Mt Stephen Ave,Oaklands
 48.436569,-123.348016,Laburnum × watereri,Golden chain tree,Laburnum x watereri,6,36,On Mt Stephen Ave,Oaklands
-48.436611,-123.347989,Aesculus briottii,Horse Chestnut,Aesculus briottii,2,2,On Mt Stephen Ave,Oaklands
+48.436611,-123.347989,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,2,2,On Mt Stephen Ave,Oaklands
 48.436459,-123.347989,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,12,45,On Mt Stephen Ave,Oaklands
 48.436379,-123.34795,Salix matsudana,Chinese Willow,Salix matsudana,12,67,On Mt Stephen Ave,Oaklands
 48.436335,-123.349322,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,31,On Haultain St,Oaklands
@@ -20343,7 +20343,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.439153,-123.340744,Quercus garryana,Garry oak,Quercus garryana,6,8,On Asquith St,Oaklands
 48.438969,-123.34076,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,5,25,On Asquith St,Oaklands
 48.438702,-123.340772,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,4,24,On Asquith St,Oaklands
-48.438553,-123.34079,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,9,On Asquith St,Oaklands
+48.438553,-123.34079,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,9,On Asquith St,Oaklands
 48.438417,-123.340772,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,5,39,On Asquith St,Oaklands
 48.438284,-123.340785,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,40,On Asquith St,Oaklands
 48.438294,-123.340982,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,36,On Asquith St,Oaklands
@@ -20943,7 +20943,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.438332,-123.351722,Quercus garryana,Garry oak,Quercus garryana,12,39,On Kings Rd,Oaklands
 48.438332,-123.351755,Quercus garryana,Garry oak,Quercus garryana,10,45,On Kings Rd,Oaklands
 48.438309,-123.351762,Quercus garryana,Garry oak,Quercus garryana,9,43,On Kings Rd,Oaklands
-48.436462,-123.351805,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,21,On Haultain St,Oaklands
+48.436462,-123.351805,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,21,On Haultain St,Oaklands
 48.436456,-123.351673,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,39,On Haultain St,Oaklands
 48.436444,-123.351522,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,40,On Haultain St,Oaklands
 48.436438,-123.351343,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',4,12,On Haultain St,Oaklands
@@ -21124,7 +21124,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436175,-123.336403,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,11,72,On Haultain St,Oaklands
 48.436307,-123.336294,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,55,On Shakespeare St,Oaklands
 48.436586,-123.33628,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,62,On Shakespeare St,Oaklands
-48.436719,-123.336285,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,4,On Shakespeare St,Oaklands
+48.436719,-123.336285,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,4,On Shakespeare St,Oaklands
 48.437372,-123.336054,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',1.5,5,On Shakespeare St,Oaklands
 48.437221,-123.336053,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,45,On Shakespeare St,Oaklands
 48.437089,-123.33605,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',5,9,On Shakespeare St,Oaklands
@@ -21299,9 +21299,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.440364,-123.334808,Acer rubrum,Red maple,Acer rubrum,9,30,On Scott St,Oaklands
 48.440232,-123.334812,Prunus serrulata,Japanese cherry,Prunus accolade,4,13,On Scott St,Oaklands
 48.440093,-123.334583,Prunus serrulata,Japanese cherry,Prunus accolade,6,22,On Ryan St,Oaklands
-48.440091,-123.334255,Aesculus briottii,Horse Chestnut,Aesculus briottii,5,6,On Ryan St,Oaklands
-48.440089,-123.334024,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,10,On Ryan St,Oaklands
-48.440085,-123.33376,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,5,On Ryan St,Oaklands
+48.440091,-123.334255,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,5,6,On Ryan St,Oaklands
+48.440089,-123.334024,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,10,On Ryan St,Oaklands
+48.440085,-123.33376,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,5,On Ryan St,Oaklands
 48.441926,-123.333626,Prunus cerasifera,Cherry plum,Prunus cerasifera,5,11,On Pearl St,Oaklands
 48.441931,-123.333939,Prunus cerasifera,Cherry plum,Prunus cerasifera,5,12,On Pearl St,Oaklands
 48.441936,-123.334203,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,17,On Pearl St,Oaklands
@@ -21380,7 +21380,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.443738,-123.335944,Betula papyrifera,Paper birch,Betula papyrifera,16,62,On Myrtle Ave,Oaklands
 48.443662,-123.334978,Betula papyrifera,Paper birch,Betula papyrifera,12,46,On Myrtle Ave,Oaklands
 48.443664,-123.335218,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,10,40,On Myrtle Ave,Oaklands
-48.440117,-123.336379,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,5,On Ryan St,Oaklands
+48.440117,-123.336379,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,5,On Ryan St,Oaklands
 48.443669,-123.335426,Betula papyrifera,Paper birch,Betula papyrifera,12,36,On Myrtle Ave,Oaklands
 48.440113,-123.336032,Prunus serrulata,Japanese cherry,Prunus accolade,4,10,On Ryan St,Oaklands
 48.443672,-123.335572,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,21,On Myrtle Ave,Oaklands
@@ -21459,9 +21459,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.442919,-123.334668,Quercus robur,Common oak,Quercus robur,,5,On Scott St,Oaklands
 48.442083,-123.334603,Prunus cerasifera,Cherry plum,Prunus ceresifera Linsayiae,10,68,On Pearl St,Oaklands
 48.442082,-123.334387,Prunus cerasifera,Cherry plum,Prunus ceresifera Linsayiae,10,73,On Pearl St,Oaklands
-48.442079,-123.334192,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Pearl St,Oaklands
-48.442077,-123.334022,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,7,On Pearl St,Oaklands
-48.442076,-123.333745,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,7,On Pearl St,Oaklands
+48.442079,-123.334192,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Pearl St,Oaklands
+48.442077,-123.334022,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,7,On Pearl St,Oaklands
+48.442076,-123.333745,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,7,On Pearl St,Oaklands
 48.443664,-123.333867,Betula nigra,Black birch,Betula nigra 'Dura Heat',5,9,On Myrtle Ave,Oaklands
 48.444672,-123.334654,Quercus robur,Common oak,Quercus robur,5,4,On Scott St,Oaklands
 48.443763,-123.333699,Betula papyrifera,Paper birch,Betula papyrifera,10,25,On Myrtle Ave,Oaklands
@@ -21495,7 +21495,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.438076,-123.341333,Quercus garryana,Garry oak,Quercus garryana,16,65,On Kings Rd,Oaklands
 48.437824,-123.342161,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,31,On Avebury Ave,Oaklands
 48.437576,-123.342167,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,26,On Avebury Ave,Oaklands
-48.437459,-123.342174,Pistachia chinensis,Pistachio,Pistachia chinensis,2,4,On Avebury Ave,Oaklands
+48.437459,-123.342174,Pistacia chinensis,Chinese pistache,Pistachia chinensis,2,4,On Avebury Ave,Oaklands
 48.437321,-123.342181,Quercus garryana,Garry oak,Quercus garryana,4,8,On Avebury Ave,Oaklands
 48.437163,-123.342183,Betula pendula,European white birch,Betula pendula,10,24,On Avebury Ave,Oaklands
 48.437026,-123.342186,Juglans regia,English Walnut,Juglans regia,6,19,On Avebury Ave,Oaklands
@@ -21503,13 +21503,13 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436761,-123.342186,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,36,On Avebury Ave,Oaklands
 48.436634,-123.342203,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,5,6,On Avebury Ave,Oaklands
 48.436474,-123.342185,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,32,On Avebury Ave,Oaklands
-48.436333,-123.342204,Pistachia chinensis,Pistachio,Pistachia chinensis,4,4,On Avebury Ave,Oaklands
+48.436333,-123.342204,Pistacia chinensis,Chinese pistache,Pistachia chinensis,4,4,On Avebury Ave,Oaklands
 48.436246,-123.342071,Prunus cerasifera,Cherry plum,Prunus cerasifera,4,8,On Haultain St,Oaklands
 48.436243,-123.341856,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,8,53,On Haultain St,Oaklands
 48.436246,-123.341642,Juglans regia,English Walnut,Juglans regia,6,18,On Haultain St,Oaklands
 48.43624,-123.341367,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,8,58,On Haultain St,Oaklands
 48.436235,-123.341088,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,77,On Haultain St,Oaklands
-48.436607,-123.342364,Pistachia chinensis,Pistachio,Pistachia chinensis,4,4,On Avebury Ave,Oaklands
+48.436607,-123.342364,Pistacia chinensis,Chinese pistache,Pistachia chinensis,4,4,On Avebury Ave,Oaklands
 48.436765,-123.342357,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,36,On Avebury Ave,Oaklands
 48.43698,-123.342363,Acer campestre,Field maple,Acer campestre,6,7,On Avebury Ave,Oaklands
 48.437137,-123.342366,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,6,10,On Avebury Ave,Oaklands
@@ -22553,7 +22553,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.435631,-123.340867,Prunus serrulata,Japanese cherry,Prunus accolade,5,24,On Asquith St,Fernwood
 48.435458,-123.340868,Prunus serrulata,Japanese cherry,Prunus accolade,3,9,On Asquith St,Fernwood
 48.435354,-123.340874,Fraxinus ornus,Manna ash,Fraxinus ornus,4,6,On Asquith St,Fernwood
-48.434948,-123.340876,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,2,On Asquith St,Fernwood
+48.434948,-123.340876,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,2,On Asquith St,Fernwood
 48.434708,-123.340875,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,58,On Asquith St,Fernwood
 48.434547,-123.340878,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,48,On Asquith St,Fernwood
 48.434429,-123.342097,Parrotia persica,Persian ironwood,Parrotia persica 'Ruby Vase',4,5,On Bay St,Fernwood
@@ -22587,7 +22587,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.435472,-123.34222,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,4,5,On Avebury Ave,Fernwood
 48.43536,-123.342221,Quercus garryana,Garry oak,Quercus garryana,5,5,On Avebury Ave,Fernwood
 48.435233,-123.342224,Quercus garryana,Garry oak,Quercus garryana,3,4,On Avebury Ave,Fernwood
-48.435094,-123.342228,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Avebury Ave,Fernwood
+48.435094,-123.342228,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Avebury Ave,Fernwood
 48.434909,-123.342235,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Avebury Ave,Fernwood
 48.434773,-123.342244,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,33,On Avebury Ave,Fernwood
 48.434632,-123.342243,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,5,8,On Avebury Ave,Fernwood
@@ -22601,10 +22601,10 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.434812,-123.3424,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,41,On Avebury Ave,Fernwood
 48.434917,-123.342401,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Avebury Ave,Fernwood
 48.434968,-123.342446,Ilex aquifolium,English holly,Ilex aquifolium,6,28,On Avebury Ave,Fernwood
-48.435091,-123.342398,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,8,On Avebury Ave,Fernwood
+48.435091,-123.342398,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,8,On Avebury Ave,Fernwood
 48.435206,-123.342384,Betula papyrifera,Paper birch,Betula papyrifera,10,35,On Avebury Ave,Fernwood
 48.435323,-123.342444,Quercus garryana,Garry oak,Quercus garryana,18,125,On Avebury Ave,Fernwood
-48.43551,-123.342413,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,4,On Avebury Ave,Fernwood
+48.43551,-123.342413,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,4,On Avebury Ave,Fernwood
 48.435847,-123.342391,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Avebury Ave,Fernwood
 48.436136,-123.342462,Crataegus,Hawthorn,Crataegus,4,9,On Haultain St,Fernwood
 48.436135,-123.342734,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',3,8,On Haultain St,Fernwood
@@ -22797,7 +22797,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.423917,-123.349714,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,28,On Ormond St,Fernwood
 48.424139,-123.349682,Fraxinus pennsylvanica,Red ash,Fraxinus pennsylvanica,20,68,On Ormond St,Fernwood
 48.424249,-123.349638,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,32,On Ormond St,Fernwood
-48.424336,-123.349625,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,7,On Ormond St,Fernwood
+48.424336,-123.349625,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,7,On Ormond St,Fernwood
 48.424487,-123.349576,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,40,On Ormond St,Fernwood
 48.424561,-123.3497,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,7,61,On Yates St,Fernwood
 48.424588,-123.349892,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,66,On Yates St,Fernwood
@@ -22867,7 +22867,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436175,-123.345884,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,31,On Haultain St,Fernwood
 48.43618,-123.346078,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,28,On Haultain St,Fernwood
 48.43604,-123.346205,Crataegus × grignonensis,Grignon hawthorn,Crataegus grignonensis,7,52,On Garden St,Fernwood
-48.435866,-123.346191,Malus adams,Apple,Malus adams,8,45,On Garden St,Fernwood
+48.435866,-123.346191,Malus,Apple,Malus adams,8,45,On Garden St,Fernwood
 48.435731,-123.346202,Crataegus × grignonensis,Grignon hawthorn,Crataegus grignonensis,12,54,On Garden St,Fernwood
 48.435317,-123.346211,Malus,Apple,Malus,8,35,On Garden St,Fernwood
 48.435183,-123.346226,Crataegus × grignonensis,Grignon hawthorn,Crataegus grignonensis,7,69,On Garden St,Fernwood
@@ -22989,7 +22989,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.432217,-123.334246,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,21,On Lydia St,Fernwood
 48.432113,-123.334255,Fraxinus ornus,Manna ash,Fraxinus ornus,6,16,On Lydia St,Fernwood
 48.431951,-123.334259,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,31,On Lydia St,Fernwood
-48.431853,-123.334265,Fraxinus oxycarpa,Ash,Fraxinus oxycarpa,5,16,On Lydia St,Fernwood
+48.431853,-123.334265,Fraxinus angustifolia,Narrow-leafed ash,Fraxinus oxycarpa,5,16,On Lydia St,Fernwood
 48.431711,-123.334273,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,30,On Lydia St,Fernwood
 48.431507,-123.334282,Fraxinus ornus,Manna ash,Fraxinus ornus,5,17,On Lydia St,Fernwood
 48.431402,-123.33429,Crataegus × mordenensis,Hawthorn,Crataegus x mordenensis,3,4,On Lydia St,Fernwood
@@ -23061,7 +23061,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.431968,-123.33834,Cornus × 'Venus',Dogwood,Cornus X 'Venus',3,4,On Forbes St,Fernwood
 48.431794,-123.338352,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,20,63,On Forbes St,Fernwood
 48.431665,-123.338355,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,18,On Forbes St,Fernwood
-48.43159,-123.338359,Cornus x,Dogwood,Cornus x Eddies White Wonder,3,5,On Forbes St,Fernwood
+48.43159,-123.338359,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,3,5,On Forbes St,Fernwood
 48.431381,-123.338375,Aesculus × carnea,Red horse-chestnut,Aesculus carnea 'Fort McNair',5,6,On Forbes St,Fernwood
 48.431272,-123.338335,Quercus garryana,Garry oak,Quercus garryana,14,68,On Forbes St,Fernwood
 48.431283,-123.337185,Malus,Apple,Malus,6,27,On Victor St,Fernwood
@@ -23089,7 +23089,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.432127,-123.3385,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,20,80,On Forbes St,Fernwood
 48.432252,-123.338495,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,15,On Forbes St,Fernwood
 48.43238,-123.338489,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,18,83,On Forbes St,Fernwood
-48.432533,-123.33848,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,7,On Forbes St,Fernwood
+48.432533,-123.33848,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,7,On Forbes St,Fernwood
 48.432595,-123.338669,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,6,12,On Denman St,Fernwood
 48.432601,-123.338935,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,8,27,On Denman St,Fernwood
 48.432608,-123.33926,Crataegus × grignonensis,Grignon hawthorn,Crataegus grignonensis,8,43,On Denman St,Fernwood
@@ -23200,9 +23200,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.43312,-123.338452,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,18,63,On Forbes St,Fernwood
 48.433247,-123.338459,Prunus cerasifera,Cherry plum,Prunus cerasifera,10,35,On Forbes St,Fernwood
 48.433375,-123.338441,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,18,91,On Forbes St,Fernwood
-48.433491,-123.338434,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,6,On Forbes St,Fernwood
+48.433491,-123.338434,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,6,On Forbes St,Fernwood
 48.433602,-123.338426,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,16,75,On Forbes St,Fernwood
-48.433741,-123.338418,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,7,On Forbes St,Fernwood
+48.433741,-123.338418,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,7,On Forbes St,Fernwood
 48.433861,-123.33841,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,16,74,On Forbes St,Fernwood
 48.434019,-123.338405,Prunus cerasifera,Cherry plum,Prunus cerasifera,4,10,On Forbes St,Fernwood
 48.434101,-123.338436,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,10,41,On Bay St,Fernwood
@@ -23813,7 +23813,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.426623,-123.337802,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',8,27,On Pandora Ave,North Jubilee
 48.426616,-123.337607,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',8,33,On Pandora Ave,North Jubilee
 48.426613,-123.337433,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',8,21,On Pandora Ave,North Jubilee
-48.428011,-123.334359,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,4,On Fort St,North Jubilee
+48.428011,-123.334359,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,4,On Fort St,North Jubilee
 48.428236,-123.333813,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,4,9,On Fort St,North Jubilee
 48.429911,-123.334227,Quercus garryana,Garry oak,Quercus garryana,18,105,On Begbie St,North Jubilee
 48.428318,-123.333725,Robinia x,Black Locust,Robinia x idahoensis,16,59,On Fern St,North Jubilee
@@ -24850,7 +24850,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437798,-123.369514,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,26,On Hillside Ave,Burnside
 48.437838,-123.369311,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,32,On Hillside Ave,Burnside
 48.437877,-123.3691,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,35,On Hillside Ave,Burnside
-48.437918,-123.368904,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,4,On Hillside Ave,Burnside
+48.437918,-123.368904,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,4,On Hillside Ave,Burnside
 48.438012,-123.368418,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,34,On Hillside Ave,Burnside
 48.438217,-123.367576,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',8,32,On Government St,Burnside
 48.43829,-123.367585,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',7,17,On Government St,Burnside
@@ -24874,7 +24874,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.435909,-123.371828,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,10,40,On Bay St,Burnside
 48.436012,-123.371491,Prunus,Plum / Cherry,Prunus,8,8,On Bay St,Burnside
 48.436021,-123.371325,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,10,25,On Bay St,Burnside
-48.437579,-123.370084,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Hillside Ave,Burnside
+48.437579,-123.370084,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Hillside Ave,Burnside
 48.437556,-123.370189,Fagus sylvatica,European beech,Fagus sylvatica fastigiata,1,3,On Hillside Ave,Burnside
 48.437541,-123.370297,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,30,On Hillside Ave,Burnside
 48.43751,-123.370429,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,38,On Hillside Ave,Burnside
@@ -24924,7 +24924,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437331,-123.37195,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,8,39,On Hillside Ave,Burnside
 48.437379,-123.371718,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,7,40,On Hillside Ave,Burnside
 48.437402,-123.371578,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,7,On Hillside Ave,Burnside
-48.437528,-123.370923,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Hillside Ave,Burnside
+48.437528,-123.370923,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,3,On Hillside Ave,Burnside
 48.437607,-123.37055,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,5,31,On Hillside Ave,Burnside
 48.437646,-123.370323,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,6,24,On Hillside Ave,Burnside
 48.437679,-123.370107,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,8,32,On Hillside Ave,Burnside
@@ -25599,7 +25599,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.447192,-123.386846,Quercus garryana,Garry oak,Quercus garryana,16,112,On Harriet Rd,Burnside
 48.447052,-123.386995,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,33,On Harriet Rd,Burnside
 48.446964,-123.387082,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,43,On Harriet Rd,Burnside
-48.446846,-123.387215,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,4,On Harriet Rd,Burnside
+48.446846,-123.387215,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,4,On Harriet Rd,Burnside
 48.446723,-123.387344,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,52,On Harriet Rd,Burnside
 48.446484,-123.387592,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,44,On Harriet Rd,Burnside
 48.446361,-123.387723,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,33,On Harriet Rd,Burnside
@@ -26634,7 +26634,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436902,-123.387886,Morus,Mulberry,Morus,1,1,In Banfield Park,Victoria West
 48.436871,-123.387879,Ficus carica,Fig,Ficus carica,1,1,In Banfield Park,Victoria West
 48.436834,-123.387869,Morus,Mulberry,Morus,1,1,In Banfield Park,Victoria West
-48.436838,-123.387973,Malus apple,Apple,Malus apple,2,1,In Banfield Park,Victoria West
+48.436838,-123.387973,Malus domestica,Apple,Malus apple,2,1,In Banfield Park,Victoria West
 48.437019,-123.386239,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,12,36,In Banfield Park,Victoria West
 48.436986,-123.386233,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,16,110,In Banfield Park,Victoria West
 48.436966,-123.386274,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,18,63,In Banfield Park,Victoria West
@@ -27060,7 +27060,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.438768,-123.388657,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,48,On Styles St,Victoria West
 48.438648,-123.388819,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,40,On Styles St,Victoria West
 48.434374,-123.394139,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,36,In Hereward Green,Victoria West
-48.434425,-123.394061,Malus apple,Apple,Malus apple,5,29,In Hereward Green,Victoria West
+48.434425,-123.394061,Malus domestica,Apple,Malus apple,5,29,In Hereward Green,Victoria West
 48.434213,-123.393838,Abies grandis,Grand Fir,Abies grandis,2,5,In Hereward Green,Victoria West
 48.434247,-123.393837,Abies grandis,Grand Fir,Abies grandis,2,5,In Hereward Green,Victoria West
 48.43441,-123.393883,Malus domestica,Apple,Malus domestica,4,7,In Hereward Green,Victoria West
@@ -27103,7 +27103,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.435753,-123.390652,Crataegus phaenopyrum,Washington Hawthorn,Crataegus phaenopyrum,7,30,On Raynor Ave,Victoria West
 48.435694,-123.3909,Crataegus phaenopyrum,Washington Hawthorn,Crataegus phaenopyrum,8,35,On Raynor Ave,Victoria West
 48.435675,-123.391025,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,4,6,On Raynor Ave,Victoria West
-48.435437,-123.391219,Malus apple,Apple,Malus apple,4,13,On Evans St,Victoria West
+48.435437,-123.391219,Malus domestica,Apple,Malus apple,4,13,On Evans St,Victoria West
 48.435401,-123.39122,Malus,Apple,Malus,4,12,On Evans St,Victoria West
 48.435362,-123.391221,Pyrus communis,Callery Pear,Pyrus communis,3,9,On Evans St,Victoria West
 48.435347,-123.39122,Pyrus communis,Callery Pear,Pyrus communis,4,9,On Evans St,Victoria West
@@ -27353,7 +27353,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.43222,-123.386228,Quercus garryana,Garry oak,Quercus garryana,8,75,On Henry St,Victoria West
 48.432191,-123.38618,Laburnum × watereri,Golden chain tree,Laburnum x watereri,3,15,On Henry St,Victoria West
 48.432241,-123.386087,Acer platanoides,Norway maple,Acer platanoides,5,9,On Mary St,Victoria West
-48.432535,-123.386105,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,7,On Mary St,Victoria West
+48.432535,-123.386105,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,7,On Mary St,Victoria West
 48.432759,-123.386102,Acer platanoides,Norway maple,Acer platanoides,4,7,On Mary St,Victoria West
 48.431178,-123.379062,Alnus rubra,Red Alder,Alnus rubra,12,33,On Wilson St,Victoria West
 48.431295,-123.379293,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,20,56,On Wilson St,Victoria West
@@ -27467,8 +27467,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.432013,-123.380374,Cercidiphyllum japonicum,Katsura,Cercidiphyllum japonicum,6,21,On Wilson St,Victoria West
 48.431933,-123.380217,Cercidiphyllum japonicum,Katsura,Cercidiphyllum japonicum,5,21,On Wilson St,Victoria West
 48.432956,-123.383177,Betula pendula,European white birch,Betula pendula,10,26,On Wilson St,Victoria West
-48.432953,-123.383016,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,6,On Wilson St,Victoria West
-48.432952,-123.382651,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,2,On Wilson St,Victoria West
+48.432953,-123.383016,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,6,On Wilson St,Victoria West
+48.432952,-123.382651,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,2,On Wilson St,Victoria West
 48.43295,-123.382518,Sorbus aucuparia,Mountain-ash,Sorbus aucuparia,5,10,On Wilson St,Victoria West
 48.436206,-123.382504,Prunus serrulata,Japanese cherry,Prunus serrulata,7,18,On Tyee Rd,Victoria West
 48.436014,-123.382371,Prunus serrulata,Japanese cherry,Prunus serrulata,6,18,On Tyee Rd,Victoria West
@@ -27581,7 +27581,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436433,-123.38711,Prunus serrulata,Japanese cherry,Prunus serrulata,4,27,On Raynor Ave,Victoria West
 48.436251,-123.387609,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,14,63,On Craigflower Rd,Victoria West
 48.436144,-123.387499,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,14,62,On Craigflower Rd,Victoria West
-48.436031,-123.387376,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,6,On Craigflower Rd,Victoria West
+48.436031,-123.387376,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,6,On Craigflower Rd,Victoria West
 48.435802,-123.386169,Prunus serrulata,Japanese cherry,Prunus serrulata,10,48,On Mary St,Victoria West
 48.435927,-123.386173,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,7,39,On Mary St,Victoria West
 48.43624,-123.386174,Prunus serrulata,Japanese cherry,Prunus serrulata,7,12,On Mary St,Victoria West
@@ -27744,9 +27744,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.433573,-123.387148,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,2,3,On Russell St,Victoria West
 48.432978,-123.393827,Thuja plicata,Western redcedar,Thuja plicata,22,72,On Wilson St,Victoria West
 48.432913,-123.393281,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,11,55,On Wilson St,Victoria West
-48.432874,-123.393014,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,3,On Wilson St,Victoria West
+48.432874,-123.393014,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,3,On Wilson St,Victoria West
 48.432811,-123.392629,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,32,On Wilson St,Victoria West
-48.432797,-123.392539,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,7,On Wilson St,Victoria West
+48.432797,-123.392539,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,7,On Wilson St,Victoria West
 48.432779,-123.392366,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,9,43,On Wilson St,Victoria West
 48.432746,-123.392173,Acer rubrum,Red maple,Acer rubrum,5,10,On Wilson St,Victoria West
 48.432724,-123.391927,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,4,12,On Wilson St,Victoria West
@@ -27810,23 +27810,23 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.428818,-123.381761,Pinus nigra,Austrian pine,Pinus nigra,8,34,In Sitkum Park,Victoria West
 48.429006,-123.381363,Crataegus × mordenensis,Hawthorn,Crataegus mordenensis 'Snowbird',4,6,On Sitkum Rd,Victoria West
 48.42907,-123.381262,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,4,13,On Sitkum Rd,Victoria West
-48.429124,-123.381179,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,6,On Sitkum Rd,Victoria West
-48.429184,-123.381082,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,8,On Sitkum Rd,Victoria West
+48.429124,-123.381179,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,6,On Sitkum Rd,Victoria West
+48.429184,-123.381082,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,8,On Sitkum Rd,Victoria West
 48.429237,-123.380982,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,4,12,On Sitkum Rd,Victoria West
-48.429303,-123.380798,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',1.5,5,On Sitkum Rd,Victoria West
-48.429334,-123.380664,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,2,On Sitkum Rd,Victoria West
+48.429303,-123.380798,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',1.5,5,On Sitkum Rd,Victoria West
+48.429334,-123.380664,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,2,On Sitkum Rd,Victoria West
 48.429406,-123.380422,Quercus palustris,Pin oak,Quercus palustris,9,20,On Sitkum Rd,Victoria West
 48.42948,-123.380399,Quercus palustris,Pin oak,Quercus palustris,9,15,On Sitkum Rd,Victoria West
 48.429563,-123.380369,Quercus palustris,Pin oak,Quercus palustris,9,18,On Sitkum Rd,Victoria West
 48.429637,-123.380341,Quercus palustris,Pin oak,Quercus palustris,6,22,On Sitkum Rd,Victoria West
-48.429326,-123.380261,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,3,On Saghalie Rd,Victoria West
+48.429326,-123.380261,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,3,On Saghalie Rd,Victoria West
 48.429247,-123.37997,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,14,On Saghalie Rd,Victoria West
 48.429211,-123.379906,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,4,20,On Saghalie Rd,Victoria West
 48.429032,-123.379684,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,14,On Saghalie Rd,Victoria West
 48.428976,-123.379634,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,14,On Saghalie Rd,Victoria West
 48.428754,-123.379649,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,5,13,On Saghalie Rd,Victoria West
-48.428931,-123.379747,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,15,On Saghalie Rd,Victoria West
-48.428985,-123.379793,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,12,On Saghalie Rd,Victoria West
+48.428931,-123.379747,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,15,On Saghalie Rd,Victoria West
+48.428985,-123.379793,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,12,On Saghalie Rd,Victoria West
 48.429141,-123.379978,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,4,14,On Saghalie Rd,Victoria West
 48.429176,-123.380054,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,3,5,On Saghalie Rd,Victoria West
 48.429249,-123.380308,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,4,12,On Saghalie Rd,Victoria West
@@ -28030,7 +28030,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.42901,-123.38368,Acer rubrum,Red maple,Acer rubrum,10,36,On Kimta Rd,Victoria West
 48.429044,-123.3839,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,9,25,In Catherine Street Green,Victoria West
 48.429057,-123.38402,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,8,16,In Catherine Street Green,Victoria West
-48.429093,-123.384142,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,7,In Catherine Street Green,Victoria West
+48.429093,-123.384142,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,7,In Catherine Street Green,Victoria West
 48.429113,-123.384294,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,14,49,In Catherine Street Green,Victoria West
 48.428961,-123.384041,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,35,In Catherine Street Green,Victoria West
 48.429089,-123.384418,Pinus sylvestris,Scots pine,Pinus sylvestris,5,53,In Catherine Street Green,Victoria West
@@ -28098,7 +28098,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.438846,-123.390953,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,3,6,On Craigflower Rd,Victoria West
 48.438808,-123.39085,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,42,On Craigflower Rd,Victoria West
 48.43876,-123.390706,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,10,47,On Craigflower Rd,Victoria West
-48.438695,-123.390537,Aesculus briottii,Horse Chestnut,Aesculus briottii,8,22,On Craigflower Rd,Victoria West
+48.438695,-123.390537,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,8,22,On Craigflower Rd,Victoria West
 48.438622,-123.390319,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,49,On Craigflower Rd,Victoria West
 48.438454,-123.389969,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,50,On Craigflower Rd,Victoria West
 48.438338,-123.389823,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,50,On Craigflower Rd,Victoria West
@@ -28324,7 +28324,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.438004,-123.391434,Prunus serrulata,Japanese cherry,Prunus accolade,8,30,On Alderman Rd,Victoria West
 48.43902,-123.39202,Quercus garryana,Garry oak,Quercus garryana,10,48,On Craigflower Rd,Victoria West
 48.438823,-123.391366,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,34,On Craigflower Rd,Victoria West
-48.438756,-123.391166,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,3,On Craigflower Rd,Victoria West
+48.438756,-123.391166,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,3,On Craigflower Rd,Victoria West
 48.439081,-123.392095,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,35,On Craigflower Rd,Victoria West
 48.439273,-123.392702,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,38,On Craigflower Rd,Victoria West
 48.438956,-123.391738,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,10,44,On Craigflower Rd,Victoria West
@@ -28337,7 +28337,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437494,-123.386326,Thuja plicata,Western redcedar,Thuja plicata,2,1,In Banfield Park,Victoria West
 48.43711,-123.387073,Thuja plicata,Western redcedar,Thuja plicata,3,4,In Banfield Park,Victoria West
 48.437096,-123.387057,Picea glauca,White spruce,Picea glauca,8,28,In Banfield Park,Victoria West
-48.437059,-123.387032,Malus apple,Apple,Malus apple,1,29,In Banfield Park,Victoria West
+48.437059,-123.387032,Malus domestica,Apple,Malus apple,1,29,In Banfield Park,Victoria West
 48.437055,-123.386934,Prunus avium,Wild cherry,Prunus avium,7,22,In Banfield Park,Victoria West
 48.437031,-123.387061,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,33,In Banfield Park,Victoria West
 48.429901,-123.39317,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,3,3,In Barnard Park,Victoria West
@@ -28575,7 +28575,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.42968,-123.393964,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,16,55,In Barnard Park,Victoria West
 48.438872,-123.388135,Crataegus laevigata,Midland hawthorn,Crataegus laevigata,6,43,In Banfield Park,Victoria West
 48.438459,-123.388879,Quercus garryana,Garry oak,Quercus garryana,14,73,In Banfield Park,Victoria West
-48.438412,-123.389132,Malus apple,Apple,Malus apple,5,22,In Banfield Park,Victoria West
+48.438412,-123.389132,Malus domestica,Apple,Malus apple,5,22,In Banfield Park,Victoria West
 48.438381,-123.389071,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,14,55,In Banfield Park,Victoria West
 48.438364,-123.389093,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,12,50,In Banfield Park,Victoria West
 48.438355,-123.389114,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,12,37,In Banfield Park,Victoria West
@@ -31537,7 +31537,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.408974,-123.353995,Malus,Apple,Malus,3,11,On Linden Ave,Fairfield
 48.410296,-123.353825,Acer truncatum,Maple,Acer truncatum 'Crimson Sunset',4,4,On Linden Ave,Fairfield
 48.417443,-123.351926,Tilia cordata,Little-leaf linden,Tilia cordata,4,8,On Linden Ave,Fairfield
-48.407512,-123.354344,Malus apple,Apple,Malus apple,3,7,On Linden Ave,Fairfield
+48.407512,-123.354344,Malus domestica,Apple,Malus apple,3,7,On Linden Ave,Fairfield
 48.411714,-123.353197,Tilia cordata,Little-leaf linden,Tilia cordata,5,12,On May St,Fairfield
 48.420221,-123.351389,Tilia cordata,Little-leaf linden,Tilia cordata,6,12,On Linden Ave,Fairfield
 48.409035,-123.356228,Acer griseum,Maple,Acer griseum,3,7,On Marlborough St,Fairfield
@@ -31619,7 +31619,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437222,-123.360384,Malus,Apple,Malus,3,10,On Kings Rd,Hillside/Quadra
 48.428191,-123.339067,Quercus palustris,Pin oak,Quercus palustris,5,7,On Begbie St,Fernwood
 48.434345,-123.349581,Acer rubrum,Red maple,Acer rubrum,5,6,On Empress Ave,Fernwood
-48.433306,-123.338274,Aesculus briottii,Horse Chestnut,Aesculus briottii,1,4,On Forbes St,Fernwood
+48.433306,-123.338274,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,1,4,On Forbes St,Fernwood
 48.430392,-123.339992,Carpinus betulus,Common hornbeam,Carpinus betulus 'Fastigiata',3,6,On Gladstone Ave,Fernwood
 48.435665,-123.346405,Malus,Apple,Malus,3,6,On Garden St,Fernwood
 48.436007,-123.333916,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,5,5,On Haultain St,Fernwood
@@ -31639,13 +31639,13 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.438162,-123.389314,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,4,6,In Banfield Park,Victoria West
 48.438134,-123.389396,Nothofuagus antarctica,Antarctic Beech,Nothofuagus antarctica,2,1,In Banfield Park,Victoria West
 48.421484,-123.37407,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Thundercloud,6,27,In Quadra Park,James Bay
-48.421465,-123.373989,Malus apple,Apple,Malus apple,5,24,In Quadra Park,James Bay
-48.421413,-123.373787,Malus apple,Apple,Malus apple,5,16.5,In Quadra Park,James Bay
-48.421381,-123.373689,Malus apple,Apple,Malus apple,5,29,In Quadra Park,James Bay
-48.421355,-123.373565,Malus apple,Apple,Malus apple,6,27.5,In Quadra Park,James Bay
-48.421323,-123.373468,Malus apple,Apple,Malus apple,5,20,In Quadra Park,James Bay
+48.421465,-123.373989,Malus domestica,Apple,Malus apple,5,24,In Quadra Park,James Bay
+48.421413,-123.373787,Malus domestica,Apple,Malus apple,5,16.5,In Quadra Park,James Bay
+48.421381,-123.373689,Malus domestica,Apple,Malus apple,5,29,In Quadra Park,James Bay
+48.421355,-123.373565,Malus domestica,Apple,Malus apple,6,27.5,In Quadra Park,James Bay
+48.421323,-123.373468,Malus domestica,Apple,Malus apple,5,20,In Quadra Park,James Bay
 48.421282,-123.373501,Acer palmatum,Red emperor maple,Acer palmatum,3,10,In Quadra Park,James Bay
-48.421287,-123.373614,Malus apple,Apple,Malus apple,8,31,In Quadra Park,James Bay
+48.421287,-123.373614,Malus domestica,Apple,Malus apple,8,31,In Quadra Park,James Bay
 48.421376,-123.373718,Betula,Birch,Betula,8,21.5,In Quadra Park,James Bay
 48.421388,-123.373738,Betula,Birch,Betula,10,37,In Quadra Park,James Bay
 48.421342,-123.373888,Betula,Birch,Betula,10,17,In Quadra Park,James Bay
@@ -31775,7 +31775,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.432737,-123.393279,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,6,42,In Z Add 01,Victoria West
 48.43272,-123.393069,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,6,45,In Z Add 01,Victoria West
 48.43269,-123.392841,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,47,In Z Add 01,Victoria West
-48.432641,-123.392588,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,5,In Z Add 01,Victoria West
+48.432641,-123.392588,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,5,In Z Add 01,Victoria West
 48.432626,-123.392463,Acer rubrum,Red maple,Acer rubrum,6,13,In Z Add 01,Victoria West
 48.432596,-123.392239,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,51,In Z Add 01,Victoria West
 48.432575,-123.39207,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,7,55,In Z Add 01,Victoria West
@@ -31900,7 +31900,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.434792,-123.382305,Quercus,Oak,Quercus,5,10,On Skinner St,Victoria West
 48.434839,-123.382356,Quercus,Oak,Quercus,5,11,On Skinner St,Victoria West
 48.431381,-123.384438,Acer ginnala,Amur maple,Acer ginnala,4,9,On Dundas St,Victoria West
-48.445363,-123.342348,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,5,On Oakland Ave,Oaklands
+48.445363,-123.342348,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,5,On Oakland Ave,Oaklands
 48.443425,-123.373658,Ulmus,Elm,Ulmus,5,10,In Sumas Playground,Burnside
 48.44159,-123.372446,Fraxinus ornus,Manna ash,Fraxinus ornus,3,10,On Sumas St,Burnside
 48.44719,-123.353495,Prunus cerasifera,Cherry plum,Prunus cerasifera,4,8,On Finlayson St,Hillside/Quadra
@@ -31919,17 +31919,17 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.431002,-123.332483,Acer rubrum,Red maple,Acer rubrum,8,9,In Begbie Parkway,North Jubilee
 48.430891,-123.332457,Acer rubrum,Red maple,Acer rubrum,7,10,In Begbie Parkway,North Jubilee
 48.430832,-123.332496,Acer rubrum,Red maple,Acer rubrum,5,7,In Begbie Parkway,North Jubilee
-48.415976,-123.384561,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,14,On Montreal St,James Bay
+48.415976,-123.384561,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,14,On Montreal St,James Bay
 48.416068,-123.384465,Zelkova serrata,Japanese Zelkova,Zelkova serrata,6,18,On Montreal St,James Bay
-48.416129,-123.384387,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,13,On Montreal St,James Bay
-48.416206,-123.384305,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,14,On Montreal St,James Bay
+48.416129,-123.384387,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,13,On Montreal St,James Bay
+48.416206,-123.384305,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,14,On Montreal St,James Bay
 48.416289,-123.384216,Zelkova serrata,Japanese Zelkova,Zelkova serrata,6,11,On Montreal St,James Bay
 48.416528,-123.383975,Zelkova serrata,Japanese Zelkova,Zelkova serrata,4,8,On Montreal St,James Bay
-48.416608,-123.383884,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,9,On Montreal St,James Bay
-48.416701,-123.383781,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',5,10,On Montreal St,James Bay
+48.416608,-123.383884,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,9,On Montreal St,James Bay
+48.416701,-123.383781,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',5,10,On Montreal St,James Bay
 48.416784,-123.383698,Zelkova serrata,Japanese Zelkova,Zelkova serrata,5,12,On Montreal St,James Bay
 48.417101,-123.383352,Zelkova serrata,Japanese Zelkova,Zelkova serrata,6,20,On Montreal St,James Bay
-48.417181,-123.383256,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',4,16,On Montreal St,James Bay
+48.417181,-123.383256,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',4,16,On Montreal St,James Bay
 48.417254,-123.383169,Zelkova serrata,Japanese Zelkova,Zelkova serrata,6,20,On Montreal St,James Bay
 48.41181,-123.361545,Fraxinus americana,White Ash,Fraxinus americana 'Royal Purple',7,14,In Beacon Hill Park,Fairfield
 48.415512,-123.364931,Quercus garryana,Garry oak,Quercus garryana,3,3,In Beacon Hill Park,James Bay
@@ -31963,7 +31963,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411799,-123.361274,Quercus dentata,Oak,Quercus dentata 'Pinnatifida',4,4,In Beacon Hill Park,Fairfield
 48.411613,-123.361512,Stewartia monadelpha,Deciduous Camellia,Stewartia monadelpha,3,5,In Beacon Hill Park,Fairfield
 48.411932,-123.362247,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,2,6,In Beacon Hill Park,Fairfield
-48.411848,-123.361408,Asminia triloba,Pawpaw,Asminia triloba,3,6,In Beacon Hill Park,Fairfield
+48.411848,-123.361408,Asimina triloba,Pawpaw,Asminia triloba,3,6,In Beacon Hill Park,Fairfield
 48.411939,-123.361435,Quercus macrocarpa,Bur Oak,Quercus macrocarpa,3,6,In Beacon Hill Park,Fairfield
 48.41201,-123.361366,Cornus kousa,Kousa Dogwood,Cornus kousa,3,3,In Beacon Hill Park,Fairfield
 48.412103,-123.361453,Picea orientalis,Spruce,Picea orientalis,4,7,In Beacon Hill Park,Fairfield
@@ -31980,7 +31980,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.422395,-123.331684,Stewartia monadelpha,Deciduous Camellia,Stewartia monadelpha,4,4,On Oak Shade Lane,Rockland
 48.440457,-123.336262,Ginkgo biloba,Ginkgo,Ginkgo biloba princeton sent,3,3,On Lionel St,Oaklands
 48.422298,-123.375507,Acer ginnala,Amur maple,Acer ginnala 'Red November',5,8,In Centennial Park,James Bay
-48.423961,-123.341452,Cornus x,Dogwood,Cornus x Eddies White Wonder,3,6,On Pemberton Rd,Rockland
+48.423961,-123.341452,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,3,6,On Pemberton Rd,Rockland
 48.442083,-123.335032,Acer platanoides,Norway maple,Acer platanoides 'Crimson King',3,6,On Pearl St,Oaklands
 48.417083,-123.355475,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum baumn,4,8,On Cook St,Fairfield
 48.441951,-123.335216,Acer platanoides,Norway maple,Acer platanoides 'Crimson King',4,7,In Oaklands Park,Oaklands
@@ -32117,7 +32117,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.418405,-123.364394,Quercus garryana,Garry oak,Quercus garryana,3,4,In Beacon Hill Park,Fairfield
 48.418467,-123.364518,Quercus garryana,Garry oak,Quercus garryana,3,5,In Beacon Hill Park,Fairfield
 48.41728,-123.365597,Quercus garryana,Garry oak,Quercus garryana,4,4,In Beacon Hill Park,James Bay
-48.417279,-123.365511,Cornus x,Dogwood,Cornus x Eddies White Wonder,4,4,In Beacon Hill Park,James Bay
+48.417279,-123.365511,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,4,4,In Beacon Hill Park,James Bay
 48.417254,-123.365437,Quercus garryana,Garry oak,Quercus garryana,4,5,In Beacon Hill Park,James Bay
 48.417352,-123.365161,Quercus garryana,Garry oak,Quercus garryana,4,5,In Beacon Hill Park,James Bay
 48.417458,-123.364995,Quercus garryana,Garry oak,Quercus garryana,3,4,In Beacon Hill Park,James Bay
@@ -32141,7 +32141,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411752,-123.367196,Catalpa bignonioides,Southern Catalpa,Catalpa bignonioides,6,18,In Beacon Hill Park,James Bay
 48.414896,-123.363226,Fagus sylvatica,European beech,Fagus sylvatica 'Rohanii',5,5,In Beacon Hill Park,Fairfield
 48.412473,-123.363575,Acer rubrum,Red maple,Acer rubrum 'Karpick',6,9,In Beacon Hill Park,Fairfield
-48.411773,-123.367029,Pistachia chinensis,Pistachio,Pistachia chinensis,5,10,In Beacon Hill Park,James Bay
+48.411773,-123.367029,Pistacia chinensis,Chinese pistache,Pistachia chinensis,5,10,In Beacon Hill Park,James Bay
 48.441827,-123.381638,Pinus contorta,Lodgepole pine,Pinus contorta var. bolanderi,3,5,In Arbutus Park,Burnside
 48.421831,-123.366233,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos shadem,6,8,On Douglas St,Downtown
 48.42656,-123.331808,Quercus garryana,Garry oak,Quercus garryana,17,92,On Oak Bay Ave,Gonzales
@@ -32199,9 +32199,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411527,-123.372516,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,5,15,On Government St,James Bay
 48.428647,-123.370264,Magnolia × 'Galaxy',Galaxy magnolia,Magnolia X 'Galaxy',2,4,On Pandora Ave,Downtown
 48.428705,-123.369767,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos shadem,4,7,On Pandora Ave,Downtown
-48.418018,-123.383161,Malus apple,Apple,Malus apple,2,2,In Ernest Todd Playground,James Bay
-48.418109,-123.383358,Malus apple,Apple,Malus apple,1,1,In Ernest Todd Playground,James Bay
-48.422121,-123.376985,Malus apple,Apple,Malus apple,12,1,In Charles Redfern Park,James Bay
+48.418018,-123.383161,Malus domestica,Apple,Malus apple,2,2,In Ernest Todd Playground,James Bay
+48.418109,-123.383358,Malus domestica,Apple,Malus apple,1,1,In Ernest Todd Playground,James Bay
+48.422121,-123.376985,Malus domestica,Apple,Malus apple,12,1,In Charles Redfern Park,James Bay
 48.42216,-123.377064,Malus domestica,Apple,Malus domestica 'Melrose',2,2,In Charles Redfern Park,James Bay
 48.422168,-123.377006,Acer rubrum,Red maple,Acer rubrum,3,4,In Charles Redfern Park,James Bay
 48.422207,-123.377152,Corylus,Hazel,Corylus,1,1,In Charles Redfern Park,James Bay
@@ -32488,7 +32488,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437251,-123.386833,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,4,5,In Banfield Park,Victoria West
 48.413119,-123.365779,Acer rubrum,Red maple,Acer rubrum 'Sun Valley',4,5,In Beacon Hill Park,James Bay
 48.41709,-123.362557,Quercus garryana,Garry oak,Quercus garryana,4,6,In Beacon Hill Park,Fairfield
-48.428409,-123.366161,Cornus x,Dogwood,Cornus x Eddies White Wonder,3,4,In Centennial Square,Downtown
+48.428409,-123.366161,Cornus × 'Eddie's White Wonder',Dogwood,Cornus x Eddies White Wonder,3,4,In Centennial Square,Downtown
 48.445519,-123.379304,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,4,7,On Cecelia Rd,Burnside
 48.445563,-123.379418,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,4,6,In Cecelia Ravine Park,Burnside
 48.445554,-123.37947,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,4,6,In Cecelia Ravine Park,Burnside
@@ -32505,7 +32505,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.427083,-123.374198,Prunus serrulata,Japanese cherry,Prunus serrulata 'Shirofugen',3,7,On Westsong Way,Victoria West
 48.441224,-123.380108,Quercus garryana,Garry oak,Quercus garryana,3,4,In Cecelia Cove Park,Burnside
 48.444394,-123.356048,Quercus garryana,Garry oak,Quercus garryana,4,4,In Summit Park,Hillside/Quadra
-48.414645,-123.380541,Crataegus mordensis,Hawthorn,Crataegus mordensis 'Toba',2,2,On San Jose Ave,James Bay
+48.414645,-123.380541,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',2,2,On San Jose Ave,James Bay
 48.41468,-123.380519,Acer rubrum,Red maple,Acer rubrum 'Sun Valley',4,3,On San Jose Ave,James Bay
 48.431468,-123.392606,Pinus contorta,Lodgepole pine,Pinus contorta,15,119,In Z Add 01,Victoria West
 48.418426,-123.33789,Zelkova serrata,Japanese Zelkova,Zelkova serrata 'Green Vase',2,7,On St Charles St,Rockland
@@ -32586,7 +32586,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.417611,-123.36648,Acer palmatum,Red emperor maple,Acer palmatum,8,17,On Michigan St,James Bay
 48.417544,-123.366361,Betula,Birch,Betula,12,11,On Michigan St,James Bay
 48.414044,-123.366252,Rhamnus purshiana,Cascara Buckthorn,Frangula purshiana,8,10,In Beacon Hill Park,James Bay
-48.444917,-123.385784,Malus apple,Apple,Malus apple,8,13,In Balfour Playlot,Burnside
+48.444917,-123.385784,Malus domestica,Apple,Malus apple,8,13,In Balfour Playlot,Burnside
 48.444979,-123.38588,Prunus cerasifera,Cherry plum,Prunus cerasifera,11,74,In Balfour Playlot,Burnside
 48.445033,-123.385827,Laburnum × watereri,Golden chain tree,Laburnum x watereri,7,47,In Balfour Playlot,Burnside
 48.444965,-123.385705,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,12,52,In Balfour Playlot,Burnside
@@ -32674,7 +32674,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.444537,-123.351279,Quercus garryana,Garry oak,Quercus garryana,7,40,In Summit Park,Hillside/Quadra
 48.44451,-123.351534,Quercus garryana,Garry oak,Quercus garryana,7,56,In Summit Park,Hillside/Quadra
 48.412748,-123.352756,Acer rubrum,Red maple,Acer rubrum 'Sun Valley',5,8,In Chapman Street Playlot,Fairfield
-48.432976,-123.38676,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,5,On Wilson St,Victoria West
+48.432976,-123.38676,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,5,On Wilson St,Victoria West
 48.437006,-123.33155,Pyrus communis,Callery Pear,Pyrus communis,3,6,On Carrick St,North Jubilee
 48.411351,-123.338048,Pinus,Pine,Pinus,12,31,In Ross Bay Cemetery,Fairfield
 48.435781,-123.37657,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,5,7,On Pleasant St,Burnside
@@ -33266,7 +33266,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.431486,-123.337232,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,15,50,On Victor St,Fernwood
 48.431515,-123.337226,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,18,61,On Victor St,Fernwood
 48.438113,-123.387649,Thuja plicata,Western redcedar,Thuja plicata,2,4,In Banfield Park,Victoria West
-48.430706,-123.355734,Fraxinus oxycarpa,Ash,Fraxinus oxycarpa,4,5,On Vancouver St,North Park
+48.430706,-123.355734,Fraxinus angustifolia,Narrow-leafed ash,Fraxinus oxycarpa,4,5,On Vancouver St,North Park
 48.428911,-123.355992,Fraxinus angustifolia,Narrow-leafed ash,Fraxinus angustifolia 'Raywood',4,5,On Vancouver St,North Park
 48.423282,-123.357031,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,4,8,On Vancouver St,Fairfield
 48.42061,-123.357683,Acer rubrum,Red maple,Acer rubrum,7,10,On Vancouver St,Fairfield
@@ -33513,7 +33513,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.437187,-123.386826,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,4,4,In Banfield Park,Victoria West
 48.437203,-123.38678,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,4,4,In Banfield Park,Victoria West
 48.437242,-123.386679,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,4,4,In Banfield Park,Victoria West
-48.438445,-123.342136,Pistachia chinensis,Pistachio,Pistachia chinensis,4,2,On Avebury Ave,Oaklands
+48.438445,-123.342136,Pistacia chinensis,Chinese pistache,Pistachia chinensis,4,2,On Avebury Ave,Oaklands
 48.437662,-123.383413,Acer macrophyllum,Bigleaf maple,Acer macrophyllum,3,3,In Arthur Currie Green,Victoria West
 48.449036,-123.35875,Gleditsia triacanthos,Honey locust,Gleditsia triacanthos 'Street Keeper',5,5,In Jackson Street Playground,Hillside/Quadra
 48.442414,-123.380762,Arbutus menziesii,Arbutus / Pacific madrone,Arbutus menziesii,14,80,In Arbutus Park,Burnside
@@ -33567,10 +33567,10 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.425978,-123.353026,Parrotia persica,Persian ironwood,Parrotia persica 'Vanessa',4,5,On Johnson St,Fernwood
 48.425972,-123.352929,Parrotia persica,Persian ironwood,Parrotia persica 'Vanessa',4,5,On Johnson St,Fernwood
 48.425958,-123.352809,Parrotia persica,Persian ironwood,Parrotia persica 'Vanessa',4,5,On Johnson St,Fernwood
-48.443084,-123.367121,Pistachia chinensis,Pistachio,Pistachia chinensis,6,7,On Summit Ave,Burnside
-48.443146,-123.366581,Pistachia chinensis,Pistachio,Pistachia chinensis,6,7,On Summit Ave,Burnside
-48.443133,-123.366695,Pistachia chinensis,Pistachio,Pistachia chinensis,6,7,On Summit Ave,Burnside
-48.443119,-123.366801,Pistachia chinensis,Pistachio,Pistachia chinensis,4,6,On Summit Ave,Burnside
+48.443084,-123.367121,Pistacia chinensis,Chinese pistache,Pistachia chinensis,6,7,On Summit Ave,Burnside
+48.443146,-123.366581,Pistacia chinensis,Chinese pistache,Pistachia chinensis,6,7,On Summit Ave,Burnside
+48.443133,-123.366695,Pistacia chinensis,Chinese pistache,Pistachia chinensis,6,7,On Summit Ave,Burnside
+48.443119,-123.366801,Pistacia chinensis,Chinese pistache,Pistachia chinensis,4,6,On Summit Ave,Burnside
 48.444319,-123.378677,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,1,3,In Cecelia Ravine Park,Burnside
 48.414673,-123.363995,Wildlife snag,Wildlife snag,Wildlife snag,6,72,In Beacon Hill Park,James Bay
 48.414686,-123.363989,Wildlife snag,Wildlife snag,Wildlife snag,5,67,In Beacon Hill Park,James Bay
@@ -33599,7 +33599,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.413406,-123.336362,Davidia involucrata,Dove Tree,Davidia involucrate,3,2,In Hollywood Park,Gonzales
 48.415339,-123.335812,Ailanthus altissima,Tree of heaven,Ailanthus altissima,14,55,On Chandler Ave,Gonzales
 48.415368,-123.335718,Pinus,Pine,Pinus,14,58,On Chandler Ave,Gonzales
-48.435044,-123.340882,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,4,On Asquith St,Fernwood
+48.435044,-123.340882,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,4,On Asquith St,Fernwood
 48.416356,-123.345256,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',4,4,On Durban St,Fairfield
 48.416809,-123.344872,Magnolia × 'Galaxy',Galaxy magnolia,Magnolia x Galaxy,4,6,On Richardson St,Fairfield
 48.416765,-123.344727,Magnolia × 'Galaxy',Galaxy magnolia,Magnolia x Galaxy,4,5,On Richardson St,Fairfield
@@ -33814,7 +33814,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.439057,-123.362975,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,3,4,In Blanshard Parkway,Hillside/Quadra
 48.439096,-123.363131,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,3,4,In Blanshard Parkway,Hillside/Quadra
 48.432465,-123.360435,Quercus garryana,Garry oak,Quercus garryana,8,66,On Pembroke St,North Park
-48.432316,-123.334259,Malus apple,Apple,Malus apple,4,4,On Lydia St,Fernwood
+48.432316,-123.334259,Malus domestica,Apple,Malus apple,4,4,On Lydia St,Fernwood
 48.430669,-123.35758,Acer rubrum,Red maple,Acer rubrum autumn blaze,5,5,On Caledonia Ave,North Park
 48.430662,-123.357432,Acer rubrum,Red maple,Acer rubrum autumn blaze,5,5,On Caledonia Ave,North Park
 48.430207,-123.362213,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,3,4,On Herald St,Downtown
@@ -33962,7 +33962,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.44526,-123.380751,Prunus serrulata,Japanese cherry,Prunus serrulata,2,3,On Washington Ave,Burnside
 48.445081,-123.380846,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Thundercloud,3,3,On Washington Ave,Burnside
 48.445587,-123.380574,Prunus serrulata,Japanese cherry,Prunus serrulata,2,3,On Washington Ave,Burnside
-48.445806,-123.338235,Aesculus briottii,Horse Chestnut,Aesculus briottii,3,4,On Edgeware Rd,Oaklands
+48.445806,-123.338235,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,3,4,On Edgeware Rd,Oaklands
 48.415519,-123.326619,Acer truncatum,Maple,Acer truncatum 'Urban Sunset',3,5,On Fairfield Rd,Gonzales
 48.415532,-123.326479,Acer truncatum,Maple,Acer truncatum 'Urban Sunset',3,5,On Fairfield Rd,Gonzales
 48.426927,-123.351129,Acer miyabei,Maple,Acer miyabei 'Rugged Ridge',4,7,In Harris Green,Fernwood
@@ -33986,8 +33986,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.445883,-123.339786,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,4,4,On Doncaster Dr,Oaklands
 48.438174,-123.338195,Ginkgo biloba,Ginkgo,Ginkgo biloba princeton sent,2,5,On Kings Rd,Oaklands
 48.438172,-123.337855,Ginkgo biloba,Ginkgo,Ginkgo biloba princeton sent,2,5,On Kings Rd,Oaklands
-48.438167,-123.337532,Aesculus briottii,Horse Chestnut,Aesculus briottii,1.5,3,On Kings Rd,Oaklands
-48.438175,-123.338033,Aesculus briottii,Horse Chestnut,Aesculus briottii,4,3,On Kings Rd,Oaklands
+48.438167,-123.337532,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,1.5,3,On Kings Rd,Oaklands
+48.438175,-123.338033,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,4,3,On Kings Rd,Oaklands
 48.424628,-123.335205,Quercus garryana,Garry oak,Quercus garryana,1.5,5,On Terrace Park,Rockland
 48.424635,-123.335404,Quercus garryana,Garry oak,Quercus garryana,1.5,5,On Terrace Park,Rockland
 48.424647,-123.335241,Quercus garryana,Garry oak,Quercus garryana,1.5,5,On Terrace Park,Rockland
@@ -34222,8 +34222,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.426651,-123.356371,Cercis canadensis,Redbud,Cercis canadensis 'Northern Herald',3,5,On Vancouver St,Harris Green
 48.443532,-123.387589,Syringa reticulata,Lilac,Syringa reticulata Ivory silk,4,4,On Gorge Rd E,Burnside
 48.406387,-123.349507,Laburnum anagyroides,Common Laburnum,Laburnum anagyroides,4,40,On Point St,Fairfield
-48.449997,-123.350578,Aesculus briottii,Horse Chestnut,Aesculus briottii,10,35,In Maplewood Green,Oaklands
-48.45005,-123.350631,Aesculus briottii,Horse Chestnut,Aesculus briottii,10,35,In Maplewood Green,Oaklands
+48.449997,-123.350578,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,10,35,In Maplewood Green,Oaklands
+48.45005,-123.350631,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,10,35,In Maplewood Green,Oaklands
 48.45004,-123.35054,Davidia involucrata,Dove Tree,Davidia involucrate,3,4,In Maplewood Green,Oaklands
 48.450117,-123.350633,Nyssa sylvatica,Black tupelo,Nyssa sylvatica 'Red Rage',4,5,In Maplewood Green,Oaklands
 48.434311,-123.389024,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,46,In Victoria West School,Victoria West
@@ -34392,7 +34392,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.42471,-123.33522,Quercus garryana,Garry oak,Quercus garryana,10,52,In Terrace Park,Rockland
 48.424716,-123.335333,Quercus garryana,Garry oak,Quercus garryana,10,40,In Terrace Park,Rockland
 48.429636,-123.324827,Parrotia persica,Persian ironwood,Parrotia persica,3,1,On Bourchier St,South Jubilee
-48.438913,-123.356181,Aesculus briottii,Horse Chestnut,Aesculus briottii,1.5,6,On Graham St,Hillside/Quadra
+48.438913,-123.356181,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,1.5,6,On Graham St,Hillside/Quadra
 48.41324,-123.362559,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,0.75,4,In Beacon Hill Park,Fairfield
 48.439026,-123.363596,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua 'Worplesdon',4,6,On Hillside Ave,Burnside
 48.43898,-123.36366,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua 'Worplesdon',1,6,On Hillside Ave,Burnside
@@ -34690,7 +34690,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.410324,-123.368459,Pinus contorta,Lodgepole pine,Pinus contorta,3,2,In Beacon Hill Park,James Bay
 48.415218,-123.325735,Quercus garryana,Garry oak,Quercus garryana,2,2,On Fairfield Pl,Gonzales
 48.429684,-123.394249,Arbutus menziesii,Arbutus / Pacific madrone,Arbutus menziesii,3,3,In Barnard Park,Victoria West
-48.432858,-123.333705,Malus apple,Apple,Malus apple,2,1,In Shelbourne Green,Fernwood
+48.432858,-123.333705,Malus domestica,Apple,Malus apple,2,1,In Shelbourne Green,Fernwood
 48.445198,-123.355314,Quercus garryana,Garry oak,Quercus garryana,2,4,In Summit Park,Hillside/Quadra
 48.427401,-123.340113,Quercus garryana,Garry oak,Quercus garryana,3,2,In Stadacona Park,Fernwood
 48.427463,-123.340677,Malus fusca,Oregon crabapple,Malus fusca,3,1,In Stadacona Park,Fernwood
@@ -34894,10 +34894,10 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.456942,-123.32535,Pinus jeffreyi,Jeffrey pine,Pinus jeffreyi,,,At Mount Tolmie Park,
 48.414581,-123.320341,Quercus garryana,Garry oak,Quercus garriana,,,At 570 Falkland Rd.,
 48.65556,-123.44444,Quercus garryana,Garry oak,Quercus garriana,,,At Mills Rd at W. Saanich Rd,
-48.4522,-123.4414,Juniperus scopulorum,Rocky Mountain Juniper,Juniperus scopulorum,,,"At Kerwood Street, View Royal",
-48.4522,-123.4414,Juniperus scopulorum,Rocky Mountain Juniper,Juniperus scopulorum,,,"At Kerwood Street, View Royal",
-48.669444,-123.477752,Juniperus scopulorum,Rocky Mountain Juniper,Juniperus scopulorum,,,At Towner Bay,
-48.41052,-123.337856,Pinus thunbergii,Japanese Black Pine,Pinus thunbergii,,,"At Ross Bay Cemetery, Fairfield Road",
+48.4522,-123.4414,Juniperus maritima,Seaside juniper,Juniperus scopulorum,,,"At Kerwood Street, View Royal",
+48.4522,-123.4414,Juniperus maritima,Seaside juniper,Juniperus scopulorum,,,"At Kerwood Street, View Royal",
+48.669444,-123.477752,Juniperus maritima,Seaside juniper,Juniperus scopulorum,,,At Towner Bay,
+48.41052,-123.337856,Pinus thunbergiana,Japanese Black pine,Pinus thunbergii,,,"At Ross Bay Cemetery, Fairfield Road",
 48.648511,-123.450395,Abies cephalonica,Greek Fir,Abies cephlonica,,,"At Institue of Ocean Sciences, 9860 W Saanich Rd",
 48.57256,-123.40315,Abies pinsapo,Spanish Fir,Abies pinsapo,,,"At Michell Park, Central Saanich Rd and East Saanich Road",
 48.643964,-123.457036,Abies pinsapo,Spanish Fir,Abies pinsapo,,,At 9635 West Saanich Rd.,
@@ -34912,7 +34912,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.67297,-123.4773,Abies numidica,Algerian fir,Abies numidica,,,At 507 Downey Road,
 48.672696,-123.477756,Abies numidica,Algerian fir,Abies numidica,,,At 507 Downey Road,
 48.409534,-123.343773,Pinus nigra,Austrian pine,Pinus nigra,,,,
-48.409564,-123.343794,Pinus thunbergii,Japanese Black Pine,Pinus thunbergii,,,,
+48.409564,-123.343794,Pinus thunbergiana,Japanese Black pine,Pinus thunbergii,,,,
 48.48989,-123.33787,Platanus × acerifolia,London plane,Platanus acerifolia,,,At Shelbourne Street and Cedar Hill Road,
 48.44386,-123.29532,Magnolia campbellii,Magnolia,Magnolia campbellii,,,At 2985 Rutland Road,
 48.44382,-123.29495,Taxodium distichum,Bald cypress,Taxodium distichum,,,At 3000 Rutland Road,
@@ -34922,14 +34922,14 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.41833,-123.37152,Ulmus americana,White Elm,Ulmus americana,,,"At Parliment Buildings, Superior Street",
 48.50229,-123.35812,Pinus nigra,Austrian pine,Pinus nigra,,,,
 48.410953,-123.338182,Pinus nigra,Austrian pine,Pinus nigra,,,"At Ross Bay Cemetery, Fairfield Road",
-48.41154,-123.34129,Pinus thunbergii,Japanese Black Pine,Pinus thunbergii,,,,
+48.41154,-123.34129,Pinus thunbergiana,Japanese Black pine,Pinus thunbergii,,,,
 48.47051,-123.33767,Pinus strobus,Eastern White Pine,Pinus strobus,,,,
 48.470492,-123.33771,Pinus radiata,Monterey Pine,Pinis radiata,,,At 3941 Oakdale Place,
 48.43186,-123.307098,Cedrus atlantica,Atlas cedar,Cedrus atlantica glauca,,,At Beach Drive at Bowker Ave.,
 48.4705,-123.3378,Pinus monticola,Western white pine,Pinus montecola,,,,
 48.47048,-123.3376,Pinus ponderosa,Ponderosa pine,Pinus ponderosa,,,At 3941 Oakdale Place,
 48.415578,-123.365648,Pinus jeffreyi,Jeffrey pine,Pinus jeffreyi,,,At Beacon Hill Park,
-48.43183,-123.30677,Pinus thunbergii,Japanese Black Pine,Pinus thunbergii,,,At Beach Drive and Bowker Ave.,
+48.43183,-123.30677,Pinus thunbergiana,Japanese Black pine,Pinus thunbergii,,,At Beach Drive and Bowker Ave.,
 48.50166,-123.35851,Populus angustifolia,Narrowleaf Cottonwood,Populus angustifolia,,,"At Outerbridge Park, Royal Oak Drive",
 48.38901,-123.52426,Arbutus menziesii,Arbutus / Pacific madrone,Arbutus menziesii,,,At Witty's Lagoon Regional Park,
 48.38878,-123.51437,Taxus brevifolia,Pacific yew,Taxus brevifolia,,,At Witty's Lagoon Regional Park,
@@ -35071,7 +35071,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.41833,-123.37152,Ulmus americana,White Elm,Ulmus americana,,,,
 48.50229,-123.35812,Pinus nigra,Austrian pine,Pinus nigra,,,"At Outerbridge Park, Royal Oak Drive",
 48.41079,-123.33813,Pinus nigra,Austrian pine,Pinus nigra,,,,
-48.41154,-123.34129,Pinus thunbergii,Japanese Black Pine,Pinus thunbergii,,,"At Ross Bay Cemetery, Fairfield Road",
+48.41154,-123.34129,Pinus thunbergiana,Japanese Black pine,Pinus thunbergii,,,"At Ross Bay Cemetery, Fairfield Road",
 48.47051,-123.33767,Pinus strobus,Eastern White Pine,Pinus strobus,,,At 3941 Oakdale Place,
 48.4704,-123.338,Pinus radiata,Monterey Pine,Pinis radiata,,,,
 48.622451,-123.415585,Magnolia kobus,Kobus magnolia,Kobushi magnolia,,,"At Dominion Brook Park, 8801 E Saanich Rd",

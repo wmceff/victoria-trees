@@ -5,6 +5,7 @@
   common_name: Fir
   order: Pinales
   inaturalist_taxon_id: 63567
+  description: This tree has only been identified to genus, not species.
 - name: Abies amabilis
   common_name: Pacific silver fir
   native_region: the Pacific Northwest of North America
@@ -35,12 +36,14 @@
     and Montana
   inaturalist_taxon_id: 63690
   description: >-
-    Needles were used for hair perfume (Nuxalk, Hesquiaht); boughs for purification (Kwakwaka’wakw);
-    branches burned as incense, air freshener, protection against illness (Ditidaht); boughs rubbed
-    on skin of girls for protection against predators, used as a protective wash (Nlaka’pamux)
-    Boughs for bedding, flooring, incense; pitch for glue. (Boas 1921, 1966; H.I. Smith 1928; Turner
-    1973; Turner and Bell 1973; Turner and Efrat 1982; Turner, Thomas, et al. 1983, 1990).
-  turner_pages: vol. 1, p. 343; vol. 2, p. 301
+    Grand fir pitch, used as a glue, was harvested from the same tree over generations (Coast
+    Salish, Kwakwaka’wakw). Its fragrant boughs were burned as incense to protect against illness
+    (Ditidaht) and used for purification (Kwakwaka’wakw), and its needles made a hair perfume
+    (Nuxalk, Hesquiaht).
+  turner_pages: vol. 1, p. 343; vol. 2, pp. 183, 301
+  wildlife:
+    - who: [pileated woodpeckers]
+      what: search it for insects and places to nest
 - name: Abies homolepis
   common_name: Nikko fir
   native_region: the mountains of central and southern Honshū and Shikoku, Japan
@@ -72,7 +75,7 @@
 - name: Acer
   common_name: Maple
   inaturalist_taxon_id: 48098
-  description: This is a genus only identification, not species.
+  description: This tree has only been identified to genus, not species.
 - name: Acer buergerianum
   common_name: Maple
   order: Sapindales
@@ -98,7 +101,19 @@
   order: Sapindales
   native: true
   sencoten_name: PENÁEȽĆ
+  native_region: >-
+    the Pacific coast of North America, from southern British Columbia to northern California
   inaturalist_taxon_id: 48258
+  description: >-
+    Coastal peoples valued vine maple's wood for bows, arrow shafts, dip-net hoops, snowshoe frames,
+    spoons and tool handles, and wove its thin stems into baskets. Branches were cut from living
+    plants rather than felling them (mainland Halkomelem, Lower Stl’atl’imx and others), and wood
+    for bows was traded from the coast to the BC interior. Its flexible branches can bend to the
+    ground and take root, forming arches and spreading stands under the forest canopy.
+  turner_pages: vol. 1, pp. 364–366, 368; vol. 2, pp. 122, 185
+  wildlife:
+    - who: [chickadees, nuthatches, grosbeaks, woodpeckers]
+      what: eat its winged seeds
 - name: Acer crataegifolium
   common_name: Hawthorn Maple
   order: Sapindales
@@ -110,8 +125,8 @@
   native_region: 'northeast Asia: Mongolia, northern China, Korea, Japan and the Russian Far East'
   inaturalist_taxon_id: 123638
   description: >-
-    It is a small maple with deciduous leaves that is sometimes grown as a garden subject or
-    boulevard tree.
+    Amur maple turns brilliant orange to red in autumn, with reddish winged seeds. It has become
+    invasive in parts of northern North America.
 - name: Acer glabrum
   common_name: Maple
   order: Sapindales
@@ -119,7 +134,13 @@
 - name: Acer griseum
   common_name: Maple
   order: Sapindales
+  native_region: the mountains of central China
   inaturalist_taxon_id: 120525
+  description: >-
+    Paperbark maple was brought from central China in 1901 by the plant hunter Ernest Wilson,
+    collecting for the Veitch nursery in England. Its orange-red bark peels in thin, translucent
+    curls that cling to the branches. Many of its seeds are empty, so it is hard to raise, and in
+    2015 an expedition went to China to collect wild seed to widen the gene pool of garden trees.
 - name: Acer henryi
   common_name: Maple
   order: Sapindales
@@ -137,13 +158,23 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#329.
   inaturalist_taxon_id: 48227
   description: >-
-    Indigenous peoples used bigleaf maple for canoe paddles, spindle whorls, bowls, dishes, masks,
-    and clubs.
-  turner_pages: vol. 1, p. 341
+    Bigleaf maple is called "paddle tree" in at least six Coast Salish languages, because its wood
+    is prime for carving paddles. Coast Salish peoples took its bark and wood from living trees for
+    weaving, paddles, spindle whorls, other tools and fuel, and red elderberries were wrapped in its
+    big leaves and buried in sand to store them (Lushootseed). Its wood also made bowls, dishes and
+    masks.
+  turner_pages: vol. 1, pp. 296, 341, 347; vol. 2, p. 185
+  wildlife:
+    - who: [grosbeaks]
+      what: eat its winged seeds in winter
 - name: Acer miyabei
   common_name: Maple
   order: Sapindales
+  native_region: scattered streamsides in northern Japan, on Hokkaido and northern Honshu
   inaturalist_taxon_id: 48074
+  description: >-
+    Miyabe maple is endangered in the wild. It is named after Kingo Miyabe, a botanist in Hokkaido,
+    and its closest relatives include field maple from Europe.
 - name: Acer negundo
   common_name: Manitoba Maple
   order: Sapindales
@@ -154,8 +185,8 @@
   native_region: Japan, Korea, eastern China and southeast Russia
   inaturalist_taxon_id: 63512
   description: >-
-    Acer palmatum has been cultivated in Japan for centuries and in temperate areas around the world
-    since the 1800s.
+    Japanese maple, momiji in Japanese, has been grown in Japan for centuries and in gardens around
+    the world since the 1800s, with hundreds of cultivars chosen for their leaf shapes and colours.
 - name: Acer platanoides
   common_name: Norway maple
   order: Sapindales
@@ -239,7 +270,12 @@
 - name: Acer truncatum
   common_name: Maple
   order: Sapindales
+  native_region: northern China and Korea
   inaturalist_taxon_id: 461754
+  description: >-
+    Shantung maple is named after Shandong, the province of northern China once spelled Shantung.
+    Almost all of the City's trees are Sunset hybrids with Norway maple, bred at J. Frank Schmidt &
+    Son, an Oregon nursery, as tough street trees.
   cultivars:
     - name: Pacific Sunset
       description: >-
@@ -255,20 +291,27 @@
   common_name: Horse Chestnut
   order: Sapindales
   inaturalist_taxon_id: 84298
+  description: This tree has only been identified to genus, not species.
 - name: Aesculus × carnea
   common_name: Red horse-chestnut
   garden_origin: >-
     a hybrid of the European horse-chestnut and the American red buckeye, which probably first
     appeared in Germany in the early 1800s
   inaturalist_taxon_id: 478638
-  description: Artificial hybrid between A. pavia (red buckeye) and A. hippocastanum (horse-chestnut)
+  description: >-
+    Unusually for a hybrid, red horse-chestnut breeds true from seed: its chromosomes doubled, so
+    its seedlings look like the parent tree.
   cultivars:
     - name: Fort McNair
       description: >-
         A pink-flowered red horse-chestnut named after Fort McNair in Washington, D.C., more resistant
         to leaf blotch than most.
-- name: Aesculus briottii
-  common_name: Horse Chestnut
+    - name: Briotii
+      match: briot
+      description: >-
+        The most commonly planted red horse-chestnut, with brighter red flowers on a smaller tree.
+        It was named in 1858 after Pierre Louis Briot, chief gardener of the state gardens at
+        Trianon-Versailles, near Paris.
 - name: Aesculus carnea
   common_name: Horse chestnut
   inaturalist_taxon_id: 478638
@@ -277,17 +320,9 @@
   native_region: the mountains of the Balkans, in Greece, Albania and North Macedonia
   inaturalist_taxon_id: 84298
   description: >-
-    The common name "horse-chestnut" (often unhyphenated) is reported as having originated from the
-    erroneous belief that the tree was a kind of chestnut (though in fact only distantly related),
-    together with the alleged observation that the fruit or seeds could help panting or coughing
-    horses.
-
-
-    In Germany, horse-chestnuts are often found in beer gardens, particularly in Bavaria. Prior to
-    the advent of mechanical refrigeration, brewers would dig cellars for lagering. To further
-    protect the cellars from the summer heat, they would plant chestnut trees, which have spreading,
-    dense canopies but shallow roots which would not intrude on the caverns. The practice of serving
-    beer at these sites evolved into the modern beer garden.
+    Horse-chestnut isn't a true chestnut; the name may come from a belief that its seeds, conkers,
+    could cure coughing horses. In Bavaria, brewers planted horse-chestnuts over their beer cellars
+    to keep them cool, and the custom of serving beer under them grew into the beer garden.
   cultivars:
     - name: Baumannii
       match: baumn
@@ -305,12 +340,9 @@
   native_region: northern and central China, and Taiwan
   inaturalist_taxon_id: 57278
   description: >-
-    In China, the tree of heaven has a long and rich history. It was mentioned in the oldest extant
-    Chinese dictionary and listed in many Chinese medical texts for its purported curative ability.
-
-
-    It is considered a noxious weed and vigorous invasive species, and one of the worst invasive
-    plant species in Europe and North America.
+    Tree of heaven appears in the oldest surviving Chinese dictionary and in many Chinese medical
+    texts. It is now one of the worst invasive trees in Europe and North America, growing up to 15 m
+    (50 ft) in 25 years, and it feeds the invasive spotted lanternfly.
 - name: Albizia julibrissin
   common_name: Mimosa Or Silk Tree
   order: Fabales
@@ -324,21 +356,20 @@
   native_region: the Pacific coast of North America, from southeast Alaska to California
   inaturalist_taxon_id: 56034
   description: >-
-    Used by First Peoples for bowls and trays, masks, canoe bailers, paddles, firedrills. Cooking &
-    smoking. Dye. Bark would be partially harvested for medicinal use, rectangular pieces cut from
-    living trees.
-
-
-    In moist forest areas Alnus rubra will rapidly cover a former burn or clearcut, often preventing
-    the establishment of conifers. It is a prolific seed producer, but the small, wind-dispersed
-    seeds require an open area of mineral soil to germinate, and so skid trails and other areas
-    disturbed by logging or fire are ideal seedbeds.
-  turner_pages: vol. 1, p. 341; vol. 2, p. 179
+    Red alder's inner bark was eaten (W̱SÁNEĆ), and its wood and bark, taken from living trees, gave
+    fuel, tools and dye, with its limbs and saplings used for fish weirs (Straits Salish,
+    Kwakwaka’wakw and other coastal peoples). Its soft wood was carved into bowls, trays, masks and
+    paddles, and burned for cooking and smoking. It is one of the first trees to cover burned or
+    logged ground.
+  turner_pages: vol. 1, pp. 62, 341; vol. 2, p. 185
+  wildlife:
+    - who: [pine siskins]
+      what: eat its seeds
 - name: Amelanchier × grandiflora
   common_name: Serviceberry
-  garden_origin: a garden hybrid of two serviceberries from eastern North America
+  garden_origin: >-
+    a garden hybrid of downy and Allegheny serviceberries, both from eastern North America
   inaturalist_taxon_id: 363450
-  description: A hybrid of garden origin between A. arborea and A. laevis.
   bloom:
     from: early April
     to: late April
@@ -370,19 +401,10 @@
   native_region: the Andes of central Chile and western Argentina
   inaturalist_taxon_id: 126404
   description: >-
-    Because of the prevalence of similar species in ancient prehistory, it is sometimes called a
-    living fossil. It is also the national tree of Chile.
-
-
-    The origin of the popular English language name "monkey puzzle" derives from its early
-    cultivation in Britain in about 1850, when the species was still very rare in gardens and not
-    widely known. Sir William Molesworth, the owner of a young specimen at Pencarrow garden near
-    Bodmin in Cornwall, was showing it to a group of friends, when one of them – the noted barrister
-    and Benthamist Charles Austin – remarked, "It would puzzle a monkey to climb that".
-
-
-    Its piñones, or seeds, are edible, similar to large pine nuts, and are harvested by indigenous
-    peoples in Argentina and Chile.
+    Monkey puzzle is the national tree of Chile, and its name araucana comes from the Araucanian
+    (Mapuche) people, who harvest its large edible seeds, piñones. The English name dates from about
+    1850 in Cornwall, when a visitor admiring a young tree said, "It would puzzle a monkey to climb
+    that." It is now endangered in the wild.
 - name: Arbutus menziesii
   common_name: Arbutus / Pacific madrone
   order: Ericales
@@ -392,37 +414,20 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.2.
   inaturalist_taxon_id: 51046
   description: >-
-    Many mammal and bird species feed off the berries. The berries dry up and have hooked barbs that
-    latch onto larger animals for migration.
-
-
-    Although drought tolerant and relatively fast growing, Arbutus menziesii is currently declining
-    throughout most of its range. One likely cause is fire control; under natural conditions, the
-    madrona depends on intermittent naturally occurring fires to reduce the conifer overstory.
-    Mature trees survive fire, and can regenerate more rapidly after fire than the Douglas firs with
-    which they are often associated. They also produce very large numbers of seeds, which sprout
-    following fire.
-
-
-    Indigenous peoples ate the berries raw and cooked, but because the berries have a high tannin
-    content and are thus astringent, they more often chewed them or made them into a cider. They
-    also used the berries to make necklaces and other decorations, and as bait for fishing. Bark and
-    leaves were used to treat stomach aches, cramps, skin ailments, and sore throats. The bark was
-    often made into a tea to be drunk for these medicinal purposes. Wood was spared as fuel and for
-    any other use by Saanich for spiritual reasons (because of its service to people during the
-    Great Flood).
-  indigenous_uses: >-
-    Indigenous peoples ate the berries raw and cooked, but because the berries have a high tannin
-    content and are thus astringent, they more often chewed them or made them into a cider. Native
-    Americans also used the berries to make necklaces and other decorations, and as bait for
-    fishing. Bark and leaves were used to treat stomach aches, cramps, skin ailments, and sore
-    throats. The bark was often made into a tea to be drunk for these medicinal purposes.
-  turner_pages: vol. 2, p. 185
+    The W̱SÁNEĆ (Saanich) spare arbutus from use as firewood or for anything else, for spiritual
+    reasons: during the Great Flood it served the people as an anchor. Its leaves and bark are taken
+    from living trees for medicine (Straits Salish), and its Squamish name means "peeling tree".
+  turner_pages: vol. 1, p. 129; vol. 2, pp. 185, 269
+  wildlife:
+    - who: [robins, cedar waxwings, varied thrushes, band-tailed pigeons, juncos, quail]
+      what: eat its berries
+    - who: [woodpeckers, other cavity-nesting birds]
+      what: favour it for nesting
 - name: Arbutus unedo
   common_name: Arbutus
   order: Ericales
   inaturalist_taxon_id: 82689
-- name: Asminia triloba
+- name: Asimina triloba
   common_name: Pawpaw
 - name: Austrocedrus chilensis
   common_name: Chilean cedar
@@ -434,14 +439,20 @@
   common_name: Birch
   order: Fagales
   inaturalist_taxon_id: 49883
+  description: This tree has only been identified to genus, not species.
 - name: Betula alba
   common_name: Silver Birch
   order: Fagales
   inaturalist_taxon_id: 119061
 - name: Betula nigra
   common_name: Black birch
-  native_region: the Eastern United States
+  native_region: >-
+    the eastern United States, from New Hampshire to Minnesota and south to Florida and Texas
   inaturalist_taxon_id: 117429
+  description: >-
+    River birch, also called black birch, grows wild along stream banks and is one of the few
+    birches that thrive in summer heat; its saplings can survive a month of flooding. Native
+    Americans boiled its sap into a sweetener like maple syrup.
   cultivars:
     - name: Dura Heat
       description: A compact river birch selected for heat and drought tolerance, with peeling creamy-white bark.
@@ -454,17 +465,14 @@
   native_region: northern North America, across Canada, Alaska and the northern United States
   inaturalist_taxon_id: 49883
   description: >-
-    Indigenous peoples used the bark for baskets, lining cache pits, burials, etc. It would be
-    removed from standing, living trees without killing the tree (general, Tsilhqot’in, Ulkatcho
-    Dakelth, Dene [Athabaskan], Secwepemc, Okanagan, Ktunaxa)
-
-
-    Betula papyrifera is a pioneer species, meaning it is often one of the first trees to grow in an
-    area after other trees are removed by some sort of disturbance. Typical disturbances colonized
-    by paper birch are wildfire, avalanche, or windthrow areas where the wind has blown down all
-    trees. When it grows in these pioneer, or early successional, woodlands, it often forms stands
-    of trees where it is the only species.
-  turner_pages: vol. 2, p. 186
+    Paper birch bark was peeled from living trees, without killing them, for baskets, for lining
+    food cache pits and for burials (Tsilhqot’in, Ulkatcho Dakelh, Dene, Secwepemc, Okanagan,
+    Ktunaxa). Its Squamish name, qwéłiʔn, comes from an ancient Salishan word for birch. It is a
+    pioneer tree, often the first to grow back after fire, avalanches or windthrow.
+  turner_pages: vol. 1, p. 185; vol. 2, p. 186
+  wildlife:
+    - who: [chickadees]
+      what: eat its seeds
 - name: Betula pendula
   common_name: European white birch
   order: Fagales
@@ -486,16 +494,19 @@
   common_name: Boxwood
   order: Buxales
   inaturalist_taxon_id: 133397
+  description: This tree has only been identified to genus, not species.
 - name: Calocedrus decurrens
   common_name: Incense cedar
   native_region: western North America
   inaturalist_taxon_id: 53723
 - name: Camelia spp
   common_name: Camelia
+  description: This tree has only been identified to genus, not species.
 - name: Carpinus
   common_name: Hornbeam
   order: Fagales
   inaturalist_taxon_id: 54768
+  description: This tree has only been identified to genus, not species.
 - name: Carpinus betulus
   common_name: Common hornbeam
   order: Fagales
@@ -518,6 +529,7 @@
   common_name: Carya
   order: Fagales
   inaturalist_taxon_id: 54791
+  description: This tree has only been identified to genus, not species.
 - name: Castanea dentata
   common_name: American Chestnut
   order: Fagales
@@ -531,8 +543,9 @@
   native_region: southern Europe and Turkey, around the Mediterranean and Black Sea
   inaturalist_taxon_id: 121763
   description: >-
-    A substantial, long-lived deciduous tree, it produces an edible seed, the chestnut, which has
-    been used in cooking since ancient times.
+    Sweet chestnut's nuts have been eaten since ancient times: carbonised chestnuts were found in a
+    Roman villa near Naples buried by Vesuvius in AD 79. An ancient tree on Mount Etna in Sicily,
+    the Hundred Horse Chestnut, was once recorded at 18 m (59 ft) around its split trunks.
 - name: Catalpa bignonioides
   common_name: Southern Catalpa
   order: Lamiales
@@ -545,14 +558,14 @@
   common_name: California Lilac
   order: Rosales
   inaturalist_taxon_id: 56617
+  description: This tree has only been identified to genus, not species.
 - name: Cedrus atlantica
   common_name: Atlas cedar
   native_region: the Atlas Mountains of Morocco and Algeria, in North Africa
   inaturalist_taxon_id: 136234
   description: >-
-    C. atlantica is common in cultivation as an ornamental tree in temperate climates. In garden
-    settings, often the glaucous (bluish green) forms are planted as ornamental trees, distinguished
-    as the Glauca group, a cultivar group.
+    Atlas cedar forests in Morocco and Algeria are home to the endangered Barbary macaque. Most
+    planted trees are blue-needled forms, known as the Glauca group.
 - name: Cedrus brevifolia
   common_name: Cyprus cedar
   order: Pinales
@@ -565,19 +578,17 @@
   native_region: the western Himalayas, in Afghanistan, Pakistan, India, Tibet and Nepal
   inaturalist_taxon_id: 69820
   description: >-
-    The botanical name, which is also the English common name, derives from the Sanskrit term
-    devadāru, which means "wood of the gods", a compound of deva "god" and dāru "wood and tree".
-    Among Hindus, as the etymology of deodar suggests, it is worshiped as a divine tree.
+    The name deodar comes from the Sanskrit devadāru, "wood of the gods", from deva, "god", and
+    dāru, "wood". Hindus revere it as a divine tree.
 - name: Cedrus libani
   common_name: Cedar of Lebanon
   order: Pinales
   native_region: the mountains of Lebanon, Syria and southern Turkey
   inaturalist_taxon_id: 136234
   description: >-
-    It is a large evergreen conifer that has great religious and historical significance in the
-    cultures of the Middle East, and is referenced many times in the literature of ancient
-    civilisations. It is the national emblem of Lebanon and is widely used as an ornamental tree in
-    parks and gardens.
+    Cedar of Lebanon is the national emblem of Lebanon. The ancient Phoenicians built ships from it
+    and traded it across the Mediterranean, and a tree planted at Childrey in England in 1646 is the
+    oldest in Britain.
 - name: Celtis occidentalis
   common_name: Hackberries
   order: Rosales
@@ -601,20 +612,25 @@
 - name: Chamaecyparis
   order: Pinales
   inaturalist_taxon_id: 76237
+  description: This tree has only been identified to genus, not species.
 - name: Chamaecyparis lawsoniana
   common_name: Lawson cypress
   order: Pinales
-  native_region: Oregon and northwestern California
+  native_region: a small area of southwest Oregon and northwest California
   inaturalist_taxon_id: 76237
+  description: >-
+    In its home range it's called Port Orford cedar. Its fragrant, rot-resistant wood has been
+    exported in large amounts to Japan for coffins, shrines and temples, and is a favourite for
+    arrow shafts. Wild trees are now threatened by an introduced root rot.
 - name: Chamaecyparis obtusa
   common_name: Hinoki cypress
   order: Pinales
   native_region: central and southern Japan
   inaturalist_taxon_id: 133369
   description: >-
-    It is grown for its very high quality timber in Japan, where it is used as a material for
-    building palaces, temples, shrines, traditional noh theatres, baths, table tennis blades and
-    masu.
+    Hinoki is one of Japan's most prized timbers: Hōryū-ji temple and Osaka Castle are built from
+    it, and the hinoki of the Kiso valley used for Ise Shrine are called "divine trees". It is also
+    used for noh theatres, baths and table tennis blades.
 - name: Chamaecyparis pisifera
   common_name: Sawara cypress
   order: Pinales
@@ -631,23 +647,32 @@
   order: Lamiales
 - name: Cladrastis kentukea
   common_name: Kentucky Yellow Wood
-  native_region: >-
-    the Southeastern United States, with a restricted range from western North Carolina west to
-    eastern Oklahoma, and from southern Missouri and Indiana south to central Alabama
+  native_region: scattered sites in the southeastern United States, from North Carolina to Oklahoma
   inaturalist_taxon_id: 117430
+  description: >-
+    Kentucky yellowwood is one of the rarest trees in eastern North America. It is named for its
+    yellow heartwood, used for gunstocks, specialist furniture and woodturning. Its fragrant white
+    flowers hang in long clusters like wisteria, but it blooms heavily only every second or third
+    year.
 - name: Cladrastis lutea
   common_name: Yellow-Wood
   order: Fabales
   inaturalist_taxon_id: 117430
 - name: Conifer Evergreen
   common_name: Conifer Evergreen Small
+  description: This tree has only been identified as an evergreen conifer, not to genus or species.
 - name: Cornus
   common_name: Dogwood
   order: Cornales
   inaturalist_taxon_id: 54777
-  description: This is a genus-only identification.
+  description: This tree has only been identified to genus, not species.
 - name: Cornus × 'Venus'
   common_name: Dogwood
+  garden_origin: a hybrid bred by Elwin Orton at Rutgers University in New Jersey, released in 2004
+  description: >-
+    'Venus' crosses kousa dogwood from East Asia with Pacific dogwood, British Columbia's floral
+    emblem. Its white flower heads reach 15 cm (6 in) across, and it resists the anthracnose disease
+    that has killed many Pacific dogwoods.
 - name: Cornus × Eddies
   common_name: Dogwood
 - name: Cornus alternifolia
@@ -660,8 +685,13 @@
   inaturalist_taxon_id: 54777
 - name: Cornus kousa
   common_name: Kousa Dogwood
-  native_region: East Asia including Korea, China and Japan
+  native_region: Japan, Korea and China
   inaturalist_taxon_id: 128614
+  description: >-
+    Kousa dogwood flowers about a month later than the eastern flowering dogwood, and its white
+    bracts are pointed rather than rounded. Its pink to red fruits, about 2 cm across, have a sweet,
+    edible pulp with a flavour like ripe persimmon. It resists the anthracnose disease that has
+    killed many wild Pacific dogwoods.
 - name: Cornus mas
   common_name: Cornelian-Cherry
   order: Cornales
@@ -674,23 +704,31 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.3.
   inaturalist_taxon_id: 76447
   description: >-
-    This deciduous, flowering tree has been used for many purposes by indigenous communities from
-    the west coast of British Columbia to California. The wood was used to make harpoons, bow,
-    arrows, combs, and needle hooks. The Cowichan people on Vancouver Island made knitting needles
-    from the Pacific Dogwood. The Straits Salish used the bark to make dark brown or red dye. The
-    bark was also used medicinally to treat skin infections, fevers, digestive issues, to purify the
-    blood to strengthen the lungs, and as an antiseptic. In 1956 the Pacific Dogwood was adopted as
-    British Columbia’s floral emblem.
-
-
-    Cornus nuttallii is named after Thomas Nuttall, an English botanist and zoologist who worked in
-    North America in the nineteenth century.
-- name: Cornus x
+    Pacific dogwood bark is one of the ten barks in a W̱SÁNEĆ (Saanich) family medicine for
+    tuberculosis, and its hard wood made bows, arrow shafts and combs. It has been British
+    Columbia's floral emblem since 1956. Thomas Nuttall first described it in 1834, and his friend
+    John James Audubon named it after him.
+  turner_pages: vol. 1, pp. 109, 364, 462
+  wildlife:
+    - who: [band-tailed pigeons, pileated woodpeckers]
+      what: eat its red fruit
+    - who: [Wilson's warblers]
+      what: shelter in it
+- name: Cornus × 'Eddie's White Wonder'
   common_name: Dogwood
+  garden_origin: >-
+    a hybrid of Pacific dogwood and the eastern flowering dogwood, raised by Henry Eddie in
+    Vancouver in the 1940s
+  description: >-
+    'Eddie's White Wonder' was raised by the Vancouver nurseryman Henry Eddie, who crossed British
+    Columbia's Pacific dogwood with the flowering dogwood of eastern North America. It looks most
+    like Pacific dogwood but is hardier, flowers two or three weeks later and sets no seed, and its
+    leaves turn red and purple in autumn.
 - name: Corylus
   common_name: Hazel
   order: Fagales
   inaturalist_taxon_id: 54491
+  description: This tree has only been identified to genus, not species.
 - name: Corylus avellana
   common_name: Hazel
   order: Fagales
@@ -707,6 +745,7 @@
   common_name: Cotoneaster
   order: Rosales
   inaturalist_taxon_id: 57254
+  description: This tree has only been identified to genus, not species.
 - name: Cotoneaster x
   common_name: Cotoneaster
   inaturalist_taxon_id: 790747
@@ -714,39 +753,51 @@
   common_name: Hawthorn
   order: Rosales
   inaturalist_taxon_id: 51147
+  description: This tree has only been identified to genus, not species.
 - name: Crataegus × grignonensis
   common_name: Grignon hawthorn
-  native_region: Arboretum de Grignon, France
+  garden_origin: a hybrid hawthorn raised at the Grignon arboretum, near Paris
 - name: Crataegus × lavalleei
   common_name: Hybrid cockspurthorn
   garden_origin: a hybrid hawthorn raised in France in the 1870s, at the arboretum of Alphonse Lavallée
   inaturalist_taxon_id: 143798
   description: >-
-    The female parent was C. mexicana (sometimes mistakenly called C. pubescens), and the male
-    parent is thought to be C. calpodendron.
+    Lavallée's hawthorn has glossy, dark green leaves. Its parents were a Mexican hawthorn and,
+    probably, the pear hawthorn of eastern North America.
 - name: Crataegus × mordenensis
   common_name: Hawthorn
   inaturalist_taxon_id: 706684
   cultivars:
     - name: Snowbird
       description: A hardy hawthorn from Canada, raised from 'Toba', with double white flowers that stay white.
+    - name: Toba
+      description: >-
+        A hardy hawthorn bred at the Morden Research Station in Manitoba, with double white flowers
+        that turn pink as they age.
 - name: Crataegus crus-galli
   common_name: Cockspur hawthorn
   order: Rosales
-  native_region: eastern North America from Ontario to Texas to Florida
+  native_region: eastern North America, from southern Ontario to Texas and Florida
   inaturalist_taxon_id: 54824
+  description: >-
+    Cockspur hawthorn is named for its sharp thorns, several centimetres long, which look like the
+    spur on a rooster's leg; crus-galli is Latin for "rooster's leg". Its white flowers have a scent
+    most people find unpleasant. The thornless variety, inermis, is especially popular in gardens
+    and along streets.
 - name: Crataegus douglasii
   common_name: Black Hawthorn
   native: true
   native_region: western North America, with outlying populations around the Great Lakes
   inaturalist_taxon_id: 76469
   description: >-
-    Hard wood used by First Peoples for digging sticks, hammers, and implement handles.
-
-
-    It is named after David Douglas, who collected seed from the plant during his botanical
-    explorations.
-  turner_pages: vol. 1, p. 341
+    Black hawthorn charcoal is used as a face paint in winter dances, said to protect the wearer
+    (Halkomelem), and the thorny tree itself is valued for its spiritual protection (Hul’qumi’num).
+    Its hard wood made digging sticks, hammers and tool handles. It is named after David Douglas,
+    the Scottish botanist who collected its seed.
+  turner_pages: vol. 1, pp. 341, 387; vol. 2, pp. 305, 323
+  wildlife:
+    - who: [quail]
+      what: eat its black berries
 - name: Crataegus laevigata
   common_name: Midland hawthorn
   order: Rosales
@@ -756,21 +807,16 @@
     Midland hawthorn is a tree of ancient woodland and old hedgerows in Britain. Many of the red- and
     pink-flowered hawthorns planted along streets, such as 'Paul's Scarlet', are cultivars of this
     species or its hybrids.
-- name: Crataegus mordensis
-  common_name: Hawthorn
-  cultivars:
-    - name: Toba
-      description: >-
-        A hardy hawthorn bred at the Morden Research Station in Manitoba, with double white flowers
-        that turn pink as they age.
 - name: Crataegus oxyacantha
+  # Crataegus oxyacantha is a rejected name of uncertain application, used for both common hawthorn
+  # (C. monogyna) and Midland hawthorn (C. laevigata). The City's trees are probably C. monogyna.
   common_name: Common hawthorn
   order: Rosales
   native_region: Europe, North Africa and western Asia
   inaturalist_taxon_id: 54428
   description: >-
-    The name Crataegus oxyacantha L. has been rejected as being of uncertain application, but is
-    sometimes still used. Likely the same as Crataegus monogyna
+    Common hawthorn is the hedgerow tree of Britain, where its white blossom is called may, after
+    the month it opens.
   cultivars:
     - name: Paul's Scarlet
       match: paul
@@ -813,24 +859,17 @@
   common_name: Cypress
   order: Gleicheniales
   inaturalist_taxon_id: 322545
-  description: These trees haven't been fully identified.
+  description: This tree has only been identified to genus, not species.
 - name: Cupressus × leylandii
   common_name: Leyland cypress
   garden_origin: >-
     a chance cross between Monterey cypress and yellow-cedar, first found on an estate in Wales in
     1888
   description: >-
-    In 1888 at Leighton Hall, an estate in Wales, the hybrid cross occurred when the female flowers
-    or cones of Yellow cedar were fertilised by pollen from Monterey cypress in gardens owned by
-    Liverpool banker Christopher Leyland.
-
-
-    In 1925, a firm of commercial nurserymen specialising in conifers were looking for a breed which
-    was fast-growing, and could be deployed in hard-to-grow windy and salty areas such as Cornwall.
-    Eventually they found the six original trees developed by Leyland, and began propagating the
-    species. Commercial nurseries spotted the plant’s potential, and for many years it was the
-    biggest-selling item in every garden centre in Great Britain, making up to 10% of their total
-    sales.
+    Leyland cypress was found at Leighton Hall, the estate of the Liverpool banker Christopher
+    Leyland, where yellow-cedar had been pollinated by Monterey cypress. Fast-growing and tolerant
+    of wind and salt, it was for many years the best-selling plant in British garden centres, at up
+    to 10% of their sales.
 - name: Cupressus arizonica
   common_name: Arizona cypress
   order: Pinales
@@ -846,9 +885,8 @@
   native_region: the eastern Himalayas, in Bhutan and northeast India
   inaturalist_taxon_id: 136152
   description: >-
-    It is the official national tree of Bhutan, where it is often associated with Buddhist religious
-    places. It has been widely planted around Vihara monasteries and Buddhist temples there for
-    centuries.
+    Kashmir cypress is the national tree of Bhutan, where it has been planted around Buddhist
+    monasteries and temples for centuries.
 - name: Cupressus nootkatensis
   common_name: Yellow-cedar
   native: true
@@ -857,29 +895,12 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#322.
   inaturalist_taxon_id: 126792
   description: >-
-    The specific epithet "nootkatensis" is derived from its discovery by Europeans on the lands of a
-    First Nation of Canada, those lands of the Nuu-chah-nulth people of Vancouver Island, British
-    Columbia, who were formerly referred to as the Nootka.
-
-
-    The Nootka cypress is used extensively by the indigenous peoples of the Pacific Northwest Coast,
-    along with another cypress, Thuja plicata (western red cedar). While western red cedar was
-    preferred for larger projects (houses, canoes), Nootka cypress was used for smaller carvings
-    such as vessels and utensils. Boughs are used in sweat bath, as scrubbers, for rheumatism,
-    arthritis, and protection (Kwakwaka’wakw) (Boas 1930; Turner and Bell 1973). Used for bows,
-    canoe paddles, carving. Inner bark used for baskets, mats, clothing, blankets. Bark harvested
-    for weaving material; only partially harvested so as not to kill tree (widely, Northwest Coast).
-
-
-    This species has been considered to be one of the finest timber trees in the world and has been
-    exported to China during the last century. The wood has been used for flooring, interior finish
-    and shipbuilding.
-  indigenous_uses: >-
-    The Nootka cypress is used extensively by the indigenous peoples of the Pacific Northwest Coast,
-    along with another cypress, Thuja plicata (western red cedar). While western red cedar was
-    preferred for larger projects (houses, canoes), Nootka cypress was used for smaller carvings
-    such as vessels and utensils.
-  turner_pages: vol. 1, p. 342; vol. 2, pp. 184, 302
+    Coast Salish peoples traded yellow-cedar bow wood to the interior, and coastal peoples carved
+    its wood into paddles and smaller pieces. Its soft inner bark, peeled in part from living trees
+    so they survive, was woven into baskets, mats, clothing and blankets, and its boughs are used in
+    sweat baths and for protection (Kwakwaka’wakw). The name nootkatensis comes from Nootka, the old
+    name for the Nuu-chah-nulth, on whose lands Europeans first described it.
+  turner_pages: vol. 1, p. 342; vol. 2, pp. 121, 184, 302
 - name: Davidia involucrata
   common_name: Dove Tree
   order: Cornales
@@ -896,6 +917,7 @@
   common_name: Gum Tree
   order: Myrtales
   inaturalist_taxon_id: 53398
+  description: This tree has only been identified to genus, not species.
 - name: Eucalyptus pauciflora
   common_name: Snow Gum
   order: Myrtales
@@ -907,6 +929,7 @@
   common_name: Spindle Tree
   order: Celastrales
   inaturalist_taxon_id: 117433
+  description: This tree has only been identified to genus, not species.
 - name: Euonymus europaeus
   common_name: European Euonymus
   order: Celastrales
@@ -915,6 +938,7 @@
   common_name: Beech
   order: Fagales
   inaturalist_taxon_id: 49202
+  description: This tree has only been identified to genus, not species.
 - name: Fagus sylvatica
   common_name: European beech
   order: Fagales
@@ -935,9 +959,8 @@
         A copper beech with especially dark purple leaves, raised by Rivers nursery in England in the
         late 1800s.
   description: >-
-    European beech can grow over 40 m (130 ft) tall, with smooth silver-grey bark. Its many cultivars
-    include the purple-leaved copper beech and the columnar 'Dawyck'. Beech nuts were once gathered to
-    feed pigs and pressed for oil.
+    European beech has smooth, silver-grey bark. Beech nuts were once gathered to feed pigs and
+    pressed for oil.
 - name: Ficus carica
   common_name: Fig
   order: Rosales
@@ -946,6 +969,7 @@
   common_name: Ash
   order: Lamiales
   inaturalist_taxon_id: 54805
+  description: This tree has only been identified to genus, not species.
 - name: Fraxinus americana
   common_name: White Ash
   order: Lamiales
@@ -955,6 +979,11 @@
   order: Lamiales
   native_region: central and southern Europe, northwest Africa, and southwest Asia
   inaturalist_taxon_id: 82881
+  description: >-
+    Narrow-leaved ash is named for its slender leaflets. In Australia it has spread so widely that
+    it is a weed, known there as desert ash. Its cultivar 'Raywood', the claret ash, was raised in
+    the Adelaide Hills of South Australia and is planted for its wine-red autumn colour, though its
+    branches are brittle.
 - name: Fraxinus excelsior
   common_name: European Ash
   order: Lamiales
@@ -973,24 +1002,23 @@
   native_region: southern Europe and southwest Asia, from Spain and Italy east to Turkey and Lebanon
   inaturalist_taxon_id: 319281
   description: >-
-    A sugary extract from the sap may be obtained by making a cut in the bark; this was compared in
-    late medieval times (attested by around 1400 AD) with the biblical manna, giving rise to the
-    English name of the tree, and some of the vernacular names from its native area (fresno del maná
-    in Spanish, frassino da manna in Italian). In fact, the sugar mannose and the sugar alcohol
-    mannitol both derive their names from the extract.
+    Manna ash is named for the sweet sap that seeps from cuts in its bark, which was compared to the
+    biblical manna by about 1400. The sugar mannose and the sugar alcohol mannitol are both named
+    after it.
   cultivars:
     - name: Arie Peters
       description: A compact, rounded Dutch selection of manna ash, with fragrant white flowers in late spring.
-- name: Fraxinus oxycarpa
-  common_name: Ash
-  order: Lamiales
 - name: Fraxinus pennsylvanica
   common_name: Red ash
   order: Lamiales
   native_region: >-
-    eastern and central North America, from Nova Scotia west to southeastern Alberta and eastern
-    Colorado, south to northern Florida, and southwest to Oklahoma and eastern Texas
+    eastern and central North America, from Nova Scotia and Alberta to Florida and Texas
   inaturalist_taxon_id: 54808
+  description: >-
+    Green ash, also called red ash, is the most widely distributed of the American ashes. The
+    emerald ash borer, a beetle from Asia, has killed vast numbers of green ash across eastern North
+    America, and in 2024 it was found in Vancouver, its first appearance in British Columbia. A few
+    "lingering ash" that survived in the wild are being studied for resistance.
 - name: Fraxinus velutina
   common_name: Ash
   order: Lamiales
@@ -1004,10 +1032,9 @@
   native_region: China
   inaturalist_taxon_id: 64350
   description: >-
-    The ginkgo is classified in its own division, the Ginkgophyta, comprising the single class
-    Ginkgoopsida, order Ginkgoales, family Ginkgoaceae, genus Ginkgo and is the only extant species
-    within this group. It is one of the best-known examples of a living fossil, because Ginkgoales
-    other than G. biloba are not known from the fossil record after the Pliocene.
+    Ginkgo is the last living species of a group of plants that first appeared more than 290 million
+    years ago, which makes it one of the best-known living fossils. Some ginkgos survived the atomic
+    bombing of Hiroshima.
   cultivars:
     - name: Princeton Sentry
       match: princeton
@@ -1027,8 +1054,12 @@
   native_region: central and eastern North America, mainly the Mississippi and Ohio river valleys
   inaturalist_taxon_id: 54797
   description: >-
-    Honey locust is highly adaptable to different environments, has been introduced worldwide, and
-    is an aggressive invasive species.
+    Honey locust's long, twisted pods hold a sweet pulp, which gives the tree its name. Wild trees
+    bear long, branched thorns, but the ones planted on streets are thornless forms. Outside its
+    range it can be an aggressive invasive species.
+  wildlife:
+    - who: [crows]
+      what: eat its seeds in winter
   cultivars:
     - name: Street Keeper
       description: A narrow, upright, thornless honey locust bred for streets.
@@ -1044,8 +1075,12 @@
   common_name: Honey locust
   native_region: central and eastern North America, mainly the Mississippi and Ohio river valleys
   description: >-
-    Honey locust is highly adaptable to different environments, has been introduced worldwide, and
-    is an aggressive invasive species. var. inermis is the thornless form.
+    The thornless honey locust lacks the long, branched thorns of wild trees, which makes it the
+    form planted along streets. Its long, twisted pods hold a sweet pulp, which gives the tree its
+    name.
+  wildlife:
+    - who: [crows]
+      what: eat its seeds in winter
 - name: Gymnocladus dioicus
   common_name: Kentucky Coffeetree
   order: Fabales
@@ -1066,12 +1101,10 @@
   native_region: two small groves on the California coast, near Monterey
   inaturalist_taxon_id: 322545
   description: >-
-    Because of the large trunk size some trees develop, people have assumed that individual H.
-    macrocarpa trees may be up to 2,000 years old. However, the longest-lived report based on
-    physical evidence is only 284 years old. The renowned Californian botanist Willis Linn Jepson
-    wrote that "the advertisement of [C. macrocarpa trees] in seaside literature as 1,000 to 2,000
-    years old does not ... rest upon any actual data, and probably represents a desire to minister
-    to a popular craving for superlatives".
+    Monterey cypress's huge trunks led to claims that some trees were 2,000 years old, which the
+    botanist Willis Linn Jepson put down to "a popular craving for superlatives"; the oldest dated
+    from physical evidence was 284 years old. Trees planted in New Zealand around 1860 are still
+    alive.
 - name: Ilex
   common_name: Holly
   order: Fagales
@@ -1093,6 +1126,7 @@
   inaturalist_taxon_id: 60749
 - name: Ilex spp.
   common_name: Holly
+  description: This tree has only been identified to genus, not species.
 - name: Juglans nigra
   common_name: Black Walnut
   order: Fagales
@@ -1102,12 +1136,14 @@
   native_region: the mountains of Central Asia, from the Balkans east to the Himalayas and southwest China
   inaturalist_taxon_id: 63935
   description: >-
-    In the fourth century BC, Alexander the Great introduced this "Persian nut" in Macedonian and
-    Greek ancestral forms with lateral fruiting from Iran and Central Asia.
+    English walnut is also called Persian walnut: it comes from Iran and Central Asia, and the
+    ancient Greeks knew it as the Persian nut. The genus name, Juglans, means "Jupiter's nut" in
+    Latin.
 - name: Juniperus
   common_name: Juniper
   order: Pinales
   inaturalist_taxon_id: 49399
+  description: This tree has only been identified to genus, not species.
 - name: Juniperus chinensis
   common_name: Chinese juniper
   native_region: China, Taiwan, Myanmar, Japan, Korea and the Russian Far East
@@ -1116,13 +1152,26 @@
   common_name: Common Juniper
   order: Pinales
   inaturalist_taxon_id: 58725
-- name: Juniperus scopulorum
-  common_name: Rocky Mountain Juniper
+- name: Juniperus maritima
+  # Was Juniperus scopulorum. The wild junipers of Salish Sea shores were split off as J. maritima
+  # (R.P. Adams, 2007); BC's Conservation Data Centre lists it, though some databases don't accept it
+  # yet. The three mapped trees are heritage records on the shore at View Royal and Towner Bay.
+  common_name: Seaside juniper
   order: Pinales
   native: true
   sencoten_name: PEȾN¸Á¸IȽĆ
+  native_region: >-
+    the shores and dry rocky ridges of the Salish Sea, in southwestern British Columbia and
+    northwestern Washington
   sencoten_url: http://saanich.montler.net/WordList/plants.html#380.
-  inaturalist_taxon_id: 135883
+  description: >-
+    Seaside juniper boughs are hung in the house or burned on the stove as incense to keep sickness
+    away during epidemics (W̱SÁNEĆ, western Washington peoples), and an infusion of the boughs is
+    drunk for colds, coughs and sore throats. Its Quw’utsun’ (Cowichan) name means "rank-smelling"
+    or "skunk-like plant". It was named as its own species in 2007, when genetic studies showed that
+    the junipers of Salish Sea shores, long called Rocky Mountain juniper, are distinct; it also
+    ripens its cones faster and doesn't interbreed with other junipers.
+  turner_pages: vol. 1, pp. 128, 423; vol. 2, p. 302
 - name: Juniperus squamata
   common_name: Juniper
   order: Pinales
@@ -1141,18 +1190,26 @@
   native_region: southern China
   notable: true
   inaturalist_taxon_id: 133608
-  description: It is one of the few trees that bloom in summer.
+  description: >-
+    Chinese flame tree is one of the few trees that flower in late summer, with sprays of small
+    yellow flowers followed by papery, reddish, three-lobed seed pods.
 - name: Koelreuteria paniculata
   common_name: Chinese Rain Or Flame
   order: Sapindales
+  native_region: China and Korea
   inaturalist_taxon_id: 58320
+  description: >-
+    Goldenrain tree was one of the five official memorial trees of China's Zhou dynasty, planted
+    beside the tombs of scholars. Its yellow summer flowers are followed by papery, three-sided pods
+    like small lanterns, which ripen from green to orange and pink. The genus honours Joseph
+    Kölreuter, an 18th-century German botanist who pioneered the study of plant hybrids.
 - name: Laburnum × watereri
   common_name: Golden chain tree
   native_region: the Alps, where its two parent species grow together
   inaturalist_taxon_id: 899503
   description: >-
-    A naturally occurring hybrid, its parents are common laburnum, Laburnum anagyroides, and alpine
-    laburnum, Laburnum alpinum.
+    Golden chain tree's best-known form is 'Vossii', with especially long chains of yellow flowers.
+    All parts of the plant are poisonous, though deaths are very rare.
 - name: Laburnum anagyroides
   common_name: Common Laburnum
   order: Fabales
@@ -1179,31 +1236,31 @@
   native_region: the southeastern United States, Mexico and Central America
   inaturalist_taxon_id: 49658
   description: >-
-    Sweetgum is one of the most important commercial hardwoods in the Southeastern United States. It
-    is also a popular ornamental and forestal tree, cultivated for its distinctive foliage and
-    intense autumn colors.
+    The name Liquidambar, "liquid amber", refers to the fragrant resin that seeps from sweetgum's
+    bark, which also gives the tree its common name. It is one of the most valuable timber trees of
+    the southeastern United States.
+  wildlife:
+    - who: [goldfinches, purple finches]
+      what: eat the seeds from its spiky seed balls
   cultivars:
     - name: Worplesdon
       description: >-
         A sweetgum raised in England, with deeply lobed leaves that reliably turn orange, red and
         purple in autumn.
+    - name: Slender Silhouette
+      match: slender silhouette
+      description: >-
+        An extremely narrow, columnar sweetgum, many times taller than it is wide, with the species'
+        red and purple autumn colour. Planted where there's no room for a spreading crown.
 - name: Liriodendron tulipifera
   common_name: Tulip tree
   order: Magnoliales
   native_region: eastern North America, from southern Ontario to Florida and Louisiana
   inaturalist_taxon_id: 53582
   description: >-
-    The tulip tree is the tallest eastern hardwood.
-
-
-    This tree species is a major honey plant in the eastern United States, yielding a dark reddish,
-    fairly strong honey which gets mixed reviews as a table honey but is favorably regarded by
-    bakers; nectar is produced in the orange part of the flowers.
-
-
-    The tulip tree has been referenced in many poems and the namesakes of other poems, such as
-    William Stafford's "Tulip Tree." It is also a plot element in the Edgar Allan Poe short story
-    "The Gold-Bug".
+    Tulip tree is the tallest hardwood of eastern North America. Its tulip-shaped flowers, with
+    nectar in their orange centres, make it a major honey plant in the eastern United States. It
+    appears in Edgar Allan Poe's short story "The Gold-Bug".
   cultivars:
     - name: Emerald City
       description: An upright tulip tree with dark, glossy leaves.
@@ -1219,12 +1276,13 @@
   common_name: Magnolia
   order: Magnoliales
   inaturalist_taxon_id: 83074
+  description: This tree has only been identified to genus, not species.
 - name: Magnolia × 'Galaxy'
   common_name: Galaxy magnolia
   garden_origin: a hybrid bred at the U.S. National Arboretum in Washington, D.C., and released in 1980
   description: >-
-    Magnolia 'Galaxy' is the result of a cross between Magnolia liliiflora and Magnolia sprengeri
-    'Diva'.
+    'Galaxy' crosses the purple-flowered lily magnolia with Magnolia sprengeri 'Diva', two magnolias
+    from China.
   bloom:
     from: early April
     to: late April
@@ -1236,10 +1294,8 @@
   common_name: Saucer magnolia
   garden_origin: a hybrid of two Chinese magnolias, first raised near Paris in 1820
   description: >-
-    Magnolia × soulangeana was initially bred by French plantsman Étienne Soulange-Bodin
-    (1774–1846), a retired cavalry officer in Napoleon's army, at his château de Fromont near Paris.
-    He crossed Magnolia denudata with M. liliiflora in 1820, and was impressed with the resulting
-    progeny's first precocious flowering in 1826.
+    Saucer magnolia is named after Étienne Soulange-Bodin, a retired cavalry officer from Napoleon's
+    army, who raised it at his château de Fromont; its first seedlings flowered in 1826.
   bloom:
     from: mid March
     to: mid April
@@ -1263,11 +1319,12 @@
   native_region: the southeastern United States, from North Carolina to Florida and Texas
   inaturalist_taxon_id: 83074
   description: >-
-    Squirrels, opossums, quail, and turkey are known to eat the seeds.
-
-
-    Over 150 cultivars have been developed and named, although only 30 to 40 of these still exist
-    and still fewer are commercially propagated and sold.
+    Southern magnolia, also called bull bay, reached Britain in 1728. Sir John Colliton of Exeter,
+    one of its first growers there, surrounded his tree with scaffolding and tubs so his gardeners
+    could root its branches, and sold the young plants for five guineas each.
+  wildlife:
+    - who: [quail]
+      what: eat its seeds
 - name: Magnolia kobus
   common_name: Kobus magnolia
   order: Magnoliales
@@ -1299,6 +1356,7 @@
   common_name: Apple
   order: Rosales
   inaturalist_taxon_id: 77949
+  description: This tree has only been identified to genus, not species.
   bloom:
     from: mid April
     to: mid May
@@ -1313,8 +1371,8 @@
   common_name: Flowering crabapple
   garden_origin: a hybrid crabapple raised by the Barbier nursery in Orléans, France, around 1900
   description: >-
-    This crab was raised by Messrs Barbier of Orleans around 1900 by crossing M. niedzwetzkyana with
-    M. × atrosanguinea (M. floribunda atrosanguinea)
+    Purple crabapple gets its purple-red flowers, leaves and fruit from one parent, Niedzwetzky's
+    apple, a red-fleshed wild apple from Central Asia.
   bloom:
     from: mid April
     to: mid May
@@ -1324,16 +1382,15 @@
   common_name: Japanese crabapple
   native_region: Japan
   inaturalist_taxon_id: 578211
-  description: Introduced to N. America in 1892 by Sargent, and thence to Kew in 1905.
+  description: >-
+    Zumi crabapple is a natural hybrid of the Manchurian and Siebold's crabapples. Charles Sprague
+    Sargent of the Arnold Arboretum brought it to North America in 1892, and it reached Kew in
+    England in 1905.
   bloom:
     from: mid April
     to: mid May
     colour: white
     hue: white
-- name: Malus adams
-  common_name: Apple
-- name: Malus apple
-  common_name: Apple
 - name: Malus domestica
   common_name: Apple
   order: Rosales
@@ -1347,8 +1404,6 @@
     to: mid May
     colour: pink fading to white
     hue: pale pink
-- name: Malus red
-  common_name: Apple
 - name: Malus sylvestris
   common_name: European crab apple
   native_region: Europe
@@ -1364,6 +1419,7 @@
   common_name: Mulberry
   order: Suliformes
   inaturalist_taxon_id: 56090
+  description: This tree has only been identified to genus, not species.
 - name: Morus alba
   common_name: White Mulberry
   order: Rosales
@@ -1371,10 +1427,15 @@
 - name: Nyssa sylvatica
   common_name: Black tupelo
   order: Cornales
-  native_region: >-
-    eastern North America from the coastal Northeastern United States and southern Ontario south to
-    central Florida and eastern Texas, as well as Mexico
+  native_region: eastern North America, from southern Ontario to Florida and Texas, and Mexico
   inaturalist_taxon_id: 54802
+  description: >-
+    Black tupelo colours early in autumn, and its scarlet leaves are thought to signal its ripe
+    fruit to migrating birds. The name tupelo comes from the Creek words ito, "tree", and opilwa,
+    "swamp".
+  wildlife:
+    - who: [robins, thrushes, woodpeckers]
+      what: eat its blue-black fruit in autumn
   cultivars:
     - name: Red Rage
       description: >-
@@ -1415,13 +1476,15 @@
   common_name: Spruce
   order: Pinales
   inaturalist_taxon_id: 48734
+  description: This tree has only been identified to genus, not species.
 - name: Picea abies
   common_name: Norway Spruce
   native_region: northern, central and eastern Europe, from Norway to Russia and the Alps
   inaturalist_taxon_id: 63567
   description: >-
-    The Norway spruce is one of the most widely planted spruces, both in and outside of its native
-    range, and one of the most economically important coniferous species in Europe.
+    Norway spruce is a prized tonewood for violins, and Stradivari used it for his. Every year Oslo
+    sends a Norway spruce to London's Trafalgar Square as a Christmas tree, in thanks for Britain's
+    help in the Second World War.
 - name: Picea engelmannii
   common_name: Engelmann Spruce
   order: Pinales
@@ -1430,17 +1493,24 @@
   common_name: White spruce
   order: Pinales
   native_region: >-
-    central Alaska all through the east, across southern/central Canada to the Avalon Peninsula in
-    Newfoundland
+    the northern forests of Alaska and Canada, from the Arctic treeline south to the Great Lakes
   inaturalist_taxon_id: 117326
+  description: >-
+    White spruce is the northernmost tree in North America, reaching past 69°N in the Mackenzie
+    River delta. Its crushed needles have a sharp smell that has earned it the names cat spruce and
+    skunk spruce.
+  wildlife:
+    - who: [chickadees, nuthatches, pine siskins]
+      what: eat its seeds
 - name: Picea omorika
   common_name: Serbian spruce
   native_region: a small stretch of the Drina River valley, on the border of Serbia and Bosnia
   inaturalist_taxon_id: 135773
   description: >-
-    It has a total range of only about 60 ha. Outside its native range, Serbian spruce is of major
-    importance as an ornamental tree in large gardens, valued in northern Europe and North America
-    for its very attractive crown form and ability to grow on a wide range of soils
+    Serbian spruce was discovered on Mount Tara in 1875 and named by the botanist Josif Pančić; in
+    Serbian it is still called Pančić's spruce. Before the ice ages it grew across most of Europe.
+    Its narrow, spire-like crown has made it a popular garden tree in northern Europe and North
+    America.
 - name: Picea orientalis
   common_name: Spruce
   order: Pinales
@@ -1449,7 +1519,9 @@
   common_name: Blue spruce
   native_region: the Rocky Mountains of the United States, from Wyoming to New Mexico
   inaturalist_taxon_id: 119092
-  description: The blue spruce is the State Tree of Colorado.
+  description: >-
+    Blue spruce is the state tree of Colorado, and its blue-grey needles have made it a popular
+    ornamental far beyond its native range.
 - name: Picea sitchensis
   common_name: Sitka Spruce
   order: Pinales
@@ -1457,42 +1529,23 @@
   native_region: the Pacific coast of North America, from Alaska to northern California
   inaturalist_taxon_id: 68131
   description: >-
-    Said to bring supernatural protection (Haida, Kwakwaka’wakw, Klallam, Ditidaht); bark mixture in
-    sweat bath, decoction drunk for tuberculosis (Nuxalk); branches placed around sick people’s
-    houses with the idea that the sharp spruce needles would keep anything unclean from entering the
-    house; spruce tips rubbed on canoes, digging sticks, and implements to purify them and used to
-    cleanse a person contaminated (sic) with menstrual blood (Kwakwaka’wakw); beating with branches
-    said to drive away the sickness and ghosts of the dead (Klallam); said to bring vivid dreams and
-    good luck if you sleep under spruce (Nlaka’pamux) (Boas 1930, 1966; Turner 2004a; Turner,
-    Thomas, et al. 1983). 
-
-
-    Wood used for bows, wedges, blanket pins, arrows and arrow points, tongs, clubs, implement
-    handles,
-
-    ladders, drying racks, hollowed out containers, fish traps, deadfalls, shelters. Roots for
-    twined basketry, fishing lines, snares, binding and tying; bark sheets for roofing. Pitch for
-    sealing canoes and
-
-    baskets, waterproofing, glue.
-
-
-    Pitch or gum harvested from living trees for material or medicinal purposes. Collected from
-    natural or human-made wounds in trees or from pitch blisters. The pitch was variously chewed for
-    pleasure, used as waterproofing or adhesive for implements and containers, or prepared for
-    medicinal use.         -- Roots harvested for basketry; only a few taken from a single tree in
-    any one year; limbs and sapling trunks used for fish weirs; inner bark (food) and pitch
-    (medicine, adhesive) harvested from individual living trees over generations (Haida, Tlingit,
-    Ts’msyen, Kwakwaka’wakw, other Northwest
-
-    Coast peoples).
-  turner_pages: vol. 1, pp. 340, 342, 344; vol. 2, pp. 179, 184, 195, 302
+    Sitka spruce's sharp-needled branches are used to protect against illness (Central Coast Salish
+    and others); after a death, the Klallam beat the bed, the walls and the arms of relatives with
+    spruce branches to drive away any lingering sickness. Its roots were split and twined into
+    baskets and fishing lines, its pitch sealed canoes, and its wood made bows, wedges and fish
+    traps.
+  turner_pages: vol. 1, pp. 340, 342, 344; vol. 2, pp. 302, 333
+  wildlife:
+    - who: [bald eagles, peregrine falcons]
+      what: nest in it
+    - who: [cavity-nesting birds]
+      what: favour its dead snags
 - name: Picea smithiana
   order: Pinales
 - name: Pinus
   common_name: Pine
   inaturalist_taxon_id: 52391
-  description: This is a genus only identification, not species.
+  description: This tree has only been identified to genus, not species.
 - name: Pinus aristata
   common_name: Bristlecone Pine
   order: Pinales
@@ -1520,20 +1573,20 @@
   native_region: western North America, from Alaska and the Yukon to California and the Rockies
   inaturalist_taxon_id: 48934
   description: >-
-    Pinus contorta is a fire-dependent species, requiring wildfires to maintain healthy populations
-    of diverse ages. The bark of the lodgepole pine is fairly thin, minimizing the tree's defense to
-    fire; however, the heat of fire opens the cones to release the seeds. This allows the species to
-    regenerate and maintain its place in the forest habitat.
+    Shore pine, the coastal form of lodgepole pine, grows twisted and stunted on rocky shores and in
+    bogs, which gave the species its name, contorta. Its pitch and inner bark were harvested a
+    little at a time so the tree lived: pitch by coastal peoples such as the Haida and Gitxsan, and
+    inner bark, for food, by interior peoples. Inland, lodgepole pine depends on fire, whose heat
+    opens its cones to release the seeds.
+  turner_pages: vol. 2, p. 184
 - name: Pinus coulteri
   common_name: Big-cone pine
   native_region: the coastal mountains of southern California and northern Mexico
   inaturalist_taxon_id: 67330
   description: >-
-    The outstanding characteristic of this tree is the large, spiny cones which are 20–40 cm
-    (7.9–15.7 in) long, and weigh 2–5 kg (4.4–11.0 lb) when fresh. Coulter pines produce the largest
-    cones of any pine tree species (people are actually advised to wear hardhats when working in
-    Coulter pine groves), although the slender cones of the sugar pine are longer. The large size of
-    the cones has earned them the nickname "widowmakers" among locals.
+    Coulter pine has the heaviest cones of any pine, 20–40 cm (8–16 in) long and up to 5 kg (11 lb)
+    when fresh. Locals call them "widowmakers", and people working in Coulter pine groves are
+    advised to wear hard hats.
 - name: Pinus densiflora
   common_name: Pine
   order: Pinales
@@ -1547,22 +1600,10 @@
   native_region: the mountains of California, southern Oregon, western Nevada and northern Mexico
   inaturalist_taxon_id: 48463
   description: >-
-    The scent of Pinus jeffreyi is variously described as reminiscent of vanilla, lemon, pineapple,
-    violets, apple, and, quite commonly, butterscotch; This scent may be sampled by breaking off a
-    shoot or some needles, or by simply smelling the resin's scent in between the plates of the
-    bark.
-
-
-    The exceptional purity of n-heptane distilled from Pinus jeffreyi resin led to n-heptane being
-    selected as the zero point on the octane rating scale of petrol. 
-
-
-    Pinus jeffreyi is closely related to Pinus ponderosa (ponderosa pine) and is similar in
-    appearance. One way to distinguish between them is by their cones. Each has barbs at the end of
-    the scales. The sharp Pinus jeffreyi cone scale barbs point inward, so the cone feels smooth to
-    the palm of one's hand when rubbed down the cone. Pinus ponderosa cone scale barbs point
-    outward, so feel sharp and prickly to the palm of one's hands. This gives rise to the memory
-    device for distinguishing between them - "gentle Jeffrey and prickly ponderosa".
+    Jeffrey pine's bark and crushed needles smell of vanilla, pineapple or, most often,
+    butterscotch. Its resin yields heptane so pure that heptane was chosen as the zero point of the
+    octane scale for petrol. Its cone prickles point inward, which gives the rhyme "gentle Jeffrey,
+    prickly ponderosa".
 - name: Pinus monticola
   common_name: Western white pine
   native: true
@@ -1572,7 +1613,11 @@
   sencoten_name: ₭ÍYÁL¸EŚEȽĆ
   sencoten_url: http://saanich.montler.net/WordList/plants.html#320.
   inaturalist_taxon_id: 68084
-  description: Sheets of bark harvested for baskets and canoes from living trees (Ktunaxa, Lakes, Secwepemc)
+  description: >-
+    Western white pine bark was peeled in sheets from living trees to make baskets and canoes
+    (Ktunaxa, Lakes, Secwepemc). It is the state tree of Idaho. White pine blister rust, a fungus
+    brought from Europe by accident in 1909, has killed an estimated 90% of the trees west of the
+    Cascades.
   turner_pages: vol. 2, p. 184
 - name: Pinus mugo
   common_name: Mugo Pine
@@ -1591,14 +1636,15 @@
   common_name: Five-needle pine
   order: Pinales
 - name: Pinus pinaster
+  # Tree A296 has been misidentified as Aleppo pine (Pinus halepensis). For its identification see
+  # naturevictoria.com/species/p-pinaster.html and conifers.org/pi/Pinus_pinaster.php.
   common_name: Maritime pine
   order: Pinales
   native_region: the western Mediterranean, in Spain, Portugal, France, Italy and North Africa
   notable: true
   description: >-
-    Tree A296 has been misidentified by others as the Allepo Pine, Pinus halepensis. For details of
-    identification see: https://naturevictoria.com/species/p-pinaster.html
-  indigenous_uses: 'see: https://www.conifers.org/pi/Pinus_pinaster.php'
+    Maritime pine makes up the Landes forest of southwest France, the largest planted maritime pine
+    forest in Europe, much of it planted in the 1800s.
 - name: Pinus ponderosa
   common_name: Ponderosa pine
   order: Pinales
@@ -1608,6 +1654,11 @@
     Ponderosa pine is the most widely distributed pine in North America. David Douglas named it in
     1829 for its heavy wood. Mature trees have orange, jigsaw-puzzle bark that smells of vanilla when
     warmed by the sun.
+  wildlife:
+    - who: [quail]
+      what: eat its seeds
+    - who: [pileated woodpeckers]
+      what: nest in it
 - name: Pinus radiata
   common_name: Monterey Pine
   order: Pinales
@@ -1627,26 +1678,20 @@
   native_region: Europe and northern Asia, from Scotland and Spain to eastern Siberia
   inaturalist_taxon_id: 58722
   description: >-
-    Scots pine was one of the first trees introduced to North America, in about 1600.
-
-
-    It has been widely used in the United States for the Christmas tree trade, and was one of the
-    most popular Christmas trees from the 1950s through the 1980s.
-
-
-    The Scots pine was grown and used extensively in the coal mining regions of Flanders, Belgium.
-    It was used to fortify the tunnelling and preferred for its cracking sound when in need of
-    replacing. Large patches of forest containing mostly this species are still scattered over the
-    countryside.
+    Scots pine was one of the first trees brought to North America, in about 1600, and from the
+    1950s to the 1980s it was one of the most popular Christmas trees in the United States. In the
+    coal mines of Flanders its timber was used to prop tunnels, because it cracked audibly before it
+    gave way.
 - name: Pinus thunbergiana
   common_name: Japanese Black pine
   order: Pinales
-  native_region: coastal areas of Japan (Kyūshū, Shikoku and Honshū) and South Korea
+  native_region: the coasts of Japan and South Korea
   inaturalist_taxon_id: 135655
-- name: Pinus thunbergii
-  common_name: Japanese Black Pine
-  order: Pinales
-  inaturalist_taxon_id: 135655
+  description: >-
+    Japanese black pine is one of the classic bonsai trees, and in Japanese gardens it is pruned
+    into sculpted shapes as niwaki. Its tolerance of salt and pollution has made it popular in
+    gardens and along streets. In Japan it has become endangered since the accidental introduction
+    of the North American pinewood nematode, a tiny worm that kills the trees.
 - name: Pinus wallichiana
   common_name: Bhutan pine
   order: Pinales
@@ -1655,19 +1700,16 @@
     Pakistan and north west India to Yunnan in southwest China
   notable: true
   inaturalist_taxon_id: 135668
-- name: Pistachia chinensis
-  common_name: Pistachio
+- name: Pistacia chinensis
+  common_name: Chinese pistache
 - name: Platanus × acerifolia
   common_name: London plane
   garden_origin: a hybrid of the oriental plane and American sycamore, which arose in Spain or England in the 1600s
   inaturalist_taxon_id: 897876
   description: >-
-    The London plane is usually thought to be a hybrid of Platanus orientalis (oriental plane) and
-    Platanus occidentalis (American sycamore). The species was formed by hybridization in the 17th
-    century after P. orientalis and P. occidentalis had been planted in proximity to one another. It
-    is often said that the hybridization took place in Spain, but it could also have happened in
-    Vauxhall Gardens in London where John Tradescant the Younger discovered the tree in the mid-17th
-    century.
+    London plane was discovered in the mid-1600s by the gardener John Tradescant the Younger,
+    possibly at Vauxhall Gardens in London. It is one of the most efficient trees at removing fine
+    particle pollution from city air.
 - name: Platanus acerifolia
   common_name: Plane tree
   inaturalist_taxon_id: 897876
@@ -1681,28 +1723,22 @@
   native_region: southeastern Europe and western Asia, from the Balkans to Iran
   inaturalist_taxon_id: 181682
   description: >-
-    From earliest days, P. orientalis has been an important tree in Persian gardens, which are built
-    around water and shade. There it is known as the chenar. 
-
-
-    The Tree of Hippocrates, under which Hippocrates — the "Father of Medicine" — taught at Kos, is
-    reputed to have been an oriental plane.
+    Oriental plane, the chenar, has been a central tree of Persian gardens, which are built around
+    water and shade, since ancient times. Hippocrates is said to have taught medicine under an
+    oriental plane on the island of Kos.
 - name: Platycladus orientalis
   common_name: Chinese thuja
   native_region: northern China and Korea
   inaturalist_taxon_id: 135659
   description: >-
-    The wood is used in Buddhist temples both for construction work, and chipped, for incense
-    burning.
-
-
-    Platycladus was often included in Thuja, which is reflected in one of its common names,
-    "oriental thuja". But it is only distantly related to the genus Thuja. Differences include its
-    distinct cones, wingless seeds, and its almost scentless foliage.
+    Chinese thuja's wood is used in Buddhist temples, both for building and, chipped, as incense.
+    Despite its other name, oriental thuja, it is only distantly related to the true thujas, with
+    different cones and almost scentless leaves.
 - name: Populus
   common_name: Poplar
   order: Malpighiales
   inaturalist_taxon_id: 54840
+  description: This tree has only been identified to genus, not species.
 - name: Populus alba
   common_name: European White Poplar
   order: Malpighiales
@@ -1721,13 +1757,21 @@
   inaturalist_taxon_id: 78699
   description: >-
     Most of Victoria's balsam poplars are black cottonwood (subspecies trichocarpa), one of the
-    tallest broadleaf trees in western North America. Each spring it releases its seeds on drifts of
-    cottony fluff, and its sticky, fragrant buds give the balsam poplars their name.
+    tallest broadleaf trees in western North America. The Squamish say that burning its bark brings
+    a strong wind, and its Squamish name may come from a root meaning "fluttering". Each spring it
+    releases its seeds on drifts of cottony fluff, and its sticky, fragrant buds give the balsam
+    poplars their name.
+  turner_pages: vol. 1, p. 186; vol. 2, p. 307
 - name: Populus nigra
   common_name: Black poplar
   order: Malpighiales
   native_region: Europe, southwest and central Asia, and northwest Africa
   inaturalist_taxon_id: 47565
+  description: >-
+    Black poplar's best-known form is the narrow, columnar Lombardy poplar, a single male tree
+    selected in Lombardy, northern Italy, in the 1600s and grown from cuttings ever since. In
+    Britain the native black poplar is now one of the rarest trees, with about 7,000 known, of which
+    only about 600 are confirmed female.
 - name: Populus tremula
   common_name: Poplar
   order: Malpighiales
@@ -1739,19 +1783,26 @@
   native_region: northern North America, from Alaska to Newfoundland and south through the Rockies to Mexico
   inaturalist_taxon_id: 54840
   description: >-
-    The species often propagates through its roots to form large clonal groves originating from a
-    shared root system.
+    Trembling aspen bark is one of the ten barks in a W̱SÁNEĆ (Saanich) family medicine for
+    tuberculosis. Aspen spreads by its roots into large groves of identical trees that share one
+    root system.
+  turner_pages: vol. 1, p. 462
+  wildlife:
+    - who: [quail]
+      what: eat its buds in winter
 - name: Prunus
   common_name: Plum / Cherry
   order: Rosales
   inaturalist_taxon_id: 54834
-  description: This is the genus, lacking species identification.
+  description: This tree has only been identified to genus, not species.
 - name: Prunus × blireiana
   common_name: Purple-leafed plum
-  garden_origin: a hybrid raised in France in the 1890s
+  garden_origin: >-
+    a hybrid of Japanese apricot and purple-leaved cherry plum, raised by the Lemoine nursery in
+    Nancy, France, around 1905
   description: >-
-    It is a cross between the Japanese apricot (Prunus mume) and the purple-leaved plum (Prunus
-    cerasifera var. 'Pissardii').
+    Purple-leafed plum has rich pink, double, slightly scented flowers in spring. It is named after
+    the town of Bléré, near Tours in France.
   bloom:
     from: early March
     to: late March
@@ -1762,9 +1813,10 @@
   common_name: Yoshino cherry
   garden_origin: a Japanese hybrid, bred by gardeners in the village of Somei in Edo (now Tokyo) in the 1800s
   description: >-
-    A hybrid cherry of between Prunus speciosa (Oshima zakura) as father plant and Prunus pendula f.
-    ascendens (Edo higan) as mother. It is a clone from a single tree and propagated by grafting to
-    all over the world.
+    Yoshino cherry, Somei-Yoshino in Japan, is a cross between the Oshima cherry and the Edo higan.
+    It gets its habit of blooming before the leaves open from Edo higan, and its fast growth and
+    pale flowers from Oshima cherry. Every tree is a clone of a single original, propagated by
+    grafting.
   bloom:
     from: mid March
     to: early April
@@ -1781,11 +1833,13 @@
 - name: Prunus avium
   common_name: Wild cherry
   order: Rosales
-  native_region: >-
-    Europe, Anatolia, Maghreb, and Western Asia, from the British Isles south to Morocco and
-    Tunisia, north to the Trondheimsfjord region in Norway and east to the Caucasus and northern
-    Iran, with a small isolated population in the western Himalaya
+  native_region: Europe and western Asia, from Britain and Norway to Morocco and northern Iran
   inaturalist_taxon_id: 61964
+  description: >-
+    Wild cherry's botanical name means "bird cherry". Birds eat the small cherries and pass the
+    stones in their droppings, which is how it has spread wild in North America. Cultivated sweet
+    cherries are selections of this species, and its stones have been found at Bronze Age
+    settlements across Europe.
   bloom:
     from: early April
     to: late April
@@ -1832,11 +1886,8 @@
   garden_origin: a domesticated plum, thought to have arisen in western Asia around the Caucasus
   inaturalist_taxon_id: 63735
   description: >-
-    Its hybrid parentage was believed to be Prunus spinosa and Prunus cerasifera. 
-
-
-    This is the most commonly grown plum at least in Europe, and most prunes (dried plums) are made
-    from fruits of this species.
+    European plum is thought to be a hybrid of blackthorn and cherry plum. It is the most commonly
+    grown plum in Europe, and most prunes are made from its fruit.
   bloom:
     from: late March
     to: mid April
@@ -1856,33 +1907,28 @@
   native_region: western North America, from British Columbia to California and east to the Rockies
   inaturalist_taxon_id: 63905
   description: >-
-    The bitter cherries are not edible by humans. However, they are eaten by some birds (especially
-    cedar waxwing) and mammals, and deer and livestock forage on the leaves.
-
-
-    Indigenous peoples, most notably Kwakwaka'wakw, used other parts of the plant for medicinal
-    purposes, such as poultices and bark infusions. Outer bark was harvested in strips from
-    standing, living trees for wrapping implement joints, waterproofing, cordage, basket decoration;
-    whistle reeds.
-  indigenous_uses: >-
-    Indigenous tribes, most notably Kwakwaka'wakw, used other parts of the plant for medicinal
-    purposes, such as poultices and bark infusions.
+    Bitter cherry bark is peeled in strips from living trees to decorate baskets, wrap tool joints
+    and make cordage (Coast Salish and interior peoples), and it is one of the ten barks in a
+    W̱SÁNEĆ (Saanich) family medicine for tuberculosis. Its bark is also used in poultices and
+    infusions (Kwakwaka’wakw). As its name says, its cherries are too bitter for people to eat.
+  wildlife:
+    - who: [cedar waxwings]
+      what: eat its cherries and spread the seeds
   bloom:
     from: mid April
     to: mid May
     colour: white
     hue: white
     note: "Victoria's native cherry; small flowers in flat clusters."
-  turner_pages: vol. 1, p. 343
+  turner_pages: vol. 1, pp. 343, 462; vol. 2, p. 189
 - name: Prunus laurocerasus
   common_name: Cherry laurel
   order: Rosales
   native_region: the lands around the Black Sea, from the Balkans through Turkey to the Caucasus and northern Iran
   inaturalist_taxon_id: 61432
   description: >-
-    Prunus laurocerasus is a widely cultivated ornamental plant, used for planting in gardens and
-    parks in temperate regions worldwide. It is often used for hedges, as a screening plant, and as
-    a massed landscape plant.
+    Cherry laurel is widely planted for hedges, but birds eat its fruit and spread the seeds, and it
+    has become invasive in the Pacific Northwest. Its leaves and seeds contain hydrogen cyanide.
 - name: Prunus lusitanica
   common_name: Portugal laurel
   order: Rosales
@@ -1933,7 +1979,8 @@
   order: Rosales
   native_region: the mountains of western China and Tibet
   inaturalist_taxon_id: 125742
-  description: It is used as an ornamental in many parts of the world for its striking coppery-red bark.
+  description: >-
+    Birch bark cherry is grown for its glossy, coppery-red bark, which peels in thin bands.
 - name: Prunus serrulata
   common_name: Japanese cherry
   order: Rosales
@@ -1989,10 +2036,7 @@
   inaturalist_taxon_id: 54835
 - name: Prunus wadai
   common_name: Cherry blossom
-  garden_origin: a hybrid cherry from Japan
-  description: >-
-    Hybrid of Prunus pseudocerasus (Chinese sour cherry) and Prunus subhirtella (Winter-flowering
-    cherry).
+  garden_origin: a hybrid of Chinese sour cherry and winter-flowering cherry, raised in Japan
 - name: Prunus yedoensis
   common_name: cherry plum
 - name: Pseudocydonia sinensis
@@ -2008,55 +2052,27 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#318.
   inaturalist_taxon_id: 48256
   description: >-
-    Despite its common name, the Douglas-fir is not a true fir. It is also not a hemlock; the genus
-    name Pseudotsuga means "false hemlock".
-
-
-    Many different Indigenous peoples used the bark, resin (pitch), and pine needles of Douglas-fir
-    to make herbal treatments for various diseases. For the W̱SÁNEĆ people, Douglas-firs were the
-    largest producer of pitch, which was a prized commodity for its many uses. Pitch was used in
-    fire starting, patching open wounds as well as for sealing canoes. Bark for fuel would be cut
-    from standing, living trees; self-pruned limbs from living trees used extensively for fuel;
-    branches cut from living trees for pit-cooking, bedding, floor covering, and sweathouses.
-
-
-    Also used as a mixture with other plants for hair wash and skin wash during sweat bathing,
-    needles as hair tonic (Nlaka’pamux, Okanagan); boughs used on floors, in sweathouse, for
-    bereaved persons, used as tea during sweat bathing, cleansing agent (Nlaka’pamux, Okanagan,
-    other groups); boughs used in ritual washing of twins, to construct puberty houses for girls,
-    and in other ceremonial roles (Secwepemc, Okanagan, other Interior Plateau peoples) (Turner
-    Bouchard, and Kennedy 1980; Turner, Thompson, et al. 1990).
-
-
-    Thick bark and wood were used as hot-burning fuels. Harpoon and spear shafts, dip net poles and
-    hoops, arrow shafts, fish-barbecuing stakes. Bark slabs split off standing trees and used for
-    shelter covering,
-
-    siding.
-
-
-    Douglas-fir seeds are an extremely important food source for small mammals such as moles,
-    shrews, and chipmunks, which consume an estimated 65% of each annual seed crop.
-
-
-    The species is extensively used in forestry as a plantation tree for softwood timber.
-    Douglas-fir has been commonly used as a Christmas tree since the 1920s.
-
-
-    The common name honors David Douglas, a Scottish botanist and collector who first reported the
-    extraordinary nature and potential of the species. The specific epithet menziesii is after
-    Archibald Menzies, a Scottish physician and rival naturalist to David Douglas. Menzies first
-    documented the tree on Vancouver Island in 1791.
-  turner_pages: vol. 1, pp. 340, 344; vol. 2, pp. 184, 303
+    Douglas-fir bark is one of the best fuels, and some Coast Salish names for the tree come from an
+    old word for "wood, log, stick". Its boughs are used in sweat baths and for cleansing
+    (Nlaka’pamux, Okanagan and others), and its wood made harpoon and spear shafts, dip-net poles
+    and fish-barbecuing stakes. Despite its name it is not a true fir; the genus name Pseudotsuga
+    means "false hemlock". Archibald Menzies first recorded it on Vancouver Island in 1791.
+  turner_pages: vol. 1, pp. 340, 344, 351; vol. 2, p. 303
 - name: Pyrus
   common_name: Callery Pear
   order: Rosales
   inaturalist_taxon_id: 119793
+  description: This tree has only been identified to genus, not species.
 - name: Pyrus calleryana
   common_name: Callery Pear
   order: Rosales
-  native_region: China and Vietnam
+  native_region: China, Korea, Taiwan and Japan
   inaturalist_taxon_id: 119793
+  description: >-
+    Callery pear's small, hard fruits soften after frost and are then eaten by birds, which spread
+    the seeds in their droppings; that is how it has become invasive in much of the eastern United
+    States. It is named after Joseph-Marie Callery, a missionary in China who sent specimens to
+    Europe. Its spring flowers have a smell often compared to rotting fish.
   bloom:
     from: mid March
     to: early April
@@ -2067,8 +2083,7 @@
       match: chanticlear
       description: >-
         A narrow, pyramidal Callery pear with white flowers in early spring and red-purple autumn
-        colour. Widely planted as a street tree, though Callery pear has become invasive in parts of
-        the eastern U.S.
+        colour, widely planted as a street tree.
 - name: Pyrus communis
   common_name: Callery Pear
   order: Rosales
@@ -2085,18 +2100,20 @@
   common_name: Oak
   order: Fagales
   inaturalist_taxon_id: 49005
+  description: This tree has only been identified to genus, not species.
 - name: Quercus agrifolia
   common_name: Oak
   order: Fagales
   inaturalist_taxon_id: 47850
 - name: Quercus coccinea
+  # Can be mistaken for pin oak: scarlet oak's leaf sinuses are C-shaped (pin oak's are U-shaped), and
+  # its acorns are half covered by a deep cap.
   common_name: Scarlet Oak
   native_region: the central and eastern United States
   inaturalist_taxon_id: 54784
   description: >-
-    The scarlet oak can be mistaken for the pin oak, the black oak, or occasionally the red oak. On
-    scarlet oak the sinuses between lobes are "C"-shaped in comparison to pin oak (Q. palustris),
-    which has "U"-shaped sinuses and the acorns are half covered by a deep cap.
+    Scarlet oak is named for its brilliant scarlet autumn colour, and is the official tree of
+    Washington, D.C.
 - name: Quercus dentata
   common_name: Oak
   order: Fagales
@@ -2118,30 +2135,13 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.1.
   inaturalist_taxon_id: 68632
   description: >-
-    Garry oak is the only native oak species in British Columbia, Washington, and northern Oregon.
-
-
-    Indigenous peoples burned the plants under the oaks throughout their range to maintain open
-    prairie, to make hunting easier, and to allow the land to produce more food. The edible bulbs of
-    camas and other species were the focus of the plant harvest. Camas was so important in their
-    diet that families had their own plots of woodland where they owned the harvest. So important
-    were these plants that the Victoria area was originally known as Camosun, or "place to gather
-    camas."
-
-
-    The WSANEĆ peoples used the bark and leaves medicinally to help treat colds, stomach aches,
-    cramps and even as a post-childbirth contraceptive. The bark can be infused to treat cuts,
-    wounds, sore throats, and help treat diabetes while the inner bark was used to make dresses.
-    Tannin, also found in the bark of Arbutus trees, was used to tan and cure hides.
-
-
-    Garry oak woodlands depend on disturbance to avoid being overtaken by Douglas-fir. Deliberate
-    burning was widely practiced by the indigenous people of these areas. Fire perpetuated the
-    grasslands that produced food sources such as camas, chocolate lily, bracken fern, and oak; and
-    that provided grazing and easy hunting for deer and elk.
-
-
-    The eponymous Nicholas Garry was deputy governor of the Hudson's Bay Company, 1822–35.
+    Victoria's Garry oak meadows are the product of centuries, probably millennia, of light burning
+    by the local Coast Salish peoples, which kept the land open and productive for camas and other
+    food plants. Camas bulbs were a staple, harvested from family-owned plots. Younger Hul’qumi’num
+    hunters left the open oak prairies, which were easier to walk, to the older hunters. Garry oak
+    is the only native oak in British Columbia, and is named after Nicholas Garry, deputy governor
+    of the Hudson's Bay Company.
+  turner_pages: vol. 2, pp. 70, 149, 189
 - name: Quercus ilex
   common_name: Oak
   order: Fagales
@@ -2212,13 +2212,26 @@
 - name: Rhamnus purshiana
   common_name: Cascara Buckthorn
   order: Rosales
+  native: true
+  native_region: >-
+    western North America, from southern British Columbia to California and inland to Montana
   inaturalist_taxon_id: 77156
+  description: >-
+    Cascara bark is one of the ten barks in a W̱SÁNEĆ (Saanich) family medicine for tuberculosis,
+    and an infusion is drunk as a laxative and a general tonic; its Ditidaht name means "laxative
+    medicine". The bark is taken in strips so the tree lives, and the tree is spoken to and asked
+    permission first (coast and interior peoples). In the early 1900s many Indigenous harvesters
+    sold the bark to drug companies, for about 20 cents a pound in the 1930s; Hul’qumi’num elder
+    Luschiim (Arvid Charlie) paid for his hunting ammunition this way as a child.
+  turner_pages: vol. 1, pp. 130, 248, 420–421, 462; vol. 2, pp. 187, 305
 - name: Rhododendron
   order: Ericales
+  description: This tree has only been identified to genus, not species.
 - name: Rhus
   common_name: Sumac
   order: Sapindales
   inaturalist_taxon_id: 58732
+  description: This tree has only been identified to genus, not species.
 - name: Rhus glabra
   common_name: Smooth Sumac
   order: Sapindales
@@ -2243,13 +2256,13 @@
   common_name: Willow
   order: Malpighiales
   inaturalist_taxon_id: 54847
+  description: This tree has only been identified to genus, not species.
 - name: Salix × sepulcralis 'Chrysocoma'
   common_name: Weeping Golden Willow
   garden_origin: a garden hybrid of white willow and Peking willow, raised in Europe in the 1800s
   description: >-
-    It is an artificial hybrid between S. alba 'Vitellina' and S. babylonica. The first parent
-    provides the frost hardiness and the golden shoots and the second parent the strong weeping
-    habit.
+    Golden weeping willow gets its hardiness and golden shoots from golden white willow, and its
+    strongly weeping habit from Chinese weeping willow.
 - name: Salix alba
   common_name: Salialba
   order: Malpighiales
@@ -2259,10 +2272,8 @@
   native_region: northern China
   inaturalist_taxon_id: 58316
   description: >-
-    The epithet babylonica in this Chinese species' scientific name (S. babylonica), as well as the
-    related common names "Babylon willow" or "Babylon weeping willow", derive from a
-    misunderstanding by Linnaeus that this willow was the tree described in the Bible in the opening
-    of Psalm 137.
+    Weeping willow's name babylonica comes from Linnaeus's mistaken belief that this Chinese willow
+    was the one by the rivers of Babylon in Psalm 137.
 - name: Salix caprea
   common_name: Kilmarnock Willow
   order: Malpighiales
@@ -2286,30 +2297,24 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#332.
   inaturalist_taxon_id: 71076
   description: >-
-    Scouler's willow protects the soil and helps return sites to forest cover following
-    disturbances. When growing along streams, it helps protect the stream banks from erosion and
-    shades the watercourse, thus maintaining cooler water temperatures. The cover provided is
-    important for mammals and birds. The flowers provide pollen and nectar to honey bees in early
-    spring.
-
-
-    Straits Salish peoples used bark and stems cut from living plants for cordage and netting which
-    would regenerate in following years.
-
-
-    The Secwepemc people of British Columbia used the wood for smoking fish, drying meat, and
-    constructing fishing weirs, the inner bark for lashing, sowing, cordage, and headbands, and
-    decoctions of twigs for treating pimples, body odor, and diaper rash.
-  indigenous_uses: >-
-    The Secwepemc people of British Columbia used the wood for smoking fish, drying meat, and
-    constructing fishing weirs, the inner bark for lashing, sowing, cordage, and headbands, and
-    decoctions of twigs for treating pimples, body odor, and diaper rash.
-  turner_pages: vol. 2, p. 191
+    Straits Salish peoples cut willow bark and stems from living plants for cordage and netting,
+    leaving them to regrow; the W̱SÁNEĆ word for willow means "reefnet plant", after the willow-bark
+    reefnets that are a Straits Salish specialty. The Secwepemc used its wood to smoke fish and
+    build weirs, and its inner bark for lashing, sewing and cordage. Its catkins give bees pollen
+    and nectar in early spring.
+  turner_pages: vol. 1, pp. 131, 399; vol. 2, p. 191
 - name: Salix sitchensis
   common_name: Sitka willow
   native: true
-  native_region: northwestern North America from Alaska to northern California to Montana
+  native_region: western North America, from Alaska to northern California and inland to Montana
   inaturalist_taxon_id: 61100
+  description: >-
+    The W̱SÁNEĆ (Saanich) word for willow means "reefnet plant": Straits Salish reefnets, said to
+    have been given by Xals, the Creator, were made from willow bark, mostly Pacific willow's.
+    Coastal peoples also twisted Sitka willow bark into bowstrings, and in the interior its branches
+    and inner bark were used to build fish weirs and traps. It is named after Sitka, Alaska, where
+    it was first collected.
+  turner_pages: vol. 1, pp. 131, 368, 370, 399
 - name: Sapindus drummondii
   common_name: Soapberries
   order: Sapindales
@@ -2328,19 +2333,14 @@
   native_region: about 70 groves on the western slopes of California's Sierra Nevada
   inaturalist_taxon_id: 59567
   description: >-
-    Giant sequoia specimens are the most massive trees on Earth. 
-
-
-    The etymology of the genus name is in honor of Sequoyah (1767–1843), a polymath of the Cherokee
-    Nation who was the inventor of the Cherokee syllabary.
-
-
-    Giant sequoias are in many ways adapted to forest fires. Their bark is unusually fire resistant,
-    and their cones will normally open immediately after a fire.
+    Giant sequoias are the most massive trees on Earth. The genus is named in honour of Sequoyah
+    (1767–1843), the Cherokee scholar who created the Cherokee syllabary. Their thick bark resists
+    fire, and their cones open after a fire to release seeds.
 - name: Sorbus
   common_name: Mountain Ash
   order: Rosales
   inaturalist_taxon_id: 56063
+  description: This tree has only been identified to genus, not species.
 - name: Sorbus americana
   common_name: American Mountain-Ash
   order: Rosales
@@ -2352,8 +2352,16 @@
 - name: Sorbus aucuparia
   common_name: Mountain-ash
   order: Rosales
-  native_region: most of Europe and parts of Asia, as well as northern Africa
+  native_region: most of Europe and northern Asia, and the mountains of North Africa
   inaturalist_taxon_id: 56063
+  description: >-
+    Rowan's species name, aucuparia, means "bird-catching": fowlers once used its berries as bait.
+    In Scotland, rowan boughs were taken into cattle byres in May, and rowans planted in pastures,
+    to protect livestock from evil. Despite the name mountain-ash, it isn't related to true ashes;
+    only its leaves look alike.
+  wildlife:
+    - who: [thrushes, waxwings]
+      what: eat its berries from late summer and spread the seeds
 - name: Sorbus hupehensis
   common_name: Mountain Ash
   order: Rosales
@@ -2366,6 +2374,9 @@
   description: >-
     Swedish whitebeam, now classified as Hedlundia intermedia, is planted as a street tree for its
     tolerance of wind and poor soil, with white flowers in spring and orange-red berries in autumn.
+  wildlife:
+    - who: [thrushes, waxwings]
+      what: eat its berries and spread the seeds
 - name: Sorbus x
 - name: Stewartia monadelpha
   common_name: Deciduous Camellia
@@ -2376,8 +2387,8 @@
   native_region: the mountains of southern Japan and South Korea
   inaturalist_taxon_id: 133373
   description: >-
-    The Latin specific epithet pseudocamellia references the flower’s resemblance to the related
-    camellia.
+    Japanese stewartia's white flowers look like a camellia's, which gives it both its botanical
+    name, pseudocamellia, "false camellia", and its Japanese one, natsutsubaki, "summer camellia".
 - name: Styrax japonicus
   common_name: Japanese Snowbell
   order: Ericales
@@ -2388,10 +2399,12 @@
   inaturalist_taxon_id: 452210
 - name: Styrax spp
   common_name: Snowbell
+  description: This tree has only been identified to genus, not species.
 - name: Syringa
   common_name: Lilac
   order: Lamiales
   inaturalist_taxon_id: 83072
+  description: This tree has only been identified to genus, not species.
 - name: Syringa reticulata
   common_name: Lilac
   order: Lamiales
@@ -2418,10 +2431,15 @@
   common_name: Yew
   order: Pinales
   inaturalist_taxon_id: 47553
+  description: This tree has only been identified to genus, not species.
 - name: Taxus baccata
   common_name: English yew
-  native_region: western, central and southern Europe, northwest Africa, northern Iran and southwest Asia
+  native_region: most of Europe, North Africa and southwest Asia, east to northern Iran
   inaturalist_taxon_id: 47553
+  description: >-
+    English yew's red, berry-like arils are eaten by birds, which pass the hard seeds unharmed.
+    Every other part of the tree is poisonous. Yew wood was prized for English longbows, and the
+    genus name, Taxus, may come from the Greek toxon, "bow".
 - name: Taxus brevifolia
   common_name: Pacific yew
   native: true
@@ -2432,18 +2450,12 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#331.
   inaturalist_taxon_id: 55209
   description: >-
-    Used by indigenous peoples for implement handles, digging sticks, clubs, mallets, wedges, bows,
-    snowshoes, gambling disks, blanket pins, pegs, fishhooks (bent) and halibut fishing gear.
-
-
-    Tree would be “talked to” before a piece was cut for bows or other tools (Kwakwaka’wakw);
-    branches used for ritual scrubbing and purification (Ditidaht, Nlaka’pamux, and others) (Turner,
-    Thomas, et al. 1983, 1990).
-  indigenous_uses: >-
-    Traditionally, the wood was used by Native Americans to make bows and paddles for canoes, in
-    addition many other items from daily life. The Japanese have also used the wood for decorative
-    purposes.
-  turner_pages: vol. 1, p. 340; vol. 2, p. 303
+    Pacific yew's Quw’utsun’ (Halkomelem) name means "bow tree". Wood for bows and other tools was
+    cut from standing, living trees, a practice called "begging from" the tree (Halkomelem,
+    Kwakwaka’wakw and others), and the tree was spoken to before a piece was taken (Kwakwaka’wakw).
+    Its tough wood also made wedges, digging sticks, clubs, fishhooks and halibut gear; yew wedges
+    about 3,000 years old have been found at a Musqueam village site.
+  turner_pages: vol. 1, pp. 340, 405, 481; vol. 2, pp. 184, 303
 - name: Taxus cuspidata
   common_name: Japanese Yew
   order: Pinales
@@ -2453,8 +2465,13 @@
 - name: Thuja occidentalis
   common_name: Northern white-cedar
   order: Pinales
-  native_region: eastern Canada and much of the north, central and upper Northeastern United States
+  native_region: eastern Canada and the northeastern United States, from Manitoba to Nova Scotia
   inaturalist_taxon_id: 54037
+  description: >-
+    Northern white-cedar is honoured in Ojibwe culture as Nookomis Giizhik, Grandmother Cedar, and
+    is one of the four plants of the medicine wheel. Its foliage is rich in vitamin C, and it is
+    believed to be the annedda that the St. Lawrence Iroquoians used to cure Jacques Cartier's crew
+    of scurvy in the winter of 1535–36. Its other name, arborvitae, is Latin for "tree of life".
 - name: Thuja plicata
   common_name: Western redcedar
   native: true
@@ -2463,43 +2480,36 @@
   sencoten_url: http://saanich.montler.net/WordList/plants.html#321.
   inaturalist_taxon_id: 48252
   description: >-
-    Western redcedar is also known as the giant arborvitae, by comparison with arborvitae for its
-    close relative Thuja occidentalis. Arborvitae comes from the Latin for "tree of life";
-    coincidentally, indigenous peoples of the West coast also address the species as "long life
-    maker". Western redcedar is a member of the cypress family and not a true cedar of the genus
-    Cedrus.
-
-
-    Western red cedar has an extensive history of use by Indigenous peoples. Some northwest coast
-    tribes refer to themselves as "people of the redcedar" because of their extensive dependence on
-    the tree for basic materials. The wood has been used for constructing housing and totem poles,
-    and crafted into many objects, including masks, utensils, boxes, boards, instruments, canoes,
-    vessels, houses, and ceremonial objects. Western Red Cedar is also associated with a long
-    tradition of curing and cooking fish over the open fire. Roots and bark are used for baskets,
-    bowls, ropes, clothing, blankets, and rings.
+    Western redcedar boughs are used as ceremonial scrubbers (W̱SÁNEĆ), and to sweep a house after a
+    death, with their smoke keeping ghosts away (W̱SÁNEĆ, western Washington peoples). The Straits
+    Salish laid their first salmon on cedar boughs. Its straight-grained wood builds houses, canoes
+    and totem poles, its bark is woven into clothing, mats and rope, and Sechelt women are renowned
+    for coiled cedar-root baskets. It is not a true cedar but a member of the cypress family.
+  turner_pages: vol. 2, pp. 128, 303, 329
 - name: Thujopsis dolabrata
   common_name: Hiba arborvitae
   order: Pinales
   native_region: Japan
   inaturalist_taxon_id: 135553
   description: >-
-    The hiba arborvitae / asunaro is a valued ornamental tree both in its native Japan, where it is
-    commonly planted around temples as well as in gardens, and also in Europe and North America.
+    Hiba is called asunaro in Japan, popularly read as "tomorrow it will become a hinoki", because
+    it looks like a small hinoki cypress. It is commonly planted around temples there, and in
+    gardens in Europe and North America.
 - name: Tilia americana
   common_name: American basswood
   native_region: eastern North America, from Manitoba and New Brunswick south to the Carolinas and Oklahoma
   inaturalist_taxon_id: 54854
   description: >-
-    Its flowers provide abundant nectar for insects. The seeds are eaten by chipmunks, mice, and
-    squirrels. Rabbits and voles eat the bark, sometimes girdling young trees.
+    American basswood's flowers provide abundant nectar for bees and other insects, and its seeds
+    are eaten by chipmunks, mice and squirrels.
 - name: Tilia cordata
   common_name: Little-leaf linden
   order: Malvales
   native_region: most of Europe, from Britain to the Caucasus and western Siberia
   inaturalist_taxon_id: 132600
   description: >-
-    Tilia cordata is widely grown as an ornamental tree. It was much planted to form avenues in 17th
-    and early 18th century landscape planning.
+    Small-leaved lime was much planted for avenues in 17th- and early 18th-century landscapes, and
+    some lime trees in Germany are said to be over 1,000 years old.
 - name: Tilia tomentosa
   common_name: Linden
   order: Malvales
@@ -2531,53 +2541,17 @@
     Montana
   inaturalist_taxon_id: 48254
   description: >-
-    Western hemlock is a very shade-tolerant tree; among associated species in the Pacific
-    Northwest, it is matched or exceeded in shade tolerance only by Pacific yew and Pacific silver
-    fir. Young plants typically grow up under the canopy of other conifers such as Sitka spruce or
-    Douglas-fir, where they can persist for decades waiting to exploit a gap in the canopy. They
-    eventually replace these conifers, which are relatively shade-intolerant, in climax forest.
-    However, storms and wildfires will create larger openings in the forest where these other
-    species can then regenerate.
-
-
-    Western hemlock forms ectomycorrhizal associations with some well-known edible fungi such as
-    chanterelles. It is capable of associating with wood-decay fungi in addition to soil fungi; this
-    enables its seedlings to survive on rotting stumps and logs.
-
-
-    Boughs were used as ritual scrubbers to protect girls at puberty, hunters (Kwakwaka’wakw,
-    Hesquiaht/Nuu-chah-nulth, Ditidaht, Makah, Nlaka’pamux); decoction of branches drunk for ritual
-    purification and used as disinfecting fumigant for houses (Nlaka’pamux) (Boas 1930; Gill 1983;
-    Turner and Bell 1973; Turner and Efrat 1982; Turner, Thompson, et al. 1990). Knots for bentwood
-    fishhooks; wood for harpoon shafts, fish weir stakes, arrow points, paddles. Boughs for lining
-    acorn-leaching pits, reinforcing fish weirs,
-
-    capturing herring eggs. 
-
-
-    The Ditidaht name qw’itłqapt, for western hemlock, means “fire goes out/no fire-tree/plant”
-    because it is considered a poor-burning wood, although it is sometimes used for banking a fire
-    overnight because it will smoulder without putting out much heat.
-
-
-    The sap or pitch is medicinal, used as a poultice to heal wounds and burns, as well as mixed
-    with fat to form an aromatic salve that is useful as a chest rub for colds, to massage sore
-    muscles, and to protect against sunburn.
-
-
-    Harvesting: Partial harvesting of edible cambium and inner bark. Rectangular pieces cut from
-    living trees.            Harvesting pitch or gum from living trees for material or medicinal
-    purposes. Collected from natural or human-made wounds in trees or from pitch blisters. The pitch
-    was variously chewed for pleasure, used as waterproofing or adhesive for implements and
-    containers, or prepared for medicinal use. Bark harvested for food (inner bark) from standing,
-    living trees; branches and sapling trunks cut for herring egg harvesting, lining acorn-leaching
-    pits, and reinforcing weirs; poles cut for weirs and twisting eelgrass (general, Northwest
-    Coast)
+    Western hemlock boughs are used as ritual scrubbers to protect girls at puberty and hunters
+    (Kwakwaka’wakw, Hesquiaht, Ditidaht, Makah, Nlaka’pamux), and its branches are set in the sea to
+    collect herring spawn. Its inner bark was eaten, and its hard knots were bent into fishhooks.
+    The Ditidaht name means "fire goes out", because it burns poorly. Its seedlings grow on rotting
+    stumps and logs, and wait for decades in the shade for a gap in the canopy.
   turner_pages: vol. 1, pp. 340, 344, 351; vol. 2, pp. 179, 185, 195, 303
 - name: Ulmus
   common_name: Elm
   order: Rosales
   inaturalist_taxon_id: 53547
+  description: This tree has only been identified to genus, not species.
 - name: Ulmus americana
   common_name: White Elm
   order: Rosales

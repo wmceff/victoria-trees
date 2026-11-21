@@ -1,6 +1,6 @@
 # Victoria Trees
 
-> A map of the 35,125 trees on public land in Victoria, British Columbia, Canada, from 376 species, built from the City of Victoria's open tree data (last refreshed 2026-11-21). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
+> A map of the 35,125 trees on public land in Victoria, British Columbia, Canada, from 369 species, built from the City of Victoria's open tree data (last refreshed 2026-11-21). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions, the birds and other wildlife that use them and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
 
 ## Pages
 
@@ -34,7 +34,7 @@
 - [Common hornbeam (Carpinus betulus)](https://victoriatrees.ca/species/carpinus-betulus/): 779 trees
 - [Austrian pine (Pinus nigra)](https://victoriatrees.ca/species/pinus-nigra/): 716 trees
 - [Yoshino cherry (Prunus × yedoensis)](https://victoriatrees.ca/species/prunus-x-yedoensis/): 698 trees
-- [Red horse-chestnut (Aesculus × carnea)](https://victoriatrees.ca/species/aesculus-x-carnea/): 624 trees
+- [Red horse-chestnut (Aesculus × carnea)](https://victoriatrees.ca/species/aesculus-x-carnea/): 672 trees
 - [Paper birch (Betula papyrifera)](https://victoriatrees.ca/species/betula-papyrifera/): 621 trees
 - [Field maple (Acer campestre)](https://victoriatrees.ca/species/acer-campestre/): 582 trees
 

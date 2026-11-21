@@ -282,6 +282,10 @@ function showTree(treeData, properties) {
     // hybrids and garden plants that don't grow wild: where and when they were raised
     details += `<p>${species.garden_origin[0].toUpperCase()}${species.garden_origin.slice(1)}.</p>`;
   }
+  // which birds and other animals use the tree, written by the pipeline as one line
+  if (species.wildlife) {
+    details += `<p><b>Wildlife:</b> ${species.wildlife}</p>`;
+  }
   const size = sizeFacts(treeData, tree, name);
   if (size) {
     details += `<p>${size}</p>`;

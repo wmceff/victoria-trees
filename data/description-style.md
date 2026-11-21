@@ -51,7 +51,8 @@ rough order of preference:
    cypress knees, caramel-smelling leaves in autumn, bark that peels.
 4. **Origin for hybrids and garden plants.** The parents, who raised it, where and when. Examples:
    Prunus × yedoensis, Magnolia × soulangeana, Malus × purpurea.
-5. **Ecology.** Wildlife that relies on it, fire adaptation, clonal groves, invasiveness.
+5. **Ecology.** Fire adaptation, clonal groves, invasiveness. Birds and other animals that use the
+   tree go in the `wildlife` field instead (see Wildlife, below).
 
 Leave out generic botany (leaf shape, height ranges) unless it's what makes the tree stand out.
 
@@ -61,6 +62,12 @@ Leave out generic botany (leaf shape, height ranges) unless it's what makes the 
   (2014). Name the Nation or people in parentheses after each use, as the book does:
   "boughs for purification (Kwakwaka'wakw)". Where a use is local, name the local Nation, such as
   W̱SÁNEĆ, Lekwungen or Cowichan.
+- Favour Coast Salish peoples. When Turner records a use by a Coast Salish people (W̱SÁNEĆ,
+  Lekwungen, T’Sou-ke and other Straits Salish; Quw’utsun’, Hul’q’umi’num’ and other Halkomelem
+  peoples; Squamish; Sechelt), lead with it, then other coastal uses, then interior ones. Check the
+  book's index and the pages around it: some Coast Salish uses aren't indexed under the species.
+- Write a Nation's own name, with the book's name in parentheses the first time: W̱SÁNEĆ (Saanich),
+  Quw’utsun’ (Cowichan).
 - Paraphrase rather than copy, but keep the Nation attributions exact.
 - Record where the uses come from with `turner_pages`, by volume and page:
   `turner_pages: vol. 1, p. 341; vol. 2, p. 186`. The species page and tree popup show this as a
@@ -118,3 +125,27 @@ rubrum 'Armstrong'"). Describe them under the species:
 - Use a folded block (`description: >-`) for anything longer than one line, wrapped at about 100
   characters.
 - Separate paragraphs with a blank line inside the block.
+
+## Wildlife
+
+Which birds and other animals use a tree goes in its own `wildlife` field, not in the description.
+The site shows it as one line, "Wildlife: …", just below the origin.
+
+```yaml
+  wildlife:
+    - who: [robins, cedar waxwings]
+      what: eat its berries
+    - who: [pileated woodpeckers]
+      what: nest in it
+```
+
+- Each entry is one sentence: `who` lists the animals and `what` finishes the sentence ("eat its
+  seeds in winter", "nest in it"). The site joins them: "Robins and cedar waxwings eat its berries.
+  Pileated woodpeckers nest in it."
+- Name only animals that live in or regularly visit Victoria. The bird facts in Wikipedia describe
+  the tree's home range, so drop birds that don't occur here (wild turkey, hawfinch, great tit,
+  magpie).
+- Say which animals and what they do. Leave the field out rather than write "birds eat the fruit".
+- Use a source, as for descriptions. Wikipedia's ecology section is usually enough.
+- Keep a bird in the description only when it's part of another story, such as the name (Prunus
+  avium means "bird cherry") or how the tree became invasive (birds spread Callery pear seeds).

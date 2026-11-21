@@ -36,7 +36,7 @@ npm run build
 
 The build joins the City's trees with the curated data in `data/`:
 
-- `species.yml` - species details (descriptions, native range, SENĆOŦEN names). Edit this to change what the site shows.
+- `species.yml` - species details (descriptions, native range, SENĆOŦEN names, and the birds and other wildlife that use each tree). Edit this to change what the site shows.
   A species' `bloom` (`from`/`to` like `mid March`, between November and May, plus `colour` and an optional
   `note`) puts it on the blossom calendar at `docs/blossoms/`. Its `hue` (white, pale pink, pink or deep pink)
   colours its trees on the map, and `varieties` gives a variety its own hue (`Kwanzan: deep pink`), matched

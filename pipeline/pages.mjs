@@ -40,8 +40,12 @@ const displayName = (s) => s.common_name || s.name;
 // Species pages worth a search result: ones with a curated description, or enough trees
 // that the neighbourhood table says something. The rest stay up for the map's links but
 // are kept out of search results and the sitemap, so they don't read as thin pages.
+// The standard line for genus-only and unidentified records ("This tree has only been
+// identified to genus…") doesn't count as a description.
 const minIndexedTrees = 10;
-export const isIndexed = (s) => Boolean(s.description) || s.tree_count >= minIndexedTrees;
+const isUnidentifiedLine = (text) => /^This tree has only been identified/.test(text ?? "");
+export const isIndexed = (s) =>
+  (Boolean(s.description) && !isUnidentifiedLine(s.description)) || s.tree_count >= minIndexedTrees;
 
 // How common a species is, in words rather than a percentage. The map's tree modal shows it too.
 export function commonnessFact(s, species, total) {
@@ -72,6 +76,18 @@ const turnerSource = (pages, home) =>
 const nativeRange = (s) => s.native_region.replace(/^from /, "");
 // hybrids and garden plants that don't grow wild: where and when they were raised, as a sentence
 const gardenOrigin = (s) => `${s.garden_origin[0].toUpperCase()}${s.garden_origin.slice(1)}.`;
+
+// species.yml's wildlife entries ({ who: [robins, cedar waxwings], what: eat its berries }) as one line of text:
+// "Robins and cedar waxwings eat its berries."
+export function wildlifeText(entries) {
+  const list = (items) => (items.length < 2 ? items[0] : `${items.slice(0, -1).join(", ")} and ${items.at(-1)}`);
+  return entries
+    .map(({ who, what }) => {
+      const sentence = `${list(who)} ${what}`;
+      return `${sentence[0].toUpperCase()}${sentence.slice(1)}.`;
+    })
+    .join(" ");
+}
 
 // [west, south, east, north], the format the map's ?bounds= param takes
 function boundsOf(points) {
@@ -192,6 +208,7 @@ function speciesPage(s, ctx) {
   } else if (s.garden_origin) {
     body += `<p>${escapeHtml(gardenOrigin(s))}</p>\n`;
   }
+  if (s.wildlife) body += `<p><b>Wildlife:</b> ${escapeHtml(s.wildlife)}</p>\n`;
   body += `<p>${escapeHtml(commonnessFact(s, ctx.species, ctx.total))}</p>\n`;
   if (s.bloom) {
     body += `<p>Usually in flower ${escapeHtml(bloomWindow(s.bloom))}, with ${escapeHtml(s.bloom.colour)} blossoms. ` +
@@ -579,7 +596,7 @@ function aboutPage(ctx) {
 <p>Everything on the map is in two files, rebuilt from the City's data with the corrections and additions above:</p>
 <ul>
 <li><a href="../data/trees.csv"><code>trees.csv</code></a>: one row per tree, with its location, species, common and botanical names, height, trunk diameter, street or park, and neighbourhood.</li>
-<li><a href="../data/trees.json"><code>trees.json</code></a>: the compact file the map loads, with each species' details (native range, SENĆOŦEN name, description).</li>
+<li><a href="../data/trees.json"><code>trees.json</code></a>: the compact file the map loads, with each species' details (native range, SENĆOŦEN name, description, the wildlife that uses it).</li>
 </ul>
 <p>There's also a plain-text summary of the site for AI assistants at <a href="../llms.txt"><code>llms.txt</code></a>.</p>
 <h2>Linking to the map</h2>
@@ -638,7 +655,7 @@ function llmsTxt(ctx, blossomCount) {
   const common = [...ctx.listed].sort((a, b) => b.tree_count - a.tree_count).slice(0, 15);
   return `# Victoria Trees
 
-> A map of the ${formatCount(ctx.total)} trees on public land in Victoria, British Columbia, Canada, from ${formatCount(ctx.listed.length)} species, built from the City of Victoria's open tree data (last refreshed ${ctx.updated}). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
+> A map of the ${formatCount(ctx.total)} trees on public land in Victoria, British Columbia, Canada, from ${formatCount(ctx.listed.length)} species, built from the City of Victoria's open tree data (last refreshed ${ctx.updated}). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions, the birds and other wildlife that use them and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
 
 ## Pages
 

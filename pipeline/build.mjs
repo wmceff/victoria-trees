@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import yaml from "js-yaml";
 import { cleanBotanicalName, speciesNameFor } from "./species-name.mjs";
-import { blossomHues, commonnessFact, slugFor, writePages } from "./pages.mjs";
+import { blossomHues, commonnessFact, slugFor, wildlifeText, writePages } from "./pages.mjs";
 
 const root = new URL("..", import.meta.url).pathname;
 const cityLayer = "https://maps.victoria.ca/server/rest/services/OpenData/OpenData_Parks/MapServer/15";
@@ -159,8 +159,20 @@ for (const s of species) {
   });
 }
 
+// Wildlife that uses each tree is kept as structured entries in species.yml (which animals, doing what), and
+// shown on the site as one line of text
+for (const s of species) {
+  if (!s.wildlife) continue;
+  for (const w of s.wildlife) {
+    if (!Array.isArray(w.who) || !w.who.length || typeof w.what !== "string") {
+      throw new Error(`${s.name}: each wildlife entry needs a "who" list and a "what"`);
+    }
+  }
+  s.wildlife = wildlifeText(s.wildlife);
+}
+
 // Only the fields the site displays
-const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "garden_origin", "description", "turner_pages", "cultivars", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness", "blossom"];
+const siteFields = ["name", "slug", "common_name", "order", "native", "native_region", "garden_origin", "wildlife", "description", "turner_pages", "cultivars", "sencoten_name", "sencoten_url", "tree_count", "top_area", "commonness", "blossom"];
 const output = {
   source: cityLayer,
   updated: new Date().toISOString().slice(0, 10), // when this file was last built from the City's data
