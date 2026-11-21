@@ -10,22 +10,63 @@
   common_name: Pacific silver fir
   native_region: the Pacific Northwest of North America
   inaturalist_taxon_id: 75240
+  description: >-
+    Pacific silver fir's inner bark was a coastal food. Sheets were cut from living trees, sometimes
+    high up the trunk, so that the trees survived (Kwakwaka’wakw, Ts’msyen), and men climbed with
+    ropes while women scraped off the edible layer with mussel-shell or iron knives (Kwakwaka’wakw,
+    Gitga’at). At Hartley Bay, Gitga’at elder Archie Dundas showed the harvest again in 2004, about
+    60 years after it was last done there. Its knots made bentwood halibut hooks (Ditidaht), but
+    some Ts’msyen call it "ghost's wood" because it burns like paper. Its species name, amabilis, is
+    Latin for "lovely".
+  turner_pages: vol. 1, pp. 351, 358; vol. 2, pp. 76, 183, 417
 - name: Abies balsamea
   common_name: Balsam fir
   order: Pinales
+  native_region: >-
+    eastern and central Canada and the northeastern United States, from Alberta to Newfoundland
   inaturalist_taxon_id: 54261
+  description: >-
+    Balsam fir is the provincial tree of New Brunswick and is known as the most fragrant of
+    Christmas trees. Its resin, Canada balsam, was long used to cement lenses in optical instruments
+    and to mount specimens on microscope slides.
+  wildlife:
+    - who: [red squirrels]
+      what: eat its seeds
+    - who: [crossbills, chickadees]
+      what: find food in it
 - name: Abies cephalonica
   common_name: Greek Fir
   order: Pinales
+  native_region: the mountains of southern Greece, including the island of Kefalonia
   inaturalist_taxon_id: 136886
+  description: >-
+    Greek fir is named after Cephalonia (Kefalonia), the largest of the Ionian Islands. Once an
+    important timber tree in Greece, it is now too rare to be of much value, and bark beetles have
+    killed many trees in recent hot, dry years. It is one of the first conifers to put out new
+    shoots in spring, so late frosts can damage it.
 - name: Abies concolor
   common_name: White Fir
   order: Pinales
+  native_region: >-
+    the mountains of the western United States, from Oregon and Colorado south into northern Mexico
   inaturalist_taxon_id: 68087
+  description: >-
+    White fir's botanical name, concolor, means "all one colour", because its needles are the same
+    blue-grey on both sides. David Douglas overlooked it on his Pacific coast expedition of the
+    1820s, and it was first collected near Santa Fe, New Mexico, in 1846–47 by Augustus Fendler.
+  wildlife:
+    - who: [deer]
+      what: browse its foliage
 - name: Abies firma
   common_name: Momi fir
   order: Pinales
+  native_region: central and southern Japan, from the lowlands up to the lower mountains
   inaturalist_taxon_id: 136304
+  description: >-
+    Momi fir and Nikko fir are the two firs that make up most of Japan's temperate forests, and
+    where their altitude ranges overlap they cross to form a hybrid, Abies × umbellata. Outside
+    Japan it is planted mostly where summers are hot and humid, as in the southeastern United
+    States, where nurseries also graft other firs onto its roots.
 - name: Abies grandis
   common_name: Grand Fir
   order: Pinales
@@ -46,12 +87,21 @@
       what: search it for insects and places to nest
 - name: Abies homolepis
   common_name: Nikko fir
-  native_region: the mountains of central and southern Honshū and Shikoku, Japan
+  native_region: the mountains of central and southern Japan
   inaturalist_taxon_id: 136321
+  description: >-
+    Nikko fir's Japanese name, urajiro momi, means "white-backed fir", for the two white bands under
+    each needle. It resists air pollution, and is grown in parks and gardens in northern Europe and
+    North America.
 - name: Abies koreana
   common_name: Fir
   order: Pinales
+  native_region: the high mountains of South Korea, including Jeju Island
   inaturalist_taxon_id: 136891
+  description: >-
+    Korean fir, gusang namu in Korean, grows wild in its largest numbers on Hallasan, a mountain on
+    Jeju Island. It is a popular garden fir because even young trees only 1–2 m (3–7 ft) tall bear
+    many dark purple-blue cones.
 - name: Abies lasiocarpa
   common_name: Subalpine Fir
   order: Pinales
@@ -59,19 +109,42 @@
 - name: Abies nordmanniana
   common_name: Caucasian fir
   order: Pinales
+  native_region: the mountains south and east of the Black Sea, in Turkey, Georgia and Russia
   inaturalist_taxon_id: 136894
+  description: >-
+    Nordmann fir honours Alexander von Nordmann, a Finnish zoologist who directed the botanical
+    garden in Odessa. It is one of the most important Christmas trees, because its needles are not
+    sharp and stay on as the tree dries. Wild trees in Russia's Western Caucasus Reserve have been
+    reported at 78–85 m (256–279 ft), the tallest trees in Europe.
 - name: Abies numidica
   common_name: Algerian fir
   order: Pinales
+  native_region: a small area around Mount Babor, in northern Algeria
   inaturalist_taxon_id: 136895
+  description: >-
+    Algerian fir grows high on a mountain where most of the year's precipitation falls as winter
+    snow and summers are warm and very dry, and it copes with drought better than most firs. It also
+    tolerates polluted air, and its closest relative is Spanish fir.
 - name: Abies pinsapo
   common_name: Spanish Fir
   order: Pinales
+  native_region: a few mountain ranges in southern Spain, near Ronda, and northern Morocco
   inaturalist_taxon_id: 136896
+  description: >-
+    Spanish fir takes its botanical name from its Spanish name, pinsapo. Its short blue-grey needles
+    stand out all round the shoot like a bottlebrush, where most firs hold theirs in flat rows.
+    Conservation and replanting have greatly increased its numbers, though fire, erosion, building
+    and heavy tourism still threaten it.
 - name: Abies procera
   common_name: Noble Fir
   order: Pinales
+  native_region: the mountains of western Washington and Oregon, and far northwestern California
   inaturalist_taxon_id: 75242
+  description: >-
+    Noble fir was named by David Douglas, who found it in the Cascade Range and sent its seed to
+    Britain in 1830. It is the world's tallest true fir. Loggers prized its light, strong wood and
+    called it "larch" so it would not be confused with weaker firs, and it may have gone into the
+    frames of wartime Mosquito bombers.
 - name: Acer
   common_name: Maple
   inaturalist_taxon_id: 48098
@@ -79,7 +152,12 @@
 - name: Acer buergerianum
   common_name: Maple
   order: Sapindales
+  native_region: eastern China and Taiwan
   inaturalist_taxon_id: 337792
+  description: >-
+    Trident maple, named for its three-lobed leaves, reached Japan from China so long ago that its
+    Japanese name means "China maple". It is one of the most popular maples for bonsai, and its
+    botanical name honours the 19th-century plant hunter J. Buerger.
 - name: Acer campestre
   common_name: Field maple
   order: Sapindales
@@ -91,11 +169,21 @@
 - name: Acer capillipes
   common_name: Maple
   order: Sapindales
+  native_region: mountain streamsides in central and southern Japan
   inaturalist_taxon_id: 774116
+  description: >-
+    Red snakebark maple has smooth olive-green bark with narrow white stripes, a pattern it keeps to
+    the base of the trunk even when old, and small rust-orange spots on the bark set it apart from
+    its relatives. Its leaf stalks are red, and its leaves turn yellow, orange or red in autumn.
 - name: Acer cappadocicum
   common_name: Maple
   order: Sapindales
+  native_region: Asia, from Turkey through the Caucasus and the Himalayas to southwestern China
   inaturalist_taxon_id: 399309
+  description: >-
+    Cappadocian maple is named after Cappadocia, the ancient name for a region of central Turkey.
+    Its leaf stalks bleed a milky sap when snapped, and garden trees often send up many suckers from
+    their roots, which is rare in maples.
 - name: Acer circinatum
   common_name: Vine maple
   order: Sapindales
@@ -117,9 +205,21 @@
 - name: Acer crataegifolium
   common_name: Hawthorn Maple
   order: Sapindales
+  native_region: the mountain forests of central and southern Japan
+  description: >-
+    Hawthorn maple's Japanese name, urikaede, means "melon maple", for its green bark with pale
+    stripes like a melon's skin. Its botanical name means "hawthorn-leaved", a likeness that holds
+    only for certain hawthorns. Charles Maries of the Veitch nursery brought it to England in 1879,
+    but it is hard to propagate and seldom grown.
 - name: Acer freemanii
   common_name: Maple
   order: Sapindales
+  native_region: eastern North America, where red and silver maples grow wild together
+  description: >-
+    Freeman maple is named after Oliver Freeman of the U.S. National Arboretum, who crossed red and
+    silver maples deliberately in 1933; the same cross also happens in the wild. Nursery selections
+    grow faster than red maple and have stronger branches than silver maple, turn orange-red in
+    autumn, and are usually seedless, so they drop few winged seeds.
 - name: Acer ginnala
   common_name: Amur maple
   native_region: 'northeast Asia: Mongolia, northern China, Korea, Japan and the Russian Far East'
@@ -130,7 +230,19 @@
 - name: Acer glabrum
   common_name: Maple
   order: Sapindales
+  native_region: western North America, from southeast Alaska to California and New Mexico
   inaturalist_taxon_id: 63078
+  description: >-
+    Rocky Mountain maple's Ditidaht name means "drinking bowl plant". Its dense wood made snowshoe
+    frames, bows, labrets (lip ornaments) and dishes, and its tough inner bark was woven into mats,
+    baskets and trays (coastal and interior peoples); bark and branches were taken from living
+    plants (Interior Plateau). In the Ts’msyen story "The Boy Taken by the Star", people burned
+    every kind of wood to find the one that lasts longest, and it was this maple, still known as a
+    long-lasting fuel. The Ts’msyen also traded its wood to the Haida.
+  turner_pages: vol. 1, pp. 130, 341–342, 346–347, 365, 379, 400; vol. 2, pp. 122, 185
+  wildlife:
+    - who: [deer]
+      what: browse its foliage, especially in winter
 - name: Acer griseum
   common_name: Maple
   order: Sapindales
@@ -144,11 +256,21 @@
 - name: Acer henryi
   common_name: Maple
   order: Sapindales
+  native_region: central and eastern China
   inaturalist_taxon_id: 707456
+  description: >-
+    Henry's maple is named after Augustine Henry, an Irish plant collector who worked in China in
+    the late 1800s. Unlike most maples, its leaves are divided into three separate leaflets, whitish
+    underneath, and male and female flowers grow on separate trees.
 - name: Acer japonicum
   common_name: Downey Japanese Maple
   order: Sapindales
+  native_region: Japan and southern Korea
   inaturalist_taxon_id: 63510
+  description: >-
+    Fullmoon maple has almost round leaves cut into 9 to 13 lobes, while the common Japanese maple
+    rarely has more than seven. Its small dark purplish-red flowers hang in clusters as the leaves
+    open, and in autumn the leaves turn bright orange to deep red.
 - name: Acer macrophyllum
   common_name: Bigleaf maple
   order: Sapindales
@@ -178,7 +300,16 @@
 - name: Acer negundo
   common_name: Manitoba Maple
   order: Sapindales
+  native_region: much of North America, from the Canadian Prairies south to Central America
   inaturalist_taxon_id: 47726
+  description: >-
+    Manitoba maple's other name, box elder, comes from its pale wood, like boxwood, and its leaves,
+    divided into three to seven leaflets like an elder's; no other maple regularly has more than
+    three. The oldest surviving wooden flutes in the Americas, found in northeastern Arizona and
+    dated to about 620–670 CE, are made of box elder.
+  wildlife:
+    - who: [evening grosbeaks]
+      what: eat its seeds
 - name: Acer palmatum
   common_name: Red emperor maple
   order: Sapindales
@@ -251,22 +382,50 @@
 - name: Acer rufinerve
   common_name: Maple
   order: Sapindales
+  native_region: the mountain forests of Japan
   inaturalist_taxon_id: 447110
+  description: >-
+    Redvein maple is named for the rusty down on the veins of its young leaves, which is also what
+    its botanical name, rufinerve, means. Its Japanese name, urihadakaede, means "melon-skin maple",
+    for its green bark with pale stripes. It is one of the most widely planted snakebark maples, and
+    turns bright orange or red in autumn.
 - name: Acer saccharinum
   common_name: Silver Maple
   order: Sapindales
+  native_region: the eastern and central United States and southeastern Canada
   inaturalist_taxon_id: 54762
+  description: >-
+    Silver maple's leaves have downy, silvery undersides that flash in the lightest breeze on their
+    long, slender stalks. After the Second World War it was widely planted to replace American elms
+    killed by disease, but its brittle wood, invasive roots and many seedlings have led some towns
+    to ban it as a street tree.
+  wildlife:
+    - who: [squirrels]
+      what: eat its large buds in spring
+    - who: [raccoons, owls, woodpeckers]
+      what: shelter in cavities in its trunk
 - name: Acer saccharum
   common_name: Sugar Maple
   order: Sapindales
+  native_region: the hardwood forests of eastern Canada and the eastern United States
   inaturalist_taxon_id: 52543
+  description: >-
+    Sugar maple, with its close relative black maple, is the main source of maple syrup; about 40
+    litres of sap are boiled down for each litre of syrup. A stylized 11-pointed sugar maple leaf is
+    on the flag of Canada, and it is the state tree of New York, Vermont, West Virginia and
+    Wisconsin.
   cultivars:
     - name: Green Mountain
       description: A sugar maple selected for heat and drought tolerance, with orange-red autumn colour.
 - name: Acer tegmentosum
   common_name: Manchurian Stried Maple
   order: Sapindales
+  native_region: the Russian Far East, northeastern China and Korea
   inaturalist_taxon_id: 496247
+  description: >-
+    Manchurian striped maple has greenish-grey bark with bright white stripes, and its leaves turn
+    bright yellow in autumn. It survives winters as cold as about −29 °C (−20 °F). It is not
+    generally considered at risk, but China's 2004 red list of species classed it as vulnerable.
 - name: Acer truncatum
   common_name: Maple
   order: Sapindales
@@ -331,10 +490,16 @@
         flowers are sterile, so it drops no conkers, which makes it a favourite for streets.
 - name: Aesculus indica
   common_name: Indian horse-chestnut
-  native_region: >-
-    the Himalayan Lowlands, between Kashmir and Western Nepal at elevations between 900 and 3,000
-    metres
+  native_region: the western Himalayas, from Kashmir to western Nepal
   inaturalist_taxon_id: 367294
+  description: >-
+    Indian horse-chestnut seeds are dried and ground into a bitter flour, tattawakher, which is
+    washed to remove the bitter saponins and then mixed with wheat flour for chapatis, or cooked as
+    halwa or a porridge eaten during fasts. Collecting the seeds for flour seems to have reduced the
+    tree in the wild.
+  wildlife:
+    - who: [bees]
+      what: pollinate its flowers
 - name: Ailanthus altissima
   common_name: Tree of heaven
   native_region: northern and central China, and Taiwan
@@ -370,6 +535,11 @@
   garden_origin: >-
     a garden hybrid of downy and Allegheny serviceberries, both from eastern North America
   inaturalist_taxon_id: 363450
+  description: >-
+    The name grandiflora means "large-flowered", and this hybrid serviceberry's white blossoms are
+    followed by small, edible red to purple fruit. Its parents cross so readily that serviceberries
+    are hard to tell apart and are often mislabelled in nurseries. Its named selections include
+    'Autumn Brilliance', 'Princess Diana' and 'Robin Hill'.
   bloom:
     from: early April
     to: late April
@@ -378,7 +548,18 @@
 - name: Amelanchier arborea
   common_name: Downy Serviceberry
   order: Rosales
+  native_region: eastern North America, from Ontario and Quebec south to the Gulf of Mexico
   inaturalist_taxon_id: 49226
+  description: >-
+    Downy serviceberry has a string of folk names. Shadberry comes from its flowering during the
+    shad runs in New England, and serviceberry, or sarviceberry, is said to come from Appalachia,
+    where its blossoms meant the muddy roads would soon be open to travelling preachers and church
+    services could begin again.
+  wildlife:
+    - who: [bees]
+      what: pollinate its flowers
+    - who: [squirrels, rabbits, deer]
+      what: eat its fruit
   bloom:
     from: early April
     to: late April
@@ -392,7 +573,18 @@
 - name: Amelanchier canadensis
   common_name: Shadbush
   order: Rosales
+  native_region: eastern North America, from Newfoundland to Alabama, mostly near the Atlantic coast
   inaturalist_taxon_id: 133382
+  description: >-
+    Shadbush has many folk names, among them juneberry, sugarplum and currant-tree, and its small
+    dark purple fruit is sweet and edible. Its hard, heavy wood takes a polish and has been used for
+    fishing rods, walking sticks and handles. It is listed as vulnerable in the Canadian provinces
+    where it grows wild.
+  wildlife:
+    - who: [robins, woodpeckers, squirrels]
+      what: eat its fruit
+    - who: [bees, butterflies]
+      what: feed at its early spring flowers
 - name: Amelanchier grandiflora
   common_name: Shadbush
   inaturalist_taxon_id: 363450
