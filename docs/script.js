@@ -52,7 +52,7 @@ Promise.all([treeDataLoaded, mapLoaded]).then(function([treeData]) {
   }
   const bounds = (urlParams.get('bounds') || '').split(',').map(Number);
   if (bounds.length === 4 && bounds.every(Number.isFinite)) {
-    map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: 40, animate: false });
+    map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: framePadding, animate: false });
   }
 
   // phones are usually out looking at a tree, so returning visitors who already allowed
@@ -83,6 +83,15 @@ function blossomHue(species, botanicalName) {
   return variety ? species.blossom.varieties[variety] : species.blossom.hue;
 }
 
+// how trees look when nothing is highlighted; clearHighlight() goes back to it
+const treePaint = {
+  'circle-color': ['case', ['get', 'conifer'], '#35553a', '#8aa65f'],
+  'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 1, 14, 2, 17, 4, 19, 7, 21, 12],
+  'circle-stroke-color': '#f7f2e3',
+  'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1],
+  'circle-opacity': 0.9
+};
+
 function addTrees(treeData) {
   const features = treeData.trees.map(function([latitude, longitude, speciesIndex, botanicalIndex], treeIndex) {
     const species = treeData.species[speciesIndex];
@@ -108,13 +117,7 @@ function addTrees(treeData) {
     id: 'trees',
     type: 'circle',
     source: 'trees',
-    paint: {
-      'circle-color': ['case', ['get', 'conifer'], '#35553a', '#8aa65f'],
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 1, 14, 2, 17, 4, 19, 7, 21, 12],
-      'circle-stroke-color': '#f7f2e3',
-      'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 14, 0, 17, 1],
-      'circle-opacity': 0.9
-    }
+    paint: { ...treePaint }
   });
 
   map.addLayer({
@@ -171,10 +174,9 @@ function highlightSpecies(treeData, speciesIndexes) {
   const points = treeData.trees.filter((tree) => speciesIndexes.includes(tree[2]));
   if (!urlParams.has('bounds')) {
     const [west, south, east, north] = framingBounds(points);
-    map.fitBounds([[west, south], [east, north]], { padding: 40, maxZoom: 17, animate: false });
+    map.fitBounds([[west, south], [east, north]], { padding: framePadding, maxZoom: 17, animate: false });
   }
 
-  const colour = blossoms ? 'by flower colour' : 'in rust';
   // links that frame an area (a street, a neighbourhood) count the trees in it, not the whole city's
   const area = (urlParams.get('bounds') || '').split(',').map(Number);
   if (area.length === 4 && area.every(Number.isFinite)) {
@@ -183,13 +185,15 @@ function highlightSpecies(treeData, speciesIndexes) {
     const what = speciesIndexes.length === 1
       ? (treeData.species[speciesIndexes[0]].common_name || treeData.species[speciesIndexes[0]].name)
       : blossoms ? 'blossom' : 'highlighted';
-    showFooterMessage(`${inArea.toLocaleString()} ${what} ${inArea === 1 ? 'tree' : 'trees'} in this area, ${colour}. `);
+    showFooterMessage(`${inArea.toLocaleString()} ${what} ${inArea === 1 ? 'tree' : 'trees'} in this area`);
   } else if (speciesIndexes.length === 1) {
     const species = treeData.species[speciesIndexes[0]];
     const name = species.common_name || species.name;
-    showFooterMessage(`Showing ${points.length === 1 ? 'the 1' : 'all ' + points.length.toLocaleString()} ${name} ${points.length === 1 ? 'tree' : 'trees'} ${colour}. `);
+    showFooterMessage(points.length === 1 ? `The only ${name} tree on the map` : `All ${points.length.toLocaleString()} ${name} trees`);
   } else {
-    showFooterMessage(`Showing ${points.length.toLocaleString()} ${blossoms ? 'blossom trees' : 'trees'} of ${speciesIndexes.length} species ${colour}. `);
+    showFooterMessage(blossoms
+      ? `${points.length.toLocaleString()} blossom trees, coloured by flower`
+      : `${points.length.toLocaleString()} trees of ${speciesIndexes.length} species`);
   }
   if (blossoms) {
     const legend = document.createElement('span');
@@ -206,11 +210,20 @@ function highlightSpecies(treeData, speciesIndexes) {
     });
     document.getElementById('footer-text').append(legend);
   }
-  const showAll = document.createElement('a');
-  showAll.href = window.location.pathname;
-  showAll.textContent = 'Show all trees';
-  document.getElementById('footer-text').append(showAll);
+  footerClear.setAttribute('aria-label', 'Clear the highlight and show all trees');
+  footerClear.onclick = clearHighlight;
 }
+
+// back to every tree in its usual colours, without reloading the map
+function clearHighlight() {
+  Object.entries(treePaint).forEach(([property, value]) => map.setPaintProperty('trees', property, value));
+  map.setLayoutProperty('trees', 'circle-sort-key', undefined);
+  hideFooter();
+  history.replaceState(null, '', window.location.pathname);
+}
+
+// room at the top for the message card when framing trees
+const framePadding = { top: 100, bottom: 40, left: 40, right: 40 };
 
 // [west, south, east, north] around the trees; with many trees, around the middle 98% of them,
 // so a few far-off trees (Dominion Brook Park, out on the Saanich Peninsula) don't zoom the map out
@@ -377,10 +390,17 @@ map.on('zoomstart', function(event) {
 map.on('click', hideHint);
 
 // errors and the species highlight; replaces the hint
+// the × closes a message, or clears a highlight (highlightSpecies sets that)
+const footerClear = document.getElementById('footer-clear');
 function showFooterMessage(message) {
   hideHint();
   document.getElementById('footer-text').textContent = message;
-  document.getElementById('footer').style.display = 'block';
+  document.getElementById('footer').hidden = false;
+  footerClear.setAttribute('aria-label', 'Close');
+  footerClear.onclick = hideFooter;
+}
+function hideFooter() {
+  document.getElementById('footer').hidden = true;
 }
 
 function locationAlreadyAllowed() {

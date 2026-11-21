@@ -1,8 +1,20 @@
 // Writes the static, search-indexable pages: one per species and neighbourhood, their
 // index pages, the cherry blossom calendar, the about page, sitemap.xml and robots.txt. The map page (docs/index.html) is hand-written.
+import crypto from "node:crypto";
 import fs from "node:fs";
 
 export const siteUrl = "https://victoriatrees.ca/";
+
+// The site's CSS and JS are linked with a hash of their contents (theme.css?v=1a2b3c4d), so
+// browsers fetch them again when they change instead of pairing new pages with old styles
+const versionedAssets = ["theme.css", "style.css", "script.js"];
+const assetVersions = {};
+function readAssetVersions(docsDir) {
+  for (const file of versionedAssets) {
+    assetVersions[file] = crypto.createHash("sha256").update(fs.readFileSync(`${docsDir}/${file}`)).digest("hex").slice(0, 8);
+  }
+}
+const asset = (file) => `${file}?v=${assetVersions[file]}`;
 
 // URL slug for a species or neighbourhood name, eg. "Prunus × yedoensis" -> "prunus-x-yedoensis"
 export function slugFor(name) {
@@ -106,7 +118,7 @@ function layout({ path, title, description, body, indexed = true, breadcrumbs = 
     <script type="application/ld+json">${jsonLd(breadcrumbList)}</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap">
-    <link rel="stylesheet" href="${home}theme.css">
+    <link rel="stylesheet" href="${home}${asset("theme.css")}">
   </head>
 <body>
   <nav class="navbar is-success" aria-label="main navigation">
@@ -520,6 +532,7 @@ function aboutPage(ctx) {
 // species: every species with its slug and tree_count; trees: [lat, lng, speciesIndex, ...];
 // treeAreas: each tree's City neighbourhood (or null), in the same order as trees
 export function writePages(docsDir, { species, trees, treeAreas, places, botanical, total, updated }) {
+  readAssetVersions(docsDir);
   const areasByName = new Map();
   trees.forEach((tree, i) => {
     const name = treeAreas[i];
@@ -591,5 +604,9 @@ function writeHomeLinks(docsDir, species, areas) {
           <p>The most common trees in Victoria: ${common.join(", ")}, and <a href="species/">${formatCount(species.length)} more species</a>.</p>
           <p>Trees by neighbourhood: ${areas.map((a) => link(`neighbourhoods/${a.slug}/`, a.name)).join(", ")}.</p>
           `;
-  fs.writeFileSync(file, html.slice(0, start) + block + html.slice(end));
+  const versioned = (html.slice(0, start) + block + html.slice(end)).replace(
+    /\b(theme\.css|style\.css|script\.js)(\?v=[0-9a-f]+)?"/g,
+    (_, file) => `${asset(file)}"`
+  );
+  fs.writeFileSync(file, versioned);
 }
