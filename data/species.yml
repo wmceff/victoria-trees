@@ -654,10 +654,6 @@
     yellow heartwood, used for gunstocks, specialist furniture and woodturning. Its fragrant white
     flowers hang in long clusters like wisteria, but it blooms heavily only every second or third
     year.
-- name: Cladrastis lutea
-  common_name: Yellow-Wood
-  order: Fabales
-  inaturalist_taxon_id: 117430
 - name: Conifer Evergreen
   common_name: Conifer Evergreen Small
   description: This tree has only been identified as an evergreen conifer, not to genus or species.

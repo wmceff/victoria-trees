@@ -1408,7 +1408,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411637,-123.364883,Pinus ponderosa,Ponderosa pine,Pinus ponderosa,14,38,In Beacon Hill Park,James Bay
 48.411654,-123.36492,Pinus ponderosa,Ponderosa pine,Pinus ponderosa,14,43,In Beacon Hill Park,James Bay
 48.41313,-123.36446,Crataegus,Hawthorn,Crataegus,14,46,In Beacon Hill Park,James Bay
-48.413185,-123.364376,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,1.25,5,In Beacon Hill Park,James Bay
+48.413185,-123.364376,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,1.25,5,In Beacon Hill Park,James Bay
 48.413345,-123.364451,Styrax japonicus,Japanese Snowbell,Styrax japonica,1,1,In Beacon Hill Park,James Bay
 48.413199,-123.364495,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,16,88,In Beacon Hill Park,James Bay
 48.412153,-123.363628,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,22,137,In Beacon Hill Park,Fairfield
@@ -5383,7 +5383,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.411721,-123.34257,Prunus serrulata,Japanese cherry,Prunus serrulata,3,8,In Ross Bay Cemetery,Fairfield
 48.411705,-123.342466,Cornus florida,Flowering dogwood,Cornus florida,3,5,In Ross Bay Cemetery,Fairfield
 48.411685,-123.342249,Liquidambar styraciflua,American sweetgum,Liquidambar styraciflua,4,6,In Ross Bay Cemetery,Fairfield
-48.411677,-123.342173,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,In Ross Bay Cemetery,Fairfield
+48.411677,-123.342173,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,In Ross Bay Cemetery,Fairfield
 48.411679,-123.342096,Crataegus crus-galli,Cockspur hawthorn,Crataegus crus-galli,4,5,In Ross Bay Cemetery,Fairfield
 48.411676,-123.342013,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,10,83,In Ross Bay Cemetery,Fairfield
 48.411692,-123.34189,Cornus mas,Cornelian-Cherry,Cornus mas,3,6,In Ross Bay Cemetery,Fairfield
@@ -10401,7 +10401,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.43797,-123.35416,Betula pendula,European white birch,Betula pendula,10,29,On Prior St,Hillside/Quadra
 48.437825,-123.354119,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,38,On Prior St,Hillside/Quadra
 48.437669,-123.354078,Acer ginnala,Amur maple,Acer ginnala 'Bergiana Flame',4,5,On Prior St,Hillside/Quadra
-48.437512,-123.354031,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,2.5,5,On Prior St,Hillside/Quadra
+48.437512,-123.354031,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,2.5,5,On Prior St,Hillside/Quadra
 48.437377,-123.35398,Prunus cerasifera,Cherry plum,Prunus cerasifera,9,56,On Prior St,Hillside/Quadra
 48.437259,-123.353958,Prunus cerasifera,Cherry plum,Prunus cerasifera,9,38,On Prior St,Hillside/Quadra
 48.437121,-123.353914,Acer ginnala,Amur maple,Acer ginnala 'Red November',4,8,On Prior St,Hillside/Quadra
@@ -10461,23 +10461,23 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.435523,-123.354614,Acer campestre,Field maple,Acer campestre,10,40,On Graham St,Hillside/Quadra
 48.435368,-123.354565,Acer campestre,Field maple,Acer campestre,10,48,On Graham St,Hillside/Quadra
 48.435227,-123.354536,Acer campestre,Field maple,Acer campestre,12,48,On Graham St,Hillside/Quadra
-48.435228,-123.353527,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Prior St,Hillside/Quadra
+48.435228,-123.353527,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Prior St,Hillside/Quadra
 48.435348,-123.353548,Prunus cerasifera,Cherry plum,Prunus cerasifera,9,31,On Prior St,Hillside/Quadra
-48.435476,-123.353589,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Prior St,Hillside/Quadra
+48.435476,-123.353589,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Prior St,Hillside/Quadra
 48.435615,-123.35363,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,35,On Prior St,Hillside/Quadra
-48.435773,-123.353675,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Prior St,Hillside/Quadra
+48.435773,-123.353675,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Prior St,Hillside/Quadra
 48.435893,-123.35372,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,36,On Prior St,Hillside/Quadra
 48.43601,-123.353761,Betula pendula,European white birch,Betula pendula,10,54,On Prior St,Hillside/Quadra
 48.436167,-123.353802,Betula pendula,European white birch,Betula pendula,10,36,On Prior St,Hillside/Quadra
 48.436282,-123.353835,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,33,On Prior St,Hillside/Quadra
 48.436442,-123.353893,Betula papyrifera,Paper birch,Betula papyrifera,9,28,On Prior St,Hillside/Quadra
-48.436575,-123.353922,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,2.5,3,On Prior St,Hillside/Quadra
+48.436575,-123.353922,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,2.5,3,On Prior St,Hillside/Quadra
 48.436733,-123.353955,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,33,On Prior St,Hillside/Quadra
 48.436866,-123.354,Prunus cerasifera,Cherry plum,Prunus cerasifera,7,35,On Prior St,Hillside/Quadra
 48.436949,-123.35402,Acer ginnala,Amur maple,Acer ginnala,4,7,On Prior St,Hillside/Quadra
 48.437106,-123.354066,Betula pendula,European white birch,Betula pendula,10,27,On Prior St,Hillside/Quadra
 48.437234,-123.354115,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,34,On Prior St,Hillside/Quadra
-48.437378,-123.35414,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,6,15,On Prior St,Hillside/Quadra
+48.437378,-123.35414,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,6,15,On Prior St,Hillside/Quadra
 48.437658,-123.35423,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,40,On Prior St,Hillside/Quadra
 48.437765,-123.354255,Prunus,Plum / Cherry,Prunus,6,14,On Prior St,Hillside/Quadra
 48.437965,-123.354316,Prunus cerasifera,Cherry plum,Prunus cerasifera,10,39,On Prior St,Hillside/Quadra
@@ -10607,7 +10607,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.436862,-123.357159,Acer rubrum,Red maple,Acer rubrum 'Armstrong',9,21,On Fifth St,Hillside/Quadra
 48.436979,-123.357185,Cornus × 'Venus',Dogwood,Cornus X 'Venus',3,5,On Fifth St,Hillside/Quadra
 48.437109,-123.357234,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,3,3,On Fifth St,Hillside/Quadra
-48.437193,-123.357275,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Fifth St,Hillside/Quadra
+48.437193,-123.357275,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Fifth St,Hillside/Quadra
 48.437381,-123.357306,Magnolia kobus,Kobus magnolia,Magnolia kobus,3,5,On Fifth St,Hillside/Quadra
 48.437483,-123.357337,Syringa reticulata,Lilac,Syringa reticulata Ivory silk,1,5,On Fifth St,Hillside/Quadra
 48.437554,-123.357351,Magnolia kobus,Kobus magnolia,Magnolia kobus,3,5,On Fifth St,Hillside/Quadra
@@ -11253,7 +11253,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.440049,-123.355025,Betula papyrifera,Paper birch,Betula papyrifera,8,33,On Hillside Ave,Hillside/Quadra
 48.440099,-123.354586,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,3,3,On Hillside Ave,Hillside/Quadra
 48.440118,-123.354442,Betula papyrifera,Paper birch,Betula papyrifera,10,39,On Hillside Ave,Hillside/Quadra
-48.440138,-123.354273,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,4,4,On Hillside Ave,Hillside/Quadra
+48.440138,-123.354273,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,4,4,On Hillside Ave,Hillside/Quadra
 48.44016,-123.354072,Betula papyrifera,Paper birch,Betula papyrifera,7,28,On Hillside Ave,Hillside/Quadra
 48.440233,-123.35394,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha Paul's Scarlet,7,30,On Blackwood St,Hillside/Quadra
 48.440418,-123.353996,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha Paul's Scarlet,6,11,On Blackwood St,Hillside/Quadra
@@ -11272,7 +11272,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.440238,-123.353534,Betula papyrifera,Paper birch,Betula papyrifera,9,35.5,On Hillside Ave,Hillside/Quadra
 48.440246,-123.353402,Prunus subhirtella,Winter-flowering cherry,Prunus subhirtella,4,12,On Hillside Ave,Hillside/Quadra
 48.440273,-123.353231,Acer rubrum,Red maple,Acer rubrum 'October Glory',3,6,On Hillside Ave,Hillside/Quadra
-48.440296,-123.353091,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,2,5,On Hillside Ave,Hillside/Quadra
+48.440296,-123.353091,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,2,5,On Hillside Ave,Hillside/Quadra
 48.440314,-123.352914,Betula papyrifera,Paper birch,Betula papyrifera,10,36,On Hillside Ave,Hillside/Quadra
 48.440335,-123.352755,Fagus sylvatica,European beech,Fagus sylvatica,5,11,On Hillside Ave,Hillside/Quadra
 48.440361,-123.352549,Betula papyrifera,Paper birch,Betula papyrifera,10,26,On Hillside Ave,Hillside/Quadra
@@ -14202,7 +14202,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.417264,-123.358845,Tilia cordata,Little-leaf linden,Tilia cordata,20,92,On Humboldt St,Fairfield
 48.416921,-123.359233,Prunus,Plum / Cherry,Prunus,7,31,On Vancouver St,Fairfield
 48.417383,-123.359035,Tilia cordata,Little-leaf linden,Tilia cordata,12,58,On Humboldt St,Fairfield
-48.417022,-123.359096,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,4,5,On Vancouver St,Fairfield
+48.417022,-123.359096,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,4,5,On Vancouver St,Fairfield
 48.417483,-123.359188,Tilia cordata,Little-leaf linden,Tilia cordata,18,79,On Humboldt St,Fairfield
 48.417552,-123.359305,Fagus sylvatica,European beech,Fagus sylvatica,16,47,On Humboldt St,Fairfield
 48.417655,-123.359464,Fagus sylvatica,European beech,Fagus sylvatica,14,38,On Humboldt St,Fairfield
@@ -14644,7 +14644,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.419945,-123.354762,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,14,72,On Cook St,Fairfield
 48.419736,-123.354815,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,8,23,On Cook St,Fairfield
 48.421493,-123.351193,Prunus serrulata,Japanese cherry,Prunus serrulata,9,69,On Rockland Ave,Fairfield
-48.421572,-123.351369,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,5,9,On Rockland Ave,Fairfield
+48.421572,-123.351369,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,5,9,On Rockland Ave,Fairfield
 48.421703,-123.351651,Prunus serrulata,Japanese cherry,Prunus serrulata,8,53,On Rockland Ave,Fairfield
 48.419332,-123.352604,Acer rubrum,Red maple,Acer rubrum,5,6,On Richardson St,Fairfield
 48.42177,-123.35195,Prunus serrulata,Japanese cherry,Prunus serrulata,8,74,On Rockland Ave,Fairfield
@@ -14781,7 +14781,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.42034,-123.353242,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,8,54,On Mcclure St,Fairfield
 48.415874,-123.359228,Cornus × 'Venus',Dogwood,Cornus X 'Venus',4,5,On Vancouver St,Fairfield
 48.420311,-123.352954,Prunus serrulata,Japanese cherry,Prunus accolade,3,9,On Mcclure St,Fairfield
-48.417381,-123.358361,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,5,On Vancouver St,Fairfield
+48.417381,-123.358361,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,5,On Vancouver St,Fairfield
 48.420286,-123.352769,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,7,46,On Mcclure St,Fairfield
 48.420269,-123.352575,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,7,33,On Mcclure St,Fairfield
 48.420256,-123.352468,Prunus serrulata,Japanese cherry,Prunus accolade,6,23,On Mcclure St,Fairfield
@@ -15207,7 +15207,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.41684,-123.34544,Prunus serrulata,Japanese cherry,Prunus serrulata,6,15,On Carnsew St,Fairfield
 48.412214,-123.356648,Celtis occidentalis,Hackberries,Celtis occidentalis prair pr,6,12,On May St,Fairfield
 48.416728,-123.345467,Prunus serrulata,Japanese cherry,Prunus serrulata,8,44,On Carnsew St,Fairfield
-48.412174,-123.356356,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On May St,Fairfield
+48.412174,-123.356356,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On May St,Fairfield
 48.416747,-123.345651,Quercus rubra,Northern red oak,Quercus rubra,18,91,On Carnsew St,Fairfield
 48.412157,-123.35613,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,20,On May St,Fairfield
 48.416783,-123.345895,Prunus serrulata,Japanese cherry,Prunus serrulata,7,31,On Carnsew St,Fairfield
@@ -15232,7 +15232,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.416877,-123.348362,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,3,4,On Moss St,Fairfield
 48.411939,-123.354185,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,21,On May St,Fairfield
 48.416795,-123.348381,Prunus × yedoensis,Yoshino cherry,Prunus x yedoensis,2,6,On Moss St,Fairfield
-48.41193,-123.354063,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,5,10,On May St,Fairfield
+48.41193,-123.354063,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,5,10,On May St,Fairfield
 48.416666,-123.348399,Prunus serrulata,Japanese cherry,Prunus serrulata,8,67,On Moss St,Fairfield
 48.416482,-123.348447,Prunus serrulata,Japanese cherry,Prunus serrulata,8,71,On Moss St,Fairfield
 48.411868,-123.353532,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,2,3,On May St,Fairfield
@@ -15340,8 +15340,8 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.413752,-123.342148,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,14,74,On Clifford St,Fairfield
 48.413735,-123.342043,Fraxinus pennsylvanica,Red ash,Fraxinus pennsylvanica,16,78,On Clifford St,Fairfield
 48.413725,-123.341955,Sorbus intermedia,Swedish whitebeam,Sorbus intermedia,12,82,On Clifford St,Fairfield
-48.413705,-123.341736,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Clifford St,Fairfield
-48.413699,-123.341516,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Clifford St,Fairfield
+48.413705,-123.341736,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Clifford St,Fairfield
+48.413699,-123.341516,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Clifford St,Fairfield
 48.414425,-123.341351,Betula pendula,European white birch,Betula pendula,14,47,On Brooke St,Fairfield
 48.414545,-123.341609,Prunus serrulata,Japanese cherry,Prunus serrulata,8,16,On Brooke St,Fairfield
 48.414547,-123.341489,Prunus serrulata,Japanese cherry,Prunus serrulata,8,38,On Brooke St,Fairfield
@@ -15865,7 +15865,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.41167,-123.350787,Prunus cerasifera,Cherry plum,Prunus cerasifera,9,48,On Howe St,Fairfield
 48.411564,-123.350718,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,6,23,On May St,Fairfield
 48.411535,-123.350444,Fraxinus ornus,Manna ash,Fraxinus ornus,7,26,On May St,Fairfield
-48.411517,-123.350284,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On May St,Fairfield
+48.411517,-123.350284,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On May St,Fairfield
 48.411546,-123.349809,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,9,62,On Moss St,Fairfield
 48.411655,-123.349778,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,5,27,On Moss St,Fairfield
 48.411832,-123.349752,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,9,90,On Moss St,Fairfield
@@ -16916,10 +16916,10 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.429586,-123.326809,Prunus serrulata,Japanese cherry,Prunus serrulata,6,16,On David St,South Jubilee
 48.429713,-123.326806,Prunus serrulata,Japanese cherry,Prunus serrulata,8,22,On David St,South Jubilee
 48.430059,-123.327684,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,65,On Duchess St,South Jubilee
-48.430258,-123.325435,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Bourchier St,South Jubilee
+48.430258,-123.325435,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Bourchier St,South Jubilee
 48.430262,-123.325185,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,4,3,On Bourchier St,South Jubilee
 48.430263,-123.324971,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,4,4,On Bourchier St,South Jubilee
-48.430259,-123.324779,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,2,On Bourchier St,South Jubilee
+48.430259,-123.324779,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,2,On Bourchier St,South Jubilee
 48.430262,-123.324541,Cornus nuttallii,Pacific dogwood,Cornus nuttallii,10,43,On Bourchier St,South Jubilee
 48.430254,-123.324361,Cornus nuttallii,Pacific dogwood,Cornus nuttallii,8,27,On Bourchier St,South Jubilee
 48.430256,-123.324172,Quercus garryana,Garry oak,Quercus garryana,6,10,On Bourchier St,South Jubilee
@@ -19780,7 +19780,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.420947,-123.349094,Tilia cordata,Little-leaf linden,Tilia cordata,14,74,On Rockland Ave,Rockland
 48.420967,-123.349257,Tilia cordata,Little-leaf linden,Tilia cordata,18,43,On Rockland Ave,Rockland
 48.42099,-123.349459,Tilia cordata,Little-leaf linden,Tilia cordata,14,52,On Rockland Ave,Rockland
-48.421019,-123.349689,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,5,On Rockland Ave,Rockland
+48.421019,-123.349689,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,5,On Rockland Ave,Rockland
 48.42104,-123.349919,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,6,33,On Rockland Ave,Rockland
 48.421071,-123.350213,Ulmus david,David elm,Ulmus david,3,4,On Rockland Ave,Rockland
 48.421136,-123.350394,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,7,37,On Rockland Ave,Rockland
@@ -20216,7 +20216,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.447562,-123.341092,Betula papyrifera,Paper birch,Betula papyrifera,10,26,On Doncaster Dr,Oaklands
 48.44744,-123.340986,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,4,4,On Doncaster Dr,Oaklands
 48.447344,-123.340927,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,5,10,On Doncaster Dr,Oaklands
-48.447062,-123.340691,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,2,On Doncaster Dr,Oaklands
+48.447062,-123.340691,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,2,On Doncaster Dr,Oaklands
 48.447009,-123.340632,Picea abies,Norway Spruce,Picea abies,5,12,On Doncaster Dr,Oaklands
 48.446969,-123.340521,Acer rubrum,Red maple,Acer rubrum,12,38,On Burton Ave,Oaklands
 48.447032,-123.340341,Acer rubrum,Red maple,Acer rubrum,14,41,On Burton Ave,Oaklands
@@ -20260,7 +20260,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.446762,-123.340477,Betula papyrifera,Paper birch,Betula papyrifera,5,7,On Doncaster Dr,Oaklands
 48.446664,-123.340406,Picea glauca,White spruce,Picea glauca,10,21,On Doncaster Dr,Oaklands
 48.446625,-123.340356,Pinus sylvestris,Scots pine,Pinus sylvestris,14,66,On Doncaster Dr,Oaklands
-48.446552,-123.340306,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Doncaster Dr,Oaklands
+48.446552,-123.340306,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Doncaster Dr,Oaklands
 48.446421,-123.340204,Betula papyrifera,Paper birch,Betula papyrifera,10,26,On Doncaster Dr,Oaklands
 48.446261,-123.340084,Betula papyrifera,Paper birch,Betula papyrifera,9,29,On Doncaster Dr,Oaklands
 48.446211,-123.339882,Parrotia persica,Persian ironwood,Parrotia persica 'Ruby Vase',4,5,On Oakland Ave,Oaklands
@@ -21534,7 +21534,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.43694,-123.343698,Fraxinus ornus,Manna ash,Fraxinus ornus,10,51,On Roseberry Ave,Oaklands
 48.437055,-123.343696,Fraxinus ornus,Manna ash,Fraxinus ornus,9,57,On Roseberry Ave,Oaklands
 48.437199,-123.343688,Fraxinus ornus,Manna ash,Fraxinus ornus,10,58,On Roseberry Ave,Oaklands
-48.437324,-123.343713,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Roseberry Ave,Oaklands
+48.437324,-123.343713,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Roseberry Ave,Oaklands
 48.437473,-123.343683,Fraxinus ornus,Manna ash,Fraxinus ornus,10,49,On Roseberry Ave,Oaklands
 48.437596,-123.34367,Fraxinus ornus,Manna ash,Fraxinus ornus,9,47,On Roseberry Ave,Oaklands
 48.437748,-123.343671,Fraxinus ornus,Manna ash,Fraxinus ornus,7,36,On Roseberry Ave,Oaklands
@@ -22588,7 +22588,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.43536,-123.342221,Quercus garryana,Garry oak,Quercus garryana,5,5,On Avebury Ave,Fernwood
 48.435233,-123.342224,Quercus garryana,Garry oak,Quercus garryana,3,4,On Avebury Ave,Fernwood
 48.435094,-123.342228,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,2,On Avebury Ave,Fernwood
-48.434909,-123.342235,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Avebury Ave,Fernwood
+48.434909,-123.342235,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Avebury Ave,Fernwood
 48.434773,-123.342244,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,33,On Avebury Ave,Fernwood
 48.434632,-123.342243,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,5,8,On Avebury Ave,Fernwood
 48.434511,-123.342245,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,28,On Avebury Ave,Fernwood
@@ -22599,13 +22599,13 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.434523,-123.342416,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,32,On Avebury Ave,Fernwood
 48.434711,-123.342418,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,4,5,On Avebury Ave,Fernwood
 48.434812,-123.3424,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,9,41,On Avebury Ave,Fernwood
-48.434917,-123.342401,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Avebury Ave,Fernwood
+48.434917,-123.342401,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Avebury Ave,Fernwood
 48.434968,-123.342446,Ilex aquifolium,English holly,Ilex aquifolium,6,28,On Avebury Ave,Fernwood
 48.435091,-123.342398,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,8,On Avebury Ave,Fernwood
 48.435206,-123.342384,Betula papyrifera,Paper birch,Betula papyrifera,10,35,On Avebury Ave,Fernwood
 48.435323,-123.342444,Quercus garryana,Garry oak,Quercus garryana,18,125,On Avebury Ave,Fernwood
 48.43551,-123.342413,Crataegus × mordenensis,Hawthorn,Crataegus mordensis 'Toba',3,4,On Avebury Ave,Fernwood
-48.435847,-123.342391,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Avebury Ave,Fernwood
+48.435847,-123.342391,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Avebury Ave,Fernwood
 48.436136,-123.342462,Crataegus,Hawthorn,Crataegus,4,9,On Haultain St,Fernwood
 48.436135,-123.342734,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',3,8,On Haultain St,Fernwood
 48.43614,-123.342908,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,5,On Haultain St,Fernwood
@@ -24307,9 +24307,9 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.424689,-123.35388,Aesculus hippocastanum,Horse-chestnut,Aesculus hippocastanum,12,73,On Cook St,Harris Green
 48.425238,-123.354275,Ulmus pumila,Siberian elm,Ulmus pumila,8,65,On Yates St,Harris Green
 48.447746,-123.341527,Magnolia grandiflora,Southern magnolia,Magnolia grandiflora,6,39,On Doncaster Dr,Oaklands
-48.447888,-123.341625,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Doncaster Dr,Oaklands
+48.447888,-123.341625,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Doncaster Dr,Oaklands
 48.44799,-123.341717,Acer rubrum,Red maple,Acer rubrum 'Red Sunset',7,13,On Doncaster Dr,Oaklands
-48.448125,-123.341773,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Doncaster Dr,Oaklands
+48.448125,-123.341773,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Doncaster Dr,Oaklands
 48.446642,-123.344363,Abies grandis,Grand Fir,Abies grandis,20,65,On Clawthorpe Ave,Oaklands
 48.44664,-123.34434,Pseudotsuga menziesii,Douglas-fir,Pseudotsuga menziesii,20,81,On Clawthorpe Ave,Oaklands
 48.446658,-123.344277,Crataegus × grignonensis,Grignon hawthorn,Crataegus grignonensis,9,48,On Clawthorpe Ave,Oaklands
@@ -25188,7 +25188,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.442524,-123.388887,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,20,64,On Irma St,Burnside
 48.442459,-123.388959,Ulmus carpinifolia,Field elm,Ulmus carpinifolia,20,56,On Irma St,Burnside
 48.442428,-123.389443,Betula pendula,European white birch,Betula pendula,12,25,On Lotus St,Burnside
-48.4425,-123.389576,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Lotus St,Burnside
+48.4425,-123.389576,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Lotus St,Burnside
 48.442527,-123.389639,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,6,43,On Lotus St,Burnside
 48.442601,-123.389796,Acer ginnala,Amur maple,Acer ginnala 'Bergiana Flame',4,7,On Lotus St,Burnside
 48.442775,-123.390155,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,3,3,On Lotus St,Burnside
@@ -25199,7 +25199,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.442968,-123.39061,Thuja occidentalis,Northern white-cedar,Thuja occidentalis,4,12,On Lotus St,Burnside
 48.442974,-123.390624,Thuja occidentalis,Northern white-cedar,Thuja occidentalis,4,15,On Lotus St,Burnside
 48.443001,-123.390638,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,3,26,On Lotus St,Burnside
-48.443078,-123.390806,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,5,4,On Lotus St,Burnside
+48.443078,-123.390806,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,5,4,On Lotus St,Burnside
 48.443172,-123.391025,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,3,13,On Lotus St,Burnside
 48.443236,-123.39113,Prunus,Plum / Cherry,Prunus,8,9,On Lotus St,Burnside
 48.44324,-123.391188,Prunus,Plum / Cherry,Prunus,8,25,On Lotus St,Burnside
@@ -25221,7 +25221,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.442711,-123.389696,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,3,2,On Lotus St,Burnside
 48.442719,-123.389675,Chamaecyparis lawsoniana,Lawson cypress,Chamaecyparis lawsoniana,6,43,On Lotus St,Burnside
 48.442706,-123.389642,Chamaecyparis lawsoniana,Lawson cypress,Chamaecyparis lawsoniana,6,63,On Lotus St,Burnside
-48.442635,-123.389532,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,4,On Lotus St,Burnside
+48.442635,-123.389532,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,4,On Lotus St,Burnside
 48.442559,-123.389384,Acer ginnala,Amur maple,Acer ginnala 'Bergiana Flame',5,3,On Lotus St,Burnside
 48.442494,-123.389222,Prunus × yedoensis,Yoshino cherry,Prunus yedoensis,5,27,On Lotus St,Burnside
 48.442727,-123.388899,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,6,32,On Irma St,Burnside
@@ -25678,7 +25678,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.433903,-123.364476,Parrotia persica,Persian ironwood,Parrotia persica 'Ruby Vase',3,6,On Douglas St,Burnside
 48.43357,-123.36447,Betula papyrifera,Paper birch,Betula papyrifera,10,22,On Douglas St,Burnside
 48.435002,-123.364798,Prunus cerasifera,Cherry plum,Prunus cerasifera,8,44,On Field St,Burnside
-48.434983,-123.364513,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,1.5,4,On Field St,Burnside
+48.434983,-123.364513,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,1.5,4,On Field St,Burnside
 48.434971,-123.364271,Prunus cerasifera,Cherry plum,Prunus cerasifera,6,59,On Field St,Burnside
 48.434956,-123.364055,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,3,9,On Field St,Burnside
 48.434846,-123.363982,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,5,5,On Field St,Burnside
@@ -27226,13 +27226,13 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.435978,-123.390168,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,31,On Raynor Ave,Victoria West
 48.436027,-123.389933,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,12,On Raynor Ave,Victoria West
 48.436086,-123.389677,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,7,26,On Raynor Ave,Victoria West
-48.436135,-123.389456,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,2,On Raynor Ave,Victoria West
+48.436135,-123.389456,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,2,On Raynor Ave,Victoria West
 48.436165,-123.389333,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,,2,On Raynor Ave,Victoria West
 48.436191,-123.389191,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,6,On Raynor Ave,Victoria West
 48.436252,-123.388925,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis kentukea,3,3,On Raynor Ave,Victoria West
 48.436318,-123.388622,Crataegus oxyacantha,Common hawthorn,Crataegus oxyacantha,8,38,On Raynor Ave,Victoria West
 48.436369,-123.388386,Crataegus × lavalleei,Hybrid cockspurthorn,Crataegus x lavallei,4,7,On Raynor Ave,Victoria West
-48.436416,-123.388148,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,3,3,On Raynor Ave,Victoria West
+48.436416,-123.388148,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,3,3,On Raynor Ave,Victoria West
 48.436806,-123.38843,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,12,51,On Craigflower Rd,Victoria West
 48.437019,-123.388659,Aesculus × carnea,Red horse-chestnut,Aesculus carnea,8,26,On Craigflower Rd,Victoria West
 48.440255,-123.390486,Prunus serrulata,Japanese cherry,Prunus serrulata kwanzan,10,68,On Selkirk Ave,Victoria West
@@ -31595,7 +31595,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.433659,-123.352935,Fagus,Beech,Fagus,3,3,On Queens Ave,North Park
 48.433561,-123.353003,Fagus,Beech,Fagus,3,5,On Queens Ave,North Park
 48.438873,-123.353554,Acer rubrum,Red maple,Acer rubrum,9,20,On Blackwood St,Hillside/Quadra
-48.442809,-123.357065,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,2,3,On Topaz Ave,Hillside/Quadra
+48.442809,-123.357065,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,2,3,On Topaz Ave,Hillside/Quadra
 48.442985,-123.358891,Malus,Apple,Malus,5,6,On Fifth St,Hillside/Quadra
 48.440765,-123.356713,Quercus palustris,Pin oak,Quercus palustris,8,21,On Graham St,Hillside/Quadra
 48.420102,-123.372013,Nyssa sylvatica,Black tupelo,Nyssa sylvatica,7,5,On Quebec St,James Bay
@@ -33469,7 +33469,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.408115,-123.36126,Populus tremuloides,Trembling aspen,Populus tremuloides,3,5,In Beacon Hill Park,James Bay
 48.408112,-123.361234,Populus tremuloides,Trembling aspen,Populus tremuloides,3,5,In Beacon Hill Park,James Bay
 48.408159,-123.361157,Populus tremuloides,Trembling aspen,Populus tremuloides,3,5,In Beacon Hill Park,James Bay
-48.442667,-123.389946,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,6,4,On Lotus St,Burnside
+48.442667,-123.389946,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,6,4,On Lotus St,Burnside
 48.408172,-123.36114,Populus tremuloides,Trembling aspen,Populus tremuloides,4,5,In Beacon Hill Park,James Bay
 48.408159,-123.361125,Populus tremuloides,Trembling aspen,Populus tremuloides,3,5,In Beacon Hill Park,James Bay
 48.408036,-123.360733,Populus tremuloides,Trembling aspen,Populus tremuloides,3,5,In Beacon Hill Park,James Bay
@@ -33696,7 +33696,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.414801,-123.362536,Quercus garryana,Garry oak,Quercus garryana,2,3,In Beacon Hill Park,Fairfield
 48.43395,-123.34872,Prunus cerasifera,Cherry plum,Prunus cerasifera 'Nigra',5,12,On Walnut St,Fernwood
 48.410512,-123.360832,Quercus garryana,Garry oak,Quercus garryana,3,2,In Beacon Hill Park,Fairfield
-48.428794,-123.323677,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,4,4,On Amphion St,South Jubilee
+48.428794,-123.323677,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,4,4,On Amphion St,South Jubilee
 48.41043,-123.360873,Quercus garryana,Garry oak,Quercus garryana,3,2,In Beacon Hill Park,Fairfield
 48.410872,-123.360852,Crataegus douglasii,Black Hawthorn,Crataegus douglasii,2,1,In Beacon Hill Park,Fairfield
 48.410954,-123.360794,Crataegus douglasii,Black Hawthorn,Crataegus douglasii,2,1,In Beacon Hill Park,Fairfield
@@ -33983,7 +33983,7 @@ latitude,longitude,species,common_name,botanical_name,height_m,trunk_diameter_cm
 48.418128,-123.370211,Quercus rubra,Northern red oak,Quercus rubra,7,9,On Superior St,James Bay
 48.418134,-123.370109,Quercus rubra,Northern red oak,Quercus rubra,7,8,On Superior St,James Bay
 48.433154,-123.360517,Juglans regia,English Walnut,Juglans regia,3,8,On Princess Ave,North Park
-48.445883,-123.339786,Cladrastis lutea,Yellow-Wood,Cladrastis lutea,4,4,On Doncaster Dr,Oaklands
+48.445883,-123.339786,Cladrastis kentukea,Kentucky Yellow Wood,Cladrastis lutea,4,4,On Doncaster Dr,Oaklands
 48.438174,-123.338195,Ginkgo biloba,Ginkgo,Ginkgo biloba princeton sent,2,5,On Kings Rd,Oaklands
 48.438172,-123.337855,Ginkgo biloba,Ginkgo,Ginkgo biloba princeton sent,2,5,On Kings Rd,Oaklands
 48.438167,-123.337532,Aesculus × carnea,Red horse-chestnut,Aesculus briottii,1.5,3,On Kings Rd,Oaklands

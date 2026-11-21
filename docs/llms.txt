@@ -1,6 +1,6 @@
 # Victoria Trees
 
-> A map of the 35,125 trees on public land in Victoria, British Columbia, Canada, from 369 species, built from the City of Victoria's open tree data (last refreshed 2026-11-21). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions, the birds and other wildlife that use them and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
+> A map of the 35,125 trees on public land in Victoria, British Columbia, Canada, from 368 species, built from the City of Victoria's open tree data (last refreshed 2026-11-21). Each tree has its species, location, and usually its height and trunk diameter; species have native ranges, descriptions, the birds and other wildlife that use them and, for native trees, SENĆOŦEN names. Trees on private property aren't included.
 
 ## Pages
 
