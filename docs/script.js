@@ -153,11 +153,12 @@ function addTrees(treeData) {
 // colours the species' trees and greys out the rest, then frames them unless ?bounds= is set
 function highlightSpecies(treeData, speciesIndexes) {
   const isSpecies = ['in', ['get', 'species'], ['literal', speciesIndexes]];
-  // blossom trees are coloured by their flowers, with a dark ring so white ones show on the map
+  // highlighted trees keep their usual colours against the grey; blossom trees are coloured by their
+  // flowers instead, with a dark ring so white ones show on the map
   const blossoms = speciesIndexes.every((i) => treeData.species[i].blossom);
   const highlight = blossoms
-    ? ['match', ['get', 'hue'], ...Object.entries(blossomColours).flat(), '#b5652b']
-    : '#b5652b';
+    ? ['match', ['get', 'hue'], ...Object.entries(blossomColours).flat(), treePaint['circle-color']]
+    : treePaint['circle-color'];
   map.setPaintProperty('trees', 'circle-color', ['case', isSpecies, highlight, '#b9b4a0']);
   map.setPaintProperty('trees', 'circle-opacity', ['case', isSpecies, 1, 0.35]);
   map.setLayoutProperty('trees', 'circle-sort-key', ['case', isSpecies, 1, 0]);

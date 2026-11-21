@@ -369,7 +369,7 @@ function blossomPage(ctx) {
       const left = (s.start / calendarSlots) * 100;
       const width = ((s.end - s.start + 1) / calendarSlots) * 100;
       const label = `${displayName(s)}: ${bloomWindow(s.bloom)}, ${formatCount(s.tree_count)} trees`;
-      return `<li class="bloom-row" data-start="${s.start}" data-end="${s.end}">
+      return `<li class="bloom-row" data-start="${s.start}" data-end="${s.end}" data-slug="${s.slug}">
 <a class="bloom-name" href="../species/${s.slug}/">${escapeHtml(displayName(s))}</a>
 <span class="bloom-track"><span class="bloom-bar" style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%" title="${escapeHtml(label)}"></span></span>
 </li>`;
@@ -435,7 +435,7 @@ ${placeRows(list)}
   const body = `<h1>Cherry blossoms in Victoria, BC</h1>
 <p>Victoria has <b>${formatCount(cherryCount)}</b> flowering cherry and plum trees on public land, and ${formatCount(blossomTrees.length - cherryCount)} more magnolias, crabapples, pears and serviceberries. Blossom season starts with the winter-flowering cherries, peaks with the cherry plums and Yoshino cherries in March, and ends with the Japanese cherries and crabapples in early May.</p>
 <p class="bloom-now box" hidden></p>
-<p><a class="button is-success" href="../?species=${allSlugs}">Show all ${formatCount(blossomTrees.length)} blossom trees on the map</a></p>
+<p><a class="button is-success" id="bloom-map" href="../?species=${allSlugs}">Show all blossom trees on the map</a></p>
 <p class="is-size-7">On the map they're coloured by their flowers: ${blossomHues.map((h) => `${hueSwatch(h)}${h}`).join(", ")}.</p>
 <h2>When the blossoms are out</h2>
 <p>Typical flowering times in Victoria. A warm or cold spell moves them a week or two either way, and trees in sheltered spots flower first.</p>
@@ -466,17 +466,25 @@ ${areaRows}
       var part = now.getDate() <= 10 ? 0 : now.getDate() <= 20 ? 1 : 2;
       var slot = month < ${calendarMonths.length} ? month * 3 + part : -1;
       var flowering = [];
+      var floweringSlugs = [];
       document.querySelectorAll('[data-start]').forEach(function (row) {
         var on = slot >= +row.dataset.start && slot <= +row.dataset.end;
         row.classList.toggle('is-blooming', on);
         var name = row.querySelector('a').textContent;
-        if (on && row.tagName === 'LI') flowering.push(name);
+        if (on && row.tagName === 'LI') {
+          flowering.push(name);
+          floweringSlugs.push(row.dataset.slug);
+        }
       });
       var message = document.querySelector('.bloom-now');
       if (slot === -1) {
         message.textContent = 'Blossom season is over for this year. The first winter-flowering cherries open in November.';
       } else if (flowering.length) {
         message.textContent = 'Usually in flower around now: ' + flowering.join(', ') + '.';
+        // the map button shows just these
+        var button = document.getElementById('bloom-map');
+        button.href = '../?species=' + floweringSlugs.join(',');
+        button.textContent = 'Show all trees in bloom';
         var today = document.querySelector('.bloom-today');
         today.style.left = ((slot + 0.5) / ${calendarSlots} * 100) + '%';
         today.hidden = false;
