@@ -1219,12 +1219,13 @@
 - name: Cupressus arizonica
   common_name: Arizona cypress
   order: Pinales
-  native_region: >-
-    the southwestern United States (Arizona, Utah, southwestern New Mexico, and southern California,
-    with a few populations in southern Nevada and in the Chisos Mountains of western Texas), and in
-    Mexico (Coahuila, Nuevo León, Chihuahua, Sonora, Durango, Tamaulipas, Zacatecas and northern
-    Baja California)
+  native_region: scattered mountain groves in northern Mexico and the southwestern United States
   inaturalist_taxon_id: 57888
+  description: >-
+    Arizona cypress keeps its cones closed for many years, opening them only after the branch that
+    carries them is killed, such as in a wildfire, so the seeds land on freshly burned ground.
+    Unlike Monterey cypress, it resists cypress canker, a fungal disease, which makes it a reliable
+    garden tree. Most plant databases now call it Hesperocyparis arizonica.
 - name: Cupressus cashmeriana
   common_name: Kashmir cypress / Bhutan cypress
   order: Pinales
@@ -1250,15 +1251,33 @@
 - name: Davidia involucrata
   common_name: Dove Tree
   order: Cornales
+  native_region: the mountain forests of south-central and southeastern China
   inaturalist_taxon_id: 128506
+  description: >-
+    Dove tree is named for the two large white bracts beneath each flower head, which flutter in the
+    breeze like doves or handkerchiefs. The genus honours Père Armand David, a French missionary and
+    naturalist who described it in 1869 from a single tree in China. Ernest Wilson, sent to collect
+    it, was shipwrecked on the way home but saved his specimens.
 - name: Elaeagnus angustifolia
   common_name: Russian-Olive
   order: Rosales
+  native_region: western and central Asia, from the Caucasus and Iran to Mongolia and northern China
   inaturalist_taxon_id: 64694
+  description: >-
+    Russian olive is named for its likeness to the true olive, to which it is not related. Its dried
+    fruit is one of the seven items of the Haft-sin table set out for Nowruz, the Persian spring
+    festival. In the United States it has become invasive, spreading along rivers where cottonwoods
+    have died.
 - name: Elaeocarpus decipiens
   common_name: Japanese Blueberry Tree
   order: Oxalidales
+  native_region: southern China, Taiwan, Vietnam, Korea and Japan
   inaturalist_taxon_id: 428622
+  description: >-
+    Japanese blueberry tree is named for its small, dark blue, olive-shaped fruit, which is not
+    edible. Its new leaves come out red and turn green as they age, so the evergreen crown shows a
+    mix of red, brown and green, and its small cream to pale pink flowers are often hidden among the
+    leaves.
 - name: Eucalyptus
   common_name: Gum Tree
   order: Myrtales
@@ -1267,10 +1286,23 @@
 - name: Eucalyptus pauciflora
   common_name: Snow Gum
   order: Myrtales
+  native_region: the mountains and cold high plains of southeastern Australia and Tasmania
   inaturalist_taxon_id: 208115
+  description: >-
+    Snow gum is the most cold-tolerant eucalyptus: its alpine subspecies, niphophila, survives −23
+    °C (−9 °F) and year-round frosts in the Australian Alps. Its smooth white, grey or yellow bark
+    peels in ribbons and is often marked with insect scribbles. The name pauciflora, "few-flowered",
+    is a misnomer, perhaps from an early specimen that lost its buds in transit.
 - name: Eucryphia x
   common_name: Rostrevor
+  garden_origin: >-
+    a hybrid of a Chilean and a Tasmanian eucryphia, first raised at Rostrevor in Northern Ireland
   inaturalist_taxon_id: 782371
+  description: >-
+    Rostrevor eucryphia blooms in late summer and autumn, with sweetly scented flowers 3–6 cm (1–2
+    in) across: four creamy-white petals around a mass of stamens. Tasmanian leatherwood, one of its
+    wild relatives, is a major source of honey. The name Eucryphia comes from the Greek for
+    "well-covered", for the leaves clustered at the branch tips.
 - name: Euonymus
   common_name: Spindle Tree
   order: Celastrales
@@ -1279,7 +1311,13 @@
 - name: Euonymus europaeus
   common_name: European Euonymus
   order: Celastrales
+  native_region: much of Europe
   inaturalist_taxon_id: 55847
+  description: >-
+    European spindle is named for its very hard wood, which can be cut to a sharp point and was once
+    made into spindles for spinning wool and into butchers' skewers. Artists prize its charcoal for
+    its strength and density. Its pink autumn capsules split open to show bright orange seeds, and
+    the fruit is poisonous.
 - name: Fagus
   common_name: Beech
   order: Fagales
@@ -1310,7 +1348,13 @@
 - name: Ficus carica
   common_name: Fig
   order: Rosales
+  native_region: the Mediterranean region and western and southern Asia
   inaturalist_taxon_id: 60218
+  description: >-
+    Common fig may be the first plant people ever cultivated: sterile, seedless figs from a
+    Neolithic village near Jericho, dated to about 9400 BC, are a thousand years older than the
+    first domesticated wheat. Each fig is a hollow pod lined with tiny flowers, which a specialized
+    wasp enters to pollinate, though common figs can ripen without it.
 - name: Fraxinus
   common_name: Ash
   order: Lamiales
@@ -1319,7 +1363,14 @@
 - name: Fraxinus americana
   common_name: White Ash
   order: Lamiales
+  native_region: >-
+    eastern and central North America, from Nova Scotia and Minnesota to Florida and Texas
   inaturalist_taxon_id: 54805
+  description: >-
+    White ash is named for the pale undersides of its leaves, and unlike most ashes, which turn
+    yellow, it colours orange and red in autumn. Its hard, straight-grained wood is the traditional
+    timber for baseball bats. Since the early 2000s the emerald ash borer, a beetle from Asia, has
+    killed hundreds of millions of white ashes in North America.
 - name: Fraxinus angustifolia
   common_name: Narrow-leafed ash
   order: Lamiales
@@ -1333,7 +1384,13 @@
 - name: Fraxinus excelsior
   common_name: European Ash
   order: Lamiales
+  native_region: Europe and southwest Asia, from Ireland to the Caucasus
   inaturalist_taxon_id: 125440
+  description: >-
+    European ash is the tree of Norse myth: Yggdrasil, the world tree that holds the nine worlds in
+    its roots and branches, is a vast ash. Its tough, flexible wood is the only timber used for
+    hurleys, the sticks of Irish hurling, a game known as "the clash of the ash". It is easy to tell
+    from other ashes by its jet-black buds.
 - name: Fraxinus holotricha
   common_name: Ash
   order: Lamiales
@@ -1341,7 +1398,20 @@
 - name: Fraxinus latifolia
   common_name: Oregon Ash
   order: Lamiales
+  native_region: >-
+    the Pacific coast of North America, from southwestern British Columbia to California
   inaturalist_taxon_id: 63878
+  description: >-
+    The Cowlitz made canoe paddles and digging sticks from Oregon ash wood. Its bowls, or the wood
+    to carve them, were also traded to the Makah from peoples to the south or east: five were found
+    at Ozette, a Makah village on Washington's outer coast where the tree doesn't grow, buried by
+    mudslides around 1700. It tolerates flooding far better than Douglas-fir or grand fir.
+  turner_pages: vol. 1, pp. 108–109; vol. 2, p. 123
+  wildlife:
+    - who: [squirrels]
+      what: eat its seeds
+    - who: [deer]
+      what: browse its leaves and sprouts
 - name: Fraxinus ornus
   common_name: Manna ash
   order: Lamiales
@@ -1368,11 +1438,23 @@
 - name: Fraxinus velutina
   common_name: Ash
   order: Lamiales
+  native_region: >-
+    the southwestern United States and northern Mexico, from southern California to Texas
   inaturalist_taxon_id: 64132
+  description: >-
+    Velvet ash is named for the soft down on its young shoots; it is also called Arizona ash and
+    Modesto ash. It is a close relative of Oregon ash and replaces it to the south, and in central
+    California the two merge with no clear boundary.
 - name: Fremontodendron californicum
   common_name: Flannel Bush
   order: Malvales
+  native_region: California, with small, isolated populations in Arizona and Baja California, Mexico
   inaturalist_taxon_id: 63609
+  description: >-
+    Flannel bush is named for the soft, flannel-like hairs on its leaves, which brush off easily and
+    can irritate skin and eyes. The genus honours John Charles Frémont, a 19th-century explorer of
+    western North America. In California, the Yokuts and Kawaiisu peoples used its wood for building
+    and furniture, and its bark for cordage and nets.
 - name: Ginkgo biloba
   common_name: Ginkgo
   native_region: China
@@ -1430,17 +1512,37 @@
 - name: Gymnocladus dioicus
   common_name: Kentucky Coffeetree
   order: Fabales
+  native_region: the central United States and southern Ontario, though it is rare throughout
   inaturalist_taxon_id: 163451
+  description: >-
+    Kentucky coffeetree is named for its seeds, which early settlers roasted as a coffee substitute;
+    raw, the seeds and pods are poisonous. Its leathery pods are too tough for most living animals
+    to chew and may once have been eaten by large mammals now extinct. The genus name means "naked
+    branch", since it has few small twigs and leafs out late.
   cultivars:
     - name: Espresso
       description: A male Kentucky coffeetree, so it doesn't drop the species' large seed pods.
 - name: Halesia monticola
   common_name: Carolina Silverbell
   order: Ericales
+  native_region: the southern Appalachian Mountains of the eastern United States
+  description: >-
+    Mountain silverbell is the largest of the silverbells, reaching 34 m (112 ft) in the Great Smoky
+    Mountains, and its white flowers are larger than those of its relatives. It begins to bloom when
+    only about 4 m (13 ft) tall. Botanists disagree on whether it is a species of its own or a
+    mountain form of Carolina silverbell.
 - name: Halesia tetraptera
   common_name: Carolina Silverbell
   order: Ericales
+  native_region: the southeastern United States, from West Virginia to northern Florida and Oklahoma
   inaturalist_taxon_id: 163506
+  description: >-
+    Carolina silverbell's dry fruit has four wings running along its length, which gives the species
+    its name, tetraptera, "four-winged". The genus honours Stephen Hales, an 18th-century English
+    clergyman and scientist. In the wild it is thinly scattered and becoming rare in many areas.
+  wildlife:
+    - who: [bees, butterflies]
+      what: visit its flowers
 - name: Hesperocyparis macrocarpa
   common_name: Monterey cypress
   order: Pinales
@@ -1457,6 +1559,12 @@
   inaturalist_taxon_id: 60749
 - name: Ilex altaclarensis
   common_name: Holly
+  garden_origin: >-
+    a hybrid of English holly and the tender Madeira holly, first raised at Highclere Castle in
+    England in 1835
+  description: >-
+    Highclere holly's botanical name, altaclerensis, is a Latin form of Highclere. Like all hollies,
+    it has male and female flowers on separate trees, and only the females carry red berries.
 - name: Ilex aquifolium
   common_name: English holly
   order: Aquifoliales
@@ -1469,14 +1577,31 @@
 - name: Ilex opaca
   common_name: American Holly
   order: Aquifoliales
+  native_region: the eastern United States, from Massachusetts to central Florida and eastern Texas
   inaturalist_taxon_id: 60749
+  description: >-
+    American holly is the state tree of Delaware. Its leaves are duller than those of English holly,
+    and its pale, close-grained wood has been used for engraving blocks and whip handles, and dyed
+    to stand in for ebony. Over 1,000 cultivars have been selected, including ones with yellow
+    berries.
+  wildlife:
+    - who: [cedar waxwings, thrushes]
+      what: eat its berries
+    - who: [bees, moths]
+      what: pollinate its flowers
 - name: Ilex spp.
   common_name: Holly
   description: This tree has only been identified to genus, not species.
 - name: Juglans nigra
   common_name: Black Walnut
   order: Fagales
+  native_region: eastern North America, from southern Ontario to Georgia and central Texas
   inaturalist_taxon_id: 54504
+  description: >-
+    Black walnut's roots, leaves and husks release juglone, a compound that can poison tomatoes,
+    apples, pines and birches planted near it; Pliny the Elder warned in the first century that
+    walnut shade is "poison to all plants within its compass". The husks stain hands and pavement,
+    and have long been used as a natural dye and ink.
 - name: Juglans regia
   common_name: English Walnut
   native_region: the mountains of Central Asia, from the Balkans east to the Himalayas and southwest China
@@ -1494,10 +1619,25 @@
   common_name: Chinese juniper
   native_region: China, Taiwan, Myanmar, Japan, Korea and the Russian Far East
   inaturalist_taxon_id: 135925
+  description: >-
+    Chinese juniper is one of the most important trees in bonsai, especially the Japanese form
+    called Shimpaku; famous specimens include the 250-year-old "Omiya tree" at the Birmingham
+    Botanical Gardens in England. Mature trees often carry two kinds of foliage at once: needle-like
+    juvenile leaves, mostly on shaded lower shoots, and tiny scale-like adult leaves.
 - name: Juniperus communis
   common_name: Common Juniper
   order: Pinales
+  native_region: cool regions across the Northern Hemisphere, the widest range of any woody plant
   inaturalist_taxon_id: 58725
+  description: >-
+    Common juniper is taken as a medicine that must all be drunk, or it will not work (Haida). A
+    decoction is drunk in the sweathouse and used as a purifying wash for hunters (Nlaka’pamux) or
+    as a fumigant against death and illness (Okanagan), and juniper is one of the plants used to
+    ritually treat berry bushes, fishing gear and people affected by nímính, the ritually powerful
+    and vulnerable state that comes with birth, puberty, widowhood and death (Tsilhqot’in). Its
+    Tsilhqot’in name means "raven’s arrow". Gin is named after the French and Dutch words for
+    juniper, whose berry-like cones flavour it.
+  turner_pages: vol. 1, pp. 132, 553; vol. 2, pp. 302, 341–342
 - name: Juniperus maritima
   # Was Juniperus scopulorum. The wild junipers of Salish Sea shores were split off as J. maritima
   # (R.P. Adams, 2007); BC's Conservation Data Centre lists it, though some databases don't accept it
@@ -1521,13 +1661,26 @@
 - name: Juniperus squamata
   common_name: Juniper
   order: Pinales
+  native_region: the Himalayas and China, from Afghanistan to Taiwan
   inaturalist_taxon_id: 135885
+  description: >-
+    Flaky juniper is named for its flaking brown bark. It grows high in the mountains of Asia, up to
+    4,900 m (16,100 ft), and is the unofficial provincial tree of Khyber Pakhtunkhwa, in Pakistan.
+    In gardens it is grown for its blue-green foliage and compact shape, in forms such as 'Blue
+    Star'.
 - name: Juniperus virginiana
   common_name: Eastern redcedar
-  native_region: >-
-    eastern North America from southeastern Canada to the Gulf of Mexico and east of the Great
-    Plains.
+  native_region: eastern North America, from southeastern Canada to the Gulf of Mexico
   inaturalist_taxon_id: 49399
+  description: >-
+    Eastern redcedar gave Baton Rouge, Louisiana, its name: French traders called the place "red
+    stick" after the reddish cedar poles that Native American tribes used to mark their hunting
+    territories. Its fragrant heartwood resists decay and repels moths, which made it the classic
+    lining for cedar chests and closets; it was also a pencil wood until supplies ran low in the
+    1940s.
+  wildlife:
+    - who: [cedar waxwings, raccoons, rabbits]
+      what: eat its berries
 - name: Kobus Magnolia
   common_name: Magnolia
   inaturalist_taxon_id: 143787
@@ -1559,19 +1712,50 @@
 - name: Laburnum anagyroides
   common_name: Common Laburnum
   order: Fabales
+  native_region: central and southern Europe
   inaturalist_taxon_id: 51810
+  description: >-
+    Common laburnum, or golden chain, inspired Laurelin, one of the two great trees in J.R.R.
+    Tolkien's The Silmarillion, by way of a poem by Francis Thompson. Its seeds contain cytisine, a
+    poisonous alkaloid that is also used as a medicine to help people stop smoking.
 - name: Lagerstroemia indica
   common_name: Crepe Myrtle
   order: Myrtales
+  native_region: subtropical Asia, from the Himalayas to southern China, the Philippines and Japan
   inaturalist_taxon_id: 135394
+  description: >-
+    Crape myrtle takes its name from its crinkled, crêpe-like petals, and its smooth, mottled,
+    pinkish-grey bark peels away every year. In the United States it has come to symbolize the
+    American South, along with southern magnolia. In Japan it is called sarusuberi, the title of a
+    1983 manga by Hinako Sugiura set in the world of ukiyo-e art.
 - name: Larix decidua
   common_name: European Larch
   native_region: the mountains of central Europe
   inaturalist_taxon_id: 59747
+  description: >-
+    European larch is a conifer that sheds its needles each autumn, after they turn bright yellow.
+    Three Dukes of Atholl in turn planted it widely, and larches planted in Scotland in 1725 and
+    1737 still stand. Knot-free wood from old trees, called boatskin larch, is prized for building
+    yachts.
 - name: Larix occidentalis
   common_name: Western Larch
   order: Pinales
+  native_region: >-
+    the inland mountains of southeastern British Columbia and the northwestern United States
   inaturalist_taxon_id: 69849
+  description: >-
+    Western larch, or "tamarack", is a people-eating monster in an Okanagan story, grabbing anyone
+    who comes too close until Coyote strikes its top and declares that it will be used as medicine
+    instead; that is why the tops of the tallest tamaracks are bent. Its sweet sap is a food, and a
+    productive tree can give at least 4–5 litres twice a year (Spokan). In 2010 British Columbia
+    began planting it about 1,000 km north of its range, the first assisted migration of a North
+    American tree, to keep pace with a warming climate.
+  turner_pages: vol. 1, p. 439; vol. 2, pp. 172, 261, 263–264
+  wildlife:
+    - who: [pine siskins]
+      what: eat its seeds in winter
+    - who: [woodpeckers]
+      what: dig holes in the rotting heartwood of old trees
 - name: Ligustrum sinense
   common_name: Chinese privet
   order: Lamiales
