@@ -1759,7 +1759,13 @@
 - name: Ligustrum sinense
   common_name: Chinese privet
   order: Lamiales
+  native_region: China, Taiwan and Vietnam
   inaturalist_taxon_id: 128769
+  description: >-
+    Chinese privet was brought to North America for hedges and has escaped to become a serious
+    invader of southeastern forests, covering more than a million hectares in 12 states from
+    Virginia to Texas. Its small berries are considered poisonous. Its genus name, Ligustrum, means
+    "binder" and was used for privet by Pliny and Virgil.
 - name: Liquidambar styraciflua
   common_name: American sweetgum
   order: Saxifragales
@@ -1801,7 +1807,13 @@
 - name: Maackia amurensis
   common_name: Maackia
   order: Fabales
+  native_region: northeastern China, Korea and the Russian Far East, around the Amur River
   inaturalist_taxon_id: 133358
+  description: >-
+    Amur maackia is named after Richard Maack, a 19th-century Siberian explorer who found it in the
+    Amur River region, on the border between Siberia and China. In spring its unfolding buds are
+    silvery, like flowers touched with frost, and are often considered more striking than its summer
+    flowers.
 - name: Magnolia
   common_name: Magnolia
   order: Magnoliales
@@ -1834,7 +1846,14 @@
 - name: Magnolia acuminata
   common_name: Cucumber-Tree
   order: Magnoliales
+  native_region: >-
+    the eastern United States, mainly the Appalachians, and a few sites in southern Ontario
   inaturalist_taxon_id: 117426
+  description: >-
+    Cucumber tree is named for its unripe fruit, which is green and shaped like a small cucumber.
+    Unlike most magnolias, its flowers are small, yellow-green and borne high in the tree, but
+    breeders have used it to give hybrids such as 'Yellow Bird' their yellow flowers and cold
+    hardiness. In Canada it is protected as an endangered species.
   cultivars:
     - name: Yellow Bird
       description: >-
@@ -1843,7 +1862,14 @@
 - name: Magnolia campbellii
   common_name: Magnolia
   order: Magnoliales
+  native_region: >-
+    the eastern Himalaya, from Nepal and northeastern India to southwestern China and Myanmar
   inaturalist_taxon_id: 439967
+  description: >-
+    Campbell's magnolia is named after Archibald Campbell, superintendent of Darjeeling, in India.
+    Its flowers, 15–25 cm (6–10 in) across, open on bare branches very early in the year; the inner
+    petals stay upright while the outer ones spread, which may shelter the flower from rain and
+    snow. Young trees take many years to begin flowering.
 - name: Magnolia grandiflora
   common_name: Southern magnolia
   native_region: the southeastern United States, from North Carolina to Florida and Texas
@@ -1872,11 +1898,23 @@
 - name: Magnolia macrophylla
   common_name: Magnolia
   order: Magnoliales
+  native_region: scattered woodlands of the southeastern United States
   inaturalist_taxon_id: 165075
+  description: >-
+    Bigleaf magnolia has the largest simple leaves and the largest single flowers of any native tree
+    or shrub in North America. Its leaves are usually 24–60 cm (9–24 in) long, occasionally up to 1
+    m (39 in), and heavy enough to bend the branches. It is listed as threatened in North Carolina
+    and endangered in Arkansas and Ohio.
 - name: Magnolia stellata
   common_name: Star magnolia
   order: Magnoliales
+  native_region: a small area of central Japan, around Ise Bay near Nagoya
   inaturalist_taxon_id: 126710
+  description: >-
+    Star magnolia was introduced to the United States in 1862 by Dr. George Robert Hall, and reached
+    Britain in 1877 or 1878. Each flower has at least 12 narrow petals, and some cultivars have more
+    than 30. Crossed with Kobushi magnolia, it gave Magnolia × loebneri, first raised in Germany in
+    the early 1900s and first in flower in 1917.
   bloom:
     from: early March
     to: late March
@@ -1924,11 +1962,25 @@
 - name: Malus domestica
   common_name: Apple
   order: Rosales
+  garden_origin: >-
+    domesticated 4,000–10,000 years ago from a wild apple of the Tian Shan mountains, in Central
+    Asia
   inaturalist_taxon_id: 469472
+  description: >-
+    Apple seedlings don't come true: each is unlike its parents, so every one of the more than 7,500
+    named apples is kept going by grafting. Travelling west along the Silk Road, the apple crossed
+    so often with wild crabapples that modern apples are more closely related to the European crab
+    apple than to the wild apple they came from.
 - name: Malus floribunda
   common_name: Showy crabapple
   order: Rosales
+  native_region: East Asia, especially Japan
   inaturalist_taxon_id: 165105
+  description: >-
+    Showy crabapple's botanical name, floribunda, means "flowering freely". It carries a gene for
+    resistance to apple scab, a fungal disease, and apple breeders have used it to raise
+    scab-resistant orchard apples. It may itself be a hybrid of two other East Asian crabapples,
+    Malus toringo and M. baccata.
   bloom:
     from: mid April
     to: mid May
@@ -1936,8 +1988,13 @@
     hue: pale pink
 - name: Malus sylvestris
   common_name: European crab apple
-  native_region: Europe
+  native_region: most of Europe, east to Turkey and the Caucasus
   inaturalist_taxon_id: 469472
+  description: >-
+    European crab apple's botanical name means "forest apple". Its fruit is spread mostly by cattle
+    and horses, which took over the role of the now-extinct aurochs and wild horses; with fewer
+    grazing animals in the countryside and frequent crossing with orchard apples, pure wild trees
+    have become rare throughout its range.
 - name: Metasequoia glyptostroboides
   common_name: Dawn redwood
   native_region: a few valleys in central China
@@ -1953,7 +2010,13 @@
 - name: Morus alba
   common_name: White Mulberry
   order: Rosales
+  native_region: China and India
   inaturalist_taxon_id: 56090
+  description: >-
+    White mulberry leaves are the preferred food of silkworms, and the tree has been grown in China
+    to raise them for more than 4,700 years. Its stamens fling out pollen like tiny catapults at
+    about 610 km/h (380 mph), half the speed of sound, the fastest known movement in the plant
+    kingdom.
 - name: Nyssa sylvatica
   common_name: Black tupelo
   order: Cornales
@@ -1976,7 +2039,12 @@
 - name: Oxydendrum arboreum
   common_name: Sourwood
   order: Ericales
+  native_region: the eastern United States, mostly the Appalachians, from Pennsylvania to Florida
   inaturalist_taxon_id: 133354
+  description: >-
+    Sourwood is named for its acid-laden leaves, and Oxydendrum is Greek for "sour tree". Its
+    flowers give a renowned honey and are made into sourwood jelly, and the Cherokee and Catawba
+    made arrow shafts from its shoots. In autumn its leaves turn bright scarlet.
 - name: Parrotia persica
   common_name: Persian ironwood
   order: Saxifragales
@@ -1997,11 +2065,24 @@
 - name: Paulownia tomentosa
   common_name: Princess Or Empress Tree
   order: Lamiales
+  native_region: central and eastern China, and Korea
   inaturalist_taxon_id: 119792
+  description: >-
+    Princess tree is named after Anna Pavlovna of Russia, queen of the Netherlands in the 1840s. In
+    Japan it is customary to plant one when a daughter is born and make its wood into a tansu chest
+    for her wedding. Chinese porcelain exporters in the 1800s packed their wares in its seeds, which
+    spilled along railway lines and helped it spread.
 - name: Phellodendron amurense
   common_name: Cork Tree
   order: Sapindales
+  native_region: >-
+    northeastern Asia: northern China, Korea, Japan and the Russian Far East
   inaturalist_taxon_id: 166636
+  description: >-
+    Amur cork tree bark is a major source of huáng bò, one of the 50 fundamental herbs of
+    traditional Chinese medicine. A yellow dye from the bark was used across East Asia to colour
+    paper for sutras, including the Diamond Sutra, because it protected the pages from insects. The
+    Ainu people of Japan used its fruit as a painkiller.
 - name: Picea
   common_name: Spruce
   order: Pinales
@@ -2018,7 +2099,18 @@
 - name: Picea engelmannii
   common_name: Engelmann Spruce
   order: Pinales
+  native_region: >-
+    the mountains of western North America, from central British Columbia to Arizona and New Mexico
   inaturalist_taxon_id: 78582
+  description: >-
+    Engelmann spruce bark was peeled in large sheets from living trees, taking only part so the tree
+    survived, to make canoes (Secwepemc and other Interior Salish peoples, Ktunaxa) and large
+    barrel-shaped baskets for cooking berries and soaking skins (Secwepemc and other Interior
+    Plateau peoples). Its roots were coiled into baskets (Tsilhqot’in and other Dene), a tea of its
+    bark is a general medicine (Nlaka’pamux, Okanagan), and hunters and others wash with its
+    branches for purification (Nlaka’pamux). Wood from slow-grown mountain trees is prized for the
+    soundboards of guitars, violins and pianos.
+  turner_pages: vol. 1, pp. 380, 396, 437, 548; vol. 2, pp. 184, 302
 - name: Picea glauca
   common_name: White spruce
   order: Pinales
@@ -2044,7 +2136,13 @@
 - name: Picea orientalis
   common_name: Spruce
   order: Pinales
+  native_region: the Caucasus and northeastern Turkey, near the Black Sea
   inaturalist_taxon_id: 135802
+  description: >-
+    Oriental spruce has the shortest needles of any spruce, just 6–8 mm (about 1/4 in) long and
+    glossy dark green, while its Himalayan relative, the morinda spruce, has the longest. Its young
+    cones are green or red to purple, ripening dark brown within months. It is a popular tree for
+    large gardens in northern Europe and the United States.
 - name: Picea pungens
   common_name: Blue spruce
   native_region: the Rocky Mountains of the United States, from Wyoming to New Mexico
@@ -2072,6 +2170,12 @@
       what: favour its dead snags
 - name: Picea smithiana
   order: Pinales
+  native_region: the western Himalaya, from Afghanistan and Pakistan to India and central Nepal
+  description: >-
+    Morinda spruce has the longest needles of any spruce, 2.5–5 cm (1–2 in), and its branchlets hang
+    down from level branches, which has made it a popular tree for large gardens in western Europe.
+    The name morinda comes from its Nepali name, and smithiana honours James Edward Smith, the
+    English botanist who founded the Linnean Society.
 - name: Pinus
   common_name: Pine
   inaturalist_taxon_id: 52391
@@ -2079,15 +2183,36 @@
 - name: Pinus aristata
   common_name: Bristlecone Pine
   order: Pinales
+  native_region: >-
+    the high Rocky Mountains of Colorado and New Mexico, with one outlying group in Arizona
   inaturalist_taxon_id: 135774
+  description: >-
+    Rocky Mountain bristlecone pine is named for the bristle-like points on its cone scales. It can
+    live for more than 2,400 years; the oldest in Colorado, on Black Mountain, has been dated to 442
+    BCE. Its needles are flecked with white resin, which a botanist described as "dandruffy" and
+    which is easily mistaken for scale insects.
 - name: Pinus ayacahuite
   common_name: Pine
   order: Pinales
+  native_region: the mountains of southern Mexico and Central America, south to Honduras
   inaturalist_taxon_id: 135746
+  description: >-
+    Mexican white pine has some of the longest cones that can be grown in many temperate gardens,
+    slender and 15–40 cm (6–16 in) long. Although its wild range lies entirely in the tropics, south
+    of the Tropic of Cancer, planted trees have survived temperatures near −30 °C (−22 °F) in
+    Scotland and Pennsylvania.
 - name: Pinus banksiana
   common_name: Jack Pine
   order: Pinales
+  native_region: >-
+    most of Canada east of the Rockies, south into the northern United States from Minnesota to
+    Maine
   inaturalist_taxon_id: 58724
+  description: >-
+    Jack pine's botanical name honours the English botanist Sir Joseph Banks. Many of its cones stay
+    closed for years until the heat of a forest fire, 50 °C (122 °F) or more, opens them to reseed
+    the burnt ground. Unusually for a pine, the cones point forward along the branch, sometimes
+    curling around it.
 - name: Pinus bungeana
   common_name: Lacebark Pine
   order: Pinales
@@ -2120,11 +2245,30 @@
 - name: Pinus densiflora
   common_name: Pine
   order: Pinales
+  native_region: Japan, Korea, northeastern China and the far southeast of Russia
   inaturalist_taxon_id: 135811
+  description: >-
+    Japanese red pine is akamatsu in Japanese: aka, "red", probably for its orange-red bark, and
+    matsu, "pine", which may come from matsu, "to wait", as the tree was believed to wait for the
+    arrival of the gods. In northeastern China the matsutake mushroom depends on it, and its soft
+    needles make it easy to shape as a miniature potted tree.
 - name: Pinus flexilis
   common_name: Limber Pine
   order: Pinales
+  native_region: >-
+    the mountains of western North America, from southeastern British Columbia and Alberta to
+    northern Mexico
   inaturalist_taxon_id: 78585
+  description: >-
+    Limber pine is named for its pliant branches: both "limber" and the botanical name flexilis
+    refer to them. It can live for thousands of years. One in Oregon's Eagle Cap Wilderness is over
+    2,000 years old, and a tree at Whirlpool Point, beside Alberta's North Saskatchewan River, may
+    be close to 3,000.
+  wildlife:
+    - who: [red squirrels]
+      what: eat its seeds
+    - who: [northern flickers]
+      what: nest in it
 - name: Pinus jeffreyi
   common_name: Jeffrey pine
   native_region: the mountains of California, southern Oregon, western Nevada and northern Mexico
@@ -2151,8 +2295,14 @@
   turner_pages: vol. 2, p. 184
 - name: Pinus mugo
   common_name: Mugo Pine
-  native_region: high elevation habitats from southwestern to Central Europe and Southeast Europe
+  native_region: >-
+    the mountains of central and southern Europe, from the Pyrenees and Alps to the Balkans
   inaturalist_taxon_id: 135727
+  description: >-
+    Mugo pine's young cones and buds are made into a syrup, mugolio: they are left in the sun from
+    spring into autumn to drip syrup, which is then boiled down with sugar. The misspelling "mugho",
+    first printed in a prominent 18th-century encyclopedia, stayed in occasional use until about
+    2020.
 - name: Pinus nigra
   common_name: Austrian pine
   order: Pinales
@@ -2165,6 +2315,12 @@
 - name: Pinus parviflora
   common_name: Five-needle pine
   order: Pinales
+  native_region: Japan
+  description: >-
+    Japanese white pine is one of the most popular pines for bonsai. Its botanical name, parviflora,
+    means "with small flowers". High in the mountains of northern Japan it sometimes crosses with a
+    related alpine pine, Pinus pumila, and the hybrid is named after the Hakkōda Mountains, where it
+    was first found.
 - name: Pinus pinaster
   # Tree A296 has been misidentified as Aleppo pine (Pinus halepensis). For its identification see
   # naturevictoria.com/species/p-pinaster.html and conifers.org/pi/Pinus_pinaster.php.
@@ -2192,16 +2348,38 @@
 - name: Pinus radiata
   common_name: Monterey Pine
   order: Pinales
+  native_region: >-
+    three small areas of the central California coast, near Monterey, and two Mexican islands
   inaturalist_taxon_id: 53421
+  description: >-
+    Monterey pine has become one of the world's most important timber trees: it makes up 89% of New
+    Zealand's plantation forests, and in 2001 it produced 95% of Chile's lumber. In its small wild
+    range it is threatened by pitch canker, a fungal disease brought to California from the
+    southeastern United States.
 - name: Pinus sabiniana
   common_name: Gray pine
   native_region: California
   notable: true
   inaturalist_taxon_id: 58772
+  description: >-
+    Grey pine's cones are large and heavy, 0.3–0.7 kg (0.7–1.5 lb) when fresh, with each scale
+    ending in a hooked woody spur. Its big, sweet seeds were an important food for some California
+    Indigenous peoples, and the Ohlone chewed its pitch to treat rheumatism. Its botanical name
+    honours Joseph Sabine, secretary of the Horticultural Society of London.
 - name: Pinus strobus
   common_name: Eastern White Pine
   order: Pinales
+  native_region: >-
+    eastern North America, from Newfoundland and Manitoba south through the Appalachians to Georgia
   inaturalist_taxon_id: 52391
+  description: >-
+    Eastern white pine is the Haudenosaunee "Tree of Peace", the central symbol of their
+    confederation, and since 2017 it has appeared on the flag of Montreal. In the 1600s and 1700s
+    tall white pines in the American colonies were marked with the Crown's broad arrow and reserved
+    as masts for the Royal Navy. It is the provincial tree of Ontario.
+  wildlife:
+    - who: [crossbills, pine siskins, red squirrels]
+      what: eat its seeds
 - name: Pinus sylvestris
   common_name: Scots pine
   order: Pinales
@@ -2225,13 +2403,21 @@
 - name: Pinus wallichiana
   common_name: Bhutan pine
   order: Pinales
-  native_region: >-
-    the Himalaya, Karakoram and Hindu Kush mountains, from eastern Afghanistan east across northern
-    Pakistan and north west India to Yunnan in southwest China
+  native_region: the Himalaya, from Afghanistan and Pakistan east to southwestern China
   notable: true
   inaturalist_taxon_id: 135668
+  description: >-
+    Bhutan pine's botanical name honours Nathaniel Wallich, the Danish botanist who first sent its
+    seeds to England in 1827. Its needles are long and flexible, 12–18 cm (5–7 in), and often droop,
+    and its slender cones grow up to 32 cm (13 in). It is planted in parks partly because it
+    tolerates air pollution better than some other conifers.
 - name: Pistacia chinensis
   common_name: Chinese pistache
+  native_region: most of China, and Taiwan
+  description: >-
+    Chinese pistache is the most frost-hardy of the pistachio trees, surviving about −25 °C (−13
+    °F), and is used as a rootstock for the edible pistachio, Pistacia vera. Male and female flowers
+    grow on separate trees, and the female trees produce small red fruits that turn blue when ripe.
 - name: Platanus × acerifolia
   common_name: London plane
   garden_origin: a hybrid of the oriental plane and American sycamore, which arose in Spain or England in the 1600s
