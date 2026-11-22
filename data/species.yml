@@ -3175,17 +3175,35 @@
 - name: Salix caprea
   common_name: Kilmarnock Willow
   order: Malpighiales
+  native_region: Europe and western and central Asia
   inaturalist_taxon_id: 55846
+  description: >-
+    Goat willow probably gets its name from the first known picture of it, in Hieronymus Bock's
+    herbal of 1546, which shows a goat browsing on it. Its silky catkins are the pussy willows of
+    early spring, and in countries from Germany to Ukraine and Finland the just-opened catkins are
+    carried in place of olive branches on Palm Sunday.
+  wildlife:
+    - who: [moth and butterfly caterpillars]
+      what: feed on its leaves
 - name: Salix matsudana
   common_name: Chinese Willow
   order: Malpighiales
+  native_region: northern China
   inaturalist_taxon_id: 127243
+  description: >-
+    Chinese willow, or Peking willow, is grown in northern China for timber, as an ornamental and in
+    shelterbelts, notably around the oases of the Gobi Desert, where it shields farmland from desert
+    winds. Many botanists now count it as part of the weeping willow, Salix babylonica, since the
+    only reported difference is an extra nectar gland in each female flower.
 - name: Salix nigra
   common_name: Black willow
   native_region: >-
-    eastern North America, from New Brunswick and southern Ontario west to Minnesota, and south to
-    northern Florida and Texas
+    much of North America, from New Brunswick and southern Ontario to Florida, Texas and California
   inaturalist_taxon_id: 54847
+  description: >-
+    Black willow is the largest North American willow, and the only willow native to the United
+    States that is used for timber. Its light wood keeps its shape and doesn't splinter easily, so
+    it was once made into artificial limbs, and its very bitter roots were used in place of quinine.
 - name: Salix scouleriana
   common_name: Scouler's willow
   order: Malpighiales
@@ -3216,15 +3234,35 @@
 - name: Sapindus drummondii
   common_name: Soapberries
   order: Sapindales
+  native_region: the southern United States, from Arizona and Colorado to Louisiana
   inaturalist_taxon_id: 286324
+  description: >-
+    Soapberries take their genus name, Sapindus, from the Latin for "Indian soap", because their
+    fruit lathers in water and has long been used for washing. This species was once lumped with
+    another soapberry, S. saponaria, but is now accepted as a species of its own.
 - name: Sciadopitys verticillata
   common_name: Umbrella-Pine
   order: Pinales
+  native_region: Japan
   inaturalist_taxon_id: 129057
+  description: >-
+    Japanese umbrella-pine is named for its glossy "needles", which are really flattened stems, set
+    in umbrella-like whorls at the ends of the branches. It is a living fossil, the only surviving
+    member of its family, and in Japan, where it is called kōyamaki, a stylized image of the tree is
+    the crest of the Akishino branch of the Imperial Family.
 - name: Sequoia sempervirens
   common_name: Coast Redwood
   order: Pinales
+  native_region: a narrow strip of coastal California and southwestern Oregon
   inaturalist_taxon_id: 47372
+  description: >-
+    Coast redwoods are the tallest trees on Earth, led by one named Hyperion at 116 m (381 ft). A
+    2022 Canadian Forest Service paper proposed that Vancouver Island already offers "narrow strips
+    of optimal habitat" for the species, which may have been kept from spreading north by a lack of
+    lowland routes through Oregon's Coast Range.
+  wildlife:
+    - who: [black-tailed deer]
+      what: eat its sprouts
 - name: Sequoiadendron giganteum
   common_name: Giant sequoia
   order: Pinales
@@ -3242,11 +3280,27 @@
 - name: Sorbus americana
   common_name: American Mountain-Ash
   order: Rosales
+  native_region: >-
+    eastern North America, from Minnesota and Newfoundland south along the Appalachians to Georgia
   inaturalist_taxon_id: 54265
+  description: >-
+    American mountain-ash's bright red berries ripen in October and stay on the tree all winter;
+    after the first winter freeze they can be eaten raw or cooked, and they have been made into pies
+    and jelly. Like the European mountain-ash, it is also called rowan, and it grows largest on the
+    northern shores of Lakes Huron and Superior.
+  wildlife:
+    - who: [robins, thrushes, waxwings, jays, squirrels]
+      what: eat its berries
 - name: Sorbus aria
   common_name: Mountain Ash
   order: Rosales
+  native_region: most of Europe, northwest Africa, eastern Turkey and the Caucasus
   inaturalist_taxon_id: 61522
+  description: >-
+    Whitebeam takes its name from the almost-white undersides of its leaves; "beam" is an old
+    English word for a tree. Its scarlet berries are edible only when overripe, or bletted.
+    Botanists now place the whitebeams in a genus of their own, Aria, apart from the rowans of
+    Sorbus, so this tree is also listed as Aria edulis.
 - name: Sorbus aucuparia
   common_name: Mountain-ash
   order: Rosales
@@ -3263,7 +3317,13 @@
 - name: Sorbus hupehensis
   common_name: Mountain Ash
   order: Rosales
+  native_region: central and western China
   inaturalist_taxon_id: 484168
+  description: >-
+    Hubei rowan is named after Hubei, a province of central China once spelled Hupeh. It is grown
+    for its pink to white berries, which ripen in late autumn as its leaves turn orange and red. In
+    gardens it is often confused with its relative Sorbus oligodonta, to which the popular 'Pink
+    Pagoda', commonly cited as Hubei rowan, actually belongs.
 - name: Sorbus intermedia
   common_name: Swedish whitebeam
   order: Rosales
@@ -3276,10 +3336,21 @@
     - who: [thrushes, waxwings]
       what: eat its berries and spread the seeds
 - name: Sorbus x
+  native_region: a few scattered sites across Europe, from Ireland to Romania, and in Turkey
+  description: >-
+    German service-tree is a natural hybrid of rowan and whitebeam that arises where the two grow
+    together, and it also sets a little fertile seed of its own. Its leaves are part rowan, part
+    whitebeam: lobed and grey-hairy underneath, with the lowest pairs of lobes split off as separate
+    leaflets.
 - name: Stewartia monadelpha
   common_name: Deciduous Camellia
   order: Ericales
+  native_region: the cool mountain forests of central and southern Japan
   inaturalist_taxon_id: 452251
+  description: >-
+    Orangebark stewartia is named for its orange to cinnamon-brown bark. It is related to camellias,
+    and its cupped white flowers with yellow stamens look like theirs, which explains its other
+    name, deciduous camellia. The genus honours John Stuart, an 18th-century Scottish botanist.
 - name: Stewartia pseudocamellia
   common_name: Deciduous camellia
   native_region: the mountains of southern Japan and South Korea
@@ -3290,11 +3361,22 @@
 - name: Styrax japonicus
   common_name: Japanese Snowbell
   order: Ericales
+  native_region: Japan, Korea and southern China
   inaturalist_taxon_id: 128570
+  description: >-
+    Japanese snowbell's Japanese name, egonoki, comes from egui, a word for a harsh, bitter taste,
+    because its olive-like fruit irritates the tongue and throat. The fruit's saponins have been
+    used to make soap and to stun fish so they are easier to catch, and the hard wood was made into
+    umbrella ribs and pieces for shogi, a Japanese board game.
 - name: Styrax obassia
   common_name: Fragrant Snowbell
   order: Ericales
+  native_region: eastern China, Korea and Japan
   inaturalist_taxon_id: 452210
+  description: >-
+    Fragrant snowbell is grown in gardens as an ornamental. Its species name is sometimes spelled
+    obassis, but obassia is the original; botanists have even disagreed over whether the genus name
+    Styrax is masculine, feminine or neuter, which changes how its species names end.
 - name: Styrax spp
   common_name: Snowbell
   description: This tree has only been identified to genus, not species.
@@ -3306,7 +3388,13 @@
 - name: Syringa reticulata
   common_name: Lilac
   order: Lamiales
+  native_region: Japan, northern China, Korea and the Russian Far East
   inaturalist_taxon_id: 135416
+  description: >-
+    Japanese tree lilac is the largest lilac and the only one that regularly grows as a small tree
+    rather than a shrub. Its creamy-white flowers smell of honey and privet rather than of common
+    lilac, and its tolerance of dry, alkaline soil and road salt has made it a common street tree
+    across North America.
   cultivars:
     - name: Ivory Silk
       match: ivory
@@ -3316,7 +3404,13 @@
 - name: Syringa vulgaris
   common_name: Common Lilac
   order: Lamiales
+  native_region: the rocky hills of the southern Balkans, in Serbia, North Macedonia and Bulgaria
   inaturalist_taxon_id: 83072
+  description: >-
+    Common lilac reached northern European gardens from the gardens of the Ottoman Empire: the Holy
+    Roman Emperor's ambassador to the Ottomans, Ogier Ghiselin de Busbecq, is credited with sending
+    cuttings to the botanist Carolus Clusius about 1562. It is the state flower of New Hampshire,
+    and Isabella Preston bred hardier, later-flowering hybrids from it for Canadian gardens.
 - name: Taxodium distichum
   common_name: Bald cypress
   native_region: the swamps and rivers of the southeastern United States, from Delaware to Texas
@@ -3357,9 +3451,22 @@
 - name: Taxus cuspidata
   common_name: Japanese Yew
   order: Pinales
+  native_region: Japan, Korea, northeastern China and the Russian Far East
   inaturalist_taxon_id: 133386
+  description: >-
+    Japanese yew is called ichi'i, "first rank", in Japan, because courtiers of the first rank
+    carried ceremonial sceptres, called shaku, made of its wood. A tree in Tottori known as the Yew
+    of Mount Sentsū is estimated to be 2,000 years old. Every part except the red flesh around the
+    seed is poisonous.
 - name: Taxus x
   order: Pinales
+  garden_origin: >-
+    a hybrid of English and Japanese yews, first raised in Massachusetts in the early 1900s
+  description: >-
+    Hybrid yew, also called Anglojap yew, was first raised by the horticulturist T. D. Hatfield. It
+    grows slowly and is not harmed by frequent clipping, which makes it a popular hedge and a good
+    subject for bonsai. Like all yews, its needles, branches and seeds contain taxines, which are
+    toxic to the heart.
 - name: Thuja occidentalis
   common_name: Northern white-cedar
   order: Pinales
@@ -3411,7 +3518,16 @@
 - name: Tilia tomentosa
   common_name: Linden
   order: Malvales
+  native_region: southeastern Europe and western Turkey, from Romania through the Balkans
   inaturalist_taxon_id: 143800
+  description: >-
+    Silver linden's best-known tree, in Iași, Romania, is 500 years old, and the poet Mihai Eminescu
+    reportedly wrote some of his best work beneath it. The comatose bees often found under lindens
+    in late summer were long thought to be poisoned by the nectar, but they are more likely
+    starving, with few other flowers in towns at that time.
+  wildlife:
+    - who: [honeybees]
+      what: pollinate its strongly scented flowers
 - name: Torreya californica
   common_name: California nutmeg
   native_region: California's Coast Ranges and Sierra Nevada foothills
@@ -3423,11 +3539,24 @@
 - name: Trachycarpus fortunei
   common_name: Chinese Windmill Palm
   order: Arecales
+  native_region: central and southern China, southern Japan, northern Myanmar and northern India
   inaturalist_taxon_id: 64323
+  description: >-
+    Chinese windmill palm is also called Chusan palm, after the island where Robert Fortune first
+    saw it; he smuggled plants out of China to Britain in 1849, and the species is named after him.
+    Its strong leaf-base fibre has been made into rope and sacks in China and Japan for thousands of
+    years, so its wild range is uncertain.
 - name: Tsuga canadensis
   common_name: Eastern Hemlock
   order: Pinales
+  native_region: >-
+    eastern North America, from the Great Lakes and the Maritimes south along the Appalachians
   inaturalist_taxon_id: 48734
+  description: >-
+    Eastern hemlock is the state tree of Pennsylvania, and its bark was once a major source of
+    tannin for tanning leather. Across much of its range it is threatened by the hemlock woolly
+    adelgid, a sap-sucking insect from East Asia, and a Pacific Northwest beetle that eats the
+    adelgid has been released in New York to control it.
 - name: Tsuga heterophylla
   common_name: Western hemlock
   order: Pinales
@@ -3453,7 +3582,14 @@
 - name: Ulmus americana
   common_name: White Elm
   order: Rosales
+  native_region: >-
+    eastern North America, from Nova Scotia west to Alberta and south to Florida and Texas
   inaturalist_taxon_id: 53547
+  description: >-
+    American elm lined the streets of towns across the United States in the 1800s and early 1900s,
+    until Dutch elm disease devastated it from the 1920s. It still thrives where the disease hasn't
+    reached, notably in British Columbia, and Winnipeg's close to 200,000 elms are believed to be
+    the largest surviving urban elm forest in North America.
   cultivars:
     - name: Brandon
       description: A vase-shaped American elm selected in Brandon, Manitoba.
@@ -3469,21 +3605,45 @@
 - name: Ulmus glabra
   common_name: Scotch Elm
   order: Rosales
+  native_region: Europe, from Ireland to the Ural Mountains, and western Asia as far as Iran
   inaturalist_taxon_id: 170056
+  description: >-
+    Wych elm's name comes from the Old English wice, "pliant" or "supple", the root also of wicker
+    and weak. It is the only elm certainly native to Britain, and in E. M. Forster's novel Howards
+    End a wych elm with pigs' teeth driven into its trunk, whose bark was said to cure toothache,
+    stands over the house of the title.
 - name: Ulmus procera
   common_name: English Elm
   order: Rosales
+  garden_origin: an ancient clone of the field elm, thought to come from Atina, in central Italy
   inaturalist_taxon_id: 79461
+  description: >-
+    English elm is not native to England: every English elm is genetically identical, and the clone
+    is thought to be the Atinian elm that the Romans grew to support vines and probably brought to
+    Britain. Its flowers are sterile, so it spreads only by root suckers, and its rot-resistant
+    trunks were once hollowed out for water pipes.
 - name: Ulmus pumila
   common_name: Siberian elm
-  native_region: >-
-    Central Asia, eastern Siberia, the Russian Far East, Mongolia, Tibet, northern China, India
-    (northern Kashmir) and Korea
+  native_region: Central Asia, Siberia, Mongolia, Tibet, northern China and Korea
   inaturalist_taxon_id: 79463
+  description: >-
+    Siberian elm's unripe seeds have long been eaten in Manchuria, and during the Great Chinese
+    Famine they became one of the most important foods around Harbin. Tough enough for drought,
+    severe cold and poor soil, it has become invasive in North America from central Mexico to
+    Ontario, and crosses in the wild with the native slippery elm.
 - name: Umbellularia californica
   common_name: Laurel
   order: Laurales
+  native_region: the coast and foothills of California and southwestern Oregon
   inaturalist_taxon_id: 48807
+  description: >-
+    California bay, also called headache tree, has leaves that smell sharply of camphor when
+    crushed; the Pomo and Yuki peoples treated headaches by placing a single leaf in the nostril. In
+    Oregon its wood is sold as myrtlewood, and in 1933 the town of North Bend paid its workers with
+    myrtlewood coins that remain legal tender there.
+  wildlife:
+    - who: [deer]
+      what: browse its fresh sprouts
 - name: Unknown
   common_name: Unknown
   inaturalist_taxon_id: 223548
@@ -3493,6 +3653,16 @@
   inaturalist_taxon_id: 170203
 - name: Wildlife snag
   common_name: Wildlife snag
+  description: >-
+    A wildlife snag is a dead or dying tree left standing, often without its top or smaller
+    branches. Foresters call snags "wildlife trees": in temperate forests they are vital habitat for
+    more than 100 species of birds and mammals, and their decaying wood feeds fungi and insects.
+    Most snag-dwelling animals eat insects, helping to keep forest pests in check.
+  wildlife:
+    - who: [woodpeckers]
+      what: dig nest holes in it that more than 80 other species later use
+    - who: [bats]
+      what: shelter in its cavities and hollows
 - name: Zelkova serrata
   common_name: Japanese Zelkova
   order: Rosales
