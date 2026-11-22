@@ -37,6 +37,25 @@ place:
 The description can still tell an origin story, such as how a tree was discovered, introduced or
 named. It just shouldn't repeat the range already given in the origin fields.
 
+## Common names
+
+`common_name` is the name the site shows: on the map's labels, the popup heading, the species page
+and every list. The City's data has its own common names, but the site ignores them once a species
+is in species.yml, so fix a name here rather than waiting for the City.
+
+- **Use the name people in BC would know,** in sentence case: "Paperbark maple", "Kentucky
+  yellowwood". Keep capitals for proper nouns: "Japanese maple", "Garry oak", "Douglas-fir".
+- **For native trees, use the local name** (arbutus, cascara, Garry oak), and **prefer the
+  Canadian name** to the British one (littleleaf linden rather than small-leaved lime; Manitoba
+  maple rather than box elder).
+- **Name the species, not the genus.** Never just "Maple" or "Oak", and no two species on the map
+  should share a name.
+- **Open the description with the same name,** or give it early ("Littleleaf linden, called
+  small-leaved lime in Britain, …") so the heading and the description agree.
+
+The build lists any common names that are missing, a bare genus, shared or in Title Case, and
+shows the City's name for any species it finds that isn't in species.yml yet.
+
 ## What to write about
 
 Choose the one or two things that make the tree interesting to someone standing under it. In

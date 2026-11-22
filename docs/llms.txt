@@ -31,7 +31,7 @@
 - [Bigleaf maple (Acer macrophyllum)](https://victoriatrees.ca/species/acer-macrophyllum/): 1,012 trees
 - [Common hawthorn (Crataegus oxyacantha)](https://victoriatrees.ca/species/crataegus-oxyacantha/): 988 trees
 - [Horse-chestnut (Aesculus hippocastanum)](https://victoriatrees.ca/species/aesculus-hippocastanum/): 793 trees
-- [Common hornbeam (Carpinus betulus)](https://victoriatrees.ca/species/carpinus-betulus/): 779 trees
+- [European hornbeam (Carpinus betulus)](https://victoriatrees.ca/species/carpinus-betulus/): 779 trees
 - [Austrian pine (Pinus nigra)](https://victoriatrees.ca/species/pinus-nigra/): 716 trees
 - [Yoshino cherry (Prunus × yedoensis)](https://victoriatrees.ca/species/prunus-x-yedoensis/): 698 trees
 - [Red horse-chestnut (Aesculus × carnea)](https://victoriatrees.ca/species/aesculus-x-carnea/): 672 trees

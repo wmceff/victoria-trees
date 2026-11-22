@@ -199,5 +199,35 @@ console.log(
 );
 if (newSpecies.size) {
   console.log(`\n${newSpecies.size} species not in data/species.yml (add them, or map them in data/botanical-overrides.yml):`);
-  for (const name of [...newSpecies].sort()) console.log(`  ${name} (${species[speciesIndex.get(name)].tree_count})`);
+  for (const name of [...newSpecies].sort()) {
+    const s = species[speciesIndex.get(name)];
+    console.log(`  ${name} (${s.tree_count})${s.common_name ? `, which the City calls "${s.common_name}"` : ""}`);
+  }
+}
+
+// Common names in species.yml are the site's display names; the City's own names are often a bare genus,
+// out of date or wrong. Flag curated names that look like they still need work, for species on the map.
+const genericNames = new Set(["maple", "oak", "pine", "fir", "spruce", "ash", "elm", "birch", "cherry", "plum", "hawthorn",
+  "dogwood", "willow", "poplar", "linden", "holly", "juniper", "magnolia", "cedar", "cypress", "hazel", "sumac", "pear",
+  "larch", "yew", "hemlock", "locust", "laurel", "lilac", "walnut", "chestnut", "beech", "hornbeam", "alder",
+  "crabapple", "mountain ash", "mountain-ash", "hackberries", "soapberries", "fringetrees"]);
+const isSpeciesLevel = (s) => /\s/.test(s.name.trim()) && !/\bspp\.?$/.test(s.name) && !/^This tree has only been identified/.test(s.description ?? "");
+const onMap = curatedSpecies.map((c) => species[speciesIndex.get(c.name)]).filter((s) => s.tree_count && isSpeciesLevel(s));
+const nameCounts = new Map();
+for (const s of onMap) {
+  const key = (s.common_name ?? "").trim().toLowerCase();
+  nameCounts.set(key, (nameCounts.get(key) ?? 0) + 1);
+}
+const nameProblems = [];
+for (const s of onMap) {
+  const name = (s.common_name ?? "").trim();
+  const words = name.split(/\s+/);
+  if (!name) nameProblems.push(`${s.name}: no common_name`);
+  else if (genericNames.has(name.toLowerCase())) nameProblems.push(`${s.name}: "${name}" is the genus, not the species`);
+  else if (nameCounts.get(name.toLowerCase()) > 1) nameProblems.push(`${s.name}: "${name}" is shared with another species`);
+  else if (words.length > 1 && words.every((w) => /^[A-Z]/.test(w))) nameProblems.push(`${s.name}: "${name}" should be sentence case`);
+}
+if (nameProblems.length) {
+  console.log(`\n${nameProblems.length} common names in data/species.yml to check (see the style guide's Common names section):`);
+  for (const p of nameProblems.sort()) console.log(`  ${p}`);
 }
