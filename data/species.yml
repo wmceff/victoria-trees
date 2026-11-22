@@ -618,15 +618,32 @@
 - name: Arbutus unedo
   common_name: Arbutus
   order: Ericales
+  native_region: the Mediterranean and western Europe, as far north as Ireland
   inaturalist_taxon_id: 82689
+  description: >-
+    Strawberry tree is the national tree of Italy, because its green leaves, white flowers and red
+    fruit, which hang on the tree together in autumn, recall the Italian flag. Its species name,
+    unedo, is credited to Pliny the Elder, who is said to have remarked "unum tantum edo", "I eat
+    only one".
+  wildlife:
+    - who: [bees]
+      what: feed on the nectar and pollen of its flowers
 - name: Asimina triloba
   common_name: Pawpaw
+  native_region: eastern North America, from southern Ontario to northern Florida and eastern Texas
+  description: >-
+    Pawpaw is the northernmost member of the custard-apple family, a mostly tropical family that
+    includes cherimoya and soursop, and its sweet fruit has a custard-like texture and a taste like
+    banana or pineapple. Its large seeds were probably spread by mastodons, mammoths and giant
+    ground sloths until they died out.
 - name: Austrocedrus chilensis
   common_name: Chilean cedar
-  native_region: >-
-    the Valdivian temperate rain forests and the adjacent drier steppe-forests of central-southern
-    Chile and western Argentina
+  native_region: the Andes of central and southern Chile and western Argentina
   inaturalist_taxon_id: 136243
+  description: >-
+    Chilean cedar is the only living species of Austrocedrus, "southern cedar", though in Chile and
+    Argentina it is called a cypress, ciprés de la cordillera. A second, extinct species of the
+    genus is known from Late Cretaceous fossils in Antarctica.
 - name: Betula
   common_name: Birch
   order: Fagales
@@ -635,7 +652,13 @@
 - name: Betula alba
   common_name: Silver Birch
   order: Fagales
+  native_region: northern and central Europe and Asia, from Iceland and Britain to Siberia
   inaturalist_taxon_id: 119061
+  description: >-
+    The old name Betula alba covered both silver birch and downy birch, the two white-barked birches
+    of northern Europe. Downy birch grows farther north than any other broadleaf tree; its outer
+    bark peels off without killing the tree and has been made into canoe skins, cups and roof tiles,
+    and the Sami of Scandinavia ground the reddish inner bark into bread flour.
 - name: Betula nigra
   common_name: Black birch
   native_region: >-
@@ -676,8 +699,16 @@
     invasive in parts of North America.
 - name: Betula populifolia
   common_name: Gray Birch
-  native_region: eastern North America
+  native_region: northeastern North America, from southern Quebec and Nova Scotia to New Jersey
   inaturalist_taxon_id: 49884
+  description: >-
+    Grey birch's botanical name, populifolia, means "poplar-leaved", for the way its leaves flutter
+    in the wind like a poplar's. It is often mistaken for paper birch, but its chalky white bark
+    doesn't peel as readily and has black triangular patches at the base of each branch. The
+    Iroquois and Mi'kmaq used its inner bark to treat infected cuts and wounds.
+  wildlife:
+    - who: [juncos, chickadees]
+      what: eat its seeds
 - name: Broadleaf Deciduous
   common_name: Broadleaf Deciduous Medium
 - name: Broadleaf Evergreen
@@ -689,8 +720,12 @@
   description: This tree has only been identified to genus, not species.
 - name: Calocedrus decurrens
   common_name: Incense cedar
-  native_region: western North America
+  native_region: southwestern Oregon, California and northern Baja California, in Mexico
   inaturalist_taxon_id: 53723
+  description: >-
+    Incense cedar was once the main wood for pencils, being soft and sharpening without splinters,
+    and its fragrant wood has been used for moth-resistant chests. Indigenous peoples of California
+    use it for medicine, basket-making, hunting bows and building, and to start fires by friction.
 - name: Camelia spp
   common_name: Camelia
   description: This tree has only been identified to genus, not species.
@@ -716,7 +751,12 @@
 - name: Carpinus caroliniana
   common_name: Blue-Beech
   order: Fagales
+  native_region: eastern North America, from southern Quebec and Minnesota to Texas and Florida
   inaturalist_taxon_id: 54768
+  description: >-
+    American hornbeam, or blue-beech, is also known as musclewood for its smooth, grey-green trunk,
+    which ripples with sinewy ridges like flexed muscle. Its hard, heavy wood has been made into
+    tool handles, levers, walking sticks, longbows and golf clubs.
 - name: Carya
   common_name: Carya
   order: Fagales
@@ -729,7 +769,13 @@
 - name: Castanea mollissima
   common_name: Chinese Chestnut
   order: Fagales
+  native_region: China, Taiwan and Korea
   inaturalist_taxon_id: 49192
+  description: >-
+    Chinese chestnut evolved alongside chestnut blight and resists it better than any other
+    chestnut. Asian chestnuts imported to the United States in the 1890s brought the blight with
+    them, and within 30 years it had nearly wiped out the American chestnut; breeders now cross the
+    two species to carry Chinese resistance into American trees.
 - name: Castanea sativa
   common_name: Sweet chestnut
   native_region: southern Europe and Turkey, around the Mediterranean and Black Sea
@@ -741,11 +787,22 @@
 - name: Catalpa bignonioides
   common_name: Southern Catalpa
   order: Lamiales
+  native_region: the southeastern United States, from Louisiana to Georgia and Florida
   inaturalist_taxon_id: 50859
+  description: >-
+    Southern catalpa was first seen by Europeans growing in Cherokee fields. Also called cigar tree
+    and Indian bean tree, it has long, thin pods, 20–40 cm (8–16 in), that often hang on through
+    winter. Its leaves, unusually, secrete nectar, making extra when caterpillars feed on them,
+    which draws ants that guard the tree.
 - name: Catalpa speciosa
   common_name: Northern Catalpa
   order: Lamiales
+  native_region: the midwestern United States, around where the Ohio River meets the Mississippi
   inaturalist_taxon_id: 76158
+  description: >-
+    Northern catalpa is also called worm tree or bait tree: anglers prize the caterpillars of the
+    catalpa moth that feed on its leaves, and some trees are planted just to raise them. Its wood
+    resists rot, and farmers once planted it widely in Ohio to grow fence posts.
 - name: Ceanothus
   common_name: California Lilac
   order: Rosales
@@ -761,9 +818,13 @@
 - name: Cedrus brevifolia
   common_name: Cyprus cedar
   order: Pinales
-  native_region: the Troödos Mountains of central Cyprus
+  native_region: just five natural stands in the Troödos Mountains of Cyprus
   notable: true
   inaturalist_taxon_id: 136296
+  description: >-
+    Cyprus cedar is listed as vulnerable, and its largest wild stand, at Tripylos in the Cedar
+    Valley of Paphos Forest, holds about 16,000 mature trees. Botanists disagree over whether it is
+    a species of its own or a variety of the cedar of Lebanon; brevifolia means "short-leaved".
 - name: Cedrus deodara
   common_name: Deodar cedar
   order: Pinales
@@ -784,11 +845,25 @@
 - name: Celtis occidentalis
   common_name: Hackberries
   order: Rosales
+  native_region: >-
+    central and eastern North America, from southern Ontario to North Carolina and Oklahoma
   inaturalist_taxon_id: 54857
+  description: >-
+    Common hackberry is easy to recognize by its bark, broken into corky, wart-like ridges that look
+    like layers of rock seen edge-on. Its pea-sized berries ripen orange-red to dark purple and
+    often hang on the tree for months. Montreal has more than 10,000 as street trees.
+  wildlife:
+    - who: [robins, cedar waxwings]
+      what: eat its berries
 - name: Celtis sinensis
   common_name: Hackberries
   order: Rosales
+  native_region: China, Korea, Japan and Taiwan
   inaturalist_taxon_id: 76204
+  description: >-
+    Japanese hackberry is a tree of classical East Asian garden design, and its leaves and bark are
+    used in Korean traditional medicine. In eastern Australia it is a declared noxious weed, its
+    seeds spread by birds, fruit bats and water.
 - name: Cercidiphyllum japonicum
   common_name: Katsura
   order: Saxifragales
@@ -800,7 +875,13 @@
 - name: Cercis canadensis
   common_name: Redbud
   order: Fabales
+  native_region: eastern North America, from southern Michigan to central Mexico
   inaturalist_taxon_id: 48502
+  description: >-
+    Eastern redbud is the state tree of Oklahoma, and Columbus, Wisconsin, calls itself the "Redbud
+    City". Its magenta-pink flowers open on bare twigs and sometimes straight from the trunk. In
+    southern Appalachia its green twigs are used to season venison, which has earned it the name
+    spicewood tree.
 - name: Chamaecyparis
   order: Pinales
   inaturalist_taxon_id: 76237
@@ -828,15 +909,30 @@
   order: Pinales
   native_region: central and southern Japan, on the islands of Honshū and Kyūshū
   inaturalist_taxon_id: 123925
+  description: >-
+    Sawara cypress gets its botanical name, pisifera, "pea-bearing", from its small round cones. In
+    Japan its lemon-scented, rot-resistant wood is used to build palaces, temples, shrines and
+    baths, though it is valued less than that of its relative, hinoki.
 - name: Chameacyparis
   common_name: False Cypress
 - name: Chionanthus retusus
   common_name: Fringetrees
   order: Lamiales
+  native_region: China, Japan, Korea and Taiwan
   inaturalist_taxon_id: 452213
+  description: >-
+    Chinese fringetree is grown for its feathery heads of white flowers. Near Inuyama, in Japan's
+    Aichi Prefecture, a grove of seven old trees known for their yearly bloom has been protected as
+    a natural monument since 1923. The genus name, Chionanthus, means "snow flower".
 - name: Chitalpa tashkentensis
   common_name: Pink Dawn
   order: Lamiales
+  garden_origin: a hybrid of desert willow and a catalpa, first raised in Uzbekistan in 1964
+  description: >-
+    Chitalpa's name joins those of its parents, Chilopsis (desert willow) and Catalpa. Nearly all
+    chitalpas in North America are thought to come from cuttings of two clones brought from
+    Uzbekistan in 1977, and all carry a plant-disease bacterium, Xylella fastidiosa, from the
+    infected desert willow used in the original crosses.
 - name: Cladrastis kentukea
   common_name: Kentucky Yellow Wood
   native_region: scattered sites in the southeastern United States, from North Carolina to Oklahoma
@@ -866,11 +962,24 @@
 - name: Cornus alternifolia
   common_name: Alternate-Leaf Dogwood
   order: Cornales
+  native_region: eastern North America, from Newfoundland and Manitoba to northern Florida
   inaturalist_taxon_id: 54775
+  description: >-
+    Pagoda dogwood is named for its branches, which spread in flat tiers with gaps between them,
+    like the roofs of a pagoda. Unlike most dogwoods it has alternate rather than paired leaves,
+    which gives it its botanical name and another common name, alternate-leaf dogwood.
+  wildlife:
+    - who: [eastern cottontail rabbits]
+      what: eat its leaves and bark
 - name: Cornus florida
   common_name: Flowering dogwood
   native_region: eastern North America and northern Mexico
   inaturalist_taxon_id: 54777
+  description: >-
+    Flowering dogwood is the state tree of Virginia and Missouri. In 1915 the United States sent 40
+    to Tokyo in return for Washington's cherry trees; all but one died, and in 2012, for the
+    cherries' centenary, 3,000 more were sent. Its white or pink "petals" are bracts around a
+    cluster of tiny flowers.
 - name: Cornus kousa
   common_name: Kousa Dogwood
   native_region: Japan, Korea and China
@@ -883,7 +992,13 @@
 - name: Cornus mas
   common_name: Cornelian-Cherry
   order: Cornales
+  native_region: western and southern Europe and southwestern Asia
   inaturalist_taxon_id: 55858
+  description: >-
+    Cornelian cherry wood is so dense that it sinks in water. Greek craftsmen made spears, javelins
+    and bows from it, the army of Alexander the Great used it for its infantry's long spears, and
+    Greek poets used its name to mean "spear". Its tart red fruit, like cranberry and sour cherry,
+    is made into jams and drinks, especially in Iran.
 - name: Cornus nuttallii
   common_name: Pacific dogwood
   native: true
@@ -920,15 +1035,35 @@
 - name: Corylus avellana
   common_name: Hazel
   order: Fagales
+  native_region: Europe and western Asia, from Ireland and Scandinavia to the Urals and Iran
   inaturalist_taxon_id: 54491
+  description: >-
+    Common hazel's species name, avellana, comes from the town of Avella in Italy, by way of Pliny
+    the Elder and a 1542 herbal that called it the "wild nut of Avella". In lowland England it was a
+    mainstay of field hedgerows, and was coppiced for poles to build wattle-and-daub walls and farm
+    fences.
+  wildlife:
+    - who: [squirrels, crows, jays]
+      what: crack open its nuts
 - name: Corylus colurna
   common_name: Turkish Hazel
   order: Fagales
+  native_region: >-
+    southeastern Europe and western Asia, from the Balkans through Turkey to the Caucasus
   inaturalist_taxon_id: 367960
+  description: >-
+    Turkish hazel, also called Byzantine or Constantinople hazel, carries its small, thick-shelled
+    nuts in tight clusters, each wrapped in a bristly husk. It doesn't sucker like common hazel, so
+    nut growers use it as a single-stemmed rootstock for grafting common hazel.
 - name: Cotinus coggygria
   common_name: Common Smoke-Tree
   order: Sapindales
+  native_region: southern Europe, central Asia and the Himalayas, east to northern China
   inaturalist_taxon_id: 133366
+  description: >-
+    Smoke tree is named for its feathery plumes: most of its flowers fail and lengthen into pinkish
+    wisps that look like smoke when seen together. Its wood once gave a yellow dye, young fustic,
+    and like other sumacs it has been used for red dyes, as in Middle Eastern soumak rugs.
 - name: Cotoneaster
   common_name: Cotoneaster
   order: Rosales
@@ -944,7 +1079,13 @@
   description: This tree has only been identified to genus, not species.
 - name: Crataegus × grignonensis
   common_name: Grignon hawthorn
-  garden_origin: a hybrid hawthorn raised at the Grignon arboretum, near Paris
+  garden_origin: >-
+    a Mexican hawthorn seedling, first raised at the Grignon arboretum in France in 1873
+  description: >-
+    Grignon hawthorn's pollen parent is uncertain: it was first thought to be cockspur hawthorn, but
+    that cross gave the quite different Lavallée's hawthorn, and common hawthorn is now thought more
+    likely. It was named in 1890 from a description by Pierre Mouillefert, professor of forestry at
+    the national agricultural school at Grignon.
 - name: Crataegus × lavalleei
   common_name: Hybrid cockspurthorn
   garden_origin: a hybrid hawthorn raised in France in the 1870s, at the arboretum of Alphonse Lavallée
@@ -954,7 +1095,12 @@
     probably, the pear hawthorn of eastern North America.
 - name: Crataegus × mordenensis
   common_name: Hawthorn
+  garden_origin: a hybrid of European and North American hawthorns, first raised in Manitoba in 1935
   inaturalist_taxon_id: 706684
+  description: >-
+    Morden hawthorn takes its name from Morden, Manitoba, where it was bred at the Agriculture
+    Canada plant breeding station. Its parents are Midland hawthorn, a tree of old woods and
+    hedgerows in Britain and Europe, and the North American fleshy hawthorn, Crataegus succulenta.
   cultivars:
     - name: Snowbird
       description: A hardy hawthorn from Canada, raised from 'Toba', with double white flowers that stay white.
@@ -1014,7 +1160,15 @@
 - name: Crataegus phaenopyrum
   common_name: Washington Hawthorn
   order: Rosales
+  native_region: the eastern United States
   inaturalist_taxon_id: 141714
+  description: >-
+    Washington hawthorn's small red fruit grows close together in large clusters. The fruit is
+    edible, with a mild flavour, and can be made into jelly or crushed for tea, and the wood, hard
+    like that of other hawthorns, has been used for tools.
+  wildlife:
+    - who: [squirrels]
+      what: eat its fruit
 - name: Crataegus punctata
   common_name: Dotted Hawthorn
   order: Rosales
@@ -1022,7 +1176,11 @@
 - name: Crataegus viridis
   common_name: Hawthorn
   order: Rosales
+  native_region: the southeastern United States
   inaturalist_taxon_id: 127068
+  description: >-
+    Green hawthorn, or southern thorn, varies a great deal in the wild, and many good garden forms
+    could be selected from it. The best known is 'Winter King'.
 - name: Cryptomeria japonica
   common_name: Japanese cedar
   native_region: Japan
